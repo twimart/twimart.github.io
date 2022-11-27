@@ -31,13 +31,13 @@ params:
       enabled: true
       title: "Welcome!👋 "  # optional default will be site titl
       subtitle: "You will find here my portfolio, as well as my computer notes. 😊💻"
-      imageUrl: "avatar.jpg" # optional
+      imageUrl: "/profile-picture.jpg" # optional
       imageTitle: "photo de moi" # optional
       imageWidth: 170 # custom size
       imageHeight: 170 # custom size
       buttons:
         - name: My Portfolio
-          url: "/postsen/portfolio/"
+          url: "/english/portfolio/"
         - name: My Posts
           url: "/posts/"
             
@@ -79,13 +79,13 @@ languages:
             enabled: true
             title: "Bienvenue! 👋"
             subtitle: "Vous trouverez ici mon portfolio, ainsi que mes notes informatiques. 😊💻"
-            imageUrl: "/avatar.jpg" # optional
+            imageUrl: "/profile-picture.jpg" # optional
             imageTitle: "une image test" # optional
             imageWidth: 170 # custom size 
             imageHeight: 170 # custom size
             buttons:
               - name: Mon Portfolio
-                url: "/fr/postsfr/portfolio/"
+                url: "/fr/french/porfolio/"
               - name: Mes Notes
                 url: "/fr/notes/"
 
