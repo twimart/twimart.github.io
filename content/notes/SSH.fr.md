@@ -1,7 +1,6 @@
 ---
 title: "Etablir une connexion SSH "
 date: 2022-11-17T13:39:04+01:00
-draft: False
 ---
 
 
