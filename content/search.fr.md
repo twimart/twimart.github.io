@@ -1,6 +1,6 @@
 ---
-title: Search
-layout: search
-url: /search
-summary: Search Engine
+title: "Search"
+layout: "search"
+summary: "search"
+placeholder: "Search"
 ---
