@@ -1,5 +1,97 @@
-baseURL: http://twimart.github.io/
+baseURL: https://thomaswimart.onrender.com/
 languageCode: en-us
-title: toto l'asticot
+title: Thomas WIMART
 theme: "PaperMod"
 
+enableEmoji: true
+
+
+params:
+  author: Thomas
+  defaultTheme: auto
+  displayFullLangName: true
+  ShowCodeCopyButtons: true
+  ShowReadingTime: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowToc: true
+
+  cover:
+    ShowReadingTime: true
+
+  assets:
+
+    favicon: "/favicon.ico/"
+    favicon16x16:  "/favicon-16x16.png/"
+    favicon32x32:  "/favicon-32x32.png/"
+    apple_touch_icon:  "/apple-touch-icon.png/"
+
+
+  profileMode:
+      enabled: true
+      title: "Welcome!👋 "  # optional default will be site titl
+      subtitle: "You will find here my portfolio, as well as my computer notes. 😊💻"
+      imageUrl: "avatar.jpg" # optional
+      imageTitle: "photo de moi" # optional
+      imageWidth: 170 # custom size
+      imageHeight: 170 # custom size
+      buttons:
+        - name: My Portfolio
+          url: "/postsen/portfolio/"
+        - name: My Posts
+          url: "/posts/"
+            
+
+  socialIcons: # optional
+        - name: "LinkedIn"
+          url: "https://www.linkedin.com/in/thomas-w-588182221/"
+        - name: "Github"
+          url: "https://github.com/twimart"
+
+
+
+languages:
+    en:
+        languageName: ":uk:"
+        languageAltTitle: Anglais
+        weight: 1
+        taxonomies:
+          category: categories
+          tag: tags
+          series: series
+        menu:
+            main:
+                - identifier: archives
+                  name: Archives
+                  url: /archives/
+                  weight: 5
+
+    fr:
+        languageName: ":fr:"
+        languageAltTitle: French
+        weight: 2
+        title: "Thomas WIMART"
+        taxonomies:
+          category: FRcategories
+          tag: FRtags
+          series: FRseries
+        profileMode:
+            enabled: true
+            title: "Bienvenue! 👋"
+            subtitle: "Vous trouverez ici mon portfolio, ainsi que mes notes informatiques. 😊💻"
+            imageUrl: "/avatar.jpg" # optional
+            imageTitle: "une image test" # optional
+            imageWidth: 170 # custom size 
+            imageHeight: 170 # custom size
+            buttons:
+              - name: Mon Portfolio
+                url: "/fr/postsfr/portfolio/"
+              - name: Mes Notes
+                url: "/fr/notes/"
+
+        menu:
+            main:
+                - identifier: archives
+                  name: Archives
+                  url: /archives/
+                  weight: 5
