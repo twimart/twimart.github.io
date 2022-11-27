@@ -1,7 +1,6 @@
 ---
 title: "Hugo basic commands"
 date: 2022-11-17T10:45:08+01:00
-draft: false
 ---
 .
 ### - hugo new site sitename -f yml ###

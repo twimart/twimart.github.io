@@ -1,7 +1,6 @@
 ---
 title: "Create and configure a DNS server on Linux with Bind9"
 date: 2022-11-17T14:01:35+01:00
-draft: false
 ---
 
 -Install Bind9:
