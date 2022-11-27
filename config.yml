@@ -1,15 +1,5 @@
-baseURL: http://example.org/
+baseURL: http://twimart.github.io/
 languageCode: en-us
 title: twimart
 theme: "PaperMod"
 
-
-profileMode:
-    enabled: true # needs to be explicitly set
-    title: ExampleSite
-    subtitle: "This is subtitle"
-    buttons:
-      - name: Posts
-        url: posts
-      - name: Tags
-        url: tags
