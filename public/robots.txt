@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://thomaswimart.onrender.com/sitemap.xml
