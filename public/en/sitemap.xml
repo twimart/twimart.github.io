@@ -2,65 +2,65 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://thomaswimart.onrender.com/posts/linux-dns/</loc>
+    <loc>https://twimart.github.io/posts/linux-dns/</loc>
     <lastmod>2022-11-17T14:01:35+01:00</lastmod>
   </url><url>
-    <loc>https://thomaswimart.onrender.com/posts/</loc>
+    <loc>https://twimart.github.io/posts/</loc>
     <lastmod>2022-11-17T14:01:35+01:00</lastmod>
   </url><url>
-    <loc>https://thomaswimart.onrender.com/</loc>
+    <loc>https://twimart.github.io/</loc>
     <lastmod>2022-11-17T14:01:35+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://thomaswimart.onrender.com/fr/"
+                href="https://twimart.github.io/fr/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://thomaswimart.onrender.com/"
+                href="https://twimart.github.io/"
                 />
   </url><url>
-    <loc>https://thomaswimart.onrender.com/posts/ssh/</loc>
+    <loc>https://twimart.github.io/posts/ssh/</loc>
     <lastmod>2022-11-17T13:39:04+01:00</lastmod>
   </url><url>
-    <loc>https://thomaswimart.onrender.com/english/</loc>
+    <loc>https://twimart.github.io/english/</loc>
     <lastmod>2022-11-17T11:02:24+01:00</lastmod>
   </url><url>
-    <loc>https://thomaswimart.onrender.com/english/portfolio/</loc>
+    <loc>https://twimart.github.io/english/portfolio/</loc>
     <lastmod>2022-11-17T11:02:24+01:00</lastmod>
   </url><url>
-    <loc>https://thomaswimart.onrender.com/posts/hugo-commands/</loc>
+    <loc>https://twimart.github.io/posts/hugo-commands/</loc>
     <lastmod>2022-11-17T10:45:08+01:00</lastmod>
   </url><url>
-    <loc>https://thomaswimart.onrender.com/archives/</loc>
+    <loc>https://twimart.github.io/archives/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://thomaswimart.onrender.com/fr/archives/"
+                href="https://twimart.github.io/fr/archives/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://thomaswimart.onrender.com/archives/"
+                href="https://twimart.github.io/archives/"
                 />
   </url><url>
-    <loc>https://thomaswimart.onrender.com/categories/</loc>
+    <loc>https://twimart.github.io/categories/</loc>
   </url><url>
-    <loc>https://thomaswimart.onrender.com/search/</loc>
+    <loc>https://twimart.github.io/search/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://thomaswimart.onrender.com/fr/search/"
+                href="https://twimart.github.io/fr/search/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://thomaswimart.onrender.com/search/"
+                href="https://twimart.github.io/search/"
                 />
   </url><url>
-    <loc>https://thomaswimart.onrender.com/series/</loc>
+    <loc>https://twimart.github.io/series/</loc>
   </url><url>
-    <loc>https://thomaswimart.onrender.com/tags/</loc>
+    <loc>https://twimart.github.io/tags/</loc>
   </url>
 </urlset>
