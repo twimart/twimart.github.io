@@ -69,7 +69,7 @@ params:
 
 languages:
     en:
-        languageName: ":uk:"
+        languageName: "🌍 EN "
         languageAltTitle: Anglais
         weight: 1
         taxonomies:
@@ -92,7 +92,7 @@ languages:
                   weight: 15
 
     fr:
-        languageName: ":fr:"
+        languageName: "🌍 FR "
         languageAltTitle: French
         weight: 2
         title: "Thomas WIMART"
@@ -121,7 +121,7 @@ languages:
                   url: /archives/
                   weight: 5
                 - identifier: tags
-                  name: Etiquettes
+                  name: Tags
                   url: /FRtags/
                   weight: 10
                 - identifier: search
