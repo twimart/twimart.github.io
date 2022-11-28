@@ -11,6 +11,12 @@ buildExpired: false
 enableEmoji: true
 pygmentsUseClasses: true
 
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON # is necessary
+
 
 params:
   author: Thomas
@@ -21,16 +27,21 @@ params:
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
   ShowToc: true
+  
 
   cover:
     ShowReadingTime: true
 
   assets:
-
     favicon: "/favicon.ico/"
     favicon16x16:  "/favicon-16x16.png/"
     favicon32x32:  "/favicon-32x32.png/"
     apple_touch_icon:  "/apple-touch-icon.png/"
+
+  label:
+    text: "Thomas WIMART"
+    icon: /apple-touch-icon.png
+    iconHeight: 30
 
 
   profileMode:
@@ -58,7 +69,7 @@ params:
 
 languages:
     en:
-        languageName: Anglais
+        languageName: ":uk:"
         languageAltTitle: Anglais
         weight: 1
         taxonomies:
@@ -72,12 +83,12 @@ languages:
                   url: /archives/
                   weight: 5
                 - identifier: search
-                  name: Search
+                  name: Search 🔍
                   url: /search/
                   weight: 10
 
     fr:
-        languageName: "French"
+        languageName: ":fr:"
         languageAltTitle: French
         weight: 2
         title: "Thomas WIMART"
@@ -106,6 +117,6 @@ languages:
                   url: /archives/
                   weight: 5
                 - identifier: search
-                  name: Search
+                  name: Recherche 🔍
                   url: /search/
                   weight: 10
