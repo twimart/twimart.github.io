@@ -97,7 +97,9 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://twimart.github.io/fr/" accesskey="h" title="Thomas WIMART (Alt + H)">Thomas WIMART</a>
+            <a href="https://twimart.github.io/fr/" accesskey="h" title="Thomas WIMART (Alt + H)">
+                <img src="https://twimart.github.io/apple-touch-icon.png" alt="" aria-label="logo"
+                    height="30">Thomas WIMART</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -122,7 +124,7 @@
                 <ul class="lang-switch"><li>|</li>
                     <li>
                         <a href="https://twimart.github.io/" title="Anglais"
-                            aria-label="Anglais">Anglais</a>
+                            aria-label=":uk:">🇬🇧</a>
                     </li>
                 </ul>
             </div>
@@ -134,8 +136,13 @@
                 </a>
             </li>
             <li>
-                <a href="https://twimart.github.io/fr/search/" title="Search (Alt &#43; /)" accesskey=/>
-                    <span>Search</span>
+                <a href="https://twimart.github.io/fr/frtags/" title="Etiquettes">
+                    <span>Etiquettes</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://twimart.github.io/fr/search/" title="Recherche 🔍 (Alt &#43; /)" accesskey=/>
+                    <span>Recherche 🔍</span>
                 </a>
             </li>
         </ul>
@@ -150,7 +157,7 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>Créer et configurer un serveur DNS sur Linux avec Bind9:
+    <h2>Créer et configurer un serveur DNS sur Linux avec Bind9
     </h2>
   </header>
   <div class="entry-content">
@@ -162,20 +169,20 @@ zone &#34;example.com&#34; {type master;file &#34;/etc/bind/db.example.com&#34
 Dans db.example.com, on configure sa zone (l’IP de mon serveur DNS est 192....</p>
   </div>
   <footer class="entry-footer"><span title='2022-11-17 14:01:35 +0100 CET'>novembre 17, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Thomas</footer>
-  <a class="entry-link" aria-label="post link to Créer et configurer un serveur DNS sur Linux avec Bind9:" href="https://twimart.github.io/fr/notes/linux-dns/"></a>
+  <a class="entry-link" aria-label="post link to Créer et configurer un serveur DNS sur Linux avec Bind9" href="https://twimart.github.io/fr/notes/linux-dns/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>Etablir une connexion SSH 
+    <h2>Etablir une connexion SSH sur un appareil Cisco 
     </h2>
   </header>
   <div class="entry-content">
-    <p>La procédure à suivre pour activer une connexion SSH sur un routeur Cisco:
+    <p>La procédure à suivre pour activer une connexion SSH sur un appareil Cisco:
 Router(config)# ip domain-name exemplesecurity.comRouter(config)# username SSHadmin privilege 15 secret topsecretRouter(config)# line vty 0 4Router(config-line)# login localRouter(config-line)# transport input ssh Router(config)# crypto key zeroize rsaRouter(config)# crypto key generate rsa% Please define a hostname other than Router.Router(config)# hostname RouterExempleRouterExemple(config)# crypto key generate rsa [Enter]The name for the keys will be: RouterExemple....</p>
   </div>
   <footer class="entry-footer"><span title='2022-11-17 13:39:04 +0100 CET'>novembre 17, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Thomas</footer>
-  <a class="entry-link" aria-label="post link to Etablir une connexion SSH " href="https://twimart.github.io/fr/notes/ssh/"></a>
+  <a class="entry-link" aria-label="post link to Etablir une connexion SSH sur un appareil Cisco " href="https://twimart.github.io/fr/notes/ssh/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -184,8 +191,7 @@ Router(config)# ip domain-name exemplesecurity.comRouter(config)# username SSHa
     </h2>
   </header>
   <div class="entry-content">
-    <p>TEST
-- hugo new site sitename -f yml Permet de créer les fichiers de base pour la création d’un nouveau site web. L’option “-f yml” va forcer la création du fichier de configuration principal en .yml (ce que je recommande).
+    <p>- hugo new site sitename -f yml Permet de créer les fichiers de base pour la création d’un nouveau site web. L’option “-f yml” va forcer la création du fichier de configuration principal en .yml (ce que je recommande).
 - hugo server Permet de démarrer le serveur web local de hugo: cela va nous permettre de voir en direct les modifications apportées à notre site web. Il faut exécuter cette commande dans la racine de notre site web....</p>
   </div>
   <footer class="entry-footer"><span title='2022-11-17 10:45:08 +0100 CET'>novembre 17, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Thomas</footer>

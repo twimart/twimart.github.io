@@ -5,7 +5,16 @@
     <loc>https://twimart.github.io/posts/linux-dns/</loc>
     <lastmod>2022-11-17T14:01:35+01:00</lastmod>
   </url><url>
+    <loc>https://twimart.github.io/tags/dns/</loc>
+    <lastmod>2022-11-17T14:01:35+01:00</lastmod>
+  </url><url>
+    <loc>https://twimart.github.io/tags/linux/</loc>
+    <lastmod>2022-11-17T14:01:35+01:00</lastmod>
+  </url><url>
     <loc>https://twimart.github.io/posts/</loc>
+    <lastmod>2022-11-17T14:01:35+01:00</lastmod>
+  </url><url>
+    <loc>https://twimart.github.io/tags/</loc>
     <lastmod>2022-11-17T14:01:35+01:00</lastmod>
   </url><url>
     <loc>https://twimart.github.io/</loc>
@@ -21,7 +30,13 @@
                 href="https://twimart.github.io/"
                 />
   </url><url>
+    <loc>https://twimart.github.io/tags/cisco/</loc>
+    <lastmod>2022-11-17T13:39:04+01:00</lastmod>
+  </url><url>
     <loc>https://twimart.github.io/posts/ssh/</loc>
+    <lastmod>2022-11-17T13:39:04+01:00</lastmod>
+  </url><url>
+    <loc>https://twimart.github.io/tags/ssh/</loc>
     <lastmod>2022-11-17T13:39:04+01:00</lastmod>
   </url><url>
     <loc>https://twimart.github.io/english/</loc>
@@ -29,6 +44,9 @@
   </url><url>
     <loc>https://twimart.github.io/english/portfolio/</loc>
     <lastmod>2022-11-17T11:02:24+01:00</lastmod>
+  </url><url>
+    <loc>https://twimart.github.io/tags/hugo/</loc>
+    <lastmod>2022-11-17T10:45:08+01:00</lastmod>
   </url><url>
     <loc>https://twimart.github.io/posts/hugo-commands/</loc>
     <lastmod>2022-11-17T10:45:08+01:00</lastmod>
@@ -60,7 +78,5 @@
                 />
   </url><url>
     <loc>https://twimart.github.io/series/</loc>
-  </url><url>
-    <loc>https://twimart.github.io/tags/</loc>
   </url>
 </urlset>

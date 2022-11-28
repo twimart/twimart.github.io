@@ -1,8 +1,9 @@
 ---
 title: "Hugo basic commands"
 date: 2022-11-17T10:45:08+01:00
+tags: ["hugo"]
 ---
-.
+
 ### - hugo new site sitename -f yml ###
 
 Allows you to create the basic files for the creation of a new web site. The "-f yml" option will force the creation of the main configuration file in .yml (which I recommend).

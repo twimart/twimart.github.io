@@ -82,10 +82,14 @@ languages:
                   name: Archives
                   url: /archives/
                   weight: 5
-                - identifier: search
+                - identifier: tags
+                  name: Tags
+                  url: /tags/
+                  weight: 10
+                - identifier: searchx 
                   name: Search 🔍
                   url: /search/
-                  weight: 10
+                  weight: 15
 
     fr:
         languageName: ":fr:"
@@ -116,7 +120,11 @@ languages:
                   name: Archives
                   url: /archives/
                   weight: 5
+                - identifier: tags
+                  name: Etiquettes
+                  url: /FRtags/
+                  weight: 10
                 - identifier: search
                   name: Recherche 🔍
                   url: /search/
-                  weight: 10
+                  weight: 15

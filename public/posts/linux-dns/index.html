@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <title>Create and configure a DNS server on Linux with Bind9 | Thomas WIMART</title>
-<meta name="keywords" content="">
+<meta name="keywords" content="linux, DNS">
 <meta name="description" content="-Install Bind9:
 sudo apt-get install bind9
 -First, we put these 3 lines in the named.conf file:
@@ -112,7 +112,7 @@ In db.example.com, we configure our zone (the IP of my DNS server is 192."/>
   "name": "Create and configure a DNS server on Linux with Bind9",
   "description": "-Install Bind9:\nsudo apt-get install bind9\n-First, we put these 3 lines in the named.conf file:\ninclude \u0026#34;/etc/bind/named.conf.options\u0026#34;;\rinclude \u0026#34;/etc/bind/named.conf.local\u0026#34;;\rinclude \u0026#34;/etc/bind/named.conf.default-zones\u0026#34;; -In the bind9 configuration file \u0026ldquo;named.conf.local\u0026rdquo;, declare its zones :\nzone \u0026#34;example.com\u0026#34; {\rtype master;\rfile \u0026#34;/etc/bind/db.example.com\u0026#34;;\r}; → The \u0026ldquo;file\u0026rdquo; line specifies that the configuration of our example.com zone will be done in the \u0026ldquo;db.example.com\u0026rdquo; file.\nIn db.example.com, we configure our zone (the IP of my DNS server is 192.",
   "keywords": [
-    
+    "linux", "DNS"
   ],
   "articleBody": "-Install Bind9:\nsudo apt-get install bind9\n-First, we put these 3 lines in the named.conf file:\ninclude \"/etc/bind/named.conf.options\";\rinclude \"/etc/bind/named.conf.local\";\rinclude \"/etc/bind/named.conf.default-zones\"; -In the bind9 configuration file “named.conf.local”, declare its zones :\nzone \"example.com\" {\rtype master;\rfile \"/etc/bind/db.example.com\";\r}; → The “file” line specifies that the configuration of our example.com zone will be done in the “db.example.com” file.\nIn db.example.com, we configure our zone (the IP of my DNS server is 192.168.1.15 ):\n;\r; BIND data file for example.com\r;\r$TTL 604800\r@ IN SOA example.com. root.example.com. (\r2 ; Serial\r604800 ; Refresh\r86400 ; Retry\r2419200 ; Expire\r604800 ) ; Negative Cache TTL\rIN A 192.168.1.15\r;\r@ IN NS ns.example.com.\rns IN A 192.168.1.15\rserv1 IN A 192.168.1.1\rserv2 IN A 192.168.1.2 The first paragraph corresponds to the SOA record, we can leave it as it is.\nIn the second paragraph, we are going to give information to our DNS server, that means, we are going to enter manually the names of machines and their IP useful to my DNS server.\n⚠ It is strongly recommended to make the NS record, it is the standard.\nFirst, I gave my DNS server the IPs of the other DNS servers in the example.com domain (this is the NS record). Although there is only one (my DNS server), I put it anyway.\nThen I declared 2 web servers, serv1 and serv2.\nI remind you that you will have to adapt this configuration according to your needs, this is only an example.\nIf our DNS server is not able to resolve a certain domain name, it must send these requests to other DNS servers that can do it. These servers are called “forwarders”. We must indicate them in the file “named.conf.options”.\nforwarders {\r8.8.8.8;\r172.25.254.15 ;\r}; You should now have a working DNS server! 😁\n",
   "wordCount" : "308",
@@ -154,7 +154,9 @@ In db.example.com, we configure our zone (the IP of my DNS server is 192."/>
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://twimart.github.io/" accesskey="h" title="Thomas WIMART (Alt + H)">Thomas WIMART</a>
+            <a href="https://twimart.github.io/" accesskey="h" title="Thomas WIMART (Alt + H)">
+                <img src="https://twimart.github.io/apple-touch-icon.png" alt="" aria-label="logo"
+                    height="30">Thomas WIMART</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -179,7 +181,7 @@ In db.example.com, we configure our zone (the IP of my DNS server is 192."/>
                 <ul class="lang-switch"><li>|</li>
                     <li>
                         <a href="https://twimart.github.io/fr/" title="French"
-                            aria-label="French">French</a>
+                            aria-label=":fr:">🇫🇷</a>
                     </li>
                 </ul>
             </div>
@@ -191,8 +193,13 @@ In db.example.com, we configure our zone (the IP of my DNS server is 192."/>
                 </a>
             </li>
             <li>
-                <a href="https://twimart.github.io/search/" title="Search (Alt &#43; /)" accesskey=/>
-                    <span>Search</span>
+                <a href="https://twimart.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://twimart.github.io/search/" title="Search 🔍">
+                    <span>Search 🔍</span>
                 </a>
             </li>
         </ul>
@@ -258,6 +265,8 @@ serv2   IN      A       192.168.1.2
 
   <footer class="post-footer">
     <ul class="post-tags">
+      <li><a href="https://twimart.github.io/tags/linux/">linux</a></li>
+      <li><a href="https://twimart.github.io/tags/dns/">DNS</a></li>
     </ul>
 <nav class="paginav">
   <a class="next" href="https://twimart.github.io/posts/ssh/">

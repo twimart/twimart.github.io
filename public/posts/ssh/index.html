@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <title>Set up an SSH connection | Thomas WIMART</title>
-<meta name="keywords" content="">
+<meta name="keywords" content="cisco, ssh">
 <meta name="description" content="Follow this procedure to enable SSH connexion on a Cisco router:
 Router(config)# ip domain-name exemplesecurity.comRouter (config)# username SSHadmin privilege 15 secret topsecretRouter (config)# line vty 0 4Router (config-line)# login localRouter (config-line)# transport input sshRouter (config)# crypto key zeroize rsaRouter(config)# crypto key generate rsa% Please define a hostname other than Router.Router(config)# hostname RouterExempleRouterSIO(config)# crypto key generate rsa [Enter]The name for the keys will be: RouterExemple.">
 <meta name="author" content="Thomas">
@@ -100,7 +100,7 @@ Router(config)# ip domain-name exemplesecurity.comRouter (config)# username SSH
   "name": "Set up an SSH connection",
   "description": "Follow this procedure to enable SSH connexion on a Cisco router:\nRouter(config)# ip domain-name exemplesecurity.com\rRouter (config)# username SSHadmin privilege 15 secret topsecret\rRouter (config)# line vty 0 4\rRouter (config-line)# login local\rRouter (config-line)# transport input ssh\rRouter (config)# crypto key zeroize rsa\rRouter(config)# crypto key generate rsa\r% Please define a hostname other than Router.\rRouter(config)# hostname RouterExemple\rRouterSIO(config)# crypto key generate rsa [Enter]\rThe name for the keys will be: RouterExemple.",
   "keywords": [
-    
+    "cisco", "ssh"
   ],
   "articleBody": "Follow this procedure to enable SSH connexion on a Cisco router:\nRouter(config)# ip domain-name exemplesecurity.com\rRouter (config)# username SSHadmin privilege 15 secret topsecret\rRouter (config)# line vty 0 4\rRouter (config-line)# login local\rRouter (config-line)# transport input ssh\rRouter (config)# crypto key zeroize rsa\rRouter(config)# crypto key generate rsa\r% Please define a hostname other than Router.\rRouter(config)# hostname RouterExemple\rRouterSIO(config)# crypto key generate rsa [Enter]\rThe name for the keys will be: RouterExemple.exemple.org\rChoose the size of the key modulus in the range of 360 to 2048 for your\rGeneral Purpose Keys. Choosing a key modulus greater than 512 may take\ra few minutes.\rHow many bits in the modulus [512]:1024\r% Generating 1024 bit RSA keys, keys will be non-exportable...[OK]\rRouterExemple (config)# ip ssh time-out 90\rRouterExemple (config)# ip ssh authentication-retries 2\rRouterExemple (config)# ip ssh version 2 ",
   "wordCount" : "140",
@@ -142,7 +142,9 @@ Router(config)# ip domain-name exemplesecurity.comRouter (config)# username SSH
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://twimart.github.io/" accesskey="h" title="Thomas WIMART (Alt + H)">Thomas WIMART</a>
+            <a href="https://twimart.github.io/" accesskey="h" title="Thomas WIMART (Alt + H)">
+                <img src="https://twimart.github.io/apple-touch-icon.png" alt="" aria-label="logo"
+                    height="30">Thomas WIMART</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -167,7 +169,7 @@ Router(config)# ip domain-name exemplesecurity.comRouter (config)# username SSH
                 <ul class="lang-switch"><li>|</li>
                     <li>
                         <a href="https://twimart.github.io/fr/" title="French"
-                            aria-label="French">French</a>
+                            aria-label=":fr:">🇫🇷</a>
                     </li>
                 </ul>
             </div>
@@ -179,8 +181,13 @@ Router(config)# ip domain-name exemplesecurity.comRouter (config)# username SSH
                 </a>
             </li>
             <li>
-                <a href="https://twimart.github.io/search/" title="Search (Alt &#43; /)" accesskey=/>
-                    <span>Search</span>
+                <a href="https://twimart.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://twimart.github.io/search/" title="Search 🔍">
+                    <span>Search 🔍</span>
                 </a>
             </li>
         </ul>
@@ -242,6 +249,8 @@ RouterExemple (config)# ip ssh version 2
 
   <footer class="post-footer">
     <ul class="post-tags">
+      <li><a href="https://twimart.github.io/tags/cisco/">cisco</a></li>
+      <li><a href="https://twimart.github.io/tags/ssh/">ssh</a></li>
     </ul>
 <nav class="paginav">
   <a class="prev" href="https://twimart.github.io/posts/linux-dns/">

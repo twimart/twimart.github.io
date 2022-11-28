@@ -5,9 +5,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Etablir une connexion SSH  | Thomas WIMART</title>
+<title>Etablir une connexion SSH sur un appareil Cisco  | Thomas WIMART</title>
 <meta name="keywords" content="">
-<meta name="description" content="La procédure à suivre pour activer une connexion SSH sur un routeur Cisco:
+<meta name="description" content="La procédure à suivre pour activer une connexion SSH sur un appareil Cisco:
 Router(config)# ip domain-name exemplesecurity.comRouter(config)# username SSHadmin privilege 15 secret topsecretRouter(config)# line vty 0 4Router(config-line)# login localRouter(config-line)# transport input ssh Router(config)# crypto key zeroize rsaRouter(config)# crypto key generate rsa% Please define a hostname other than Router.Router(config)# hostname RouterExempleRouterExemple(config)# crypto key generate rsa [Enter]The name for the keys will be: RouterExemple.">
 <meta name="author" content="Thomas">
 <link rel="canonical" href="https://twimart.github.io/fr/notes/ssh/">
@@ -58,8 +58,8 @@ Router(config)# ip domain-name exemplesecurity.comRouter(config)# username SSHa
         }
 
     </style>
-</noscript><meta property="og:title" content="Etablir une connexion SSH " />
-<meta property="og:description" content="La procédure à suivre pour activer une connexion SSH sur un routeur Cisco:
+</noscript><meta property="og:title" content="Etablir une connexion SSH sur un appareil Cisco " />
+<meta property="og:description" content="La procédure à suivre pour activer une connexion SSH sur un appareil Cisco:
 Router(config)# ip domain-name exemplesecurity.comRouter(config)# username SSHadmin privilege 15 secret topsecretRouter(config)# line vty 0 4Router(config-line)# login localRouter(config-line)# transport input ssh Router(config)# crypto key zeroize rsaRouter(config)# crypto key generate rsa% Please define a hostname other than Router.Router(config)# hostname RouterExempleRouterExemple(config)# crypto key generate rsa [Enter]The name for the keys will be: RouterExemple." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://twimart.github.io/fr/notes/ssh/" /><meta property="article:section" content="notes" />
@@ -67,8 +67,8 @@ Router(config)# ip domain-name exemplesecurity.comRouter(config)# username SSHa
 <meta property="article:modified_time" content="2022-11-17T13:39:04+01:00" /><meta property="og:site_name" content="Thomas WIMART" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Etablir une connexion SSH "/>
-<meta name="twitter:description" content="La procédure à suivre pour activer une connexion SSH sur un routeur Cisco:
+<meta name="twitter:title" content="Etablir une connexion SSH sur un appareil Cisco "/>
+<meta name="twitter:description" content="La procédure à suivre pour activer une connexion SSH sur un appareil Cisco:
 Router(config)# ip domain-name exemplesecurity.comRouter(config)# username SSHadmin privilege 15 secret topsecretRouter(config)# line vty 0 4Router(config-line)# login localRouter(config-line)# transport input ssh Router(config)# crypto key zeroize rsaRouter(config)# crypto key generate rsa% Please define a hostname other than Router.Router(config)# hostname RouterExempleRouterExemple(config)# crypto key generate rsa [Enter]The name for the keys will be: RouterExemple."/>
 
 
@@ -86,7 +86,7 @@ Router(config)# ip domain-name exemplesecurity.comRouter(config)# username SSHa
     {
       "@type": "ListItem",
       "position":  2 ,
-      "name": "Etablir une connexion SSH ",
+      "name": "Etablir une connexion SSH sur un appareil Cisco ",
       "item": "https://twimart.github.io/fr/notes/ssh/"
     }
   ]
@@ -96,13 +96,13 @@ Router(config)# ip domain-name exemplesecurity.comRouter(config)# username SSHa
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Etablir une connexion SSH ",
-  "name": "Etablir une connexion SSH ",
-  "description": "La procédure à suivre pour activer une connexion SSH sur un routeur Cisco:\nRouter(config)# ip domain-name exemplesecurity.com\rRouter(config)# username SSHadmin privilege 15 secret topsecret\rRouter(config)# line vty 0 4\rRouter(config-line)# login local\rRouter(config-line)# transport input ssh Router(config)# crypto key zeroize rsa\rRouter(config)# crypto key generate rsa\r% Please define a hostname other than Router.\rRouter(config)# hostname RouterExemple\rRouterExemple(config)# crypto key generate rsa [Enter]\rThe name for the keys will be: RouterExemple.",
+  "headline": "Etablir une connexion SSH sur un appareil Cisco ",
+  "name": "Etablir une connexion SSH sur un appareil Cisco ",
+  "description": "La procédure à suivre pour activer une connexion SSH sur un appareil Cisco:\nRouter(config)# ip domain-name exemplesecurity.com\rRouter(config)# username SSHadmin privilege 15 secret topsecret\rRouter(config)# line vty 0 4\rRouter(config-line)# login local\rRouter(config-line)# transport input ssh Router(config)# crypto key zeroize rsa\rRouter(config)# crypto key generate rsa\r% Please define a hostname other than Router.\rRouter(config)# hostname RouterExemple\rRouterExemple(config)# crypto key generate rsa [Enter]\rThe name for the keys will be: RouterExemple.",
   "keywords": [
     
   ],
-  "articleBody": "La procédure à suivre pour activer une connexion SSH sur un routeur Cisco:\nRouter(config)# ip domain-name exemplesecurity.com\rRouter(config)# username SSHadmin privilege 15 secret topsecret\rRouter(config)# line vty 0 4\rRouter(config-line)# login local\rRouter(config-line)# transport input ssh Router(config)# crypto key zeroize rsa\rRouter(config)# crypto key generate rsa\r% Please define a hostname other than Router.\rRouter(config)# hostname RouterExemple\rRouterExemple(config)# crypto key generate rsa [Enter]\rThe name for the keys will be: RouterExemple.exemple.org\rChoose the size of the key modulus in the range of 360 to 2048 for your\rGeneral Purpose Keys. Choosing a key modulus greater than 512 may take\ra few minutes.\rHow many bits in the modulus [512]:1024\r% Generating 1024 bit RSA keys, keys will be non-exportable...[OK]\rRouterExemple(config)# ip ssh time-out 90\rRouterExemple(config)# ip ssh authentication-retries 2\rRouterExemple(config)# ip ssh version 2 ",
+  "articleBody": "La procédure à suivre pour activer une connexion SSH sur un appareil Cisco:\nRouter(config)# ip domain-name exemplesecurity.com\rRouter(config)# username SSHadmin privilege 15 secret topsecret\rRouter(config)# line vty 0 4\rRouter(config-line)# login local\rRouter(config-line)# transport input ssh Router(config)# crypto key zeroize rsa\rRouter(config)# crypto key generate rsa\r% Please define a hostname other than Router.\rRouter(config)# hostname RouterExemple\rRouterExemple(config)# crypto key generate rsa [Enter]\rThe name for the keys will be: RouterExemple.exemple.org\rChoose the size of the key modulus in the range of 360 to 2048 for your\rGeneral Purpose Keys. Choosing a key modulus greater than 512 may take\ra few minutes.\rHow many bits in the modulus [512]:1024\r% Generating 1024 bit RSA keys, keys will be non-exportable...[OK]\rRouterExemple(config)# ip ssh time-out 90\rRouterExemple(config)# ip ssh authentication-retries 2\rRouterExemple(config)# ip ssh version 2 ",
   "wordCount" : "134",
   "inLanguage": "fr",
   "datePublished": "2022-11-17T13:39:04+01:00",
@@ -142,7 +142,9 @@ Router(config)# ip domain-name exemplesecurity.comRouter(config)# username SSHa
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://twimart.github.io/fr/" accesskey="h" title="Thomas WIMART (Alt + H)">Thomas WIMART</a>
+            <a href="https://twimart.github.io/fr/" accesskey="h" title="Thomas WIMART (Alt + H)">
+                <img src="https://twimart.github.io/apple-touch-icon.png" alt="" aria-label="logo"
+                    height="30">Thomas WIMART</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -167,7 +169,7 @@ Router(config)# ip domain-name exemplesecurity.comRouter(config)# username SSHa
                 <ul class="lang-switch"><li>|</li>
                     <li>
                         <a href="https://twimart.github.io/" title="Anglais"
-                            aria-label="Anglais">Anglais</a>
+                            aria-label=":uk:">🇬🇧</a>
                     </li>
                 </ul>
             </div>
@@ -179,8 +181,13 @@ Router(config)# ip domain-name exemplesecurity.comRouter(config)# username SSHa
                 </a>
             </li>
             <li>
-                <a href="https://twimart.github.io/fr/search/" title="Search (Alt &#43; /)" accesskey=/>
-                    <span>Search</span>
+                <a href="https://twimart.github.io/fr/frtags/" title="Etiquettes">
+                    <span>Etiquettes</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://twimart.github.io/fr/search/" title="Recherche 🔍 (Alt &#43; /)" accesskey=/>
+                    <span>Recherche 🔍</span>
                 </a>
             </li>
         </ul>
@@ -192,14 +199,14 @@ Router(config)# ip domain-name exemplesecurity.comRouter(config)# username SSHa
   <header class="post-header">
     <div class="breadcrumbs"><a href="https://twimart.github.io/fr/">Accueil</a>&nbsp;»&nbsp;<a href="https://twimart.github.io/fr/notes/">Notes</a></div>
     <h1 class="post-title">
-      Etablir une connexion SSH 
+      Etablir une connexion SSH sur un appareil Cisco 
     </h1>
     <div class="post-meta"><span title='2022-11-17 13:39:04 +0100 CET'>novembre 17, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Thomas
 
 </div>
   </header> 
 
-  <div class="post-content"><p>La procédure à suivre pour activer une connexion SSH sur un routeur Cisco:</p>
+  <div class="post-content"><p>La procédure à suivre pour activer une connexion SSH sur un appareil Cisco:</p>
 <pre tabindex="0"><code>Router(config)# ip domain-name exemplesecurity.com
 
 Router(config)# username SSHadmin privilege 15 secret topsecret
@@ -242,12 +249,14 @@ RouterExemple(config)# ip ssh version 2
 
   <footer class="post-footer">
     <ul class="post-tags">
+      <li><a href="https://twimart.github.io/fr/frtags/cisco/">cisco</a></li>
+      <li><a href="https://twimart.github.io/fr/frtags/ssh/">SSH</a></li>
     </ul>
 <nav class="paginav">
   <a class="prev" href="https://twimart.github.io/fr/notes/linux-dns/">
     <span class="title">« Page précédente</span>
     <br>
-    <span>Créer et configurer un serveur DNS sur Linux avec Bind9:</span>
+    <span>Créer et configurer un serveur DNS sur Linux avec Bind9</span>
   </a>
   <a class="next" href="https://twimart.github.io/fr/notes/commandes-hugo/">
     <span class="title">Page suivante »</span>

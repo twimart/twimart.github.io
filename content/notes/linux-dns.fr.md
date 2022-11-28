@@ -1,8 +1,8 @@
 ---
-title: "Créer et configurer un serveur DNS sur Linux avec Bind9:"
+title: "Créer et configurer un serveur DNS sur Linux avec Bind9"
 date: 2022-11-17T14:01:35+01:00
+FRtags: ["linux", "DNS"]
 ---
-
 
 -Installer Bind9 :
 

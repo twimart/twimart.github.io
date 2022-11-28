@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>cisco on Thomas WIMART</title>
+    <link>https://twimart.github.io/tags/cisco/</link>
+    <description>Recent content in cisco on Thomas WIMART</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 17 Nov 2022 13:39:04 +0100</lastBuildDate><atom:link href="https://twimart.github.io/tags/cisco/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Set up an SSH connection</title>
+      <link>https://twimart.github.io/posts/ssh/</link>
+      <pubDate>Thu, 17 Nov 2022 13:39:04 +0100</pubDate>
+      
+      <guid>https://twimart.github.io/posts/ssh/</guid>
+      <description>Follow this procedure to enable SSH connexion on a Cisco router:
+Router(config)# ip domain-name exemplesecurity.comRouter (config)# username SSHadmin privilege 15 secret topsecretRouter (config)# line vty 0 4Router (config-line)# login localRouter (config-line)# transport input sshRouter (config)# crypto key zeroize rsaRouter(config)# crypto key generate rsa% Please define a hostname other than Router.Router(config)# hostname RouterExempleRouterSIO(config)# crypto key generate rsa [Enter]The name for the keys will be: RouterExemple.</description>
+    </item>
+    
+  </channel>
+</rss>

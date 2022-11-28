@@ -1,6 +1,7 @@
 ---
 title: "Set up an SSH connection"
 date: 2022-11-17T13:39:04+01:00
+tags: ["cisco", "ssh"]
 ---
 
 
