@@ -1,4 +1,4 @@
-baseURL: https://thomaswimart.onrender.com/
+baseURL: https://twimart.github.io/
 languageCode: en-us
 title: Thomas WIMART
 theme: "PaperMod"
@@ -58,7 +58,7 @@ params:
 
 languages:
     en:
-        languageName: ":uk:"
+        languageName: Anglais
         languageAltTitle: Anglais
         weight: 1
         taxonomies:
@@ -77,7 +77,7 @@ languages:
                   weight: 10
 
     fr:
-        languageName: ":fr:"
+        languageName: "French"
         languageAltTitle: French
         weight: 2
         title: "Thomas WIMART"
