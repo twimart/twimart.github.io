@@ -55,7 +55,7 @@ params:
       buttons:
         - name: My Portfolio
           url: "/english/portfolio/"
-        - name: My Posts
+        - name: My IT Posts
           url: "/posts/"
             
 
