@@ -25,5 +25,6 @@ Je suis titulaire d'une certification Cisco Netacad NDG Linux Essential. Cette c
 
 ### Mon CV ###
 
+![cv](/french/cv.png)
 
-ya du lourd qui arrive ;)
+Je dois juste prendre une photo de bg mais ça arrive bientot :)

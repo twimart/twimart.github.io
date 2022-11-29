@@ -1,7 +1,7 @@
 ---
 title: "My Portfolio"
 date: 2022-11-17T11:02:24+01:00
-tags: ["portfolio", "Resume", "certifications"]
+tags: ["portfolio", "resume", "certifications"]
 ShowBreadCrumbs: false
 ---
 
@@ -21,10 +21,12 @@ The design and maintenance of this site is already a project in itself: indeed t
 
 I have a Cisco Netacad NDG Linux Essential certification. This certification attests to my knowledge of basic Linux commands.
 
-![image test](/french/certif-linux.png)
+![certif linux](/english/certif-linux.png)
 
 ### My Resume ###
 
+![cv](/english/cv.png)
 
-some heavy stuff coming ;)
+the english version and the photo will come soon! 
+
 

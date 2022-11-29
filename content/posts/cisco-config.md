@@ -2,6 +2,8 @@
 title: "Basic configuration for a Cisco device"
 date: 2022-11-29T10:25:59+01:00
 tags: ["cisco", "configuration"]
+ShowToc: true
+
 ---
 
 ## Basic Configuration ##
@@ -21,7 +23,7 @@ Switch(config)#
 
 Switch(config)# hostname SwitchToto
 
-SwitchToto(config)# ip domain-name ewempledomaine.local
+SwitchToto(config)# ip domain-name exempledomaine.local
 
 SwitchToto(config)# end
 

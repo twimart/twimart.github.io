@@ -21,7 +21,7 @@ Switch(config)#
 
 Switch(config)# hostname SwitchToto
 
-SwitchToto(config)# ip domain-name ewempledomaine.local
+SwitchToto(config)# ip domain-name exempledomaine.local
 
 SwitchToto(config)# end
 
@@ -106,3 +106,19 @@ Building configuration...
 SwitchToto#
 
 ```
+
+<script src="https://giscus.app/client.js"
+        data-repo="twimart/twimart.github.io"
+        data-repo-id="R_kgDOIgy40A"
+        data-category="General"
+        data-category-id="DIC_kwDOIgy40M4CS0LL"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="fr"
+        crossorigin="anonymous"
+        async>
+</script>
