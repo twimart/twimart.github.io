@@ -15,16 +15,15 @@ Ce site me sert à la fois de portfolio, mais aussi de notes personnelles qui me
 
 ### Mes projets ###
 
-La conception et la maintenance de ce site constituent déja un projet: en effet le dévellopement web n'est pas vraiment mon point fort. Mais j'ai beaucoup appris grâce au devellopement de ce site.
+La conception et la maintenance de ce site constituent déja un projet en soi: en effet le dévellopement web n'est pas vraiment mon point fort. Mais j'ai beaucoup appris grâce au devellopement de ce site.
 
 ### Mes certifications ###
 
 Je suis titulaire d'une certification Cisco Netacad NDG Linux Essential. Cette certification atteste de mes connaissances des commandes basiques de Linux.
 
-![image test](/french/certif-linux.png)
+![certif linux](/french/certif-linux.png)
 
 ### Mon CV ###
 
 
-
-(ce CV est en cour de production)
+ya du lourd qui arrive ;)

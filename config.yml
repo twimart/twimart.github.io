@@ -1,5 +1,5 @@
 baseURL: https://twimart.github.io/
-languageCode: en-us
+languageCode: en
 title: Thomas WIMART
 theme: "PaperMod"
 
@@ -42,7 +42,7 @@ params:
     text: "Thomas WIMART"
     icon: /apple-touch-icon.png
     iconHeight: 30
-
+    
 
   profileMode:
       enabled: true
@@ -86,7 +86,7 @@ languages:
                   name: Tags
                   url: /tags/
                   weight: 10
-                - identifier: searchx 
+                - identifier: search
                   name: Search 🔍
                   url: /search/
                   weight: 15

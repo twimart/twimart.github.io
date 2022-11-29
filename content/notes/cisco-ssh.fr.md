@@ -1,11 +1,10 @@
 ---
-title: "Etablir une connexion SSH sur un appareil Cisco "
-date: 2022-11-17T13:39:04+01:00
-FRtags: ["cisco", "SSH"] 
+title: "Etablir une connexion SSH sur un appareil Cisco"
+date: 2022-11-29T10:04:21+01:00
+FRtags: ["cisco", "SSH"]
 ---
 
-
-La procédure à suivre pour activer une connexion SSH sur un appareil Cisco:
+#### Activer une connexion SSH sur un appareil Cisco ####
 
 ```
 Router(config)# ip domain-name exemplesecurity.com

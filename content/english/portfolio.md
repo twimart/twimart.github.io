@@ -26,6 +26,5 @@ I have a Cisco Netacad NDG Linux Essential certification. This certification att
 ### My Resume ###
 
 
-
-(this resume is in production) (the english version of the resume will come later.)
+some heavy stuff coming ;)
 
