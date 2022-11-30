@@ -60,7 +60,9 @@ SwitchToto(config-if)# no ip address
 SwitchToto(config-if)# ex
 SwitchToto(config)# no ip default-gateway
 ```
-Il faut maintenant sécuriser notre Switch. ***Même si cette étape est optionnelle, je vous la recommande fortement.***
+Il faut maintenant sécuriser notre Switch.    
+***Même si cette étape est optionnelle, je vous la recommande fortement.***     
+
 On va tout d'abord masquer les futurs mots de passe que nous allons mettre sur ce switch, de manière à ce qu'ils ne s'affichent pas à l'écran même lors d'un `show running config`. On va donc ajouter le service **password-encryption**.
 
 
@@ -83,12 +85,12 @@ Désormais, si je veux rentrer dans le mode privilégié, il faudra que j'inscri
 Les commutateur Cisco possède 2 configurations: la "running-config" et la "startup-config". Lorsque le switch démarre, il utilise sa "startup-config". Si des changements de configuration sont crées, ils se feront dans la "running-config". Le commutateur utilisera alors sa "running-config".    
 En revanche, si les changements opérés se révelent être un échec, il suffit 
 de le redémarrer. Ainsi, le switch utilisera sa "startup-config", qui n'a donc pas changée.    
-Lorsque l'on est sur des changements faits, on peut copier la "running-config" dans la "startup-config". Les changements seront alors pris en compte dans la config par défaut, de démarrage, du commutateur.
+Lorsque l'on est certain des changements faits, on peut copier la "running-config" dans la "startup-config". Les changements seront alors pris en compte dans la config par défaut, de démarrage, du commutateur.
 
 ### Commandes ###
 
 ```
-SwitchToto# copy running-config st
+SwitchToto# copy running-config starting-config
 
 Destination filename [startup-config]?
 
@@ -107,18 +109,5 @@ SwitchToto#
 
 ```
 
-<script src="https://giscus.app/client.js"
-        data-repo="twimart/twimart.github.io"
-        data-repo-id="R_kgDOIgy40A"
-        data-category="General"
-        data-category-id="DIC_kwDOIgy40M4CS0LL"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="preferred_color_scheme"
-        data-lang="fr"
-        crossorigin="anonymous"
-        async>
-</script>
+Vous devriez maintenant avoir un switch configuré et sécurisé ! 😊
+

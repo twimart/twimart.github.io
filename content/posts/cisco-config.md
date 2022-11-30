@@ -64,7 +64,9 @@ SwitchToto(config-if)# ex
 SwitchToto(config)# no ip default-gateway
 
 ```
-Now we need to secure our switch. ***Even if this step is optional, I strongly recommend it.
+Now we need to secure our switch.    
+***Even if this step is optional, I strongly recommend it.***    
+
 We will first hide the future passwords that we will put on this switch, so that they will not be displayed on the screen even during a `show running config`. So we will add the **password-encryption** service.
 
 ```
@@ -92,7 +94,7 @@ When changes made are validated, the running-config can be copied to the startup
 ### Commands ###
 
 ```
-SwitchToto# copy running-config st
+SwitchToto# copy running-config starting-config
 
 Destination filename [startup-config]?
 
@@ -110,3 +112,4 @@ Building configuration...
 SwitchToto#
 
 ```
+You should now have a configurated and secure switch ! 😊
