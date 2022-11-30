@@ -4,9 +4,15 @@ date: 2022-11-17T14:01:35+01:00
 FRtags: ["linux", "DNS"]
 ---
 
--Installer Bind9 :
+Installer Bind9 :
 
 `sudo apt-get install bind9`
+
+Les fichiers de configuration de Bind9 sont dans `/etc/bind/`
+
+```
+cd /etc/bind/
+```
 
 Tout d’abord, on met cet 3 lignes dans le fichier named.conf : 
 
@@ -41,7 +47,7 @@ $TTL    604800
         IN      A       192.168.1.15
 ;
 @       IN      NS      ns.example.com.
-ns      IN      A         192.168.1.15
+ns      IN      A       192.168.1.15
 serv1   IN      A       192.168.1.1
 serv2   IN      A       192.168.1.2
 ```

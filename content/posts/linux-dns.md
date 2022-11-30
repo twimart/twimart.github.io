@@ -4,18 +4,25 @@ date: 2022-11-17T14:01:35+01:00
 tags: ["linux", "DNS"]
 ---
 
--Install Bind9:
+Install Bind9:
 
 `sudo apt-get install bind9`
 
--First, we put these 3 lines in the named.conf file:
+The Bind9 files are in `/etc/bind/`
+
+```
+cd /etc/bind/ 
+
+```
+
+Then, we put these 3 lines in the named.conf file:
 
 ```
 include "/etc/bind/named.conf.options";
 include "/etc/bind/named.conf.local";
 include "/etc/bind/named.conf.default-zones";
 ```
--In the bind9 configuration file "named.conf.local", declare its zones :
+In the Bind9 configuration file "named.conf.local", declare its zones :
 
 ```
 zone "example.com" {

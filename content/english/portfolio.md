@@ -21,11 +21,11 @@ The design and maintenance of this site is already a project in itself: indeed t
 
 I have a Cisco Netacad NDG Linux Essential certification. This certification attests to my knowledge of basic Linux commands.
 
-![certif linux](/english/certif-linux.png)
+![certif linux](/images/certif-linux.png)
 
 ### My Resume ###
 
-![cv](/english/cv.png)
+![cv](/images/cv.png)
 
 the english version and the photo will come soon! 
 

@@ -21,10 +21,10 @@ La conception et la maintenance de ce site constituent déja un projet en soi: e
 
 Je suis titulaire d'une certification Cisco Netacad NDG Linux Essential. Cette certification atteste de mes connaissances des commandes basiques de Linux.
 
-![certif linux](/french/certif-linux.png)
+![certif linux](/images/certif-linux.png)
 
 ### Mon CV ###
 
-![cv](/french/cv.png)
+![cv](/images/cv.png)
 
 Je dois juste prendre une photo de bg mais ça arrive bientot :)
