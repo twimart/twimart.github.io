@@ -1,6 +1,6 @@
 baseURL: https://twimart.github.io/
 languageCode: en
-title: Thomas WIMART
+title: WIMART Thomas 
 theme: "PaperMod"
 
 enableInlineShortcodes: true
@@ -39,7 +39,7 @@ params:
     apple_touch_icon:  "/apple-touch-icon.png/"
 
   label:
-    text: "Thomas WIMART"
+    text: "WIMART Thomas"
     icon: /apple-touch-icon.png
     iconHeight: 30
     
@@ -47,7 +47,7 @@ params:
   profileMode:
       enabled: true
       title: "Welcome!👋 "  # optional default will be site titl
-      subtitle: "You will find here my portfolio, as well as my computer notes. 😊💻"
+      subtitle: "You will find here my portfolio, as well as my IT. 😊💻"
       imageUrl: "/profile-picture.jpg" # optional
       imageTitle: "photo de moi" # optional
       imageWidth: 185 # custom size
@@ -61,7 +61,7 @@ params:
 
   socialIcons: # optional
         - name: "LinkedIn"
-          url: "https://www.linkedin.com/in/thomas-w-588182221/"
+          url: "https://www.linkedin.com/in/thomas-wimart"
         - name: "Github"
           url: "https://github.com/twimart"
 

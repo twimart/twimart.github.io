@@ -15,7 +15,7 @@ This site serves me as a portfolio, but also as personal notes for the missions 
 
 ### My projects ###
 
-The design and maintenance of this site is already a project in itself: indeed the web development is not really my strong point. But I learned a lot thanks to this site devellopment.
+The design and maintenance of this site is already a project in itself: indeed the web development is not really my strong point and it took a lot of time to make this website working... But I have learn several things 🙂. 
 
 ### My Certifications ###
 

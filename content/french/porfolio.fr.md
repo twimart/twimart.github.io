@@ -15,7 +15,7 @@ Ce site me sert à la fois de portfolio, mais aussi de notes personnelles qui me
 
 ### Mes projets ###
 
-La conception et la maintenance de ce site constituent déja un projet en soi: en effet le dévellopement web n'est pas vraiment mon point fort. Mais j'ai beaucoup appris grâce au devellopement de ce site.
+La conception et la maintenance de ce site constituent déja un projet en soi: en effet le dévellopement web n'est pas vraiment mon point fort. Il m'a fallu beaucoup de temps pour faire fonctionner ce site... Mais j'ai appris beaucoups de choses 🙂.
 
 ### Mes certifications ###
 
