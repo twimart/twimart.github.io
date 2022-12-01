@@ -14,15 +14,14 @@ Voila la topologie du réseau que nous allons utiliser dans ce tuto:
 Pour accéder à Internet, le PC "Linux" passera par le routeur "Pfsense", afin de sortir du réseau local "LAN". Ici la subtilité est que si "Linux" veut accéder à certaines page web, ces requêtes passeront d'abord par notre serveur proxy "Squid".    
 "Squid" pourra alors bloquer certaines pages web ou encore enregistrer certaine données dans sont cache afin d'améliorer les performances.    
 
-*Je précise que ce shéma ne sert que d'illustration, Pfsense et Squid ne forment en réalité qu'une seule machine.*
+*Je précise que ce shéma ne sert que d'illustration, Pfsense et Squid ne forment en réalité qu'une seule machine dans notre cas.*
 
 ## Création de la machine virtuelle ##
 
 Sur la page de téléchargement de [Pfsense](https://www.pfsense.org/download/), télécharger l'iso de notre future machine virtuelle. Je précise que vous allez obtenir fichier .gz, vous devez extraire ce fichier sur votre ordinateur.
 
-Ensuite, sur Vmware, vous pouvez créer votre machine virtuelle. (vous pouvez mon suivre mon tutoril [ici](/fr/notes/vmware).)
+Ensuite, sur Vmware, vous pouvez créer votre machine virtuelle. (vous pouvez mon suivre mon tutoriel [ici](/fr/notes/vmware).)
 
-***faire un tuto ⬆️***
 
 
 ## Installation de Pfsense ##

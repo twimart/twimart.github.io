@@ -15,15 +15,14 @@ Here is the network topology that we will use in this tutorial:
 To access the Internet, the "Linux" PC will go through the "Pfsense" router, in order to leave the local network "LAN". Here the subtlety is that if "Linux" wants to access some web pages, these requests will first go through our proxy server "Squid".    
 "Squid" will then be able to block some web pages or save some data in its cache to improve performance.    
 
-*I specify that this schema is only an illustration, Pfsense and Squid are actually one machine.*
+*I specify that this schema is only an illustration, Pfsense and Squid are actually one machine in our case.*
 
 ## Creation of the virtual machine ##
 
 On the download page of [Pfsense](https://www.pfsense.org/download/), download the iso of our future virtual machine. I would like to specify that you will get a .gz file, you have to extract this file on your computer.    
 
-Then, on Vmware, you can create your virtual machine. (you can follow my tutorial [here](/en/notes/tuto) ).
+Then, on Vmware, you can create your virtual machine. (you can follow my tutorial [here](/posts/vmware) ).
 
-***make a tuto ⬆️***
 
 ## Installing Pfsense ##
 
@@ -70,7 +69,6 @@ Confirm by pressing "y":
 
 ![pfsense9](/images/pfsense/pfsense9.png)
 
-Et nous avons enfin fini l'installation de Pfsense! Vous devrez maintenant arriver sur le menu de configuration principal.
 And we done with the Pfsense installation! You should now arrive at the main configuration menu.
 
 ![pfsense10](/images/pfsense/pfsense10.png)
