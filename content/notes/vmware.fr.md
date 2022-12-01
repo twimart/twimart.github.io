@@ -28,7 +28,7 @@ Choisissez l'option "Installer disc image file (iso), puis sélectonnez le fiche
 
 ⚠️ **Attention! La fenêtre qui suit peut ne pas apparaître lors de la création de votre VM. Pas de panique! C'est une fonctionnalité qui n'est supporté que par quelques OS mais ça ne change en rien l'installation.**
 
-Linux Ubuntu support "Easy Install". Grâce à cela, nous pouvons rentrer les information de login et de mot de passe lors de la création de la VM. 
+Linux Ubuntu supporte "Easy Install". Grâce à cela, nous pouvons rentrer les information de login et de mot de passe lors de la création de la VM. 
 
 ![vmware4](/images/vmware/vmware4.png)
 

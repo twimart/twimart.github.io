@@ -5,9 +5,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Posts | Thomas WIMART</title>
+<title>Posts | WIMART Thomas</title>
 <meta name="keywords" content="">
-<meta name="description" content="Posts - Thomas WIMART">
+<meta name="description" content="Posts - WIMART Thomas">
 <meta name="author" content="Thomas">
 <link rel="canonical" href="https://twimart.github.io/posts/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.3299c596a7007118365635c056dd427dace22b7b8c1341fdef6fa6c31359ba10.css" integrity="sha256-MpnFlqcAcRg2VjXAVt1CfaziK3uME0H972&#43;mwxNZuhA=" rel="preload stylesheet" as="style">
@@ -97,9 +97,9 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://twimart.github.io/" accesskey="h" title="Thomas WIMART (Alt + H)">
+            <a href="https://twimart.github.io/" accesskey="h" title="WIMART Thomas (Alt + H)">
                 <img src="https://twimart.github.io/apple-touch-icon.png" alt="" aria-label="logo"
-                    height="30">Thomas WIMART</a>
+                    height="30">WIMART Thomas</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -141,7 +141,7 @@
                 </a>
             </li>
             <li>
-                <a href="https://twimart.github.io/search/" title="Search 🔍">
+                <a href="https://twimart.github.io/search/" title="Search 🔍 (Alt &#43; /)" accesskey=/>
                     <span>Search 🔍</span>
                 </a>
             </li>
@@ -157,14 +157,58 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>Create a virtual machine with Vmware
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>I specify that I’m using Vmware Worksation 16 Pro. The installation of a Virtual Machine (VM) is running the same way if you use the Player version.
+Download an iso image Go to the download page of the desired OS. In this exemple, we gonna choose a very known Linux distribution, Ubuntu.
+Create the virtual machine On Vmware, select “Create a new virtual machine”:
+A virtual machine creation wizard appears....</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-12-01 13:57:01 +0100 CET'>December 1, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Thomas</footer>
+  <a class="entry-link" aria-label="post link to Create a virtual machine with Vmware" href="https://twimart.github.io/posts/vmware/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>Create a proxy server with Pfsense and Squid
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>In this note, we will see how to install a proxy server, using Pfsense and Squid. We will use virtual machines, created under Vmware.
+Topology of our network Here is the network topology that we will use in this tutorial:
+To access the Internet, the “Linux” PC will go through the “Pfsense” router, in order to leave the local network “LAN”. Here the subtlety is that if “Linux” wants to access some web pages, these requests will first go through our proxy server “Squid”....</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-12-01 10:29:45 +0100 CET'>December 1, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Thomas</footer>
+  <a class="entry-link" aria-label="post link to Create a proxy server with Pfsense and Squid" href="https://twimart.github.io/posts/proxy/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>Basic configuration for a Cisco device
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Basic Configuration Switch to privileged mode, then terminal configuration:
+Switch&gt;enSwitch#conf t Définir le nom du switch, ainsi que le domaine auquel il appartient (optionnel).
+Switch(config)#Switch(config)# hostname SwitchTotoSwitchToto(config)# ip domain-name exempledomaine.localSwitchToto(config)# end Define the IP addressing of the switch. To do this, we must create a VLAN dedicated to the switch configuration (here vlan 10). The IP we are going to define will be associated to this VLAN....</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-11-29 10:25:59 +0100 CET'>November 29, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Thomas</footer>
+  <a class="entry-link" aria-label="post link to Basic configuration for a Cisco device" href="https://twimart.github.io/posts/cisco-config/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>Create and configure a DNS server on Linux with Bind9
     </h2>
   </header>
   <div class="entry-content">
-    <p>-Install Bind9:
+    <p>Install Bind9:
 sudo apt-get install bind9
--First, we put these 3 lines in the named.conf file:
-include &#34;/etc/bind/named.conf.options&#34;;include &#34;/etc/bind/named.conf.local&#34;;include &#34;/etc/bind/named.conf.default-zones&#34;; -In the bind9 configuration file “named.conf.local”, declare its zones :
+The Bind9 files are in /etc/bind/
+cd /etc/bind/ Then, we put these 3 lines in the named.conf file:
+include &#34;/etc/bind/named.conf.options&#34;;include &#34;/etc/bind/named.conf.local&#34;;include &#34;/etc/bind/named.conf.default-zones&#34;; In the Bind9 configuration file “named.conf.local”, declare its zones :
 zone &#34;example.com&#34; {type master;file &#34;/etc/bind/db.example.com&#34;;}; → The “file” line specifies that the configuration of our example.com zone will be done in the “db.example.com” file.
 In db.example.com, we configure our zone (the IP of my DNS server is 192....</p>
   </div>
@@ -174,15 +218,17 @@ In db.example.com, we configure our zone (the IP of my DNS server is 192....</p>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>Set up an SSH connection
+    <h2>Set up an SSH connection on a Cisco device
     </h2>
   </header>
   <div class="entry-content">
-    <p>Follow this procedure to enable SSH connexion on a Cisco router:
-Router(config)# ip domain-name exemplesecurity.comRouter (config)# username SSHadmin privilege 15 secret topsecretRouter (config)# line vty 0 4Router (config-line)# login localRouter (config-line)# transport input sshRouter (config)# crypto key zeroize rsaRouter(config)# crypto key generate rsa% Please define a hostname other than Router.Router(config)# hostname RouterExempleRouterSIO(config)# crypto key generate rsa [Enter]The name for the keys will be: RouterExemple....</p>
+    <p>Creation of user names, domains, and keys (Here we take an exemple of Cisco router.)
+Firstly, if you haven’t already done so, give your device a personalized name and a domain name:
+Router(config)# hostname TotoToto(config)# ip domain-name exemple.com Remember to secure the privileged mode of your device!
+Toto(config)# enable secret &lt;mot_de_passe&gt; Then, we have to tell to our router (or switch) to generate aymetric key pair (required to the SSH connection)....</p>
   </div>
-  <footer class="entry-footer"><span title='2022-11-17 13:39:04 +0100 CET'>November 17, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Thomas</footer>
-  <a class="entry-link" aria-label="post link to Set up an SSH connection" href="https://twimart.github.io/posts/ssh/"></a>
+  <footer class="entry-footer"><span title='2022-11-17 13:39:04 +0100 CET'>November 17, 2022</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Thomas</footer>
+  <a class="entry-link" aria-label="post link to Set up an SSH connection on a Cisco device" href="https://twimart.github.io/posts/cisco-ssh/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -200,7 +246,7 @@ Router(config)# ip domain-name exemplesecurity.comRouter (config)# username SSH
     </main>
     
 <footer class="footer">
-    <span>&copy; 2022 <a href="https://twimart.github.io/">Thomas WIMART</a></span>
+    <span>&copy; 2022 <a href="https://twimart.github.io/">WIMART Thomas</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &

@@ -5,12 +5,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Create and configure a DNS server on Linux with Bind9 | Thomas WIMART</title>
+<title>Create and configure a DNS server on Linux with Bind9 | WIMART Thomas</title>
 <meta name="keywords" content="linux, DNS">
-<meta name="description" content="-Install Bind9:
+<meta name="description" content="Install Bind9:
 sudo apt-get install bind9
--First, we put these 3 lines in the named.conf file:
-include &#34;/etc/bind/named.conf.options&#34;;include &#34;/etc/bind/named.conf.local&#34;;include &#34;/etc/bind/named.conf.default-zones&#34;; -In the bind9 configuration file &ldquo;named.conf.local&rdquo;, declare its zones :
+The Bind9 files are in /etc/bind/
+cd /etc/bind/ Then, we put these 3 lines in the named.conf file:
+include &#34;/etc/bind/named.conf.options&#34;;include &#34;/etc/bind/named.conf.local&#34;;include &#34;/etc/bind/named.conf.default-zones&#34;; In the Bind9 configuration file &ldquo;named.conf.local&rdquo;, declare its zones :
 zone &#34;example.com&#34; {type master;file &#34;/etc/bind/db.example.com&#34;;}; → The &ldquo;file&rdquo; line specifies that the configuration of our example.com zone will be done in the &ldquo;db.example.com&rdquo; file.
 In db.example.com, we configure our zone (the IP of my DNS server is 192.">
 <meta name="author" content="Thomas">
@@ -63,10 +64,11 @@ In db.example.com, we configure our zone (the IP of my DNS server is 192.">
 
     </style>
 </noscript><meta property="og:title" content="Create and configure a DNS server on Linux with Bind9" />
-<meta property="og:description" content="-Install Bind9:
+<meta property="og:description" content="Install Bind9:
 sudo apt-get install bind9
--First, we put these 3 lines in the named.conf file:
-include &#34;/etc/bind/named.conf.options&#34;;include &#34;/etc/bind/named.conf.local&#34;;include &#34;/etc/bind/named.conf.default-zones&#34;; -In the bind9 configuration file &ldquo;named.conf.local&rdquo;, declare its zones :
+The Bind9 files are in /etc/bind/
+cd /etc/bind/ Then, we put these 3 lines in the named.conf file:
+include &#34;/etc/bind/named.conf.options&#34;;include &#34;/etc/bind/named.conf.local&#34;;include &#34;/etc/bind/named.conf.default-zones&#34;; In the Bind9 configuration file &ldquo;named.conf.local&rdquo;, declare its zones :
 zone &#34;example.com&#34; {type master;file &#34;/etc/bind/db.example.com&#34;;}; → The &ldquo;file&rdquo; line specifies that the configuration of our example.com zone will be done in the &ldquo;db.example.com&rdquo; file.
 In db.example.com, we configure our zone (the IP of my DNS server is 192." />
 <meta property="og:type" content="article" />
@@ -76,10 +78,11 @@ In db.example.com, we configure our zone (the IP of my DNS server is 192." />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Create and configure a DNS server on Linux with Bind9"/>
-<meta name="twitter:description" content="-Install Bind9:
+<meta name="twitter:description" content="Install Bind9:
 sudo apt-get install bind9
--First, we put these 3 lines in the named.conf file:
-include &#34;/etc/bind/named.conf.options&#34;;include &#34;/etc/bind/named.conf.local&#34;;include &#34;/etc/bind/named.conf.default-zones&#34;; -In the bind9 configuration file &ldquo;named.conf.local&rdquo;, declare its zones :
+The Bind9 files are in /etc/bind/
+cd /etc/bind/ Then, we put these 3 lines in the named.conf file:
+include &#34;/etc/bind/named.conf.options&#34;;include &#34;/etc/bind/named.conf.local&#34;;include &#34;/etc/bind/named.conf.default-zones&#34;; In the Bind9 configuration file &ldquo;named.conf.local&rdquo;, declare its zones :
 zone &#34;example.com&#34; {type master;file &#34;/etc/bind/db.example.com&#34;;}; → The &ldquo;file&rdquo; line specifies that the configuration of our example.com zone will be done in the &ldquo;db.example.com&rdquo; file.
 In db.example.com, we configure our zone (the IP of my DNS server is 192."/>
 
@@ -110,12 +113,12 @@ In db.example.com, we configure our zone (the IP of my DNS server is 192."/>
   "@type": "BlogPosting",
   "headline": "Create and configure a DNS server on Linux with Bind9",
   "name": "Create and configure a DNS server on Linux with Bind9",
-  "description": "-Install Bind9:\nsudo apt-get install bind9\n-First, we put these 3 lines in the named.conf file:\ninclude \u0026#34;/etc/bind/named.conf.options\u0026#34;;\rinclude \u0026#34;/etc/bind/named.conf.local\u0026#34;;\rinclude \u0026#34;/etc/bind/named.conf.default-zones\u0026#34;; -In the bind9 configuration file \u0026ldquo;named.conf.local\u0026rdquo;, declare its zones :\nzone \u0026#34;example.com\u0026#34; {\rtype master;\rfile \u0026#34;/etc/bind/db.example.com\u0026#34;;\r}; → The \u0026ldquo;file\u0026rdquo; line specifies that the configuration of our example.com zone will be done in the \u0026ldquo;db.example.com\u0026rdquo; file.\nIn db.example.com, we configure our zone (the IP of my DNS server is 192.",
+  "description": "Install Bind9:\nsudo apt-get install bind9\nThe Bind9 files are in /etc/bind/\ncd /etc/bind/ Then, we put these 3 lines in the named.conf file:\ninclude \u0026#34;/etc/bind/named.conf.options\u0026#34;;\rinclude \u0026#34;/etc/bind/named.conf.local\u0026#34;;\rinclude \u0026#34;/etc/bind/named.conf.default-zones\u0026#34;; In the Bind9 configuration file \u0026ldquo;named.conf.local\u0026rdquo;, declare its zones :\nzone \u0026#34;example.com\u0026#34; {\rtype master;\rfile \u0026#34;/etc/bind/db.example.com\u0026#34;;\r}; → The \u0026ldquo;file\u0026rdquo; line specifies that the configuration of our example.com zone will be done in the \u0026ldquo;db.example.com\u0026rdquo; file.\nIn db.example.com, we configure our zone (the IP of my DNS server is 192.",
   "keywords": [
     "linux", "DNS"
   ],
-  "articleBody": "-Install Bind9:\nsudo apt-get install bind9\n-First, we put these 3 lines in the named.conf file:\ninclude \"/etc/bind/named.conf.options\";\rinclude \"/etc/bind/named.conf.local\";\rinclude \"/etc/bind/named.conf.default-zones\"; -In the bind9 configuration file “named.conf.local”, declare its zones :\nzone \"example.com\" {\rtype master;\rfile \"/etc/bind/db.example.com\";\r}; → The “file” line specifies that the configuration of our example.com zone will be done in the “db.example.com” file.\nIn db.example.com, we configure our zone (the IP of my DNS server is 192.168.1.15 ):\n;\r; BIND data file for example.com\r;\r$TTL 604800\r@ IN SOA example.com. root.example.com. (\r2 ; Serial\r604800 ; Refresh\r86400 ; Retry\r2419200 ; Expire\r604800 ) ; Negative Cache TTL\rIN A 192.168.1.15\r;\r@ IN NS ns.example.com.\rns IN A 192.168.1.15\rserv1 IN A 192.168.1.1\rserv2 IN A 192.168.1.2 The first paragraph corresponds to the SOA record, we can leave it as it is.\nIn the second paragraph, we are going to give information to our DNS server, that means, we are going to enter manually the names of machines and their IP useful to my DNS server.\n⚠ It is strongly recommended to make the NS record, it is the standard.\nFirst, I gave my DNS server the IPs of the other DNS servers in the example.com domain (this is the NS record). Although there is only one (my DNS server), I put it anyway.\nThen I declared 2 web servers, serv1 and serv2.\nI remind you that you will have to adapt this configuration according to your needs, this is only an example.\nIf our DNS server is not able to resolve a certain domain name, it must send these requests to other DNS servers that can do it. These servers are called “forwarders”. We must indicate them in the file “named.conf.options”.\nforwarders {\r8.8.8.8;\r172.25.254.15 ;\r}; You should now have a working DNS server! 😁\n",
-  "wordCount" : "308",
+  "articleBody": "Install Bind9:\nsudo apt-get install bind9\nThe Bind9 files are in /etc/bind/\ncd /etc/bind/ Then, we put these 3 lines in the named.conf file:\ninclude \"/etc/bind/named.conf.options\";\rinclude \"/etc/bind/named.conf.local\";\rinclude \"/etc/bind/named.conf.default-zones\"; In the Bind9 configuration file “named.conf.local”, declare its zones :\nzone \"example.com\" {\rtype master;\rfile \"/etc/bind/db.example.com\";\r}; → The “file” line specifies that the configuration of our example.com zone will be done in the “db.example.com” file.\nIn db.example.com, we configure our zone (the IP of my DNS server is 192.168.1.15 ):\n;\r; BIND data file for example.com\r;\r$TTL 604800\r@ IN SOA example.com. root.example.com. (\r2 ; Serial\r604800 ; Refresh\r86400 ; Retry\r2419200 ; Expire\r604800 ) ; Negative Cache TTL\rIN A 192.168.1.15\r;\r@ IN NS ns.example.com.\rns IN A 192.168.1.15\rserv1 IN A 192.168.1.1\rserv2 IN A 192.168.1.2 The first paragraph corresponds to the SOA record, we can leave it as it is.\nIn the second paragraph, we are going to give information to our DNS server, that means, we are going to enter manually the names of machines and their IP useful to my DNS server.\n⚠ It is strongly recommended to make the NS record, it is the standard.\nFirst, I gave my DNS server the IPs of the other DNS servers in the example.com domain (this is the NS record). Although there is only one (my DNS server), I put it anyway.\nThen I declared 2 web servers, serv1 and serv2.\nI remind you that you will have to adapt this configuration according to your needs, this is only an example.\nIf our DNS server is not able to resolve a certain domain name, it must send these requests to other DNS servers that can do it. These servers are called “forwarders”. We must indicate them in the file “named.conf.options”.\nforwarders {\r8.8.8.8;\r172.25.254.15 ;\r}; You should now have a working DNS server! 😁\n",
+  "wordCount" : "316",
   "inLanguage": "en",
   "datePublished": "2022-11-17T14:01:35+01:00",
   "dateModified": "2022-11-17T14:01:35+01:00",
@@ -129,7 +132,7 @@ In db.example.com, we configure our zone (the IP of my DNS server is 192."/>
   },
   "publisher": {
     "@type": "Organization",
-    "name": "Thomas WIMART",
+    "name": "WIMART Thomas",
     "logo": {
       "@type": "ImageObject",
       "url": "https://twimart.github.io/favicon.ico/"
@@ -154,9 +157,9 @@ In db.example.com, we configure our zone (the IP of my DNS server is 192."/>
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://twimart.github.io/" accesskey="h" title="Thomas WIMART (Alt + H)">
+            <a href="https://twimart.github.io/" accesskey="h" title="WIMART Thomas (Alt + H)">
                 <img src="https://twimart.github.io/apple-touch-icon.png" alt="" aria-label="logo"
-                    height="30">Thomas WIMART</a>
+                    height="30">WIMART Thomas</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -198,7 +201,7 @@ In db.example.com, we configure our zone (the IP of my DNS server is 192."/>
                 </a>
             </li>
             <li>
-                <a href="https://twimart.github.io/search/" title="Search 🔍">
+                <a href="https://twimart.github.io/search/" title="Search 🔍 (Alt &#43; /)" accesskey=/>
                     <span>Search 🔍</span>
                 </a>
             </li>
@@ -218,13 +221,15 @@ In db.example.com, we configure our zone (the IP of my DNS server is 192."/>
 </div>
   </header> 
 
-  <div class="post-content"><p>-Install Bind9:</p>
+  <div class="post-content"><p>Install Bind9:</p>
 <p><code>sudo apt-get install bind9</code></p>
-<p>-First, we put these 3 lines in the named.conf file:</p>
+<p>The Bind9 files are in <code>/etc/bind/</code></p>
+<pre tabindex="0"><code>cd /etc/bind/ 
+</code></pre><p>Then, we put these 3 lines in the named.conf file:</p>
 <pre tabindex="0"><code>include &#34;/etc/bind/named.conf.options&#34;;
 include &#34;/etc/bind/named.conf.local&#34;;
 include &#34;/etc/bind/named.conf.default-zones&#34;;
-</code></pre><p>-In the bind9 configuration file &ldquo;named.conf.local&rdquo;, declare its zones :</p>
+</code></pre><p>In the Bind9 configuration file &ldquo;named.conf.local&rdquo;, declare its zones :</p>
 <pre tabindex="0"><code>zone &#34;example.com&#34; {
         type master;
         file &#34;/etc/bind/db.example.com&#34;;
@@ -269,10 +274,15 @@ serv2   IN      A       192.168.1.2
       <li><a href="https://twimart.github.io/tags/dns/">DNS</a></li>
     </ul>
 <nav class="paginav">
-  <a class="next" href="https://twimart.github.io/posts/ssh/">
+  <a class="prev" href="https://twimart.github.io/posts/cisco-config/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>Basic configuration for a Cisco device</span>
+  </a>
+  <a class="next" href="https://twimart.github.io/posts/cisco-ssh/">
     <span class="title">Next »</span>
     <br>
-    <span>Set up an SSH connection</span>
+    <span>Set up an SSH connection on a Cisco device</span>
   </a>
 </nav>
 
@@ -281,7 +291,7 @@ serv2   IN      A       192.168.1.2
     </main>
     
 <footer class="footer">
-    <span>&copy; 2022 <a href="https://twimart.github.io/">Thomas WIMART</a></span>
+    <span>&copy; 2022 <a href="https://twimart.github.io/">WIMART Thomas</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &

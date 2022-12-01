@@ -5,8 +5,62 @@
     <link>https://twimart.github.io/fr/frtags/</link>
     <description>Recent content in FRtags on Thomas WIMART</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 17 Nov 2022 14:01:35 +0100</lastBuildDate><atom:link href="https://twimart.github.io/fr/frtags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Thu, 01 Dec 2022 11:21:10 +0100</lastBuildDate><atom:link href="https://twimart.github.io/fr/frtags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>vm</title>
+      <link>https://twimart.github.io/fr/frtags/vm/</link>
+      <pubDate>Thu, 01 Dec 2022 11:21:10 +0100</pubDate>
+      
+      <guid>https://twimart.github.io/fr/frtags/vm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vmware</title>
+      <link>https://twimart.github.io/fr/frtags/vmware/</link>
+      <pubDate>Thu, 01 Dec 2022 11:21:10 +0100</pubDate>
+      
+      <guid>https://twimart.github.io/fr/frtags/vmware/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pfsense</title>
+      <link>https://twimart.github.io/fr/frtags/pfsense/</link>
+      <pubDate>Thu, 01 Dec 2022 09:04:41 +0100</pubDate>
+      
+      <guid>https://twimart.github.io/fr/frtags/pfsense/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>proxy</title>
+      <link>https://twimart.github.io/fr/frtags/proxy/</link>
+      <pubDate>Thu, 01 Dec 2022 09:04:41 +0100</pubDate>
+      
+      <guid>https://twimart.github.io/fr/frtags/proxy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cisco</title>
+      <link>https://twimart.github.io/fr/frtags/cisco/</link>
+      <pubDate>Tue, 29 Nov 2022 10:04:21 +0100</pubDate>
+      
+      <guid>https://twimart.github.io/fr/frtags/cisco/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SSH</title>
+      <link>https://twimart.github.io/fr/frtags/ssh/</link>
+      <pubDate>Tue, 29 Nov 2022 10:04:21 +0100</pubDate>
+      
+      <guid>https://twimart.github.io/fr/frtags/ssh/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>DNS</title>
       <link>https://twimart.github.io/fr/frtags/dns/</link>
@@ -26,20 +80,11 @@
     </item>
     
     <item>
-      <title>cisco</title>
-      <link>https://twimart.github.io/fr/frtags/cisco/</link>
+      <title>configuration</title>
+      <link>https://twimart.github.io/fr/frtags/configuration/</link>
       <pubDate>Thu, 17 Nov 2022 13:39:04 +0100</pubDate>
       
-      <guid>https://twimart.github.io/fr/frtags/cisco/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>SSH</title>
-      <link>https://twimart.github.io/fr/frtags/ssh/</link>
-      <pubDate>Thu, 17 Nov 2022 13:39:04 +0100</pubDate>
-      
-      <guid>https://twimart.github.io/fr/frtags/ssh/</guid>
+      <guid>https://twimart.github.io/fr/frtags/configuration/</guid>
       <description></description>
     </item>
     

@@ -82,9 +82,9 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://twimart.github.io/fr/" accesskey="h" title="Thomas WIMART (Alt + H)">
+            <a href="https://twimart.github.io/fr/" accesskey="h" title="WIMART Thomas (Alt + H)">
                 <img src="https://twimart.github.io/apple-touch-icon.png" alt="" aria-label="logo"
-                    height="30">Thomas WIMART</a>
+                    height="30">WIMART Thomas</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -146,12 +146,12 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>-Installer Bind9 :
+    <p>Installer Bind9 :
 sudo apt-get install bind9
-Tout d’abord, on met cet 3 lignes dans le fichier named.conf :
+Les fichiers de configuration de Bind9 sont dans /etc/bind/
+cd /etc/bind/ Tout d’abord, on met cet 3 lignes dans le fichier named.conf :
 include &#34;/etc/bind/named.conf.options&#34;;include &#34;/etc/bind/named.conf.local&#34;;include &#34;/etc/bind/named.conf.default-zones&#34;; -Dans le fichier de configuration de bind9 « named.conf.local », déclarer ses zones :
-zone &#34;example.com&#34; {type master;file &#34;/etc/bind/db.example.com&#34;;}; → La ligne “file” précise que la configuration de notre zone example.com se fera dans le fichier « db.example.com »
-Dans db.example.com, on configure sa zone (l’IP de mon serveur DNS est 192....</p>
+zone &#34;example.com&#34; {type master;file &#34;/etc/bind/db.example.com&#34;;}; → La ligne “file” précise que la configuration de notre zone example.com se fera dans le fichier « db....</p>
   </div>
   <footer class="entry-footer"><span title='2022-11-17 14:01:35 +0100 CET'>novembre 17, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Thomas</footer>
   <a class="entry-link" aria-label="post link to Créer et configurer un serveur DNS sur Linux avec Bind9" href="https://twimart.github.io/fr/notes/linux-dns/"></a>

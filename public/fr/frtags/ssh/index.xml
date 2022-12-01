@@ -5,16 +5,19 @@
     <link>https://twimart.github.io/fr/frtags/ssh/</link>
     <description>Recent content in SSH on Thomas WIMART</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 17 Nov 2022 13:39:04 +0100</lastBuildDate><atom:link href="https://twimart.github.io/fr/frtags/ssh/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Tue, 29 Nov 2022 10:04:21 +0100</lastBuildDate><atom:link href="https://twimart.github.io/fr/frtags/ssh/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Etablir une connexion SSH sur un appareil Cisco </title>
-      <link>https://twimart.github.io/fr/notes/ssh/</link>
-      <pubDate>Thu, 17 Nov 2022 13:39:04 +0100</pubDate>
+      <title>Etablir une connexion SSH sur un appareil Cisco</title>
+      <link>https://twimart.github.io/fr/notes/cisco-ssh/</link>
+      <pubDate>Tue, 29 Nov 2022 10:04:21 +0100</pubDate>
       
-      <guid>https://twimart.github.io/fr/notes/ssh/</guid>
-      <description>La procédure à suivre pour activer une connexion SSH sur un appareil Cisco:
-Router(config)# ip domain-name exemplesecurity.comRouter(config)# username SSHadmin privilege 15 secret topsecretRouter(config)# line vty 0 4Router(config-line)# login localRouter(config-line)# transport input ssh Router(config)# crypto key zeroize rsaRouter(config)# crypto key generate rsa% Please define a hostname other than Router.Router(config)# hostname RouterExempleRouterExemple(config)# crypto key generate rsa [Enter]The name for the keys will be: RouterExemple.</description>
+      <guid>https://twimart.github.io/fr/notes/cisco-ssh/</guid>
+      <description>Création de noms d&amp;rsquo;utilisateurs, de domaines, et de clés (Nous prenons ici l&amp;rsquo;exemple d&amp;rsquo;un router Cisco.)
+Tout d&amp;rsquo;abord, si ça n&amp;rsquo;est pas déja fait, donner un nom personnalisé ainsi qu&amp;rsquo;un nom de domaine DNS à votre appareil:
+Router(config)# hostname TotoToto(config)# ip domain-name exemple.com (si vous voulez faire votre propre serveur DNS Linux, j&amp;rsquo;ai fait un tuto ici )
+Pensez à sécuriser le mode privilégié de votre appareil !
+Toto(config)# enable secret &amp;lt;mot_de_passe&amp;gt; Ensuite, nous devons dire à notre routeur (ou switch) de générer une paire de clés asymétrique (nécessaire à la connexion SSH).</description>
     </item>
     
   </channel>

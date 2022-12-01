@@ -5,7 +5,7 @@
     <link>https://twimart.github.io/fr/frtags/linux/</link>
     <description>Recent content in linux on Thomas WIMART</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>en</language>
     <lastBuildDate>Thu, 17 Nov 2022 14:01:35 +0100</lastBuildDate><atom:link href="https://twimart.github.io/fr/frtags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Créer et configurer un serveur DNS sur Linux avec Bind9</title>
@@ -13,12 +13,12 @@
       <pubDate>Thu, 17 Nov 2022 14:01:35 +0100</pubDate>
       
       <guid>https://twimart.github.io/fr/notes/linux-dns/</guid>
-      <description>-Installer Bind9 :
+      <description>Installer Bind9 :
 sudo apt-get install bind9
-Tout d’abord, on met cet 3 lignes dans le fichier named.conf :
+Les fichiers de configuration de Bind9 sont dans /etc/bind/
+cd /etc/bind/ Tout d’abord, on met cet 3 lignes dans le fichier named.conf :
 include &amp;#34;/etc/bind/named.conf.options&amp;#34;;include &amp;#34;/etc/bind/named.conf.local&amp;#34;;include &amp;#34;/etc/bind/named.conf.default-zones&amp;#34;; -Dans le fichier de configuration de bind9 « named.conf.local », déclarer ses zones :
-zone &amp;#34;example.com&amp;#34; {type master;file &amp;#34;/etc/bind/db.example.com&amp;#34;;}; → La ligne &amp;ldquo;file&amp;rdquo; précise que la configuration de notre zone example.com se fera dans le fichier « db.example.com »
-Dans db.example.com, on configure sa zone (l’IP de mon serveur DNS est 192.</description>
+zone &amp;#34;example.com&amp;#34; {type master;file &amp;#34;/etc/bind/db.example.com&amp;#34;;}; → La ligne &amp;ldquo;file&amp;rdquo; précise que la configuration de notre zone example.com se fera dans le fichier « db.</description>
     </item>
     
   </channel>

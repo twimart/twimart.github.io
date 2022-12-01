@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>ssh | Thomas WIMART</title>
+<title>ssh | WIMART Thomas</title>
 <meta name="keywords" content="">
 <meta name="description" content="">
 <meta name="author" content="Thomas">
@@ -82,9 +82,9 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://twimart.github.io/" accesskey="h" title="Thomas WIMART (Alt + H)">
+            <a href="https://twimart.github.io/" accesskey="h" title="WIMART Thomas (Alt + H)">
                 <img src="https://twimart.github.io/apple-touch-icon.png" alt="" aria-label="logo"
-                    height="30">Thomas WIMART</a>
+                    height="30">WIMART Thomas</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -126,7 +126,7 @@
                 </a>
             </li>
             <li>
-                <a href="https://twimart.github.io/search/" title="Search 🔍">
+                <a href="https://twimart.github.io/search/" title="Search 🔍 (Alt &#43; /)" accesskey=/>
                     <span>Search 🔍</span>
                 </a>
             </li>
@@ -142,20 +142,22 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
-    <h2>Set up an SSH connection
+    <h2>Set up an SSH connection on a Cisco device
     </h2>
   </header>
   <div class="entry-content">
-    <p>Follow this procedure to enable SSH connexion on a Cisco router:
-Router(config)# ip domain-name exemplesecurity.comRouter (config)# username SSHadmin privilege 15 secret topsecretRouter (config)# line vty 0 4Router (config-line)# login localRouter (config-line)# transport input sshRouter (config)# crypto key zeroize rsaRouter(config)# crypto key generate rsa% Please define a hostname other than Router.Router(config)# hostname RouterExempleRouterSIO(config)# crypto key generate rsa [Enter]The name for the keys will be: RouterExemple....</p>
+    <p>Creation of user names, domains, and keys (Here we take an exemple of Cisco router.)
+Firstly, if you haven’t already done so, give your device a personalized name and a domain name:
+Router(config)# hostname TotoToto(config)# ip domain-name exemple.com Remember to secure the privileged mode of your device!
+Toto(config)# enable secret &lt;mot_de_passe&gt; Then, we have to tell to our router (or switch) to generate aymetric key pair (required to the SSH connection)....</p>
   </div>
-  <footer class="entry-footer"><span title='2022-11-17 13:39:04 +0100 CET'>November 17, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Thomas</footer>
-  <a class="entry-link" aria-label="post link to Set up an SSH connection" href="https://twimart.github.io/posts/ssh/"></a>
+  <footer class="entry-footer"><span title='2022-11-17 13:39:04 +0100 CET'>November 17, 2022</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Thomas</footer>
+  <a class="entry-link" aria-label="post link to Set up an SSH connection on a Cisco device" href="https://twimart.github.io/posts/cisco-ssh/"></a>
 </article>
     </main>
     
 <footer class="footer">
-    <span>&copy; 2022 <a href="https://twimart.github.io/">Thomas WIMART</a></span>
+    <span>&copy; 2022 <a href="https://twimart.github.io/">WIMART Thomas</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &

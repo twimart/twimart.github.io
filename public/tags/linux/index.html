@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>linux | Thomas WIMART</title>
+<title>linux | WIMART Thomas</title>
 <meta name="keywords" content="">
 <meta name="description" content="">
 <meta name="author" content="Thomas">
@@ -82,9 +82,9 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://twimart.github.io/" accesskey="h" title="Thomas WIMART (Alt + H)">
+            <a href="https://twimart.github.io/" accesskey="h" title="WIMART Thomas (Alt + H)">
                 <img src="https://twimart.github.io/apple-touch-icon.png" alt="" aria-label="logo"
-                    height="30">Thomas WIMART</a>
+                    height="30">WIMART Thomas</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -126,7 +126,7 @@
                 </a>
             </li>
             <li>
-                <a href="https://twimart.github.io/search/" title="Search 🔍">
+                <a href="https://twimart.github.io/search/" title="Search 🔍 (Alt &#43; /)" accesskey=/>
                     <span>Search 🔍</span>
                 </a>
             </li>
@@ -146,10 +146,11 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>-Install Bind9:
+    <p>Install Bind9:
 sudo apt-get install bind9
--First, we put these 3 lines in the named.conf file:
-include &#34;/etc/bind/named.conf.options&#34;;include &#34;/etc/bind/named.conf.local&#34;;include &#34;/etc/bind/named.conf.default-zones&#34;; -In the bind9 configuration file “named.conf.local”, declare its zones :
+The Bind9 files are in /etc/bind/
+cd /etc/bind/ Then, we put these 3 lines in the named.conf file:
+include &#34;/etc/bind/named.conf.options&#34;;include &#34;/etc/bind/named.conf.local&#34;;include &#34;/etc/bind/named.conf.default-zones&#34;; In the Bind9 configuration file “named.conf.local”, declare its zones :
 zone &#34;example.com&#34; {type master;file &#34;/etc/bind/db.example.com&#34;;}; → The “file” line specifies that the configuration of our example.com zone will be done in the “db.example.com” file.
 In db.example.com, we configure our zone (the IP of my DNS server is 192....</p>
   </div>
@@ -159,7 +160,7 @@ In db.example.com, we configure our zone (the IP of my DNS server is 192....</p>
     </main>
     
 <footer class="footer">
-    <span>&copy; 2022 <a href="https://twimart.github.io/">Thomas WIMART</a></span>
+    <span>&copy; 2022 <a href="https://twimart.github.io/">WIMART Thomas</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &

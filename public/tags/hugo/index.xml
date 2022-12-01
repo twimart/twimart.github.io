@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>hugo on Thomas WIMART</title>
+    <title>hugo on WIMART Thomas</title>
     <link>https://twimart.github.io/tags/hugo/</link>
-    <description>Recent content in hugo on Thomas WIMART</description>
+    <description>Recent content in hugo on WIMART Thomas</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>en</language>
     <lastBuildDate>Thu, 17 Nov 2022 10:45:08 +0100</lastBuildDate><atom:link href="https://twimart.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo basic commands</title>
