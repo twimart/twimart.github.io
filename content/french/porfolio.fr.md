@@ -10,12 +10,12 @@ ShowBreadCrumbs: false
 
 ### À propos de moi ###
 
-Je m'appelle Thomas, et j'habite à Amiens, en France. Actuellement étudiant en informatique, je m'intérresse de près à l'admninistration des réseaux informatique, ainsi qu'à la cybersécurité. 
+Je m'appelle Thomas, et j'habite à Amiens, en France. Actuellement étudiant en informatique, je m'intéresse de près à l'admninistration des réseaux informatique, ainsi qu'à la cybersécurité. 
 Ce site me sert à la fois de portfolio, mais aussi de notes personnelles qui me servent pour les missions que je dois accomplir pour mes études.
 
 ### Mes projets ###
 
-La conception et la maintenance de ce site constituent déja un projet en soi: en effet le dévellopement web n'est pas vraiment mon point fort. Il m'a fallu beaucoup de temps pour faire fonctionner ce site... Mais j'ai appris beaucoups de choses 🙂.
+La conception et la maintenance de ce site constituent déja un projet en soi: en effet le dévellopement web n'est pas vraiment mon point fort. Il m'a fallu beaucoup de temps pour faire fonctionner ce site... Mais j'ai beaucoup appris 🙂.
 
 ### Mes certifications ###
 
