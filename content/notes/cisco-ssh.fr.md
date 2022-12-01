@@ -4,7 +4,7 @@ date: 2022-11-29T10:04:21+01:00
 FRtags: ["cisco", "SSH"]
 ---
 
-### Création de noms d'utilisateurs, de domaines, et de clés ###
+## Création de noms d'utilisateurs, de domaines, et de clés ##
 
 (Nous prenons ici l'exemple d'un router Cisco.)
 
@@ -48,14 +48,14 @@ Ici, j'ai mis `thomas` pour le username et `admin` pour le mot de passe, **mais 
 Toto(config)# username thomas password admin
 
 ```
-### Activation du protocole SSH ###
+## Activation du protocole SSH ##
 
 On peut maintenant activer le protocole SSH sur notre routeur (ou switch): 
 
 ```
 Toto(config)# ip ssh version 2
 ```
-#### Petite parenthèse sur les commandes qui vont suivre: ####
+### Petite parenthèse sur les commandes qui vont suivre: ###
 
 Pour se connecter sur appareil à distance, il y a deux protocoles principaux: `Telnet` et `SSH`. Telnet est un protocole simple qui fonctionne bien, mais qui n'est pas du tout sécurisé et crypté: c'est à dire que n'importe qui peut intercepter les trames de communication entre vous et l'appareil.    
 
@@ -88,20 +88,20 @@ Toto# copy running-config startup-config
 
 ```
 
-### Test de connexion (avec PuTTy) ##
+## Test de connexion (avec PuTTy) ##
 
 PuTTy est un logiciel gratuit qui permet de se connecter à un appareil de plein de manières différentes: câble série, Telnet, SSH...    
 Vous pouvez donc sélectionner SSH, puis rentrer l'addresse IP de votre appareil Cisco (la mienne était 192.168.100.33):
 ![putty](/images/putty.PNG)
 
-On va alors vous demander un username. Vous pouvez mettre celui que vous avez créer précedemment (dans mon cas `toto`).
-Ensuite vous pouvez rentrer le mot de passe coresspondant à cet utilisateur (pour moi c'est donc `admin`).    
+On va alors vous demander un username. Vous pouvez mettre celui que vous avez créé précédemment (dans mon cas `thomas`).
+Ensuite vous pouvez rentrer le mot de passe correspondant à cet utilisateur (pour moi c'est donc `admin`).    
    
 Et vous êtes enfin connecté !    
 
 ![ssh](/images/ssh.PNG)
 
-Un mot de passe vous sera donc demandé si vous voulez rentrer en mode privilégié. 
+Un mot de passe vous sera demandé si vous voulez rentrer en mode privilégié. C'est celui que vous avez mis lors de la commande `enable secret <mot_de_passe>` 
 
 C'est tout pour la connexion SSH sur Cisco 😁!  
 

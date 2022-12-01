@@ -4,7 +4,7 @@ date: 2022-11-17T13:39:04+01:00
 tags: ["cisco", "ssh"]
 ---
 
-### Creation of user names, domains, and keys ###
+## Creation of user names, domains, and keys ##
 
 (Here we take an exemple of Cisco router.)
 
@@ -50,7 +50,7 @@ Here, I put `thomas` for the username and `admin` for the password, **but of cou
 Toto(config)# username thomas password admin
 
 ```
-### Enabling the SSH protocol ###
+## Enabling the SSH protocol ##
 
 On peut maintenant activer le protocole SSH sur notre routeur (ou switch):
 We can enable the SSH protocol on our device: 
@@ -59,7 +59,7 @@ We can enable the SSH protocol on our device:
 Toto(config)# ip ssh version 2
 ```
 
-#### A brief note on the commands that will follow: ####
+### A brief note on the commands that will follow: ###
 
 To connect to a remote device, there are two main protocols: `Telnet` and `SSH`. Telnet is a simple protocol that works well, but is not at all secure and encrypted: this means that anyone can intercept the communication frames between you and the device.    
 
@@ -89,19 +89,19 @@ Remember to save the new configuration!
 Toto# copy running-config startup-config 
 
 ```
-### Connection test ###
+## Connection test (with PuTTy) ##
 PuTTy is a free software that allows you to connect to a device in many different ways: serial cable, Telnet, SSH...    
 You can select SSH, then enter the IP address of your Cisco device (mine was 192.168.100.33):
 
 ![putty](/images/putty.PNG)
 
-You will then be asked for a username. You can put the one you created before (in my case `toto`).
+You will then be asked for a username. You can put the one you created before (in my case `thomas`).
 Then you can enter the corresponding password for that user (in my case it's `admin`).    
 
 And you finally connected! 
 
 ![ssh](/images/ssh.PNG)
 
-You will be asked for a password if you want to enter the privileged mode. 
+You will be asked for a password if you want to enter the privileged mode. That's the one you put during the `enable secret <password>` command.
 
 That's all for the SSH connection on Cisco 😁! 

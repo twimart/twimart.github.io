@@ -88,7 +88,7 @@ btw).
 
 ### Explanation ###
 The Cisco switch has 2 configurations: the "running-config" and the "startup-config". When the switch starts, it uses its "startup-config". If configuration changes are created, they will be done in the running-config. The switch will then use its "running-config".    
-On the other hand, if the changes made turn out to be a failure, it is enough to reboot it. Thus, the switch will use its "startup-config", which has not changed.    
+On the other hand, if the changes made turn out to be a failure, you just need to reboot it. Thus, the switch will use its "startup-config", which has not changed.    
 When changes made are validated, the running-config can be copied to the startup-config. The changes will then be taken into account in the default startup-config of the switch. 
 
 ### Commands ###
