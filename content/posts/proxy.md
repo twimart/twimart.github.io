@@ -29,50 +29,50 @@ Then, on Vmware, you can create your virtual machine. (you can follow my tutoria
 
 You can now start your virtual machine. 
 
-![pfsense1](/images/pfsense1.png)
+![pfsense1](/images/pfsense/pfsense1.png)
 
 Click on "Accept".
 
-![pfsense2](/images/pfsense2.png)
+![pfsense2](/images/pfsense/pfsense2.png)
 
 Select "Install", then "OK".    
 
-The installer will then ask you to select the layout of your keyboard (I have a french keyboard). Select the layout that suits you, then press "Select".
+The wizard will then ask you to select the layout of your keyboard (I have a french keyboard). Select the layout that suits you, then press "Select".
 
-![pfsense3](/images/pfsense3.png)
+![pfsense3](/images/pfsense/pfsense3.png)
 
 Confirm your choice.
 
-![pfsense4](/images/pfsense4.png)
+![pfsense4](/images/pfsense/pfsense4.png)
 
 We are then asked how to partion our disk. Choose "Auto (UFS) BIOS", then "OK".
 
-![pfsense5](/images/pfsense5.png)
+![pfsense5](/images/pfsense/pfsense5.png)
 
 Pfsense will then start its installation:
 
-![pfsense6](/images/pfsense6.png)
+![pfsense6](/images/pfsense/pfsense6.png)
 
-You will restart the virtual machine when the installer suggests it.    
+You will restart the virtual machine when the wizard suggests it.    
 
 On reboot, you will be asked if the VLANS should be configured. Press "n" then "Enter".
 
-![pfsense7](/images/pfsense7.png)
+![pfsense7](/images/pfsense/pfsense7.png)
 
 Then you have to tell Pfsense which interfaces correspond to the WAN and the LAN. Don't worry if you don't know, we can change that later! 
 In my case, I put:
 - "em1" for the WAN
 - "em0" for the LAN
 
-![pfsense8](/images/pfsense8.png)
+![pfsense8](/images/pfsense/pfsense8.png)
 
 Confirm by pressing "y":
 
-![pfsense9](/images/pfsense9.png)
+![pfsense9](/images/pfsense/pfsense9.png)
 
 Et nous avons enfin fini l'installation de Pfsense! Vous devrez maintenant arriver sur le menu de configuration principal.
 And we done with the Pfsense installation! You should now arrive at the main configuration menu.
 
-![pfsense10](/images/pfsense10.png)
+![pfsense10](/images/pfsense/pfsense10.png)
 
 the next parts is comming soon ! 😉

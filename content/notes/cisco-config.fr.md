@@ -1,5 +1,5 @@
 ---
-title: "Configuration de base pour un commutatueur Cisco "
+title: "Configuration de base pour un commutateur Cisco "
 date: 2022-11-17T13:39:04+01:00
 FRtags: ["cisco", "configuration"] 
 ---
