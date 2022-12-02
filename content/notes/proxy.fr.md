@@ -225,5 +225,7 @@ Naviguer dans le menus "Firewall", puis "Rules", et sélectionnez l'interface WA
 
 On va ici créer une règle de pare-feu, afin d'avoir accès à Internet depuis PC1. En effet, pour l'instant, il est impossible d'accéder à une page web depuis PC1, car les trames Ethernet sont bloquées par notre routeur virtuel Pfsense.
 
+La suite arrive bientôt 😉!
+
 
 
