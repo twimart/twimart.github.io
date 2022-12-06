@@ -1,9 +1,9 @@
 ---
 title: "Créer un serveur proxy avec Pfsense et Squid (Part 4)"
 date: 2022-12-06T10:55:47+01:00
-FRtags: ["pfsense", "proxy"] 
 ShowBreadCrumbs: false
 searchHidden: true
+showTOC: false
 ---
 
 Les différentes parties qui composent ce tutoriel:
@@ -59,12 +59,14 @@ Appuyer sur "Add ⬆️", puis laisser tout les paramètres par défaut, sauf la
 
 Vous pouvez ensuite validez la règle, et appuyer sur le bouton "Apply changes".
 
-Bien! Maintenant, on devrai avoir accès à Internet! 
+Bien! Maintenant, on devrait avoir accès à Internet! 
 
 ![cpfsence9](/images/cpfsense/cpfsense9.png)
 
-Effectivement, ça marche! On va maintenant essayer de bloquer [mon site](https://twimart.github.io), c'est à dire celui où vous êtes actuellement en train de naviguer.
+Effectivement, ça marche! On va maintenant essayer de bloquer l'accès au site [Youtube](https://youtube.com).
 
-La suite du tutoriel se trouve [ici](/fr/proxy/proxy5).
+La suite du tutoriel se trouve ➡️ [ici](/fr/proxy/proxy5) ⬅️.
+
+
 
 

@@ -1,11 +1,8 @@
 ---
 title: "Créer un serveur proxy avec Pfsense et Squid (Part 2)"
 date: 2022-12-06T10:55:47+01:00
-FRtags: ["pfsense", "proxy"] 
 ShowBreadCrumbs: false
 searchHidden: true
-
-
 ---
 
 Les différentes parties qui composent ce tutoriel:
@@ -81,7 +78,7 @@ Puis on nous demande quel interface correspond au WAN. Mais comment le savoir? "
 
 Lorsque nous avons configuré les interfaces de la VM de Pfsense, nous en avons mis une en "LAN segment" et une autre en "Bridged". Celle en "LAN segment" correspond au coté LAN de Pfsense, tandis que la "Bridged" correspond au coté WAN.    
 
-Mais comment savoir laquelle correspond à "em0" ou à "em1"? Avec les adresses MAC que vous avez normalement noté un peu plus tôt ! Dans mon cas, je sais donc que l'interface LAN à une adresse MAC qui se finit par :d9:f4 ; et que l'interface WAN se termine par :6a:69.    
+Mais comment savoir laquelle correspond à "em0" ou à "em1"? Avec les adresses MAC que vous avez normalement noté un peu plus tôt ! Dans mon cas, je sais donc que l'interface LAN a une adresse MAC qui se finit par :d9:f4 ; et que l'interface WAN se termine par :6a:69.    
 
 C'est marqué juste au dessus laquelle correspond à quoi.
 
@@ -107,4 +104,4 @@ Si on vous propose d'utiliser le protocole HTTP poour le WebConfigurator, appuye
 ![pfsense16](/images/pfsense/pfsense16.png)
 
 
-On passera ensuite à la configuration de PC1! La suite du tutoriel [ici](/fr/proxy/proxy3).
+On passera ensuite à la configuration de PC1! La suite du tutoriel ➡️ [ici](/fr/proxy/proxy3) ⬅️.

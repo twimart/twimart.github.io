@@ -29,7 +29,7 @@ Sélectionnez &amp;ldquo;Typical&amp;rdquo;, puis &amp;ldquo;Next&amp;rdquo;:</d
       <description>Dans cette note, nous allons voir comment installer un serveur proxy, en utilisant Pfsense et Squid. On utilisera des machines virtuelles, créées sous le logiciel Vmware Workstation 16 Pro.
 Les différentes parties qui composent ce tutoriel:
 Part-1 Part-2 Part-3 Part-4 Part-5 Topologie de notre réseau Voila la topologie du réseau que nous allons utiliser dans ce tuto:
-Pour accéder à Internet, le PC &amp;ldquo;Linux&amp;rdquo; passera par le routeur &amp;ldquo;Pfsense&amp;rdquo;, afin de sortir du réseau local &amp;ldquo;LAN&amp;rdquo;.</description>
+Pour accéder à Internet, le &amp;ldquo;PC1&amp;rdquo; passera par le routeur &amp;ldquo;Pfsense&amp;rdquo;, afin de sortir du réseau local &amp;ldquo;LAN&amp;rdquo;.</description>
     </item>
     
     <item>

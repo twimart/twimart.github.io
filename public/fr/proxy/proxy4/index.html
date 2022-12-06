@@ -117,8 +117,8 @@ Inscrivez le nouveau mot de passe pour accèder Pfsense depuis le Web ou en SSH:
   "keywords": [
     
   ],
-  "articleBody": "Les différentes parties qui composent ce tutoriel:\nPart-1 Part-2 Part-3 Part-4 Part-5 Configuration détaillé de Pfsense Une fois connecté, vous allez faire face à un assistant. Cliquez sur “Next” jusqu’a tomber sur la fenêtre ci-dessous:\nInscivez la même configuration que moi.\nSélectionnez votre fuseau horaire, puis “Next”:\nLaissez les paramètre par défaut, puis “Next”:\nIdem pour cette fenêtre:\nInscrivez le nouveau mot de passe pour accèder Pfsense depuis le Web ou en SSH:\nEnfin, appuyer sur le bouton “Reload”, et “Finish”.\nNous nous retrouvons donc sur la page principale de “monitoring” de Pfsense.\nNaviguer dans le menus “Firewall”, puis “Rules”, et sélectionnez l’interface WAN. Puis appuyez sur le bouton “Add”.\nOn va ici créer une règle de pare-feu, afin d’avoir accès à Internet depuis PC1. En effet, pour l’instant, il est impossible d’accéder à une page web depuis PC1, car les trames Ethernet sont bloquées par notre routeur virtuel Pfsense. (Dans mon cas, j’avais déja Internet, ce qui est assez étrange puisque le routeur bloque par défaut les paquets arrivant sur l’interface WAN… 🤔)\nAppuyer sur “Add ⬆️”, puis laisser tout les paramètres par défaut, sauf la ligne “Protocol”, ou vous mettrez “Any”.\nVous pouvez ensuite validez la règle, et appuyer sur le bouton “Apply changes”.\nBien! Maintenant, on devrai avoir accès à Internet!\nEffectivement, ça marche! On va maintenant essayer de bloquer mon site, c’est à dire celui où vous êtes actuellement en train de naviguer.\nLa suite du tutoriel se trouve ici.\n",
-  "wordCount" : "244",
+  "articleBody": "Les différentes parties qui composent ce tutoriel:\nPart-1 Part-2 Part-3 Part-4 Part-5 Configuration détaillé de Pfsense Une fois connecté, vous allez faire face à un assistant. Cliquez sur “Next” jusqu’a tomber sur la fenêtre ci-dessous:\nInscivez la même configuration que moi.\nSélectionnez votre fuseau horaire, puis “Next”:\nLaissez les paramètre par défaut, puis “Next”:\nIdem pour cette fenêtre:\nInscrivez le nouveau mot de passe pour accèder Pfsense depuis le Web ou en SSH:\nEnfin, appuyer sur le bouton “Reload”, et “Finish”.\nNous nous retrouvons donc sur la page principale de “monitoring” de Pfsense.\nNaviguer dans le menus “Firewall”, puis “Rules”, et sélectionnez l’interface WAN. Puis appuyez sur le bouton “Add”.\nOn va ici créer une règle de pare-feu, afin d’avoir accès à Internet depuis PC1. En effet, pour l’instant, il est impossible d’accéder à une page web depuis PC1, car les trames Ethernet sont bloquées par notre routeur virtuel Pfsense. (Dans mon cas, j’avais déja Internet, ce qui est assez étrange puisque le routeur bloque par défaut les paquets arrivant sur l’interface WAN… 🤔)\nAppuyer sur “Add ⬆️”, puis laisser tout les paramètres par défaut, sauf la ligne “Protocol”, ou vous mettrez “Any”.\nVous pouvez ensuite validez la règle, et appuyer sur le bouton “Apply changes”.\nBien! Maintenant, on devrait avoir accès à Internet!\nEffectivement, ça marche! On va maintenant essayer de bloquer l’accès au site Youtube.\nLa suite du tutoriel se trouve ➡️ ici ⬅️.\n",
+  "wordCount" : "236",
   "inLanguage": "fr",
   "datePublished": "2022-12-06T10:55:47+01:00",
   "dateModified": "2022-12-06T10:55:47+01:00",
@@ -219,21 +219,7 @@ Inscrivez le nouveau mot de passe pour accèder Pfsense depuis le Web ou en SSH:
     <div class="post-meta"><span title='2022-12-06 10:55:47 +0100 CET'>décembre 6, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Thomas
 
 </div>
-  </header> <div class="toc">
-    <details >
-        <summary accesskey="c" title="(Alt + C)">
-            <span class="details">Table des matières</span>
-        </summary>
-
-        <div class="inner"><ul>
-                <li>
-                    <a href="#configuration-d%c3%a9taill%c3%a9-de-pfsense" aria-label="Configuration détaillé de Pfsense">Configuration détaillé de Pfsense</a>
-                </li>
-            </ul>
-        </div>
-    </details>
-</div>
-
+  </header> 
   <div class="post-content"><p>Les différentes parties qui composent ce tutoriel:</p>
 <ul>
 <li><a href="/fr/notes/proxy">Part-1</a></li>
@@ -272,19 +258,17 @@ Inscrivez le nouveau mot de passe pour accèder Pfsense depuis le Web ou en SSH:
 <p><img loading="lazy" src="/images/cpfsense/cpfsense8.png" alt="cpfsence8"  />
 </p>
 <p>Vous pouvez ensuite validez la règle, et appuyer sur le bouton &ldquo;Apply changes&rdquo;.</p>
-<p>Bien! Maintenant, on devrai avoir accès à Internet!</p>
+<p>Bien! Maintenant, on devrait avoir accès à Internet!</p>
 <p><img loading="lazy" src="/images/cpfsense/cpfsense9.png" alt="cpfsence9"  />
 </p>
-<p>Effectivement, ça marche! On va maintenant essayer de bloquer <a href="https://twimart.github.io">mon site</a>, c&rsquo;est à dire celui où vous êtes actuellement en train de naviguer.</p>
-<p>La suite du tutoriel se trouve <a href="/fr/proxy/proxy5">ici</a>.</p>
+<p>Effectivement, ça marche! On va maintenant essayer de bloquer l&rsquo;accès au site <a href="https://youtube.com">Youtube</a>.</p>
+<p>La suite du tutoriel se trouve ➡️ <a href="/fr/proxy/proxy5">ici</a> ⬅️.</p>
 
 
   </div>
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://twimart.github.io/fr/frtags/pfsense/">pfsense</a></li>
-      <li><a href="https://twimart.github.io/fr/frtags/proxy/">proxy</a></li>
     </ul>
 
   </footer>

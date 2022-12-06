@@ -19,10 +19,10 @@ Les différentes parties qui composent ce tutoriel:
 
 Voila la topologie du réseau que nous allons utiliser dans ce tuto: 
 
-![reseau](/images/reseau.png)
+![reseau](/images/reseaux.png)
 
-Pour accéder à Internet, le PC "Linux" passera par le routeur "Pfsense", afin de sortir du réseau local "LAN". Ici la subtilité est que si "Linux" veut accéder à certaines page web, ces requêtes passeront d'abord par notre serveur proxy "Squid".    
-"Squid" pourra alors bloquer certaines pages web ou encore enregistrer certaine données dans sont cache afin d'améliorer les performances.    
+Pour accéder à Internet, le "PC1" passera par le routeur "Pfsense", afin de sortir du réseau local "LAN". Ici la subtilité est que si "PC1" veut accéder à certaines page web, ses requêtes passeront d'abord par notre serveur proxy "Squid".    
+"Squid" pourra alors bloquer certaines pages web ou encore enregistrer certaines données dans sont cache afin d'améliorer les performances.    
 
 *Je précise que ce shéma ne sert que d'illustration, Pfsense et Squid ne forment en réalité qu'une seule machine dans notre cas.*
 
@@ -87,5 +87,5 @@ Notre machine virtuelle Pfsense est maintenant prête à démarrer!
 Vous pouvez alors démarrer votre machine Pfsense. 
 
 
-La suite du tutoriel se trouve [ici](/fr/proxy/proxy2/).
+La suite du tutoriel se trouve ➡️ [ici](/fr/proxy/proxy2/) ⬅️.
 

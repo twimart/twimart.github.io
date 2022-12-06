@@ -57,9 +57,8 @@ Inscrivez le nouveau mot de passe pour accèder Pfsense depuis le Web ou en SSH:
       
       <guid>https://twimart.github.io/fr/proxy/proxy5/</guid>
       <description>Les différentes parties qui composent ce tutoriel:
-Part-1 Part-2 Part-3 Part-4 Part-5 Installation de SQUID Nous arrivons maintenant à la dernière ligne droite de ce tutoriel! On va devoir installer &amp;ldquo;Squid&amp;rdquo;, un paquet pour Pfsense qui permet de faire de notre machine virtuelle un veritable serveur proxy.
-Dans les menus de Pfsense, allez dans &amp;ldquo;System&amp;rdquo;, &amp;ldquo;Package Manager&amp;rdquo;, et cliuez sur l&amp;rsquo;onglet &amp;quot; Available Packages&amp;quot;. Recherchez &amp;ldquo;squid&amp;rdquo;:
-Puis installer le paquet qui s&amp;rsquo;appelle &amp;ldquo;squid&amp;rdquo; (Dans mon cas, c&amp;rsquo;est le deuxième de la liste.</description>
+Part-1 Part-2 Part-3 Part-4 Part-5 Prérequis pour le filtrage Avant d&amp;rsquo;installer Squid et de le configurer, on a quelques services à activer. Allez dans &amp;ldquo;System&amp;rdquo;, puis &amp;ldquo;Cert. Manager&amp;rdquo;. On va créer un certificat SSL afin de filtrer les requêtes HTTPS. Dans l&amp;rsquo;onglet &amp;ldquo;CA&amp;rsquo;s&amp;rdquo;, appuyer sur le bouton &amp;ldquo;Add&amp;rdquo;.
+La, on va remplir les informations qu&amp;rsquo;on nous demande (pour le &amp;ldquo;descriptive name&amp;rdquo;, j&amp;rsquo;ai mis &amp;ldquo;tw certificate&amp;rdquo;):</description>
     </item>
     
   </channel>
