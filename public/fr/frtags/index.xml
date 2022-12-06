@@ -6,7 +6,25 @@
     <description>Recent content in FRtags on Thomas WIMART</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 01 Dec 2022 11:21:10 +0100</lastBuildDate><atom:link href="https://twimart.github.io/fr/frtags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 06 Dec 2022 10:55:47 +0100</lastBuildDate><atom:link href="https://twimart.github.io/fr/frtags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>pfsense</title>
+      <link>https://twimart.github.io/fr/frtags/pfsense/</link>
+      <pubDate>Tue, 06 Dec 2022 10:55:47 +0100</pubDate>
+      
+      <guid>https://twimart.github.io/fr/frtags/pfsense/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>proxy</title>
+      <link>https://twimart.github.io/fr/frtags/proxy/</link>
+      <pubDate>Tue, 06 Dec 2022 10:55:47 +0100</pubDate>
+      
+      <guid>https://twimart.github.io/fr/frtags/proxy/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>vm</title>
       <link>https://twimart.github.io/fr/frtags/vm/</link>
@@ -22,24 +40,6 @@
       <pubDate>Thu, 01 Dec 2022 11:21:10 +0100</pubDate>
       
       <guid>https://twimart.github.io/fr/frtags/vmware/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>pfsense</title>
-      <link>https://twimart.github.io/fr/frtags/pfsense/</link>
-      <pubDate>Thu, 01 Dec 2022 09:04:41 +0100</pubDate>
-      
-      <guid>https://twimart.github.io/fr/frtags/pfsense/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>proxy</title>
-      <link>https://twimart.github.io/fr/frtags/proxy/</link>
-      <pubDate>Thu, 01 Dec 2022 09:04:41 +0100</pubDate>
-      
-      <guid>https://twimart.github.io/fr/frtags/proxy/</guid>
       <description></description>
     </item>
     

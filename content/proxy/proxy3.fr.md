@@ -4,15 +4,16 @@ date: 2022-12-06T10:55:47+01:00
 FRtags: ["pfsense", "proxy"] 
 ShowBreadCrumbs: false
 searchHidden: true
-draft: true
+
 ---
 
 Les différentes parties qui composent ce tutoriel:
+
 - [Part-1](/fr/notes/proxy)
-- [Part-2](/fr/notes/proxy2)
-- [Part-3](/fr/notes/proxy3)
-- [Part-4](/fr/notes/proxy4)
-- [Part-5](/fr/notes/proxy5)
+- [Part-2](/fr/proxy/proxy2)
+- [Part-3](/fr/proxy/proxy3)
+- [Part-4](/fr/proxy/proxy4)
+- [Part-5](/fr/proxy/proxy5)
 
 
 
@@ -40,4 +41,4 @@ Lancer votre navigateur, puis inscivez-y l'IP de la VM Pfsense. On arrive sur la
 
 ![pc4](/images/pc/pc4.png)
 
-C'est tout pour la configuration de PC1! La suite du tutoriel se trouve [ici](/fr/notes/proxy4)! 
+C'est tout pour la configuration de PC1! La suite du tutoriel se trouve [ici](/fr/proxy/proxy4)! 

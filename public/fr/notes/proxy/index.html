@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Créer un serveur proxy avec Pfsense et Squid (Part 1) | Thomas WIMART</title>
+<title>Créer un serveur proxy avec Pfsense et Squid  | Thomas WIMART</title>
 <meta name="keywords" content="">
 <meta name="description" content="Dans cette note, nous allons voir comment installer un serveur proxy, en utilisant Pfsense et Squid. On utilisera des machines virtuelles, créées sous le logiciel Vmware Workstation 16 Pro.
 Les différentes parties qui composent ce tutoriel:
@@ -60,7 +60,7 @@ Pour accéder à Internet, le PC &ldquo;Linux&rdquo; passera par le routeur &ldq
         }
 
     </style>
-</noscript><meta property="og:title" content="Créer un serveur proxy avec Pfsense et Squid (Part 1)" />
+</noscript><meta property="og:title" content="Créer un serveur proxy avec Pfsense et Squid " />
 <meta property="og:description" content="Dans cette note, nous allons voir comment installer un serveur proxy, en utilisant Pfsense et Squid. On utilisera des machines virtuelles, créées sous le logiciel Vmware Workstation 16 Pro.
 Les différentes parties qui composent ce tutoriel:
 Part-1 Part-2 Part-3 Part-4 Part-5 Topologie de notre réseau Voila la topologie du réseau que nous allons utiliser dans ce tuto:
@@ -71,7 +71,7 @@ Pour accéder à Internet, le PC &ldquo;Linux&rdquo; passera par le routeur &ldq
 <meta property="article:modified_time" content="2022-12-01T09:04:41+01:00" /><meta property="og:site_name" content="Thomas WIMART" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Créer un serveur proxy avec Pfsense et Squid (Part 1)"/>
+<meta name="twitter:title" content="Créer un serveur proxy avec Pfsense et Squid "/>
 <meta name="twitter:description" content="Dans cette note, nous allons voir comment installer un serveur proxy, en utilisant Pfsense et Squid. On utilisera des machines virtuelles, créées sous le logiciel Vmware Workstation 16 Pro.
 Les différentes parties qui composent ce tutoriel:
 Part-1 Part-2 Part-3 Part-4 Part-5 Topologie de notre réseau Voila la topologie du réseau que nous allons utiliser dans ce tuto:
@@ -92,7 +92,7 @@ Pour accéder à Internet, le PC &ldquo;Linux&rdquo; passera par le routeur &ldq
     {
       "@type": "ListItem",
       "position":  2 ,
-      "name": "Créer un serveur proxy avec Pfsense et Squid (Part 1)",
+      "name": "Créer un serveur proxy avec Pfsense et Squid ",
       "item": "https://twimart.github.io/fr/notes/proxy/"
     }
   ]
@@ -102,8 +102,8 @@ Pour accéder à Internet, le PC &ldquo;Linux&rdquo; passera par le routeur &ldq
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Créer un serveur proxy avec Pfsense et Squid (Part 1)",
-  "name": "Créer un serveur proxy avec Pfsense et Squid (Part 1)",
+  "headline": "Créer un serveur proxy avec Pfsense et Squid ",
+  "name": "Créer un serveur proxy avec Pfsense et Squid ",
   "description": "Dans cette note, nous allons voir comment installer un serveur proxy, en utilisant Pfsense et Squid. On utilisera des machines virtuelles, créées sous le logiciel Vmware Workstation 16 Pro.\nLes différentes parties qui composent ce tutoriel:\nPart-1 Part-2 Part-3 Part-4 Part-5 Topologie de notre réseau Voila la topologie du réseau que nous allons utiliser dans ce tuto:\nPour accéder à Internet, le PC \u0026ldquo;Linux\u0026rdquo; passera par le routeur \u0026ldquo;Pfsense\u0026rdquo;, afin de sortir du réseau local \u0026ldquo;LAN\u0026rdquo;.",
   "keywords": [
     
@@ -205,7 +205,7 @@ Pour accéder à Internet, le PC &ldquo;Linux&rdquo; passera par le routeur &ldq
   <header class="post-header">
     <div class="breadcrumbs"><a href="https://twimart.github.io/fr/">Accueil</a>&nbsp;»&nbsp;<a href="https://twimart.github.io/fr/notes/">Notes</a></div>
     <h1 class="post-title">
-      Créer un serveur proxy avec Pfsense et Squid (Part 1)
+      Créer un serveur proxy avec Pfsense et Squid 
     </h1>
     <div class="post-meta"><span title='2022-12-01 09:04:41 +0100 CET'>décembre 1, 2022</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Thomas
 
@@ -233,10 +233,10 @@ Pour accéder à Internet, le PC &ldquo;Linux&rdquo; passera par le routeur &ldq
 <p>Les différentes parties qui composent ce tutoriel:</p>
 <ul>
 <li><a href="/fr/notes/proxy">Part-1</a></li>
-<li><a href="/fr/notes/proxy2">Part-2</a></li>
-<li><a href="/fr/notes/proxy3">Part-3</a></li>
-<li><a href="/fr/notes/proxy4">Part-4</a></li>
-<li><a href="/fr/notes/proxy5">Part-5</a></li>
+<li><a href="/fr/proxy/proxy2">Part-2</a></li>
+<li><a href="/fr/proxy/proxy3">Part-3</a></li>
+<li><a href="/fr/proxy/proxy4">Part-4</a></li>
+<li><a href="/fr/proxy/proxy5">Part-5</a></li>
 </ul>
 <h2 id="topologie-de-notre-réseau">Topologie de notre réseau<a hidden class="anchor" aria-hidden="true" href="#topologie-de-notre-réseau">#</a></h2>
 <p>Voila la topologie du réseau que nous allons utiliser dans ce tuto:</p>
@@ -301,7 +301,7 @@ Pour accéder à Internet, le PC &ldquo;Linux&rdquo; passera par le routeur &ldq
 <p><img loading="lazy" src="/images/freebsd/freebsd8.png" alt="freebsd8"  />
 </p>
 <p>Vous pouvez alors démarrer votre machine Pfsense.</p>
-<p>La suite du tutoriel se trouve <a href="/fr/notes/proxy2/">ici</a>.</p>
+<p>La suite du tutoriel se trouve <a href="/fr/proxy/proxy2/">ici</a>.</p>
 
 
   </div>

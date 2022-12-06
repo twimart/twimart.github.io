@@ -142,7 +142,74 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
-    <h2>Créer un serveur proxy avec Pfsense et Squid (Part 1)
+    <h2>Créer un serveur proxy avec Pfsense et Squid (Part 2)
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Les différentes parties qui composent ce tutoriel:
+Part-1 Part-2 Part-3 Part-4 Part-5 Installation de Pfsense Cliquer sur “Accept”.
+Sélectionnez “Install”, puis “OK”
+L’installateur va alors vous demander de sélectionner la disposition de votre clavier (j’ai un clavier français). Sélectionnez la disposition qui vous convient, puis appuyer sur “Select”.
+Confirmer votre choix.
+On nous demande ensuite comment partionner notre disque. Choisissez “Auto (UFS) BIOS”, puis “OK”.
+Pfsense va alors démmarer son installation:...</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-12-06 10:55:47 +0100 CET'>décembre 6, 2022</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Thomas</footer>
+  <a class="entry-link" aria-label="post link to Créer un serveur proxy avec Pfsense et Squid (Part 2)" href="https://twimart.github.io/fr/proxy/proxy2/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Créer un serveur proxy avec Pfsense et Squid (Part 3)
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Les différentes parties qui composent ce tutoriel:
+Part-1 Part-2 Part-3 Part-4 Part-5 Configuration de PC1 On va maintenant se concentrer sur PC1. Rassurez-vous, c’est plus simple!
+⚠️Comme dit plus tôt, je vais travailler ici avec une machine Linux Ubuntu, donc les commandes et les manipulations qui vont suivre ne sont que valides pour cet OS.
+Sur votre machine, lancer un terminal, puis faites la commande nmtui
+Sélectionnez “Edit Connection”, puis “Wired Connexion 1”....</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-12-06 10:55:47 +0100 CET'>décembre 6, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Thomas</footer>
+  <a class="entry-link" aria-label="post link to Créer un serveur proxy avec Pfsense et Squid (Part 3)" href="https://twimart.github.io/fr/proxy/proxy3/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Créer un serveur proxy avec Pfsense et Squid (Part 4)
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Les différentes parties qui composent ce tutoriel:
+Part-1 Part-2 Part-3 Part-4 Part-5 Configuration détaillé de Pfsense Une fois connecté, vous allez faire face à un assistant. Cliquez sur “Next” jusqu’a tomber sur la fenêtre ci-dessous:
+Inscivez la même configuration que moi.
+Sélectionnez votre fuseau horaire, puis “Next”:
+Laissez les paramètre par défaut, puis “Next”:
+Idem pour cette fenêtre:
+Inscrivez le nouveau mot de passe pour accèder Pfsense depuis le Web ou en SSH:...</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-12-06 10:55:47 +0100 CET'>décembre 6, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Thomas</footer>
+  <a class="entry-link" aria-label="post link to Créer un serveur proxy avec Pfsense et Squid (Part 4)" href="https://twimart.github.io/fr/proxy/proxy4/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Créer un serveur proxy avec Pfsense et Squid (Part 5)
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Les différentes parties qui composent ce tutoriel:
+Part-1 Part-2 Part-3 Part-4 Part-5 Installation de SQUID Nous arrivons maintenant à la dernière ligne droite de ce tutoriel! On va devoir installer “Squid”, un paquet pour Pfsense qui permet de faire de notre machine virtuelle un veritable serveur proxy.
+Dans les menus de Pfsense, allez dans “System”, “Package Manager”, et cliuez sur l’onglet &#34; Available Packages&#34;. Recherchez “squid”:
+Puis installer le paquet qui s’appelle “squid” (Dans mon cas, c’est le deuxième de la liste....</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-12-06 10:55:47 +0100 CET'>décembre 6, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Thomas</footer>
+  <a class="entry-link" aria-label="post link to Créer un serveur proxy avec Pfsense et Squid (Part 5)" href="https://twimart.github.io/fr/proxy/proxy5/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Créer un serveur proxy avec Pfsense et Squid 
     </h2>
   </header>
   <div class="entry-content">
@@ -152,7 +219,7 @@ Part-1 Part-2 Part-3 Part-4 Part-5 Topologie de notre réseau Voila la topologie
 Pour accéder à Internet, le PC “Linux” passera par le routeur “Pfsense”, afin de sortir du réseau local “LAN”....</p>
   </div>
   <footer class="entry-footer"><span title='2022-12-01 09:04:41 +0100 CET'>décembre 1, 2022</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Thomas</footer>
-  <a class="entry-link" aria-label="post link to Créer un serveur proxy avec Pfsense et Squid (Part 1)" href="https://twimart.github.io/fr/notes/proxy/"></a>
+  <a class="entry-link" aria-label="post link to Créer un serveur proxy avec Pfsense et Squid " href="https://twimart.github.io/fr/notes/proxy/"></a>
 </article>
     </main>
     

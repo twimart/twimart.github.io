@@ -4,15 +4,15 @@ date: 2022-12-06T10:55:47+01:00
 FRtags: ["pfsense", "proxy"] 
 ShowBreadCrumbs: false
 searchHidden: true
-draft: true
 ---
 
 Les différentes parties qui composent ce tutoriel:
+
 - [Part-1](/fr/notes/proxy)
-- [Part-2](/fr/notes/proxy2)
-- [Part-3](/fr/notes/proxy3)
-- [Part-4](/fr/notes/proxy4)
-- [Part-5](/fr/notes/proxy5)
+- [Part-2](/fr/proxy/proxy2)
+- [Part-3](/fr/proxy/proxy3)
+- [Part-4](/fr/proxy/proxy4)
+- [Part-5](/fr/proxy/proxy5)
 
 
 
@@ -65,6 +65,6 @@ Bien! Maintenant, on devrai avoir accès à Internet!
 
 Effectivement, ça marche! On va maintenant essayer de bloquer [mon site](https://twimart.github.io), c'est à dire celui où vous êtes actuellement en train de naviguer.
 
-La suite du tutoriel se trouve [ici](/fr/notes/proxy5).
+La suite du tutoriel se trouve [ici](/fr/proxy/proxy5).
 
 
