@@ -2,6 +2,7 @@
 title: "Créer un serveur proxy avec Pfsense et Squid "
 date: 2022-12-01T09:04:41+01:00
 FRtags: ["pfsense", "proxy"] 
+ShowPostNavLinks: true
 ---
 
 Dans cette note, nous allons voir comment installer un serveur proxy, en utilisant Pfsense et Squid. On utilisera des machines virtuelles, créées sous le logiciel *Vmware Workstation 16 Pro*.
@@ -84,8 +85,7 @@ Notre machine virtuelle Pfsense est maintenant prête à démarrer!
 
 ![freebsd8](/images/freebsd/freebsd8.png)
 
-Vous pouvez alors démarrer votre machine Pfsense. 
-
-
-La suite du tutoriel se trouve ➡️ [ici](/fr/proxy/proxy2/) ⬅️.
+Vous pouvez alors démarrer votre machine Pfsense.    
+  
+***La suite du tutoriel se trouve ➡️ [ici](/fr/proxy/proxy2/) ⬅️.***
 

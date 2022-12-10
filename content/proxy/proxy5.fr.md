@@ -29,18 +29,18 @@ Notre certificat est maintenant créé!
 
 Nous arrivons maintenant à la dernière ligne droite de ce tutoriel! On va devoir installer "Squid", un paquet pour Pfsense qui permet de faire de notre machine virtuelle un veritable serveur proxy.
 
-Dans les menus de Pfsense, allez dans "System", "Package Manager", et cliuez sur l'onglet " Available Packages".    
+Dans les menus de Pfsense, allez dans "System", "Package Manager", et cliquez sur l'onglet " Available Packages".    
 Recherchez "squid":
 
 ![squid1](/images/squid/squid1.png)
 
-Puis installer le paquet qui s'appelle "squid" (Dans mon cas, c'est le deuxième de la liste.)    
+Puis installer le paquet qui s'appelle "squid" (dans mon cas, c'est le deuxième de la liste).    
 ⚠️*L'installation peut prendre quelques minutes! Soyez patient et ne rafaichissez pas la page!* 
 
 
 Une fois le paquet installé, rendez-vous dans "Services", puis "Squid Proxy Server". 
 
-⚠️***Avant toute chose, allez dans l'onglet "Local Cache". Ces options permettent de configurer le cache du proxy. Peu importe si vous modifier les options ou non, vous DEVEZ appuyer sur "Save" en bas de la page pour que le proxy puisse démarrer.***
+⚠️***Avant toutes choses, allez dans l'onglet "Local Cache". Ces options permettent de configurer le cache du proxy. Peu importe si vous modifier les options ou non, vous DEVEZ appuyer sur "Save" en bas de la page pour que le proxy puisse démarrer.***
 
 On va alors aller dans la section "General", afin de configurer notre proxy. Modifier ces paramètres:
 
@@ -57,7 +57,7 @@ Dans la section suivante ("Transparent Proxy Settings") cochez la case "Transpar
 
 ![squid3](/images/squid/squid3.png)
 
-Les options "Bypass" permettent à certainent machines du réseau LAN de passer outre le proxy.
+Les options "Bypass" permettent à certainent machines du réseau LAN de passer outre le proxy, mais cela ne nous intéresse pas pour le moment.
 
 Ensuite, on passe à la section "SSL Man In The Middle Filtering":
 
@@ -66,7 +66,7 @@ Ensuite, on passe à la section "SSL Man In The Middle Filtering":
 
 ![squid5](/images/squid/squid5.png)
 
-- Pour l'option "CA", choississez le certificat que vous avez créé dans la section [précédente](#prérequis-pour-le-filtrage) (dans mon cas, "tw certificate").
+- Pour l'option "CA", choississez le certificat que vous avez créé dans le chapitre [précédent](#prérequis-pour-le-filtrage) (dans mon cas, "tw certificate").
 
 ![squid6](/images/squid/squid6.png)
 
@@ -83,7 +83,7 @@ Allez ensuite dans la section "ACLs". Dans "Blacklist", inscrivez l'addresse des
 
 ![squid8](/images/squid/squid8.png)
 
-Pour finir, retrourner dans l'onglet General. Puis appuyer sur l'icone de redémarrage, afin que Squid prenne en compte les changement.
+Pour finir, retrourner dans l'onglet "General". Puis appuyer sur l'icone de redémarrage, afin que Squid prenne en compte les changements.
 
 ![squid9](/images/squid/squid9.png)
 
@@ -92,7 +92,7 @@ Vous pouvez alors essayer d'accèder à `https://youtube.com`. Vous allez obteni
 ![squid10](/images/squid/squid10.png)
 
 
-⚠️*Si vous arrivez à accèder à Youtube, pas de panique! Le service Squid peut parfois mettre beaucoup de temps à démarrer. Relisez-bien vos paramètre, appuyez bien sur "Save" en bas des pages de configuration, et pensez à redemarrer le service.* 
+⚠️*Si vous arrivez tout de même à accéder à Youtube, pas de panique! Le service Squid peut parfois mettre beaucoup de temps à démarrer. Relisez-bien vos paramètres, appuyez bien sur "Save" en bas des pages de configuration, et pensez à redémarrer le service après des modifications.* 
 
 Ce tutoriel est maintenant terminé! Je vous remercie sincèrement de l'avoir suivi jusqu'au bout! 🥰❤️
 

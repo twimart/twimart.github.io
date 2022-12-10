@@ -19,17 +19,17 @@ Les différentes parties qui composent ce tutoriel:
 
 ![pfsense1](/images/pfsense/pfsense1.png)
 
-Cliquer sur "Accept".
+Cliquez sur "Accept".
 
 ![pfsense2](/images/pfsense/pfsense2.png)
 
 Sélectionnez "Install", puis "OK"    
 
-L'installateur va alors vous demander de sélectionner la disposition de votre clavier (j'ai un clavier français). Sélectionnez la disposition qui vous convient, puis appuyer sur "Select".
+L'installateur va alors vous demander de sélectionner la disposition de votre clavier (j'ai un clavier français). Sélectionnez la disposition qui vous convient, puis appuyez sur "Select".
 
 ![pfsense3](/images/pfsense/pfsense3.png)
 
-Confirmer votre choix.
+Confirmez votre choix.
 
 ![pfsense4](/images/pfsense/pfsense4.png)
 
@@ -37,7 +37,7 @@ On nous demande ensuite comment partionner notre disque. Choisissez "Auto (UFS) 
 
 ![pfsense5](/images/pfsense/pfsense5.png)
 
-Pfsense va alors démmarer son installation:
+Pfsense va alors démarrer son installation:
 
 ![pfsense6](/images/pfsense/pfsense6.png)
 
@@ -63,7 +63,7 @@ Et nous avons enfin fini l'installation de Pfsense! Vous devrez maintenant arriv
 
 ![pfsense10](/images/pfsense/pfsense10.png)
 
-Pas de panique si vous n'avez pas d'adresses IP pour "em0" ou "em1" (comme moi), on va règler cela tout de suite! 
+Pas de panique si vous n'avez pas d'adresses IP pour "em1" ou "em0" (comme moi), on va règler cela tout de suite! 
 
 Appuyer sur la touche "1" du clavier afin d'assigner les interfaces correctement.
 
@@ -78,7 +78,7 @@ Puis on nous demande quel interface correspond au WAN. Mais comment le savoir? "
 
 Lorsque nous avons configuré les interfaces de la VM de Pfsense, nous en avons mis une en "LAN segment" et une autre en "Bridged". Celle en "LAN segment" correspond au coté LAN de Pfsense, tandis que la "Bridged" correspond au coté WAN.    
 
-Mais comment savoir laquelle correspond à "em0" ou à "em1"? Avec les adresses MAC que vous avez normalement noté un peu plus tôt ! Dans mon cas, je sais donc que l'interface LAN a une adresse MAC qui se finit par :d9:f4 ; et que l'interface WAN se termine par :6a:69.    
+Mais comment savoir laquelle correspond à "em0" ou à "em1"? Avec les adresses MAC que vous avez normalement noté un peu plus tôt ! Dans mon cas, je sais donc que l'interface LAN a une adresse MAC qui se finit par :d9:f4 ; et que celle de l'interface WAN se termine par :6a:69.    
 
 C'est marqué juste au dessus laquelle correspond à quoi.
 
@@ -94,7 +94,7 @@ Appuyer sur "y" pour confirmer les changements:
 
 ![pfsense14](/images/pfsense/pfsense14.png)
 
-Personnellement, je vais changer l'adresse IP de mon interface LAN, je vais don choisir l'option 2:
+Personnellement, je vais changer l'adresse IP de mon interface LAN, je vais donc choisir l'option 2:
 
 ![pfsense15](/images/pfsense/pfsense15.png)
 
@@ -104,4 +104,5 @@ Si on vous propose d'utiliser le protocole HTTP poour le WebConfigurator, appuye
 ![pfsense16](/images/pfsense/pfsense16.png)
 
 
-On passera ensuite à la configuration de PC1! La suite du tutoriel ➡️ [ici](/fr/proxy/proxy3) ⬅️.
+On passera ensuite à la configuration de PC1!    
+***La suite du tutoriel ➡️ [ici](/fr/proxy/proxy3) ⬅️.***

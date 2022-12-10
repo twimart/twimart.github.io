@@ -18,7 +18,7 @@ Les différentes parties qui composent ce tutoriel:
 
 ## Configuration détaillé de Pfsense ##
 
-Une fois connecté, vous allez faire face à un assistant. Cliquez sur "Next" jusqu'a tomber sur la fenêtre ci-dessous:
+Une fois connecté, vous allez faire face à un assistant. Cliquez sur "Next" jusqu'à tomber sur la fenêtre ci-dessous:
 
 ![cpfsence1](/images/cpfsense/cpfsense1.png)
 
@@ -51,13 +51,13 @@ Naviguer dans le menus "Firewall", puis "Rules", et sélectionnez l'interface WA
 ![cpfsence7](/images/cpfsense/cpfsense7.png)
 
 On va ici créer une règle de pare-feu, afin d'avoir accès à Internet depuis PC1. En effet, pour l'instant, il est impossible d'accéder à une page web depuis PC1, car les trames Ethernet sont bloquées par notre routeur virtuel Pfsense.     
-(Dans mon cas, j'avais déja Internet, ce qui est assez étrange puisque le routeur bloque par défaut les paquets arrivant sur l'interface WAN... 🤔)   
+(Dans mon cas, je parvenais déja à accéder à Internet, ce qui est assez étrange puisque le routeur bloque par défaut les paquets arrivant sur l'interface WAN... 🤔)   
 
 Appuyer sur "Add ⬆️", puis laisser tout les paramètres par défaut, sauf la ligne "Protocol", ou vous mettrez "Any".
 
 ![cpfsence8](/images/cpfsense/cpfsense8.png)
 
-Vous pouvez ensuite validez la règle, et appuyer sur le bouton "Apply changes".
+Vous pouvez ensuite valider la règle, et appuyee sur le bouton "Apply changes".
 
 Bien! Maintenant, on devrait avoir accès à Internet! 
 
@@ -65,7 +65,7 @@ Bien! Maintenant, on devrait avoir accès à Internet!
 
 Effectivement, ça marche! On va maintenant essayer de bloquer l'accès au site [Youtube](https://youtube.com).
 
-La suite du tutoriel se trouve ➡️ [ici](/fr/proxy/proxy5) ⬅️.
+***La suite du tutoriel se trouve ➡️ [ici](/fr/proxy/proxy5) ⬅️.***
 
 
 
