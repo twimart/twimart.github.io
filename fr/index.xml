@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Thomas WIMART</title><link>https://twimart.github.io/fr/</link><description>Recent content on Thomas WIMART</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 06 Dec 2022 10:55:47 +0100</lastBuildDate><atom:link href="https://twimart.github.io/fr/index.xml" rel="self" type="application/rss+xml"/><item><title>Créer un serveur proxy avec Pfsense et Squid (Part 2)</title><link>https://twimart.github.io/fr/proxy/proxy2/</link><pubDate>Tue, 06 Dec 2022 10:55:47 +0100</pubDate><guid>https://twimart.github.io/fr/proxy/proxy2/</guid><description>Les différentes parties qui composent ce tutoriel:
-Part-1 Part-2 Part-3 Part-4 Part-5 Installation de Pfsense Cliquer sur &amp;ldquo;Accept&amp;rdquo;.
+Part-1 Part-2 Part-3 Part-4 Part-5 Installation de Pfsense Cliquez sur &amp;ldquo;Accept&amp;rdquo;.
 Sélectionnez &amp;ldquo;Install&amp;rdquo;, puis &amp;ldquo;OK&amp;rdquo;
-L&amp;rsquo;installateur va alors vous demander de sélectionner la disposition de votre clavier (j&amp;rsquo;ai un clavier français). Sélectionnez la disposition qui vous convient, puis appuyer sur &amp;ldquo;Select&amp;rdquo;.
-Confirmer votre choix.
+L&amp;rsquo;installateur va alors vous demander de sélectionner la disposition de votre clavier (j&amp;rsquo;ai un clavier français). Sélectionnez la disposition qui vous convient, puis appuyez sur &amp;ldquo;Select&amp;rdquo;.
+Confirmez votre choix.
 On nous demande ensuite comment partionner notre disque. Choisissez &amp;ldquo;Auto (UFS) BIOS&amp;rdquo;, puis &amp;ldquo;OK&amp;rdquo;.
-Pfsense va alors démmarer son installation:</description></item><item><title>Créer un serveur proxy avec Pfsense et Squid (Part 3)</title><link>https://twimart.github.io/fr/proxy/proxy3/</link><pubDate>Tue, 06 Dec 2022 10:55:47 +0100</pubDate><guid>https://twimart.github.io/fr/proxy/proxy3/</guid><description>Les différentes parties qui composent ce tutoriel:
+Pfsense va alors démarrer son installation:</description></item><item><title>Créer un serveur proxy avec Pfsense et Squid (Part 3)</title><link>https://twimart.github.io/fr/proxy/proxy3/</link><pubDate>Tue, 06 Dec 2022 10:55:47 +0100</pubDate><guid>https://twimart.github.io/fr/proxy/proxy3/</guid><description>Les différentes parties qui composent ce tutoriel:
 Part-1 Part-2 Part-3 Part-4 Part-5 Configuration de PC1 On va maintenant se concentrer sur PC1. Rassurez-vous, c&amp;rsquo;est plus simple!
 ⚠️Comme dit plus tôt, je vais travailler ici avec une machine Linux Ubuntu, donc les commandes et les manipulations qui vont suivre ne sont que valides pour cet OS.
-Sur votre machine, lancer un terminal, puis faites la commande nmtui
-Sélectionnez &amp;ldquo;Edit Connection&amp;rdquo;, puis &amp;ldquo;Wired Connexion 1&amp;rdquo;.</description></item><item><title>Créer un serveur proxy avec Pfsense et Squid (Part 4)</title><link>https://twimart.github.io/fr/proxy/proxy4/</link><pubDate>Tue, 06 Dec 2022 10:55:47 +0100</pubDate><guid>https://twimart.github.io/fr/proxy/proxy4/</guid><description>Les différentes parties qui composent ce tutoriel:
-Part-1 Part-2 Part-3 Part-4 Part-5 Configuration détaillé de Pfsense Une fois connecté, vous allez faire face à un assistant. Cliquez sur &amp;ldquo;Next&amp;rdquo; jusqu&amp;rsquo;a tomber sur la fenêtre ci-dessous:
+On va changer les paramètres réseau de notre machine.
+Sur votre machine, lancer un terminal, puis faites la commande nmtui (fonctionne uniquement sur Linux).</description></item><item><title>Créer un serveur proxy avec Pfsense et Squid (Part 4)</title><link>https://twimart.github.io/fr/proxy/proxy4/</link><pubDate>Tue, 06 Dec 2022 10:55:47 +0100</pubDate><guid>https://twimart.github.io/fr/proxy/proxy4/</guid><description>Les différentes parties qui composent ce tutoriel:
+Part-1 Part-2 Part-3 Part-4 Part-5 Configuration détaillé de Pfsense Une fois connecté, vous allez faire face à un assistant. Cliquez sur &amp;ldquo;Next&amp;rdquo; jusqu&amp;rsquo;à tomber sur la fenêtre ci-dessous:
 Inscivez la même configuration que moi.
 Sélectionnez votre fuseau horaire, puis &amp;ldquo;Next&amp;rdquo;:
 Laissez les paramètre par défaut, puis &amp;ldquo;Next&amp;rdquo;:
