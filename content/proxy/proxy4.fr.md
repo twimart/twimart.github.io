@@ -63,7 +63,7 @@ Bien! Maintenant, on devrait avoir accès à Internet!
 
 ![cpfsence9](/images/cpfsense/cpfsense9.png)
 
-Effectivement, ça marche! On va maintenant essayer de bloquer l'accès au site [Youtube](https://youtube.com).
+Effectivement, ça marche! On va maintenant essayer de bloquer l'accès au site Youtube.
 
 ***La suite du tutoriel se trouve ➡️ [ici](/fr/proxy/proxy5) ⬅️.***
 

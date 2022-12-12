@@ -42,4 +42,5 @@ Lancer votre navigateur, puis inscivez-y l'IP de la VM Pfsense. On arrive sur la
 ![pc4](/images/pc/pc4.png)
 
 C'est tout pour la configuration de PC1!    
+   
 ***La suite du tutoriel se trouve ➡️ [ici](/fr/proxy/proxy4) ⬅️!***
