@@ -5,7 +5,7 @@ ShowBreadCrumbs: false
 searchHidden: true
 ---
 
-The different parts of this tutorial:
+Les différentes parties qui composent ce tutoriel:
 
 - [Part-1](/fr/notes/proxy)
 - [Part-2](/fr/proxy/proxy2)

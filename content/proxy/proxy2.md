@@ -14,96 +14,97 @@ The different parts of this tutorial:
 - [Part-5](/proxy/proxy5)
 
 
-## Installation de Pfsense ##
+## Pfsense installation ##
 
 
 ![pfsense1](/images/pfsense/pfsense1.png)
 
-Cliquez sur "Accept".
+Click on "Accept".
 
 ![pfsense2](/images/pfsense/pfsense2.png)
 
-Sélectionnez "Install", puis "OK"    
+Select "Install", then "OK"    
 
-L'installateur va alors vous demander de sélectionner la disposition de votre clavier (j'ai un clavier français). Sélectionnez la disposition qui vous convient, puis appuyez sur "Select".
+The wizard will then ask you to select the layout of your keyboard (I have a French keyboard). Select the layout that suits you, then press "Select".
 
 ![pfsense3](/images/pfsense/pfsense3.png)
 
-Confirmez votre choix.
+Confirm your choice.
 
 ![pfsense4](/images/pfsense/pfsense4.png)
 
-On nous demande ensuite comment partionner notre disque. Choisissez "Auto (UFS) BIOS", puis "OK".
+We are then asked how to partition our disk. Choose "Auto (UFS) BIOS", then "OK".
 
 ![pfsense5](/images/pfsense/pfsense5.png)
 
-Pfsense va alors démarrer son installation:
+Pfsense will then start its installation:
 
 ![pfsense6](/images/pfsense/pfsense6.png)
 
-Si l'installateur vous demande d'ouvrir un Shell, répondez "non"    
+If the wizard asks you to open a Shell, answer "no."    
 
-Vous redémarrerez la machine virtuelle quand l'installateur vous le proposera.
+You will restart the virtual machine when the wizard suggests it.
 
-## Configuration de démarrage de Pfsense ## 
+## Pfsense startup configuration ## 
 
-Au redémarrage, on vous demandera si les VLANS doivent être configurés. Appuyez sur "n" puis "Enter"
+On reboot, you will be asked if the VLANS should be configured. Press "n" then "Enter".
 
 ![pfsense7](/images/pfsense/pfsense7.png)
 
-Ensuite, vous devez dire à Pfsense quelles interfaces correspondent au WAN et au LAN. Pour l'instant, on ne sait pas à quoi correspond "em0" et "em1" donc mettons au hasard (on pourra modifier cela plus tard).
+Then you have to tell Pfsense which interfaces correspond to the WAN and the LAN. For the moment, we don't know what "em0" and "em1" correspond to, so let's put them randomly (we can change this later).
 
 ![pfsense8](/images/pfsense/pfsense8.png)
 
-Puis confirmer en appuyant sur "y": 
+Then confirm by pressing "y":
 
 ![pfsense9](/images/pfsense/pfsense9.png)
 
-Et nous avons enfin fini l'installation de Pfsense! Vous devrez maintenant arriver sur le menu de configuration principal.
+And we have finally finished the installation of Pfsense! Now you should arrive on the main configuration menu.
 
 ![pfsense10](/images/pfsense/pfsense10.png)
 
-Pas de panique si vous n'avez pas d'adresses IP pour "em1" ou "em0" (comme moi), on va règler cela tout de suite! 
+Don't panic if you don't have IP addresses for "em1" or "em0" (like me), we'll fix that right away! 
 
-Appuyer sur la touche "1" du clavier afin d'assigner les interfaces correctement.
+Press the "1" key on the keyboard to assign the interfaces correctly.
 
 
 ![pfsense11](/images/pfsense/pfsense11.png)
 
-Nous remarquons alors qu'à coté de "em0" et "em1", il y a des adresses MAC...
+We then notice that next to "em0" and "em1", there are MAC addresses...
 
-L'assistant nous (re)demande si nous voulons confiugurer les VLANS. Appuyer sur "n".    
+The wizard (re)asks us if we want to configure the VLANS. Press "n".    
 
-Puis on nous demande quel interface correspond au WAN. Mais comment le savoir? "em0"? "em1"? Une petite explication s'impose.
+Then we are asked which interface corresponds to the WAN. But how do we know? "em0"? "em1"? A little explanation is necessary.
 
-Lorsque nous avons configuré les interfaces de la VM de Pfsense, nous en avons mis une en "LAN segment" et une autre en "Bridged". Celle en "LAN segment" correspond au coté LAN de Pfsense, tandis que la "Bridged" correspond au coté WAN.    
+When we configured the interfaces of the Pfsense VM, we put one in "LAN segment" and another in "Bridged". The "LAN segment" one corresponds to the LAN side of Pfsense, while the "Bridged" one corresponds to the WAN side.    
 
-Mais comment savoir laquelle correspond à "em0" ou à "em1"? Avec les adresses MAC que vous avez normalement noté un peu plus tôt ! Dans mon cas, je sais donc que l'interface LAN a une adresse MAC qui se finit par :d9:f4 ; et que celle de l'interface WAN se termine par :6a:69.    
+But how do you know which one corresponds to "em0" or "em1"? With the MAC addresses you normally wrote down earlier! In my case, I know that the LAN interface has a MAC address that ends with :d9:f4; and that the WAN interface's MAC address ends with :6a:69.    
 
-C'est marqué juste au dessus laquelle correspond à quoi.
+It says right above which one corresponds to what.
 
-Vous pouvez donc entrer l'interface qui correspond au coté WAN (dans mon cas, "em0"):
+So you can enter the interface that corresponds to the WAN side (in my case, "em0"):
 
 ![pfsense12](/images/pfsense/pfsense12.png)
 
-Faites de même avec l'interface LAN:
+Do the same for the LAN interface:
 
 ![pfsense13](/images/pfsense/pfsense13.png)
 
-Appuyer sur "y" pour confirmer les changements:
+Press "y" to confirm the changes:
 
 ![pfsense14](/images/pfsense/pfsense14.png)
 
-Personnellement, je vais changer l'adresse IP de mon interface LAN, je vais donc choisir l'option 2:
+Personally, I will change the IP address of my LAN interface, so I will choose option 2:
 
 ![pfsense15](/images/pfsense/pfsense15.png)
 
-Je vais lui donner l'addresse IP 192.168.100.254, avec un masque en /24. (Je spécifie aussi que je ne veux pas utiliser le DHCP.)    
-Si on vous propose d'utiliser le protocole HTTP poour le WebConfigurator, appuyez sur "y". 
+I will give it the IP address 192.168.100.254, with a mask of /24. (I also specify that I don't want to use DHCP).
+
+If you are offered to use HTTP for the WebConfigurator, press "y". 
 
 ![pfsense16](/images/pfsense/pfsense16.png)
 
 
-On passera ensuite à la configuration de PC1!    
+We will then proceed to the configuration of PC1!   
    
-***La suite du tutoriel ➡️ [ici](/fr/proxy/proxy3) ⬅️.***
+***The next part of the tutorial is  ➡️ [here](/proxy/proxy3) ⬅️.***
