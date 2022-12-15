@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Proxies on WIMART Thomas</title><link>https://twimart.github.io/proxy/</link><description>Recent content in Proxies on WIMART Thomas</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 06 Dec 2022 10:55:47 +0100</lastBuildDate><atom:link href="https://twimart.github.io/proxy/index.xml" rel="self" type="application/rss+xml"/><item><title>Create a proxy server with Pfsense and Squid(Part 2)</title><link>https://twimart.github.io/proxy/proxy2/</link><pubDate>Tue, 06 Dec 2022 10:55:47 +0100</pubDate><guid>https://twimart.github.io/proxy/proxy2/</guid><description>The different parts of this tutorial:
+Part-1 Part-2 Part-3 Part-4 Part-5 Installation de Pfsense Cliquez sur &amp;ldquo;Accept&amp;rdquo;.
+Sélectionnez &amp;ldquo;Install&amp;rdquo;, puis &amp;ldquo;OK&amp;rdquo;
+L&amp;rsquo;installateur va alors vous demander de sélectionner la disposition de votre clavier (j&amp;rsquo;ai un clavier français). Sélectionnez la disposition qui vous convient, puis appuyez sur &amp;ldquo;Select&amp;rdquo;.
+Confirmez votre choix.
+On nous demande ensuite comment partionner notre disque. Choisissez &amp;ldquo;Auto (UFS) BIOS&amp;rdquo;, puis &amp;ldquo;OK&amp;rdquo;.
+Pfsense va alors démarrer son installation:</description></item></channel></rss>
