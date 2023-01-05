@@ -71,6 +71,7 @@ We will first force our switch to accept only incoming SSH communication:
 
 ```
 Toto(config)# line vty 0 4
+Toto(config)# login local
 Toto(config-line)# transport input ssh
 
 ```
