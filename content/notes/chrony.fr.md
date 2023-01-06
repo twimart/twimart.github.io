@@ -8,7 +8,7 @@ FRtags: ["chrony", "linux", "cisco"]
 
 ## A faire sur votre serveur (Linux ou Windows)
 
-Tout d'abord, installer un serveur NTP:
+Tout d'abord, installer Chrony:
 
 ```
 sudo -s
@@ -25,7 +25,7 @@ Ensuite nous devons déclarer nos pool NTP. Nous allons nous rendre à la ligne 
 
 `pool 2.debian.pool.ntp.org iburst`
 
-devient :
+devient:
 
 `#pool 2.debian.pool.ntp.org iburst`
 
@@ -78,7 +78,7 @@ Pour le moment, le routeur n'est pas synchronisé via le serveur NTP, on peut co
 SwitchToto#show clock
 *0:8:8.942 UTC Mon Mar 1 1993
 ```
-Passons à la configuration, très simple puisqu'il suffit d'indiquer l'adresse du server NTP. Voici la procédure de configuration :
+Passons à la configuration, très simple puisqu'il suffit d'indiquer l'adresse du serveur NTP. Voici la procédure de configuration :
 
 ```
 Router#configure terminal
