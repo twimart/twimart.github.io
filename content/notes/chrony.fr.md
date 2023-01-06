@@ -1,5 +1,5 @@
 ---
-title: "Créer un serveur Chrony et synchroniser ses équipements "
+title: "Créer un serveur NTP avec Chrony et synchroniser ses équipements "
 date: 2023-01-06T09:24:04+01:00
 FRtags: ["chrony", "linux", "cisco"] 
 ---
@@ -68,7 +68,7 @@ Et enfin la commande qui sert à activer le service à chaque fois que la machin
 systemctl enable chrony
 ```
 
-## A faire sur votre équipement (iici ce sera un switch Cisco)
+## A faire sur votre équipement (ici ce sera un switch Cisco)
 
 ***Article tiré de IT-Connect.fr, par Florian Burnel***
 
@@ -101,3 +101,6 @@ Router#show clock
 ```
 
 Et vos équipements sont bien synchronisé entre eux! 
+
+
+Merci à Enzo Ribeiro pour son aide. 😊
