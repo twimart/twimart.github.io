@@ -6,6 +6,8 @@ FRtags: ["chrony", "linux", "cisco"]
 
 ⚠**J'utilise une machine Debian pour mon serveur Chrony**
 
+## A faire sur votre serveur (Linux ou Windows)
+
 Tout d'abord, installer un serveur NTP:
 
 ```
@@ -65,3 +67,37 @@ Et enfin la commande qui sert à activer le service à chaque fois que la machin
 ```
 systemctl enable chrony
 ```
+
+## A faire sur votre équipement (iici ce sera un switch Cisco)
+
+***Article tiré de IT-Connect.fr, par Florian Burnel***
+
+Pour le moment, le routeur n'est pas synchronisé via le serveur NTP, on peut consulter l'heure actuelle grâce à la commande "show clock", on remarque que l'heure n'est pas bonne du tout...
+
+```
+SwitchToto#show clock
+*0:8:8.942 UTC Mon Mar 1 1993
+```
+Passons à la configuration, très simple puisqu'il suffit d'indiquer l'adresse du server NTP. Voici la procédure de configuration :
+
+```
+Router#configure terminal
+Enter configuration commands, one per line. End with CNTL/Z.
+Router(config)#ntp server 192.168.1.10
+Router(config)#exit
+```
+
+On peut vérifier que notre switch est bien associé au serveur ntp:
+
+```
+Router#show ntp association
+```
+
+Affichez à nouveau la date et l'heure, normalement elle doit être actualisée :
+
+```
+Router#show clock
+*11:51:11.134 UTC Fri Jan 1 2023
+```
+
+Et vos équipements sont bien synchronisé entre eux! 
