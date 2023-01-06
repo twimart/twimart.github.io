@@ -64,6 +64,8 @@ params:
           url: "https://www.linkedin.com/in/thomas-wimart"
         - name: "Github"
           url: "https://github.com/twimart"
+        - name: "Instagram"
+          url: "https://www.instagram.com/thomaswimart/"
 
           
 

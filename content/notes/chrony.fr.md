@@ -4,7 +4,7 @@ date: 2023-01-06T09:24:04+01:00
 FRtags: ["chrony", "linux", "cisco"] 
 ---
 
-⚠**J'utilise une machine Debian pour mon serveur Chrony**
+**⚠ J'utilise une machine Debian pour mon serveur Chrony**
 
 ## A faire sur votre serveur (Linux ou Windows)
 
