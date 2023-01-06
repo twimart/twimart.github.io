@@ -66,6 +66,9 @@ params:
           url: "https://github.com/twimart"
         - name: "Instagram"
           url: "https://www.instagram.com/thomaswimart/"
+        - name: "Paypal"
+          url: "paypal.me/thomaswimart"
+            
 
           
 
