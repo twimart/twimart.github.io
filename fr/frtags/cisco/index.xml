@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>cisco on Thomas WIMART</title><link>https://twimart.github.io/fr/frtags/cisco/</link><description>Recent content in cisco on Thomas WIMART</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 06 Jan 2023 09:24:04 +0100</lastBuildDate><atom:link href="https://twimart.github.io/fr/frtags/cisco/index.xml" rel="self" type="application/rss+xml"/><item><title>Créer un serveur Chrony et synchroniser ses équipements</title><link>https://twimart.github.io/fr/notes/chrony/</link><pubDate>Fri, 06 Jan 2023 09:24:04 +0100</pubDate><guid>https://twimart.github.io/fr/notes/chrony/</guid><description>⚠J&amp;rsquo;utilise une machine Debian pour mon serveur Chrony
-Tout d&amp;rsquo;abord, installer un serveur NTP:
+A faire sur votre serveur (Linux ou Windows) Tout d&amp;rsquo;abord, installer un serveur NTP:
 sudo -s apt install chrony On peut ensuite vérifier le contenu du fichier &amp;ldquo;chrony.conf&amp;rdquo;
 nano /etc/chrony/chrony.conf Ensuite nous devons déclarer nos pool NTP. Nous allons nous rendre à la ligne 3 du fichier pour faire quelques modification :
 pool 2.debian.pool.ntp.org iburst
