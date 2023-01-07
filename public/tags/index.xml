@@ -1,126 +1,126 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on WIMART Thomas</title>
-    <link>https://twimart.github.io/tags/</link>
+    <link>https://www.thomaswimart.fr/tags/</link>
     <description>Recent content in Tags on WIMART Thomas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 01 Dec 2022 13:57:01 +0100</lastBuildDate><atom:link href="https://twimart.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 01 Dec 2022 13:57:01 +0100</lastBuildDate><atom:link href="https://www.thomaswimart.fr/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>vm</title>
-      <link>https://twimart.github.io/tags/vm/</link>
+      <link>https://www.thomaswimart.fr/tags/vm/</link>
       <pubDate>Thu, 01 Dec 2022 13:57:01 +0100</pubDate>
       
-      <guid>https://twimart.github.io/tags/vm/</guid>
+      <guid>https://www.thomaswimart.fr/tags/vm/</guid>
       <description></description>
     </item>
     
     <item>
       <title>vmware</title>
-      <link>https://twimart.github.io/tags/vmware/</link>
+      <link>https://www.thomaswimart.fr/tags/vmware/</link>
       <pubDate>Thu, 01 Dec 2022 13:57:01 +0100</pubDate>
       
-      <guid>https://twimart.github.io/tags/vmware/</guid>
+      <guid>https://www.thomaswimart.fr/tags/vmware/</guid>
       <description></description>
     </item>
     
     <item>
       <title>pfsense</title>
-      <link>https://twimart.github.io/tags/pfsense/</link>
+      <link>https://www.thomaswimart.fr/tags/pfsense/</link>
       <pubDate>Thu, 01 Dec 2022 10:29:45 +0100</pubDate>
       
-      <guid>https://twimart.github.io/tags/pfsense/</guid>
+      <guid>https://www.thomaswimart.fr/tags/pfsense/</guid>
       <description></description>
     </item>
     
     <item>
       <title>proxy</title>
-      <link>https://twimart.github.io/tags/proxy/</link>
+      <link>https://www.thomaswimart.fr/tags/proxy/</link>
       <pubDate>Thu, 01 Dec 2022 10:29:45 +0100</pubDate>
       
-      <guid>https://twimart.github.io/tags/proxy/</guid>
+      <guid>https://www.thomaswimart.fr/tags/proxy/</guid>
       <description></description>
     </item>
     
     <item>
       <title>cisco</title>
-      <link>https://twimart.github.io/tags/cisco/</link>
+      <link>https://www.thomaswimart.fr/tags/cisco/</link>
       <pubDate>Tue, 29 Nov 2022 10:25:59 +0100</pubDate>
       
-      <guid>https://twimart.github.io/tags/cisco/</guid>
+      <guid>https://www.thomaswimart.fr/tags/cisco/</guid>
       <description></description>
     </item>
     
     <item>
       <title>configuration</title>
-      <link>https://twimart.github.io/tags/configuration/</link>
+      <link>https://www.thomaswimart.fr/tags/configuration/</link>
       <pubDate>Tue, 29 Nov 2022 10:25:59 +0100</pubDate>
       
-      <guid>https://twimart.github.io/tags/configuration/</guid>
+      <guid>https://www.thomaswimart.fr/tags/configuration/</guid>
       <description></description>
     </item>
     
     <item>
       <title>DNS</title>
-      <link>https://twimart.github.io/tags/dns/</link>
+      <link>https://www.thomaswimart.fr/tags/dns/</link>
       <pubDate>Thu, 17 Nov 2022 14:01:35 +0100</pubDate>
       
-      <guid>https://twimart.github.io/tags/dns/</guid>
+      <guid>https://www.thomaswimart.fr/tags/dns/</guid>
       <description></description>
     </item>
     
     <item>
       <title>linux</title>
-      <link>https://twimart.github.io/tags/linux/</link>
+      <link>https://www.thomaswimart.fr/tags/linux/</link>
       <pubDate>Thu, 17 Nov 2022 14:01:35 +0100</pubDate>
       
-      <guid>https://twimart.github.io/tags/linux/</guid>
+      <guid>https://www.thomaswimart.fr/tags/linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ssh</title>
-      <link>https://twimart.github.io/tags/ssh/</link>
+      <link>https://www.thomaswimart.fr/tags/ssh/</link>
       <pubDate>Thu, 17 Nov 2022 13:39:04 +0100</pubDate>
       
-      <guid>https://twimart.github.io/tags/ssh/</guid>
+      <guid>https://www.thomaswimart.fr/tags/ssh/</guid>
       <description></description>
     </item>
     
     <item>
       <title>certifications</title>
-      <link>https://twimart.github.io/tags/certifications/</link>
+      <link>https://www.thomaswimart.fr/tags/certifications/</link>
       <pubDate>Thu, 17 Nov 2022 11:02:24 +0100</pubDate>
       
-      <guid>https://twimart.github.io/tags/certifications/</guid>
+      <guid>https://www.thomaswimart.fr/tags/certifications/</guid>
       <description></description>
     </item>
     
     <item>
       <title>portfolio</title>
-      <link>https://twimart.github.io/tags/portfolio/</link>
+      <link>https://www.thomaswimart.fr/tags/portfolio/</link>
       <pubDate>Thu, 17 Nov 2022 11:02:24 +0100</pubDate>
       
-      <guid>https://twimart.github.io/tags/portfolio/</guid>
+      <guid>https://www.thomaswimart.fr/tags/portfolio/</guid>
       <description></description>
     </item>
     
     <item>
       <title>resume</title>
-      <link>https://twimart.github.io/tags/resume/</link>
+      <link>https://www.thomaswimart.fr/tags/resume/</link>
       <pubDate>Thu, 17 Nov 2022 11:02:24 +0100</pubDate>
       
-      <guid>https://twimart.github.io/tags/resume/</guid>
+      <guid>https://www.thomaswimart.fr/tags/resume/</guid>
       <description></description>
     </item>
     
     <item>
       <title>hugo</title>
-      <link>https://twimart.github.io/tags/hugo/</link>
+      <link>https://www.thomaswimart.fr/tags/hugo/</link>
       <pubDate>Thu, 17 Nov 2022 10:45:08 +0100</pubDate>
       
-      <guid>https://twimart.github.io/tags/hugo/</guid>
+      <guid>https://www.thomaswimart.fr/tags/hugo/</guid>
       <description></description>
     </item>
     

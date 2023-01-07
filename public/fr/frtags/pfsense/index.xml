@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>pfsense on Thomas WIMART</title>
-    <link>https://twimart.github.io/fr/frtags/pfsense/</link>
+    <link>https://www.thomaswimart.fr/fr/frtags/pfsense/</link>
     <description>Recent content in pfsense on Thomas WIMART</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 01 Dec 2022 09:04:41 +0100</lastBuildDate><atom:link href="https://twimart.github.io/fr/frtags/pfsense/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 01 Dec 2022 09:04:41 +0100</lastBuildDate><atom:link href="https://www.thomaswimart.fr/fr/frtags/pfsense/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Créer un serveur proxy avec Pfsense et Squid </title>
-      <link>https://twimart.github.io/fr/notes/proxy/</link>
+      <link>https://www.thomaswimart.fr/fr/notes/proxy/</link>
       <pubDate>Thu, 01 Dec 2022 09:04:41 +0100</pubDate>
       
-      <guid>https://twimart.github.io/fr/notes/proxy/</guid>
+      <guid>https://www.thomaswimart.fr/fr/notes/proxy/</guid>
       <description>Dans cette note, nous allons voir comment installer un serveur proxy, en utilisant Pfsense et Squid. On utilisera des machines virtuelles, créées sous le logiciel Vmware Workstation 16 Pro.
 Les différentes parties qui composent ce tutoriel:
 Part-1 Part-2 Part-3 Part-4 Part-5 Topologie de notre réseau Voila la topologie du réseau que nous allons utiliser dans ce tuto:
