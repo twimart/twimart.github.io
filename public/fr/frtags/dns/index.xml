@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>DNS on Thomas WIMART</title>
-    <link>https://twimart.github.io/fr/frtags/dns/</link>
+    <link>https://www.thomaswimart.fr/fr/frtags/dns/</link>
     <description>Recent content in DNS on Thomas WIMART</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 17 Nov 2022 14:01:35 +0100</lastBuildDate><atom:link href="https://twimart.github.io/fr/frtags/dns/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 17 Nov 2022 14:01:35 +0100</lastBuildDate><atom:link href="https://www.thomaswimart.fr/fr/frtags/dns/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Créer et configurer un serveur DNS sur Linux avec Bind9</title>
-      <link>https://twimart.github.io/fr/notes/linux-dns/</link>
+      <link>https://www.thomaswimart.fr/fr/notes/linux-dns/</link>
       <pubDate>Thu, 17 Nov 2022 14:01:35 +0100</pubDate>
       
-      <guid>https://twimart.github.io/fr/notes/linux-dns/</guid>
+      <guid>https://www.thomaswimart.fr/fr/notes/linux-dns/</guid>
       <description>Installer Bind9 :
 sudo apt-get install bind9
 Les fichiers de configuration de Bind9 sont dans /etc/bind/

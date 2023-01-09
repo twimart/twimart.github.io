@@ -1,18 +1,49 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>WIMART Thomas</title>
-    <link>https://twimart.github.io/</link>
+    <link>https://www.thomaswimart.fr/</link>
     <description>Recent content on WIMART Thomas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 01 Dec 2022 13:57:01 +0100</lastBuildDate><atom:link href="https://twimart.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 06 Jan 2023 09:24:04 +0100</lastBuildDate><atom:link href="https://www.thomaswimart.fr/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Create a NTP server with Chrony and synchronize its equipements</title>
+      <link>https://www.thomaswimart.fr/posts/chrony/</link>
+      <pubDate>Fri, 06 Jan 2023 09:24:04 +0100</pubDate>
+      
+      <guid>https://www.thomaswimart.fr/posts/chrony/</guid>
+      <description>⚠ I&amp;rsquo;m using a Debian machine for my Chrony server
+Things to do on your server (Linux or Windows) Firstly, install Chrony:
+sudo -sapt install chrony We can then check the content of the &amp;ldquo;chrony.conf&amp;rdquo; file:
+nano /etc/chrony/chrony.conf Then we have to declare our NTP pool. We will go to line 3 of the file to make some changes:
+pool 2.debian.pool.ntp.org iburst
+become:
+#pool 2.debian.pool.ntp.org iburst
+and now we can add our pools by entering the following lines instead:</description>
+    </item>
+    
+    <item>
+      <title>Create a proxy server with Pfsense and Squid(Part 2)</title>
+      <link>https://www.thomaswimart.fr/proxy/proxy2/</link>
+      <pubDate>Tue, 06 Dec 2022 10:55:47 +0100</pubDate>
+      
+      <guid>https://www.thomaswimart.fr/proxy/proxy2/</guid>
+      <description>The different parts of this tutorial:
+Part-1 Part-2 Part-3 Part-4 Part-5 Pfsense installation Click on &amp;ldquo;Accept&amp;rdquo;.
+Select &amp;ldquo;Install&amp;rdquo;, then &amp;ldquo;OK&amp;rdquo;
+The wizard will then ask you to select the layout of your keyboard (I have a French keyboard). Select the layout that suits you, then press &amp;ldquo;Select&amp;rdquo;.
+Confirm your choice.
+We are then asked how to partition our disk. Choose &amp;ldquo;Auto (UFS) BIOS&amp;rdquo;, then &amp;ldquo;OK&amp;rdquo;.
+Pfsense will then start its installation:</description>
+    </item>
+    
     <item>
       <title>Create a virtual machine with Vmware</title>
-      <link>https://twimart.github.io/posts/vmware/</link>
+      <link>https://www.thomaswimart.fr/posts/vmware/</link>
       <pubDate>Thu, 01 Dec 2022 13:57:01 +0100</pubDate>
       
-      <guid>https://twimart.github.io/posts/vmware/</guid>
+      <guid>https://www.thomaswimart.fr/posts/vmware/</guid>
       <description>I specify that I&amp;rsquo;m using Vmware Worksation 16 Pro. The installation of a Virtual Machine (VM) is running the same way if you use the Player version.
 Download an iso image Go to the download page of the desired OS. In this exemple, we gonna choose a very known Linux distribution, Ubuntu.
 Create the virtual machine On Vmware, select &amp;ldquo;Create a new virtual machine&amp;rdquo;:
@@ -21,21 +52,22 @@ A virtual machine creation wizard appears.</description>
     
     <item>
       <title>Create a proxy server with Pfsense and Squid</title>
-      <link>https://twimart.github.io/posts/proxy/</link>
+      <link>https://www.thomaswimart.fr/posts/proxy/</link>
       <pubDate>Thu, 01 Dec 2022 10:29:45 +0100</pubDate>
       
-      <guid>https://twimart.github.io/posts/proxy/</guid>
-      <description>In this note, we will see how to install a proxy server, using Pfsense and Squid. We will use virtual machines, created under Vmware.
-Topology of our network Here is the network topology that we will use in this tutorial:
-To access the Internet, the &amp;ldquo;Linux&amp;rdquo; PC will go through the &amp;ldquo;Pfsense&amp;rdquo; router, in order to leave the local network &amp;ldquo;LAN&amp;rdquo;. Here the subtlety is that if &amp;ldquo;Linux&amp;rdquo; wants to access some web pages, these requests will first go through our proxy server &amp;ldquo;Squid&amp;rdquo;.</description>
+      <guid>https://www.thomaswimart.fr/posts/proxy/</guid>
+      <description>In this note, we will see how to install a proxy server, using Pfsense and Squid. We will use virtual machines, created under Vmware Workstation 16 Pro.
+The different parts of this tutorial:
+Part-1 Part-2 Part-3 Part-4 Part-5 Topology of our network Here is the network topology that we will use in this tutorial:
+To access the Internet, &amp;ldquo;PC1&amp;rdquo; will go through the &amp;ldquo;Pfsense&amp;rdquo; router, in order to leave the local network &amp;ldquo;LAN&amp;rdquo;.</description>
     </item>
     
     <item>
       <title>Basic configuration for a Cisco device</title>
-      <link>https://twimart.github.io/posts/cisco-config/</link>
+      <link>https://www.thomaswimart.fr/posts/cisco-config/</link>
       <pubDate>Tue, 29 Nov 2022 10:25:59 +0100</pubDate>
       
-      <guid>https://twimart.github.io/posts/cisco-config/</guid>
+      <guid>https://www.thomaswimart.fr/posts/cisco-config/</guid>
       <description>Basic Configuration Switch to privileged mode, then terminal configuration:
 Switch&amp;gt;enSwitch#conf t Définir le nom du switch, ainsi que le domaine auquel il appartient (optionnel).
 Switch(config)#Switch(config)# hostname SwitchTotoSwitchToto(config)# ip domain-name exempledomaine.localSwitchToto(config)# end Define the IP addressing of the switch. To do this, we must create a VLAN dedicated to the switch configuration (here vlan 10). The IP we are going to define will be associated to this VLAN.</description>
@@ -43,10 +75,10 @@ Switch(config)#Switch(config)# hostname SwitchTotoSwitchToto(config)# ip domai
     
     <item>
       <title>Create and configure a DNS server on Linux with Bind9</title>
-      <link>https://twimart.github.io/posts/linux-dns/</link>
+      <link>https://www.thomaswimart.fr/posts/linux-dns/</link>
       <pubDate>Thu, 17 Nov 2022 14:01:35 +0100</pubDate>
       
-      <guid>https://twimart.github.io/posts/linux-dns/</guid>
+      <guid>https://www.thomaswimart.fr/posts/linux-dns/</guid>
       <description>Install Bind9:
 sudo apt-get install bind9
 The Bind9 files are in /etc/bind/
@@ -58,10 +90,10 @@ In db.example.com, we configure our zone (the IP of my DNS server is 192.</descr
     
     <item>
       <title>Set up an SSH connection on a Cisco device</title>
-      <link>https://twimart.github.io/posts/cisco-ssh/</link>
+      <link>https://www.thomaswimart.fr/posts/cisco-ssh/</link>
       <pubDate>Thu, 17 Nov 2022 13:39:04 +0100</pubDate>
       
-      <guid>https://twimart.github.io/posts/cisco-ssh/</guid>
+      <guid>https://www.thomaswimart.fr/posts/cisco-ssh/</guid>
       <description>Creation of user names, domains, and keys (Here we take an exemple of Cisco router.)
 Firstly, if you haven&amp;rsquo;t already done so, give your device a personalized name and a domain name:
 Router(config)# hostname TotoToto(config)# ip domain-name exemple.com Remember to secure the privileged mode of your device!
@@ -70,25 +102,41 @@ Toto(config)# enable secret &amp;lt;mot_de_passe&amp;gt; Then, we have to tell t
     
     <item>
       <title>My Portfolio</title>
-      <link>https://twimart.github.io/english/portfolio/</link>
+      <link>https://www.thomaswimart.fr/english/portfolio/</link>
       <pubDate>Thu, 17 Nov 2022 11:02:24 +0100</pubDate>
       
-      <guid>https://twimart.github.io/english/portfolio/</guid>
+      <guid>https://www.thomaswimart.fr/english/portfolio/</guid>
       <description>Here is my portfolio 📑 : About me My name is Thomas, and I live in Amiens, France. I&amp;rsquo;m currently a computer science student, and I&amp;rsquo;m very interested in computer network administration, as well as in cybersecurity. This site serves me as a portfolio, but also as personal notes for the missions I have to accomplish for my studies.
 My projects The design and maintenance of this site is already a project in itself: indeed the web development is not really my strong point and it took a lot of time to make this website working&amp;hellip; But I have learn several things 🙂.</description>
     </item>
     
     <item>
       <title>Hugo basic commands</title>
-      <link>https://twimart.github.io/posts/hugo-commands/</link>
+      <link>https://www.thomaswimart.fr/posts/hugo-commands/</link>
       <pubDate>Thu, 17 Nov 2022 10:45:08 +0100</pubDate>
       
-      <guid>https://twimart.github.io/posts/hugo-commands/</guid>
+      <guid>https://www.thomaswimart.fr/posts/hugo-commands/</guid>
       <description>- hugo new site sitename -f yml Allows you to create the basic files for the creation of a new web site. The &amp;ldquo;-f yml&amp;rdquo; option will force the creation of the main configuration file in .yml (which I recommend).
 - hugo server Allows you to launch the web server from Hugo; this will allows us to see in live the modifications made to our web site. You have to execute this commands in the root from our site.</description>
     </item>
     
+    <item>
+      <title>Archives</title>
+      <link>https://www.thomaswimart.fr/archives/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.thomaswimart.fr/archives/</guid>
+      <description>archives</description>
+    </item>
     
+    <item>
+      <title>Search</title>
+      <link>https://www.thomaswimart.fr/search/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.thomaswimart.fr/search/</guid>
+      <description>search</description>
+    </item>
     
   </channel>
 </rss>

@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>pfsense on WIMART Thomas</title>
-    <link>https://twimart.github.io/tags/pfsense/</link>
+    <link>https://www.thomaswimart.fr/tags/pfsense/</link>
     <description>Recent content in pfsense on WIMART Thomas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 01 Dec 2022 10:29:45 +0100</lastBuildDate><atom:link href="https://twimart.github.io/tags/pfsense/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 01 Dec 2022 10:29:45 +0100</lastBuildDate><atom:link href="https://www.thomaswimart.fr/tags/pfsense/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Create a proxy server with Pfsense and Squid</title>
-      <link>https://twimart.github.io/posts/proxy/</link>
+      <link>https://www.thomaswimart.fr/posts/proxy/</link>
       <pubDate>Thu, 01 Dec 2022 10:29:45 +0100</pubDate>
       
-      <guid>https://twimart.github.io/posts/proxy/</guid>
-      <description>In this note, we will see how to install a proxy server, using Pfsense and Squid. We will use virtual machines, created under Vmware.
-Topology of our network Here is the network topology that we will use in this tutorial:
-To access the Internet, the &amp;ldquo;Linux&amp;rdquo; PC will go through the &amp;ldquo;Pfsense&amp;rdquo; router, in order to leave the local network &amp;ldquo;LAN&amp;rdquo;. Here the subtlety is that if &amp;ldquo;Linux&amp;rdquo; wants to access some web pages, these requests will first go through our proxy server &amp;ldquo;Squid&amp;rdquo;.</description>
+      <guid>https://www.thomaswimart.fr/posts/proxy/</guid>
+      <description>In this note, we will see how to install a proxy server, using Pfsense and Squid. We will use virtual machines, created under Vmware Workstation 16 Pro.
+The different parts of this tutorial:
+Part-1 Part-2 Part-3 Part-4 Part-5 Topology of our network Here is the network topology that we will use in this tutorial:
+To access the Internet, &amp;ldquo;PC1&amp;rdquo; will go through the &amp;ldquo;Pfsense&amp;rdquo; router, in order to leave the local network &amp;ldquo;LAN&amp;rdquo;.</description>
     </item>
     
   </channel>
