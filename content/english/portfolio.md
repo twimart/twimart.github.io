@@ -6,8 +6,6 @@ ShowBreadCrumbs: false
 ---
 
 
-## Here is my portfolio 📑 ":" ##
-
 ### About me ###
 
 My name is Thomas, and I live in Amiens, France. I'm currently a computer science student, and I'm very interested in computer network administration, as well as in cybersecurity.
