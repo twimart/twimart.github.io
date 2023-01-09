@@ -1,5 +1,5 @@
 ---
-title: "Create a TFTP server and backup and restore device configurations".
+title: "Create a TFTP server and backup and restore device configurations"
 date: 2023-01-06T11:24:04+01:00
 FRtags: ["tftp", "linux", "cisco"] 
 ---
