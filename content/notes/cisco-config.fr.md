@@ -8,15 +8,15 @@ FRtags: ["cisco", "configuration"]
 
 Passer en mode privilégié, puis configuration du terminal:
 
-```
+```console
 Switch>en
     
 Switch#conf t
 
-```
+```console
 Définir le nom du switch,  ainsi que le domaine auquel il appartient (optionnel).
 
-```
+```console
 Switch(config)#
 
 Switch(config)# hostname SwitchToto
@@ -25,71 +25,72 @@ SwitchToto(config)# ip domain-name exempledomaine.local
 
 SwitchToto(config)# end
 
-```
+```console
 Définir l'addressage IP du switch. Pour cela, on doit créer un VLAN dédié à la configuration du switch (ici le vlan 10).
 L'IP que nous allons définir sera donc associé à ce VLAN.
-Créer le VLAN: 
+Créer le VLAN:
 
-```
+```console
 SwitchToto(config)# vlan 10
 SwitchToto(config-vlan)# exit
 
-```
+```console
 Puis définir la configuration IP:
 - Addresse IP: 192.168.10.1
 - Masque de sous-réseau: 255.255.255.0
 - Passerelle par défaut: 192.168.10.254
 
-```
+```console
 SwitchToto(config)# interface vlan 10 
 SwitchToto(config-if)# ip address 192.168.10.1 255.255.255.0
 SwitchToto(config-if)# ex
 SwitchToto(config)# ip default-gateway 192.168.10.254
 
-```
+```console
 Pour voir la configuration de notre vlan d'administration:
-```
+
+```console
 SwitchToto# sh run int vlan 10
 
-```
+```console
 Pour supprimer l'addresse IP, son masque, ainsi que la passerelle par défaut:
 
-```
+```console
 SwitchToto(config)# interface vlan 10
 SwitchToto(config-if)# no ip address
 SwitchToto(config-if)# ex
 SwitchToto(config)# no ip default-gateway
 ```
-Il faut maintenant sécuriser notre Switch.    
-***Même si cette étape est optionnelle, je vous la recommande fortement.***     
+
+Il faut maintenant sécuriser notre Switch.
+***Même si cette étape est optionnelle, je vous la recommande fortement.***
 
 On va tout d'abord masquer les futurs mots de passe que nous allons mettre sur ce switch, de manière à ce qu'ils ne s'affichent pas à l'écran même lors d'un `show running config`. On va donc ajouter le service **password-encryption**.
 
-
-```
+```console
 Switch(config)# service password-encryption
-
 ```
+
 Puis nous pouvons définir le mot de passe qui sera demandé lorsque l'on voudra accèder au mode priviligié:
 
-```
+```console
 SwitchToto(config)# enable secret P@55w0rd
-
 ```
-Désormais, si je veux rentrer dans le mode privilégié, il faudra que j'inscrive le mot de passe "P@55w0rd" (qui est d'ailleur un très mauvais mot de passe).
 
+Désormais, si je veux rentrer dans le mode privilégié, il faudra que j'inscrive le mot de passe "P@55w0rd" (qui est d'ailleur un très mauvais mot de passe).
 
 ## Sauvegarder la configuration ##
 
 ### Explication ###
-Les commutateur Cisco possède 2 configurations: la "running-config" et la "startup-config". Lorsque le switch démarre, il utilise sa "startup-config". Si des changements de configuration sont crées, ils se feront dans la "running-config". Le commutateur utilisera alors sa "running-config".    
-En revanche, si les changements opérés se révelent être un échec, il suffit 
-de le redémarrer. Ainsi, le switch utilisera sa "startup-config", qui n'a donc pas changée.    
+
+Les commutateur Cisco possède 2 configurations: la "running-config" et la "startup-config". Lorsque le switch démarre, il utilise sa "startup-config". Si des changements de configuration sont crées, ils se feront dans la "running-config". Le commutateur utilisera alors sa "running-config".
+En revanche, si les changements opérés se révelent être un échec, il suffit
+de le redémarrer. Ainsi, le switch utilisera sa "startup-config", qui n'a donc pas changée.
 Lorsque l'on est certain des changements faits, on peut copier la "running-config" dans la "startup-config". Les changements seront alors pris en compte dans la config par défaut, de démarrage, du commutateur.
 
 ### Commandes ###
 
-```
+```console
 SwitchToto# copy running-config starting-config
 
 Destination filename [startup-config]?
@@ -110,4 +111,3 @@ SwitchToto#
 ```
 
 Vous devriez maintenant avoir un switch configuré et sécurisé ! 😊
-

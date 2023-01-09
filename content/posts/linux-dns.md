@@ -10,31 +10,33 @@ Install Bind9:
 
 The Bind9 files are in `/etc/bind/`
 
-```
+```console
 cd /etc/bind/ 
 
 ```
 
 Then, we put these 3 lines in the named.conf file:
 
-```
+```console
 include "/etc/bind/named.conf.options";
 include "/etc/bind/named.conf.local";
 include "/etc/bind/named.conf.default-zones";
 ```
+
 In the Bind9 configuration file "named.conf.local", declare its zones :
 
-```
+```console
 zone "example.com" {
         type master;
         file "/etc/bind/db.example.com";
 };
 ```
+
 → The "file" line specifies that the configuration of our example.com zone will be done in the "db.example.com" file.
 
 In db.example.com, we configure our zone (the IP of my DNS server is 192.168.1.15 ):
 
-```
+```console
 ;
 ; BIND data file for example.com
 ;
@@ -59,19 +61,19 @@ In the second paragraph, we are going to give information to our DNS server, tha
 
 ⚠ It is strongly recommended to make the NS record, it is the standard.
 
-First, I gave my DNS server the IPs of the other DNS servers in the example.com domain (this is the NS record). Although there is only one (my DNS server), I put it anyway.   
+First, I gave my DNS server the IPs of the other DNS servers in the example.com domain (this is the NS record). Although there is only one (my DNS server), I put it anyway.
 
 Then I declared 2 web servers, serv1 and serv2.
 
 ***I remind you that you will have to adapt this configuration according to your needs, this is only an example.***
 
-If our DNS server is not able to resolve a certain domain name, it must send these requests to other DNS servers that can do it. These servers are called "forwarders". We must indicate them in the file "named.conf.options". 
+If our DNS server is not able to resolve a certain domain name, it must send these requests to other DNS servers that can do it. These servers are called "forwarders". We must indicate them in the file "named.conf.options".
 
-
-```
+```console
 forwarders {
         8.8.8.8;
         172.25.254.15 ;
     };
 ```
+
 You should now have a working DNS server! 😁

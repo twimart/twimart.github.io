@@ -6,16 +6,16 @@ ShowBreadCrumbs: false
 ---
 
 
-## Here is my portfolio 📑 : ##
+## Here is my portfolio 📑 ":" ##
 
 ### About me ###
 
-My name is Thomas, and I live in Amiens, France. I'm currently a computer science student, and I'm very interested in computer network administration, as well as in cybersecurity. 
+My name is Thomas, and I live in Amiens, France. I'm currently a computer science student, and I'm very interested in computer network administration, as well as in cybersecurity.
 This site serves me as a portfolio, but also as personal notes for the missions I have to accomplish for my studies.
 
 ### My projects ###
 
-The design and maintenance of this site is already a project in itself: indeed the web development is not really my strong point and it took a lot of time to make this website working... But I have learn several things 🙂. 
+The design and maintenance of this site is already a project in itself: indeed the web development is not really my strong point and it took a lot of time to make this website working... But I have learn several things 🙂.
 
 ### My Certifications ###
 
@@ -27,6 +27,4 @@ I have a Cisco Netacad NDG Linux Essential certification. This certification att
 
 ![cv](/images/cv.png)
 
-the english version and the photo will come soon! 
-
-
+the english version and the photo will come soon !

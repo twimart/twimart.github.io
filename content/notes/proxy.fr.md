@@ -15,15 +15,14 @@ Les différentes parties qui composent ce tutoriel:
 - [Part-4](/fr/proxy/proxy4)
 - [Part-5](/fr/proxy/proxy5)
 
+## Topologie de notre réseau ##
 
-## Topologie de notre réseau ## 
-
-Voila la topologie du réseau que nous allons utiliser dans ce tuto: 
+Voila la topologie du réseau que nous allons utiliser dans ce tuto:
 
 ![reseau](/images/reseaux.png)
 
-Pour accéder à Internet, le "PC1" passera par le routeur "Pfsense", afin de sortir du réseau local "LAN". Ici la subtilité est que si "PC1" veut accéder à certaines page web, ses requêtes passeront d'abord par notre serveur proxy "Squid".    
-"Squid" pourra alors bloquer certaines pages web ou encore enregistrer certaines données dans sont cache afin d'améliorer les performances.    
+Pour accéder à Internet, le "PC1" passera par le routeur "Pfsense", afin de sortir du réseau local "LAN". Ici la subtilité est que si "PC1" veut accéder à certaines page web, ses requêtes passeront d'abord par notre serveur proxy "Squid".
+"Squid" pourra alors bloquer certaines pages web ou encore enregistrer certaines données dans sont cache afin d'améliorer les performances.
 
 *Je précise que ce shéma ne sert que d'illustration, Pfsense et Squid ne forment en réalité qu'une seule machine dans notre cas.*
 
@@ -31,7 +30,7 @@ Pour accéder à Internet, le "PC1" passera par le routeur "Pfsense", afin de so
 
 Sur la page de téléchargement de [Pfsense](https://www.pfsense.org/download/), télécharger l'iso de notre futur routeur virtuel. Je précise que vous allez obtenir fichier .gz, vous devez extraire ce fichier sur votre ordinateur.
 
-Téléchargez aussi l'iso d'une VM, pour PC1. Personnellement, je vais utiliser une distribution Linux Ubuntu, qui fera amplement l'affaire, mais vous êtes libre d'utiliser n'importe quel OS que vous maitrisez. 
+Téléchargez aussi l'iso d'une VM, pour PC1. Personnellement, je vais utiliser une distribution Linux Ubuntu, qui fera amplement l'affaire, mais vous êtes libre d'utiliser n'importe quel OS que vous maitrisez.
 
 Ensuite, sur Vmware, vous pouvez créer les machines virtuelles (vous pouvez mon suivre mon tutoriel [ici](/fr/notes/vmware).)
 
@@ -44,33 +43,26 @@ Une fois les machines créées, on va devoir modifier leurs paramètres. En effe
 1. Allez dans les paramètres de la VM:
 
 ![freebsd1](/images/freebsd/freebsd1.png)
-
 2. Appuyez sur "Add":
 
 ![freebsd2](/images/freebsd/freebsd2.png)
-
 3. Sélectionnez "Network Adaptater", puis "Finish":
 
 ![freebsd3](/images/freebsd/freebsd3.png)
-
 4. On va maintenant paramétrer nos deux interfaces. Appuyez sur la première, puis sur "Advanced"
 
 ![freebsd4](/images/freebsd/freebsd4.png)
-
 5. Appuyer sur "Generate", et  ***notez bien*** (si, si, j'insiste) les deux derniers octets de l'addresse MAC qui vient d'être générée. C'est normal de ne pas avoir la même valeur que moi 😉 . Puis "OK".
 
 ![freebsd5](/images/freebsd/freebsd5.png)
-
 6. Ensuite, appuyez sur le bouton "Lan Segments":
 
 ![freebsd6](/images/freebsd/freebsd6.png)
-
 7. On va créer un nouveau segment LAN. Cliquez sur "Add", donner lui le nom que vous voulez, puis "OK".
 
 ![freebsd7](/images/freebsd/freebsd7.png)
+8. Enfin, toujours sur la première interface, dans la section "Network Connection", sélectionnez LAN segment, puis choisissez le segment LAN que vous venez de créer.
 
-8. Enfin, toujours sur la première interface, dans la section "Network Connection", sélectionnez LAN segment, puis choisissez le segment LAN que vous venez de créer. 
- 
 ![freebsd8](/images/freebsd/freebsd8.png)
 
 Nous venons ici de preciser que la première interface fera partie du LAN.
@@ -79,13 +71,12 @@ Pour la deuxième interface de notre routeur Pfsense, répétez la 4ième et 5i�
 
 ![freebsd9](/images/freebsd/freebsd9.png)
 
-Notre machine virtuelle Pfsense est maintenant prête à démarrer! 
+Notre machine virtuelle Pfsense est maintenant prête à démarrer!
 
 ⚠️Pensez aussi à configurer la machine "PC1". Pour cela, choisissez le "Network Adaptater" de votre VM, puis là encore sélectionnez "LAN segment", en choisissant le segement LAN que vous mis pour la première interface du routeur Pfsense:
 
 ![freebsd8](/images/freebsd/freebsd8.png)
 
-Vous pouvez alors démarrer votre machine Pfsense.    
+Vous pouvez alors démarrer votre machine Pfsense.
 
 ***La suite du tutoriel se trouve ➡️ [ici](/fr/proxy/proxy2/) ⬅️.***
-

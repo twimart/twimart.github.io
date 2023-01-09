@@ -6,40 +6,40 @@ FRtags: ["tftp", "linux", "cisco"]
 
 ⚠ **J'utilise une machine Debian pour mon serveur TFTP, les commandes présentés ne sont donc valide que pour Linux.**
 
-## A faire sur votre serveur 
+## A faire sur votre serveur
 
 Sur une machine Debian 10, installer un serveur TFTP:
 
-```
+```console
 sudo -s
 apt install xinetd tftpd tftp
 ```
 
 Une fois le service installé, il faut créer le fichier de configuration :
 
-```
+```console
 nano /etc/xinetd.d/tftp
 ```
 
 et ajouter les lignes suivantes dans le fichier :
 
-```
+```console
 service tftp
 {
-protocol    	= udp
-port        	= 69
-socket_type 	= dgram
-wait        	= yes
-user        	= nobody
-server      	= /usr/sbin/in.tftpd
-server_args 	= /tftpboot
-disable     	= no
+protocol    =   udp
+port        =   69
+socket_type =   dgram
+wait        =   yes
+user        =   nobody
+server      =   /usr/sbin/in.tftpd
+server_args =   /tftpboot
+disable     =   no
 }
 ```
 
 Maintenant, il faut créer un répertoire du nom de /tftpboot à la racine et on pensera à lui donner des droits :
 
-```
+```console
 sudo mkdir /tftpboot
 sudo chmod -R 777 /tftpboot
 sudo chown -R nobody /tftpboot
@@ -47,7 +47,7 @@ sudo chown -R nobody /tftpboot
 
 Ensuite il faut redémarrer le service :
 
-```
+```console
 sudo /etc/init.d/xinetd restart
 ```
 
@@ -55,30 +55,30 @@ Techniquement, votre serveur est prêt! Mais on va aller plus loin dans ce tuto:
 
 On va donc créer un fichier qui contiendra la configuration de notre appareil (ici, ce sera "SwitchToto"):
 
-```
+```console
 touch /tftpboot/SwitchToto
 ```
 
 On pense à lui donner des droits:
 
-```
+```console
 chmod 777 /tftpboot/SwitchToto
 ```
 
 ## A faire sur votre équipement
 
-```
+```console
 SwitchToto> en
 SwitchToto> copy running-config tftp
 ```
+
 Cette commande vous posera 2 question:
 
-```
+```console
 1- L'adresse IP du serveur TFTP
 2- La destination du fichier de configuration, soit /tftpboot/SwitchToto
 ```
 
-Et un fichier de configuration ira se stocker sur votre serveur TFTP! 
+Et un fichier de configuration ira se stocker sur votre serveur TFTP!
 
-Merci à **[Enzo Ribeiro](https://enzo-ribeiro.github.io/portfolio)** pour son aide! 
-
+Merci à **[Enzo Ribeiro](https://enzo-ribeiro.github.io/portfolio)** pour son aide!
