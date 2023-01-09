@@ -6,9 +6,8 @@ Confirmez votre choix.
 On nous demande ensuite comment partionner notre disque. Choisissez &amp;ldquo;Auto (UFS) BIOS&amp;rdquo;, puis &amp;ldquo;OK&amp;rdquo;.
 Pfsense va alors démarrer son installation:</description></item><item><title>Créer un serveur proxy avec Pfsense et Squid (Part 3)</title><link>https://www.thomaswimart.fr/fr/proxy/proxy3/</link><pubDate>Tue, 06 Dec 2022 10:55:47 +0100</pubDate><guid>https://www.thomaswimart.fr/fr/proxy/proxy3/</guid><description>Les différentes parties qui composent ce tutoriel:
 Part-1 Part-2 Part-3 Part-4 Part-5 Configuration de PC1 On va maintenant se concentrer sur PC1. Rassurez-vous, c&amp;rsquo;est plus simple!
-⚠️Comme dit plus tôt, je vais travailler ici avec une machine Linux Ubuntu, donc les commandes et les manipulations qui vont suivre ne sont que valides pour cet OS.
-On va changer les paramètres réseau de notre machine.
-Sur votre machine, lancer un terminal, puis faites la commande nmtui (fonctionne uniquement sur Linux).</description></item><item><title>Créer un serveur proxy avec Pfsense et Squid (Part 4)</title><link>https://www.thomaswimart.fr/fr/proxy/proxy4/</link><pubDate>Tue, 06 Dec 2022 10:55:47 +0100</pubDate><guid>https://www.thomaswimart.fr/fr/proxy/proxy4/</guid><description>Les différentes parties qui composent ce tutoriel:
+⚠️**Comme dit plus tôt, je vais travailler ici avec une machine Linux Ubuntu, donc les commandes et les manipulations qui vont suivre ne sont que valides pour cet OS.**
+On va changer les paramètres réseau de notre machine. Sur votre machine, lancer un terminal, puis faites la commande nmtui (fonctionne uniquement sur Linux).</description></item><item><title>Créer un serveur proxy avec Pfsense et Squid (Part 4)</title><link>https://www.thomaswimart.fr/fr/proxy/proxy4/</link><pubDate>Tue, 06 Dec 2022 10:55:47 +0100</pubDate><guid>https://www.thomaswimart.fr/fr/proxy/proxy4/</guid><description>Les différentes parties qui composent ce tutoriel:
 Part-1 Part-2 Part-3 Part-4 Part-5 Configuration détaillé de Pfsense Une fois connecté, vous allez faire face à un assistant. Cliquez sur &amp;ldquo;Next&amp;rdquo; jusqu&amp;rsquo;à tomber sur la fenêtre ci-dessous:
 Inscivez la même configuration que moi.
 Sélectionnez votre fuseau horaire, puis &amp;ldquo;Next&amp;rdquo;:
