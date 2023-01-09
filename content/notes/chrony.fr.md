@@ -4,7 +4,7 @@ date: 2023-01-06T09:24:04+01:00
 FRtags: ["chrony", "linux", "cisco"] 
 ---
 
-**⚠ J'utilise une machine Debian pour mon serveur Chrony**
+⚠ **J'utilise une machine Debian pour mon serveur Chrony, les commandes présentés ne sont donc valide que pour Linux.**
 
 ## A faire sur votre serveur (Linux ou Windows)
 
@@ -103,4 +103,5 @@ Router#show clock
 Et vos équipements sont bien synchronisé entre eux! 
 
 
-Merci à Enzo Ribeiro pour son aide. 😊
+Merci à **[Enzo Ribeiro](https://enzo-ribeiro.github.io/portfolio)** pour son aide. 😊
+

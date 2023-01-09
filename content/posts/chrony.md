@@ -105,7 +105,7 @@ Router#show clock
 And your equipment is well synchronized! 
 
 
-Thanks to Enzo Ribeiro for his help. 😊
+Thanks to **[Enzo Ribeiro](https://enzo-ribeiro.github.io/portfolio)** for his help. 😊
 
 
 
