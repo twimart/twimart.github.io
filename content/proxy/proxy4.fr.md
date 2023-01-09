@@ -14,8 +14,6 @@ Les différentes parties qui composent ce tutoriel:
 - [Part-4](/fr/proxy/proxy4)
 - [Part-5](/fr/proxy/proxy5)
 
-
-
 ## Configuration détaillé de Pfsense ##
 
 Une fois connecté, vous allez faire face à un assistant. Cliquez sur "Next" jusqu'à tomber sur la fenêtre ci-dessous:
@@ -32,11 +30,11 @@ Laissez les paramètre par défaut, puis "Next":
 
 ![cpfsence3](/images/cpfsense/cpfsense3.png)
 
-Idem pour cette fenêtre: 
+Idem pour cette fenêtre:
 
 ![cpfsence4](/images/cpfsense/cpfsense4.png)
 
-Inscrivez le nouveau mot de passe pour accèder Pfsense depuis le Web ou  en SSH: 
+Inscrivez le nouveau mot de passe pour accèder Pfsense depuis le Web ou  en SSH:
 
 ![cpfsence5](/images/cpfsense/cpfsense5.png)
 
@@ -50,8 +48,9 @@ Naviguer dans le menus "Firewall", puis "Rules", et sélectionnez l'interface WA
 
 ![cpfsence7](/images/cpfsense/cpfsense7.png)
 
-On va ici créer une règle de pare-feu, afin d'avoir accès à Internet depuis PC1. En effet, pour l'instant, il est impossible d'accéder à une page web depuis PC1, car les trames Ethernet sont bloquées par notre routeur virtuel Pfsense.     
-(Dans mon cas, je parvenais déja à accéder à Internet, ce qui est assez étrange puisque le routeur bloque par défaut les paquets arrivant sur l'interface WAN... 🤔)   
+On va ici créer une règle de pare-feu, afin d'avoir accès à Internet depuis PC1. En effet, pour l'instant, il est impossible d'accéder à une page web depuis PC1, car les trames Ethernet sont bloquées par notre routeur virtuel Pfsense.
+
+(Dans mon cas, je parvenais déja à accéder à Internet, ce qui est assez étrange puisque le routeur bloque par défaut les paquets arrivant sur l'interface WAN... 🤔)
 
 Appuyer sur "Add ⬆️", puis laisser tout les paramètres par défaut, sauf la ligne "Protocol", ou vous mettrez "Any".
 
@@ -59,14 +58,10 @@ Appuyer sur "Add ⬆️", puis laisser tout les paramètres par défaut, sauf la
 
 Vous pouvez ensuite valider la règle, et appuyee sur le bouton "Apply changes".
 
-Bien! Maintenant, on devrait avoir accès à Internet! 
+Bien! Maintenant, on devrait avoir accès à Internet!
 
 ![cpfsence9](/images/cpfsense/cpfsense9.png)
 
 Effectivement, ça marche! On va maintenant essayer de bloquer l'accès au site Youtube.
 
 ***La suite du tutoriel se trouve ➡️ [ici](/fr/proxy/proxy5) ⬅️.***
-
-
-
-

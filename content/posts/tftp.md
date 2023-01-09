@@ -6,24 +6,24 @@ FRtags: ["tftp", "linux", "cisco"]
 
 ⚠ **I am using a Debian machine for my TFTP server, so the commands presented are only valid for Linux.**
 
-## To do on your server 
+## To do on your server
 
 On a Debian 10 machine, install a TFTP server:
 
-```
+```console
 sudo -s
 apt install xinetd tftpd tftp
 ```
 
 Once the service is installed, you need to create the configuration file :
 
-```
+```console
 nano /etc/xinetd.d/tftp
 ```
 
 and add the following lines to the file:
 
-```
+```console
 service tftp
 {
 protocol = udp
@@ -39,7 +39,7 @@ disable = no
 
 Now we need to create a directory called ``/tftpboot`` in the root and we will think of giving it rights:
 
-```
+```console
 sudo mkdir /tftpboot
 sudo chmod -R 777 /tftpboot
 sudo chown -R nobody /tftpboot
@@ -47,7 +47,7 @@ sudo chown -R nobody /tftpboot
 
 Then you have to restart the service:
 
-```
+```console
 sudo /etc/init.d/xinetd restart
 ```
 
@@ -55,29 +55,30 @@ Technically, your server is ready! But we will go further in this tutorial: inde
 
 So we will create a file that will contain the configuration of our device (here, it will be "SwitchToto"):
 
-```
+```console
 touch /tftpboot/SwitchToto
 ```
 
 We'll think about giving it some rights:
 
-```
+```console
 chmod 777 /tftpboot/SwitchToto
 ```
 
 ## To do on your equipment
 
-```
+```console
 SwitchToto> en
-SwitchToto> copy running-config tftp
+SwitchToto# copy running-config tftp
 ```
+
 This command will ask you 2 questions:
 
-```
+```console
 1- The IP address of the TFTP server
 2- The destination of the configuration file, which is /tftpboot/SwitchToto
 ```
 
-And a configuration file will be stored on your TFTP server! 
+And a configuration file will be stored on your TFTP server!
 
 Thanks to **[Enzo Ribeiro](https://enzo-ribeiro.github.io/portfolio)** for his help!

@@ -14,15 +14,13 @@ Les différentes parties qui composent ce tutoriel:
 - [Part-4](/fr/proxy/proxy4)
 - [Part-5](/fr/proxy/proxy5)
 
+## Configuration de PC1
 
+On va maintenant se concentrer sur PC1. Rassurez-vous, c'est plus simple!
 
-## Configuration de PC1 ##
+⚠️**_Comme dit plus tôt, je vais travailler ici avec une machine Linux Ubuntu, donc les commandes et les manipulations qui vont suivre ne sont que valides pour cet OS._**
 
-On va maintenant se concentrer sur PC1. Rassurez-vous, c'est plus simple! 
-
-⚠️***Comme dit plus tôt, je vais travailler ici avec une machine Linux Ubuntu, donc les commandes et les manipulations qui vont suivre ne sont que valides pour cet OS.***
-
-On va changer les paramètres réseau de notre machine.   
+On va changer les paramètres réseau de notre machine.
 Sur votre machine, lancer un terminal, puis faites la commande `nmtui` (fonctionne uniquement sur Linux).
 
 ![pc1](/images/pc/pc1.png)
@@ -41,6 +39,6 @@ Lancer votre navigateur, puis inscivez-y l'IP de la VM Pfsense. On arrive sur la
 
 ![pc4](/images/pc/pc4.png)
 
-C'est tout pour la configuration de PC1!    
-   
-***La suite du tutoriel se trouve ➡️ [ici](/fr/proxy/proxy4) ⬅️!***
+C'est tout pour la configuration de PC1!
+
+**_La suite du tutoriel se trouve ➡️ [ici](/fr/proxy/proxy4) ⬅️!_**

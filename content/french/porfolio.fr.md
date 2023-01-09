@@ -5,12 +5,11 @@ FRtags: ["portfolio", "CV", "certifications"]
 ShowBreadCrumbs: false
 ---
 
-## Voilà mon portfolio 📑 :  ##
-
+## Voilà mon portfolio📑':' ##
 
 ### À propos de moi ###
 
-Je m'appelle Thomas, et j'habite à Amiens, en France. Actuellement étudiant en informatique, je m'intéresse de près à l'admninistration des réseaux informatique, ainsi qu'à la cybersécurité. 
+Je m'appelle Thomas, et j'habite à Amiens, en France. Actuellement étudiant en informatique, je m'intéresse de près à l'admninistration des réseaux informatique, ainsi qu'à la cybersécurité.
 Ce site me sert à la fois de portfolio, mais aussi de notes personnelles qui me servent pour les missions que je dois accomplir pour mes études.
 
 ### Mes projets ###
@@ -19,7 +18,7 @@ La conception et la maintenance de ce site constituent déja un projet en soi: e
 
 ### Mes certifications ###
 
-Je suis titulaire d'une certification Cisco Netacad NDG Linux Essential. Cette certification atteste de mes connaissances des commandes basiques de Linux.
+Je suis titulaire d'une certification Cisco Netacad NDG Linux Essential. Cette certification atteste de mes connaissances des commandes basiques de Linux[.](https://binance.com)
 
 ![certif linux](/images/certif-linux.png)
 
@@ -27,4 +26,4 @@ Je suis titulaire d'une certification Cisco Netacad NDG Linux Essential. Cette c
 
 ![cv](/images/cv.png)
 
-Je dois juste prendre une photo de bg mais ça arrive bientot :)
+Je dois juste prendre une photo de bg mais ça arrive bientot !

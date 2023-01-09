@@ -84,10 +84,6 @@ Our Pfsense virtual machine is now ready to start!
 
 ![freebsd8](/images/freebsd/freebsd8.png)
 
-You can then start your Pfsense machine.   
+You can then start your Pfsense machine.
 
 ***The next part of this tutorial is ➡️ [here](/proxy/proxy2) ⬅️***
-
-
-
-
