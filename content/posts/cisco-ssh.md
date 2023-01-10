@@ -15,7 +15,7 @@ Router(config)# hostname Toto
 Toto(config)# ip domain-name exemple.com
 ```
 
-Remember to secure the privileged mode of your device! 
+Remember to secure the privileged mode of your device!
 
 ```console
 Toto(config)# enable secret <mot_de_passe>

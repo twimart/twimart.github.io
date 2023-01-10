@@ -8,12 +8,16 @@
     <language>en</language>
     <lastBuildDate>Fri, 06 Jan 2023 11:24:04 +0100</lastBuildDate><atom:link href="https://www.thomaswimart.fr/fr/frtags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Créer un serveur TFTP et sauvegarder et restaurer les configuration des équipements </title>
+      <title>Créer un serveur TFTP et sauvegarder et restaurer les configuration des équipements</title>
       <link>https://www.thomaswimart.fr/fr/notes/tftp/</link>
       <pubDate>Fri, 06 Jan 2023 11:24:04 +0100</pubDate>
       
       <guid>https://www.thomaswimart.fr/fr/notes/tftp/</guid>
-      <description></description>
+      <description>⚠ J&amp;rsquo;utilise une machine Debian pour mon serveur TFTP, les commandes présentés ne sont donc valide que pour Linux.
+A faire sur votre serveur Sur une machine Debian 10, installer un serveur TFTP:
+sudo -s apt install xinetd tftpd tftp Une fois le service installé, il faut créer le fichier de configuration :
+nano /etc/xinetd.d/tftp et ajouter les lignes suivantes dans le fichier :
+service tftp { protocol = udp port = 69 socket_type = dgram wait = yes user = nobody server = /usr/sbin/in.</description>
     </item>
     
     <item>
@@ -22,14 +26,11 @@
       <pubDate>Fri, 06 Jan 2023 09:24:04 +0100</pubDate>
       
       <guid>https://www.thomaswimart.fr/fr/notes/chrony/</guid>
-      <description>⚠ J&amp;rsquo;utilise une machine Debian pour mon serveur Chrony
+      <description>⚠ J&amp;rsquo;utilise une machine Debian pour mon serveur Chrony, les commandes présentés ne sont donc valide que pour Linux.
 A faire sur votre serveur (Linux ou Windows) Tout d&amp;rsquo;abord, installer Chrony:
-sudo -sapt install chrony On peut ensuite vérifier le contenu du fichier &amp;ldquo;chrony.conf&amp;rdquo;
+sudo -s apt install chrony On peut ensuite vérifier le contenu du fichier &amp;ldquo;chrony.conf&amp;rdquo;
 nano /etc/chrony/chrony.conf Ensuite nous devons déclarer nos pool NTP. Nous allons nous rendre à la ligne 3 du fichier pour faire quelques modification :
-pool 2.debian.pool.ntp.org iburst
-devient:
-#pool 2.debian.pool.ntp.org iburst
-et maintenant nous pouvons ajouter nos pools en entrant les lignes suivantes à la place :</description>
+pool 2.</description>
     </item>
     
     <item>
@@ -42,8 +43,8 @@ et maintenant nous pouvons ajouter nos pools en entrant les lignes suivantes à 
 sudo apt-get install bind9
 Les fichiers de configuration de Bind9 sont dans /etc/bind/
 cd /etc/bind/ Tout d’abord, on met cet 3 lignes dans le fichier named.conf :
-include &amp;#34;/etc/bind/named.conf.options&amp;#34;;include &amp;#34;/etc/bind/named.conf.local&amp;#34;;include &amp;#34;/etc/bind/named.conf.default-zones&amp;#34;; -Dans le fichier de configuration de bind9 « named.conf.local », déclarer ses zones :
-zone &amp;#34;example.com&amp;#34; {type master;file &amp;#34;/etc/bind/db.example.com&amp;#34;;}; → La ligne &amp;ldquo;file&amp;rdquo; précise que la configuration de notre zone example.com se fera dans le fichier « db.</description>
+include &amp;#34;/etc/bind/named.conf.options&amp;#34;; include &amp;#34;/etc/bind/named.conf.local&amp;#34;; include &amp;#34;/etc/bind/named.conf.default-zones&amp;#34;; -Dans le fichier de configuration de bind9 « named.conf.local », déclarer ses zones :
+zone &amp;#34;example.com&amp;#34; { type master; file &amp;#34;/etc/bind/db.example.com&amp;#34;; }; → La ligne &amp;ldquo;file&amp;rdquo; précise que la configuration de notre zone example.com se fera dans le fichier « db.</description>
     </item>
     
   </channel>

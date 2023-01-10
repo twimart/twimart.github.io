@@ -15,7 +15,7 @@
       <guid>https://www.thomaswimart.fr/posts/cisco-ssh/</guid>
       <description>Creation of user names, domains, and keys (Here we take an exemple of Cisco router.)
 Firstly, if you haven&amp;rsquo;t already done so, give your device a personalized name and a domain name:
-Router(config)# hostname TotoToto(config)# ip domain-name exemple.com Remember to secure the privileged mode of your device!
+Router(config)# hostname Toto Toto(config)# ip domain-name exemple.com Remember to secure the privileged mode of your device!
 Toto(config)# enable secret &amp;lt;mot_de_passe&amp;gt; Then, we have to tell to our router (or switch) to generate aymetric key pair (required to the SSH connection).</description>
     </item>
     

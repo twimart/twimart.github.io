@@ -8,12 +8,16 @@
     <language>en</language>
     <lastBuildDate>Fri, 06 Jan 2023 11:24:04 +0100</lastBuildDate><atom:link href="https://www.thomaswimart.fr/fr/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Créer un serveur TFTP et sauvegarder et restaurer les configuration des équipements </title>
+      <title>Créer un serveur TFTP et sauvegarder et restaurer les configuration des équipements</title>
       <link>https://www.thomaswimart.fr/fr/notes/tftp/</link>
       <pubDate>Fri, 06 Jan 2023 11:24:04 +0100</pubDate>
       
       <guid>https://www.thomaswimart.fr/fr/notes/tftp/</guid>
-      <description></description>
+      <description>⚠ J&amp;rsquo;utilise une machine Debian pour mon serveur TFTP, les commandes présentés ne sont donc valide que pour Linux.
+A faire sur votre serveur Sur une machine Debian 10, installer un serveur TFTP:
+sudo -s apt install xinetd tftpd tftp Une fois le service installé, il faut créer le fichier de configuration :
+nano /etc/xinetd.d/tftp et ajouter les lignes suivantes dans le fichier :
+service tftp { protocol = udp port = 69 socket_type = dgram wait = yes user = nobody server = /usr/sbin/in.</description>
     </item>
     
     <item>
@@ -22,14 +26,11 @@
       <pubDate>Fri, 06 Jan 2023 09:24:04 +0100</pubDate>
       
       <guid>https://www.thomaswimart.fr/fr/notes/chrony/</guid>
-      <description>⚠ J&amp;rsquo;utilise une machine Debian pour mon serveur Chrony
+      <description>⚠ J&amp;rsquo;utilise une machine Debian pour mon serveur Chrony, les commandes présentés ne sont donc valide que pour Linux.
 A faire sur votre serveur (Linux ou Windows) Tout d&amp;rsquo;abord, installer Chrony:
-sudo -sapt install chrony On peut ensuite vérifier le contenu du fichier &amp;ldquo;chrony.conf&amp;rdquo;
+sudo -s apt install chrony On peut ensuite vérifier le contenu du fichier &amp;ldquo;chrony.conf&amp;rdquo;
 nano /etc/chrony/chrony.conf Ensuite nous devons déclarer nos pool NTP. Nous allons nous rendre à la ligne 3 du fichier pour faire quelques modification :
-pool 2.debian.pool.ntp.org iburst
-devient:
-#pool 2.debian.pool.ntp.org iburst
-et maintenant nous pouvons ajouter nos pools en entrant les lignes suivantes à la place :</description>
+pool 2.</description>
     </item>
     
     <item>
@@ -55,9 +56,8 @@ Pfsense va alors démarrer son installation:</description>
       <guid>https://www.thomaswimart.fr/fr/proxy/proxy3/</guid>
       <description>Les différentes parties qui composent ce tutoriel:
 Part-1 Part-2 Part-3 Part-4 Part-5 Configuration de PC1 On va maintenant se concentrer sur PC1. Rassurez-vous, c&amp;rsquo;est plus simple!
-⚠️Comme dit plus tôt, je vais travailler ici avec une machine Linux Ubuntu, donc les commandes et les manipulations qui vont suivre ne sont que valides pour cet OS.
-On va changer les paramètres réseau de notre machine.
-Sur votre machine, lancer un terminal, puis faites la commande nmtui (fonctionne uniquement sur Linux).</description>
+⚠️**Comme dit plus tôt, je vais travailler ici avec une machine Linux Ubuntu, donc les commandes et les manipulations qui vont suivre ne sont que valides pour cet OS.**
+On va changer les paramètres réseau de notre machine. Sur votre machine, lancer un terminal, puis faites la commande nmtui (fonctionne uniquement sur Linux).</description>
     </item>
     
     <item>
@@ -119,7 +119,7 @@ Pour accéder à Internet, le &amp;ldquo;PC1&amp;rdquo; passera par le routeur &
       <guid>https://www.thomaswimart.fr/fr/notes/cisco-ssh/</guid>
       <description>Création de noms d&amp;rsquo;utilisateurs, de domaines, et de clés (Nous prenons ici l&amp;rsquo;exemple d&amp;rsquo;un router Cisco.)
 Tout d&amp;rsquo;abord, si ça n&amp;rsquo;est pas déja fait, donner un nom personnalisé ainsi qu&amp;rsquo;un nom de domaine DNS à votre appareil:
-Router(config)# hostname TotoToto(config)# ip domain-name exemple.com (si vous voulez faire votre propre serveur DNS Linux, j&amp;rsquo;ai fait un tuto ici )
+Router(config)# hostname Toto Toto(config)# ip domain-name exemple.com (si vous voulez faire votre propre serveur DNS Linux, j&amp;rsquo;ai fait un tuto ici )
 Pensez à sécuriser le mode privilégié de votre appareil !
 Toto(config)# enable secret &amp;lt;mot_de_passe&amp;gt; Ensuite, nous devons dire à notre routeur (ou switch) de générer une paire de clés asymétrique (nécessaire à la connexion SSH).</description>
     </item>
@@ -134,8 +134,8 @@ Toto(config)# enable secret &amp;lt;mot_de_passe&amp;gt; Ensuite, nous devons di
 sudo apt-get install bind9
 Les fichiers de configuration de Bind9 sont dans /etc/bind/
 cd /etc/bind/ Tout d’abord, on met cet 3 lignes dans le fichier named.conf :
-include &amp;#34;/etc/bind/named.conf.options&amp;#34;;include &amp;#34;/etc/bind/named.conf.local&amp;#34;;include &amp;#34;/etc/bind/named.conf.default-zones&amp;#34;; -Dans le fichier de configuration de bind9 « named.conf.local », déclarer ses zones :
-zone &amp;#34;example.com&amp;#34; {type master;file &amp;#34;/etc/bind/db.example.com&amp;#34;;}; → La ligne &amp;ldquo;file&amp;rdquo; précise que la configuration de notre zone example.com se fera dans le fichier « db.</description>
+include &amp;#34;/etc/bind/named.conf.options&amp;#34;; include &amp;#34;/etc/bind/named.conf.local&amp;#34;; include &amp;#34;/etc/bind/named.conf.default-zones&amp;#34;; -Dans le fichier de configuration de bind9 « named.conf.local », déclarer ses zones :
+zone &amp;#34;example.com&amp;#34; { type master; file &amp;#34;/etc/bind/db.example.com&amp;#34;; }; → La ligne &amp;ldquo;file&amp;rdquo; précise que la configuration de notre zone example.com se fera dans le fichier « db.</description>
     </item>
     
     <item>
@@ -145,8 +145,7 @@ zone &amp;#34;example.com&amp;#34; {type master;file &amp;#34;/etc/bind/db.exa
       
       <guid>https://www.thomaswimart.fr/fr/notes/cisco-config/</guid>
       <description>Configuration basique Passer en mode privilégié, puis configuration du terminal:
-Switch&amp;gt;enSwitch#conf t Définir le nom du switch, ainsi que le domaine auquel il appartient (optionnel).
-Switch(config)#Switch(config)# hostname SwitchTotoSwitchToto(config)# ip domain-name exempledomaine.localSwitchToto(config)# end Définir l&amp;rsquo;addressage IP du switch. Pour cela, on doit créer un VLAN dédié à la configuration du switch (ici le vlan 10). L&amp;rsquo;IP que nous allons définir sera donc associé à ce VLAN. Créer le VLAN:</description>
+Switch&amp;gt;en Switch#conf t ```console Définir le nom du switch, ainsi que le domaine auquel il appartient (optionnel). ```console Switch(config)# Switch(config)# hostname SwitchToto SwitchToto(config)# ip domain-name exempledomaine.local SwitchToto(config)# end ```console Définir l&amp;#39;addressage IP du switch. Pour cela, on doit créer un VLAN dédié à la configuration du switch (ici le vlan 10). L&amp;#39;IP que nous allons définir sera donc associé à ce VLAN.</description>
     </item>
     
     <item>
@@ -155,7 +154,7 @@ Switch(config)#Switch(config)# hostname SwitchTotoSwitchToto(config)# ip domai
       <pubDate>Thu, 17 Nov 2022 11:02:24 +0100</pubDate>
       
       <guid>https://www.thomaswimart.fr/fr/french/porfolio/</guid>
-      <description>Voilà mon portfolio 📑 : À propos de moi Je m&amp;rsquo;appelle Thomas, et j&amp;rsquo;habite à Amiens, en France. Actuellement étudiant en informatique, je m&amp;rsquo;intéresse de près à l&amp;rsquo;admninistration des réseaux informatique, ainsi qu&amp;rsquo;à la cybersécurité. Ce site me sert à la fois de portfolio, mais aussi de notes personnelles qui me servent pour les missions que je dois accomplir pour mes études.
+      <description>Voilà mon portfolio📑&amp;rsquo;:&#39; À propos de moi Je m&amp;rsquo;appelle Thomas, et j&amp;rsquo;habite à Amiens, en France. Actuellement étudiant en informatique, je m&amp;rsquo;intéresse de près à l&amp;rsquo;admninistration des réseaux informatique, ainsi qu&amp;rsquo;à la cybersécurité. Ce site me sert à la fois de portfolio, mais aussi de notes personnelles qui me servent pour les missions que je dois accomplir pour mes études.
 Mes projets La conception et la maintenance de ce site constituent déja un projet en soi: en effet le dévellopement web n&amp;rsquo;est pas vraiment mon point fort.</description>
     </item>
     

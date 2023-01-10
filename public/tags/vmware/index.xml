@@ -16,7 +16,7 @@
       <description>I specify that I&amp;rsquo;m using Vmware Worksation 16 Pro. The installation of a Virtual Machine (VM) is running the same way if you use the Player version.
 Download an iso image Go to the download page of the desired OS. In this exemple, we gonna choose a very known Linux distribution, Ubuntu.
 Create the virtual machine On Vmware, select &amp;ldquo;Create a new virtual machine&amp;rdquo;:
-A virtual machine creation wizard appears.</description>
+A virtual machine creation wizard appears. Select &amp;ldquo;Typical&amp;rdquo;, then &amp;ldquo;Next&amp;rdquo;:</description>
     </item>
     
   </channel>

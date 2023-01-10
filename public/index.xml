@@ -6,7 +6,20 @@
     <description>Recent content on WIMART Thomas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 06 Jan 2023 09:24:04 +0100</lastBuildDate><atom:link href="https://www.thomaswimart.fr/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 06 Jan 2023 11:24:04 +0100</lastBuildDate><atom:link href="https://www.thomaswimart.fr/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Create a TFTP server and backup and restore device configurations</title>
+      <link>https://www.thomaswimart.fr/posts/tftp/</link>
+      <pubDate>Fri, 06 Jan 2023 11:24:04 +0100</pubDate>
+      
+      <guid>https://www.thomaswimart.fr/posts/tftp/</guid>
+      <description>⚠ I am using a Debian machine for my TFTP server, so the commands presented are only valid for Linux.
+To do on your server On a Debian 10 machine, install a TFTP server:
+sudo -s apt install xinetd tftpd tftp Once the service is installed, you need to create the configuration file :
+nano /etc/xinetd.d/tftp and add the following lines to the file:
+service tftp { protocol = udp port = 69 socket_type = dgram wait = yes user = nobody server = /usr/sbin/in.</description>
+    </item>
+    
     <item>
       <title>Create a NTP server with Chrony and synchronize its equipements</title>
       <link>https://www.thomaswimart.fr/posts/chrony/</link>
@@ -15,7 +28,7 @@
       <guid>https://www.thomaswimart.fr/posts/chrony/</guid>
       <description>⚠ I&amp;rsquo;m using a Debian machine for my Chrony server
 Things to do on your server (Linux or Windows) Firstly, install Chrony:
-sudo -sapt install chrony We can then check the content of the &amp;ldquo;chrony.conf&amp;rdquo; file:
+sudo -s apt install chrony We can then check the content of the &amp;ldquo;chrony.conf&amp;rdquo; file:
 nano /etc/chrony/chrony.conf Then we have to declare our NTP pool. We will go to line 3 of the file to make some changes:
 pool 2.debian.pool.ntp.org iburst
 become:
@@ -47,7 +60,7 @@ Pfsense will then start its installation:</description>
       <description>I specify that I&amp;rsquo;m using Vmware Worksation 16 Pro. The installation of a Virtual Machine (VM) is running the same way if you use the Player version.
 Download an iso image Go to the download page of the desired OS. In this exemple, we gonna choose a very known Linux distribution, Ubuntu.
 Create the virtual machine On Vmware, select &amp;ldquo;Create a new virtual machine&amp;rdquo;:
-A virtual machine creation wizard appears.</description>
+A virtual machine creation wizard appears. Select &amp;ldquo;Typical&amp;rdquo;, then &amp;ldquo;Next&amp;rdquo;:</description>
     </item>
     
     <item>
@@ -69,8 +82,8 @@ To access the Internet, &amp;ldquo;PC1&amp;rdquo; will go through the &amp;ldquo
       
       <guid>https://www.thomaswimart.fr/posts/cisco-config/</guid>
       <description>Basic Configuration Switch to privileged mode, then terminal configuration:
-Switch&amp;gt;enSwitch#conf t Définir le nom du switch, ainsi que le domaine auquel il appartient (optionnel).
-Switch(config)#Switch(config)# hostname SwitchTotoSwitchToto(config)# ip domain-name exempledomaine.localSwitchToto(config)# end Define the IP addressing of the switch. To do this, we must create a VLAN dedicated to the switch configuration (here vlan 10). The IP we are going to define will be associated to this VLAN.</description>
+Switch&amp;gt;en Switch#conf t Définir le nom du switch, ainsi que le domaine auquel il appartient (optionnel).
+Switch(config)# Switch(config)# hostname SwitchToto SwitchToto(config)# ip domain-name exempledomaine.local SwitchToto(config)# end Define the IP addressing of the switch. To do this, we must create a VLAN dedicated to the switch configuration (here vlan 10). The IP we are going to define will be associated to this VLAN.</description>
     </item>
     
     <item>
@@ -83,8 +96,8 @@ Switch(config)#Switch(config)# hostname SwitchTotoSwitchToto(config)# ip domai
 sudo apt-get install bind9
 The Bind9 files are in /etc/bind/
 cd /etc/bind/ Then, we put these 3 lines in the named.conf file:
-include &amp;#34;/etc/bind/named.conf.options&amp;#34;;include &amp;#34;/etc/bind/named.conf.local&amp;#34;;include &amp;#34;/etc/bind/named.conf.default-zones&amp;#34;; In the Bind9 configuration file &amp;ldquo;named.conf.local&amp;rdquo;, declare its zones :
-zone &amp;#34;example.com&amp;#34; {type master;file &amp;#34;/etc/bind/db.example.com&amp;#34;;}; → The &amp;ldquo;file&amp;rdquo; line specifies that the configuration of our example.com zone will be done in the &amp;ldquo;db.example.com&amp;rdquo; file.
+include &amp;#34;/etc/bind/named.conf.options&amp;#34;; include &amp;#34;/etc/bind/named.conf.local&amp;#34;; include &amp;#34;/etc/bind/named.conf.default-zones&amp;#34;; In the Bind9 configuration file &amp;ldquo;named.conf.local&amp;rdquo;, declare its zones :
+zone &amp;#34;example.com&amp;#34; { type master; file &amp;#34;/etc/bind/db.example.com&amp;#34;; }; → The &amp;ldquo;file&amp;rdquo; line specifies that the configuration of our example.com zone will be done in the &amp;ldquo;db.example.com&amp;rdquo; file.
 In db.example.com, we configure our zone (the IP of my DNS server is 192.</description>
     </item>
     
@@ -96,7 +109,7 @@ In db.example.com, we configure our zone (the IP of my DNS server is 192.</descr
       <guid>https://www.thomaswimart.fr/posts/cisco-ssh/</guid>
       <description>Creation of user names, domains, and keys (Here we take an exemple of Cisco router.)
 Firstly, if you haven&amp;rsquo;t already done so, give your device a personalized name and a domain name:
-Router(config)# hostname TotoToto(config)# ip domain-name exemple.com Remember to secure the privileged mode of your device!
+Router(config)# hostname Toto Toto(config)# ip domain-name exemple.com Remember to secure the privileged mode of your device!
 Toto(config)# enable secret &amp;lt;mot_de_passe&amp;gt; Then, we have to tell to our router (or switch) to generate aymetric key pair (required to the SSH connection).</description>
     </item>
     
@@ -106,7 +119,7 @@ Toto(config)# enable secret &amp;lt;mot_de_passe&amp;gt; Then, we have to tell t
       <pubDate>Thu, 17 Nov 2022 11:02:24 +0100</pubDate>
       
       <guid>https://www.thomaswimart.fr/english/portfolio/</guid>
-      <description>Here is my portfolio 📑 : About me My name is Thomas, and I live in Amiens, France. I&amp;rsquo;m currently a computer science student, and I&amp;rsquo;m very interested in computer network administration, as well as in cybersecurity. This site serves me as a portfolio, but also as personal notes for the missions I have to accomplish for my studies.
+      <description>About me My name is Thomas, and I live in Amiens, France. I&amp;rsquo;m currently a computer science student, and I&amp;rsquo;m very interested in computer network administration, as well as in cybersecurity. This site serves me as a portfolio, but also as personal notes for the missions I have to accomplish for my studies.
 My projects The design and maintenance of this site is already a project in itself: indeed the web development is not really my strong point and it took a lot of time to make this website working&amp;hellip; But I have learn several things 🙂.</description>
     </item>
     

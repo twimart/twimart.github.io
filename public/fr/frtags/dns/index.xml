@@ -17,8 +17,8 @@
 sudo apt-get install bind9
 Les fichiers de configuration de Bind9 sont dans /etc/bind/
 cd /etc/bind/ Tout d’abord, on met cet 3 lignes dans le fichier named.conf :
-include &amp;#34;/etc/bind/named.conf.options&amp;#34;;include &amp;#34;/etc/bind/named.conf.local&amp;#34;;include &amp;#34;/etc/bind/named.conf.default-zones&amp;#34;; -Dans le fichier de configuration de bind9 « named.conf.local », déclarer ses zones :
-zone &amp;#34;example.com&amp;#34; {type master;file &amp;#34;/etc/bind/db.example.com&amp;#34;;}; → La ligne &amp;ldquo;file&amp;rdquo; précise que la configuration de notre zone example.com se fera dans le fichier « db.</description>
+include &amp;#34;/etc/bind/named.conf.options&amp;#34;; include &amp;#34;/etc/bind/named.conf.local&amp;#34;; include &amp;#34;/etc/bind/named.conf.default-zones&amp;#34;; -Dans le fichier de configuration de bind9 « named.conf.local », déclarer ses zones :
+zone &amp;#34;example.com&amp;#34; { type master; file &amp;#34;/etc/bind/db.example.com&amp;#34;; }; → La ligne &amp;ldquo;file&amp;rdquo; précise que la configuration de notre zone example.com se fera dans le fichier « db.</description>
     </item>
     
   </channel>

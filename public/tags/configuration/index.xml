@@ -14,8 +14,8 @@
       
       <guid>https://www.thomaswimart.fr/posts/cisco-config/</guid>
       <description>Basic Configuration Switch to privileged mode, then terminal configuration:
-Switch&amp;gt;enSwitch#conf t Définir le nom du switch, ainsi que le domaine auquel il appartient (optionnel).
-Switch(config)#Switch(config)# hostname SwitchTotoSwitchToto(config)# ip domain-name exempledomaine.localSwitchToto(config)# end Define the IP addressing of the switch. To do this, we must create a VLAN dedicated to the switch configuration (here vlan 10). The IP we are going to define will be associated to this VLAN.</description>
+Switch&amp;gt;en Switch#conf t Définir le nom du switch, ainsi que le domaine auquel il appartient (optionnel).
+Switch(config)# Switch(config)# hostname SwitchToto SwitchToto(config)# ip domain-name exempledomaine.local SwitchToto(config)# end Define the IP addressing of the switch. To do this, we must create a VLAN dedicated to the switch configuration (here vlan 10). The IP we are going to define will be associated to this VLAN.</description>
     </item>
     
   </channel>

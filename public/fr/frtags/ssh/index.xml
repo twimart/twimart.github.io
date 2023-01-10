@@ -15,7 +15,7 @@
       <guid>https://www.thomaswimart.fr/fr/notes/cisco-ssh/</guid>
       <description>Création de noms d&amp;rsquo;utilisateurs, de domaines, et de clés (Nous prenons ici l&amp;rsquo;exemple d&amp;rsquo;un router Cisco.)
 Tout d&amp;rsquo;abord, si ça n&amp;rsquo;est pas déja fait, donner un nom personnalisé ainsi qu&amp;rsquo;un nom de domaine DNS à votre appareil:
-Router(config)# hostname TotoToto(config)# ip domain-name exemple.com (si vous voulez faire votre propre serveur DNS Linux, j&amp;rsquo;ai fait un tuto ici )
+Router(config)# hostname Toto Toto(config)# ip domain-name exemple.com (si vous voulez faire votre propre serveur DNS Linux, j&amp;rsquo;ai fait un tuto ici )
 Pensez à sécuriser le mode privilégié de votre appareil !
 Toto(config)# enable secret &amp;lt;mot_de_passe&amp;gt; Ensuite, nous devons dire à notre routeur (ou switch) de générer une paire de clés asymétrique (nécessaire à la connexion SSH).</description>
     </item>

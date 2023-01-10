@@ -14,8 +14,8 @@
       
       <guid>https://www.thomaswimart.fr/posts/cisco-config/</guid>
       <description>Basic Configuration Switch to privileged mode, then terminal configuration:
-Switch&amp;gt;enSwitch#conf t Définir le nom du switch, ainsi que le domaine auquel il appartient (optionnel).
-Switch(config)#Switch(config)# hostname SwitchTotoSwitchToto(config)# ip domain-name exempledomaine.localSwitchToto(config)# end Define the IP addressing of the switch. To do this, we must create a VLAN dedicated to the switch configuration (here vlan 10). The IP we are going to define will be associated to this VLAN.</description>
+Switch&amp;gt;en Switch#conf t Définir le nom du switch, ainsi que le domaine auquel il appartient (optionnel).
+Switch(config)# Switch(config)# hostname SwitchToto SwitchToto(config)# ip domain-name exempledomaine.local SwitchToto(config)# end Define the IP addressing of the switch. To do this, we must create a VLAN dedicated to the switch configuration (here vlan 10). The IP we are going to define will be associated to this VLAN.</description>
     </item>
     
     <item>
@@ -26,7 +26,7 @@ Switch(config)#Switch(config)# hostname SwitchTotoSwitchToto(config)# ip domai
       <guid>https://www.thomaswimart.fr/posts/cisco-ssh/</guid>
       <description>Creation of user names, domains, and keys (Here we take an exemple of Cisco router.)
 Firstly, if you haven&amp;rsquo;t already done so, give your device a personalized name and a domain name:
-Router(config)# hostname TotoToto(config)# ip domain-name exemple.com Remember to secure the privileged mode of your device!
+Router(config)# hostname Toto Toto(config)# ip domain-name exemple.com Remember to secure the privileged mode of your device!
 Toto(config)# enable secret &amp;lt;mot_de_passe&amp;gt; Then, we have to tell to our router (or switch) to generate aymetric key pair (required to the SSH connection).</description>
     </item>
     

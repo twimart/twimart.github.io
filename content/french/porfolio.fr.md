@@ -5,7 +5,6 @@ FRtags: ["portfolio", "CV", "certifications"]
 ShowBreadCrumbs: false
 ---
 
-## Voilà mon portfolio📑':' ##
 
 ### À propos de moi ###
 
