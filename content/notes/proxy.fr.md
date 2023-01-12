@@ -1,11 +1,11 @@
 ---
 title: "Créer un serveur proxy avec Pfsense et Squid "
 date: 2022-12-01T09:04:41+01:00
-FRtags: ["pfsense", "proxy", "configuration"] 
+FRtags: ["pfsense", "proxy", "configuration"]
 ShowPostNavLinks: true
 ---
 
-Dans cette note, nous allons voir comment installer un serveur proxy, en utilisant Pfsense et Squid. On utilisera des machines virtuelles, créées sous le logiciel *Vmware Workstation 16 Pro*.
+Dans cette note, nous allons voir comment installer un serveur proxy, en utilisant Pfsense et Squid. On utilisera des machines virtuelles, créées sous le logiciel _Vmware Workstation 16 Pro_.
 
 Les différentes parties qui composent ce tutoriel:
 
@@ -15,18 +15,18 @@ Les différentes parties qui composent ce tutoriel:
 - [Part-4](/fr/proxy/proxy4)
 - [Part-5](/fr/proxy/proxy5)
 
-## Topologie de notre réseau ##
+## Topologie de notre réseau
 
 Voila la topologie du réseau que nous allons utiliser dans ce tuto:
 
 ![reseau](/images/reseaux.png)
 
-Pour accéder à Internet, le "PC1" passera par le routeur "Pfsense", afin de sortir du réseau local "LAN". Ici la subtilité est que si "PC1" veut accéder à certaines page web, ses requêtes passeront d'abord par notre serveur proxy "Squid".
+Pour accéder à Internet, le "PC1" passera par le routeur "Pfsense", afin de sortir du réseau local "LAN". Ici la subtilité est que si "PC1" veut accéder à certaines page web, ses requêtes passeront d'abord par notre serveur proxy "Squid".  
 "Squid" pourra alors bloquer certaines pages web ou encore enregistrer certaines données dans sont cache afin d'améliorer les performances.
 
-*Je précise que ce shéma ne sert que d'illustration, Pfsense et Squid ne forment en réalité qu'une seule machine dans notre cas.*
+_Je précise que ce shéma ne sert que d'illustration, Pfsense et Squid ne forment en réalité qu'une seule machine dans notre cas._
 
-## Création des machines virtuelles ##
+## Création des machines virtuelles
 
 Sur la page de téléchargement de [Pfsense](https://www.pfsense.org/download/), télécharger l'iso de notre futur routeur virtuel. Je précise que vous allez obtenir fichier .gz, vous devez extraire ce fichier sur votre ordinateur.
 
@@ -34,33 +34,40 @@ Téléchargez aussi l'iso d'une VM, pour PC1. Personnellement, je vais utiliser 
 
 Ensuite, sur Vmware, vous pouvez créer les machines virtuelles (vous pouvez mon suivre mon tutoriel [ici](/fr/notes/vmware).)
 
-## Paramétrage des machines virtuelles ##
+## Paramétrage des machines virtuelles
 
 Une fois les machines créées, on va devoir modifier leurs paramètres. En effet, notre routeur Pfsense possède 2 interfaces: une LAN et une WAN. On va donc devoir lui en ajouter une, et les paramétrer corectement.
 
-⚠️ ***Il faut que votre ordinateur soit connecté à Internet.***
+⚠️ **_Il faut que votre ordinateur soit connecté à Internet._**
 
 1. Allez dans les paramètres de la VM:
 
 ![freebsd1](/images/freebsd/freebsd1.png)
+
 2. Appuyez sur "Add":
 
 ![freebsd2](/images/freebsd/freebsd2.png)
+
 3. Sélectionnez "Network Adaptater", puis "Finish":
 
 ![freebsd3](/images/freebsd/freebsd3.png)
+
 4. On va maintenant paramétrer nos deux interfaces. Appuyez sur la première, puis sur "Advanced"
 
 ![freebsd4](/images/freebsd/freebsd4.png)
-5. Appuyer sur "Generate", et  ***notez bien*** (si, si, j'insiste) les deux derniers octets de l'addresse MAC qui vient d'être générée. C'est normal de ne pas avoir la même valeur que moi 😉 . Puis "OK".
+
+5. Appuyer sur "Generate", et **_notez bien_** (si, si, j'insiste) les deux derniers octets de l'addresse MAC qui vient d'être générée. C'est normal de ne pas avoir la même valeur que moi 😉 . Puis "OK".
 
 ![freebsd5](/images/freebsd/freebsd5.png)
+
 6. Ensuite, appuyez sur le bouton "Lan Segments":
 
 ![freebsd6](/images/freebsd/freebsd6.png)
+
 7. On va créer un nouveau segment LAN. Cliquez sur "Add", donner lui le nom que vous voulez, puis "OK".
 
 ![freebsd7](/images/freebsd/freebsd7.png)
+
 8. Enfin, toujours sur la première interface, dans la section "Network Connection", sélectionnez LAN segment, puis choisissez le segment LAN que vous venez de créer.
 
 ![freebsd8](/images/freebsd/freebsd8.png)
@@ -79,4 +86,4 @@ Notre machine virtuelle Pfsense est maintenant prête à démarrer!
 
 Vous pouvez alors démarrer votre machine Pfsense.
 
-***La suite du tutoriel se trouve ➡️ [ici](/fr/proxy/proxy2/) ⬅️.***
+**_La suite du tutoriel se trouve ➡️ [ici](/fr/proxy/proxy2/) ⬅️._**

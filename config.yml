@@ -57,6 +57,8 @@ params:
           url: "/english/portfolio/"
         - name: My IT Posts
           url: "/posts/"
+        - name: My knowledge network
+          url: "https://thomasgarden.netlify.app/"
             
 
   socialIcons: # optional
@@ -118,6 +120,8 @@ languages:
                 url: "/fr/french/porfolio/"
               - name: Mes Notes
                 url: "/fr/notes/"
+              - name: Mon réseau de connaisances
+                url: "https://thomasgarden.netlify.app/"
 
         menu:
             main:
