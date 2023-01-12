@@ -9,6 +9,8 @@ FRtags: ["configuration", "cisco"]
 Dans ce contexte, on va ici configurer le réseau d’un bâtiment qui gère les ligues sportives d’une région.
 Voici la maquette du réseau en question :
 
+![shema_reseau](/images/M2L/shema_reseau.png)
+
 ## Les différentes missions ##
 
 On va devoir configurer ce réseau, et pour cela plusieurs missions sont nécessaires :
@@ -43,7 +45,7 @@ plage d’adresse : **172.16.16.1/20 – 172.16.31.254/20**
 
 plage d’adresses : **172.16.10.1/27 – 172.16.10.30/27**
 
-- Il y a une salle de reprographie dans le bâtiment. On va créer un VLAN de 32 adresses pour cette pièce. 
+- Il y a une salle de reprographie dans le bâtiment. On va créer un VLAN de 32 adresses pour cette pièce.
 
 plage d’adresse : **172.16.10.33/27 – 172.16.10.62/27**
 

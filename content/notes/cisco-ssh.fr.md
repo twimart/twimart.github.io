@@ -58,7 +58,7 @@ On peut maintenant activer le protocole SSH sur notre routeur (ou switch):
 Toto(config)# ip ssh version 2
 ```
 
-### Petite parenthèse sur les commandes qui vont suivre':' ###
+### Petite parenthèse sur les commandes qui vont suivre ###
 
 Pour se connecter sur appareil à distance, il y a deux protocoles principaux: `Telnet` et `SSH`. Telnet est un protocole simple qui fonctionne bien, mais qui n'est pas du tout sécurisé et crypté: c'est à dire que n'importe qui peut intercepter les trames de communication entre vous et l'appareil.
 
