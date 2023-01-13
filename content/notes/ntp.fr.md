@@ -82,16 +82,16 @@ SwitchToto#show clock
 Passons à la configuration, très simple puisqu'il suffit d'indiquer l'adresse du serveur NTP. Voici la procédure de configuration :
 
 ```console
-Router#configure terminal
+SwitchToto#configure terminal
 Enter configuration commands, one per line. End with CNTL/Z.
-Router(config)#ntp server 192.168.1.10
-Router(config)#exit
+SwitchToto(config)#ntp server 192.168.1.10
+SwitchToto(config)#exit
 ```
 
 On peut vérifier que notre switch est bien associé au serveur ntp:
 
 ```console
-Router#show ntp association
+SwitchToto#show ntp association
 ```
 
 Affichez à nouveau la date et l'heure, normalement elle doit être actualisée :
