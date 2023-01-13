@@ -120,7 +120,7 @@ languages:
                 url: "/fr/french/porfolio/"
               - name: Mes Notes
                 url: "/fr/notes/"
-              - name: Mon réseau de connaisances
+              - name: Mon réseau de connaisances (in French)
                 url: "https://thomasgarden.netlify.app/"
 
         menu:

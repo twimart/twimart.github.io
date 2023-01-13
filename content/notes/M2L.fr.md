@@ -6,7 +6,7 @@ FRtags: ["configuration", "cisco"]
 
 ## Intro ##
 
-Dans ce TP, nous allons réalisier la configuration du réseau de "Maison des Ligues", un bâtiment qui accueil les différentes ligues sportives de la région Lorraine. 
+Dans ce TP, nous allons réalisier la configuration du réseau de "Maison des Ligues", un bâtiment qui accueil les différentes ligues sportives de la région Lorraine.
 
 ![shema_reseau](/images/M2L/shema_reseau.png)
 
@@ -66,4 +66,18 @@ plage d’adresses : **10.54.0.1/24 10.54.0.31/24**
 
 - Et enfin un dernier VLAN "Management", qui nous permettra d'administrer les divers équipements d'inter-connexion. 32 addresses devrait suffire.
 
-plage d’adresses : **#172.16.10.193/27 #172.16.10.222/27**
+plage d’adresses : **172.16.10.193/27 172.16.10.222/27**
+
+Et voila pour la segmentation de notre réseau!
+
+### 2ième mission : segmentation du réseau ###
+
+Nous allons mainteant configurer les équipements d'interconnexion, c'est-à-dire les switch et les routeurs. Il nous faudra aussi créer un serveur NTP et synchronyser nos divers équipements.
+
+- On commence par donner un nom explicite à nos machines.
+
+Voir comment faire [ici]()
+
+- On devra créer une bannière de connexion pour les équipements.
+- Puis on s'occupera de créer un serveur NTP et de définir les machines d'interconnexion comme clientes de ce serveur.
+Comment faire [ici](/notes/ntp.fr.md).
