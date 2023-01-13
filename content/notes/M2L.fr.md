@@ -6,8 +6,7 @@ FRtags: ["configuration", "cisco"]
 
 ## Intro ##
 
-Dans ce contexte, on va ici configurer le réseau d’un bâtiment qui gère les ligues sportives d’une région.
-Voici la maquette du réseau en question :
+Dans ce TP, nous allons réalisier la configuration du réseau de "Maison des Ligues", un bâtiment qui accueil les différentes ligues sportives de la région Lorraine. 
 
 ![shema_reseau](/images/M2L/shema_reseau.png)
 
@@ -53,6 +52,18 @@ plage d’adresse : **172.16.10.33/27 – 172.16.10.62/27**
 
 plage d’adresses : **172.16.10.65/27 – 172.16.10.94/27**
 
-- Pour l’Amphithéâtre, la salle de réunion, et la salle de convivialité, un VLAN filaire public sera nécessaire. 29 adresses seront suffisantes pour ce VLAN.
+- Pour l’Amphithéâtre, la salle de réunion, et la salle de convivialité, un VLAN filaire public sera nécessaire. 32 adresses seront suffisantes pour ce VLAN.
 
-plage d’adresses : **172.160.10.91.
+plage d’adresses : **172.160.10.97/27 - 172.16.10.126**
+
+- Il y a des ecrans qui affichent des informations dans les couloirs. On va donc leurs créer un VLAN spécifique, 32 addresses seront largement suffisantes.
+
+plage d’adresses : **172.160.10.129/27 - 172.16.10.12**
+
+- On va aussi evdemment créer un VLAN spécifique pour la serveurs de la DMZ, de 32 addresses.
+
+plage d’adresses : **10.54.0.1/24 10.54.0.31/24**
+
+- Et enfin un dernier VLAN "Management", qui nous permettra d'administrer les divers équipements d'inter-connexion. 32 addresses devrait suffire.
+
+plage d’adresses : **#172.16.10.193/27 #172.16.10.222/27**
