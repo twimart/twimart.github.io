@@ -72,12 +72,19 @@ Et voila pour la segmentation de notre réseau!
 
 ### 2ième mission : segmentation du réseau ###
 
-Nous allons mainteant configurer les équipements d'interconnexion, c'est-à-dire les switch et les routeurs. Il nous faudra aussi créer un serveur NTP et synchronyser nos divers équipements.
+Nous allons maintenant configurer les équipements d'interconnexion, c'est-à-dire les switch et les routeurs. Il nous faudra aussi créer un serveur NTP et synchronyser nos divers équipements.
 
 - On commence par donner un nom explicite à nos machines.
 
-Voir comment faire [ici]()
+Voir comment faire [ici.](https://thomasgarden.netlify.app/fiches/cisco/ios/donner-un-nom-a-un-equipement/)
 
 - On devra créer une bannière de connexion pour les équipements.
+
+Voir comment faire [ici.](https://thomasgarden.netlify.app/fiches/cisco/ios/configurer-un-banniere-sur-ios/)
+
 - Puis on s'occupera de créer un serveur NTP et de définir les machines d'interconnexion comme clientes de ce serveur.
-Comment faire [ici](/notes/ntp.fr.md).
+
+Voir comment faire [ici.](/fr/notes/ntp).
+
+
+

@@ -56,7 +56,12 @@ A virtual machine creation wizard appears. Select &amp;ldquo;Typical&amp;rdquo;,
       <guid>https://www.thomaswimart.fr/posts/proxy/</guid>
       <description>In this note, we will see how to install a proxy server, using Pfsense and Squid. We will use virtual machines, created under Vmware Workstation 16 Pro.
 The different parts of this tutorial:
-Part-1 Part-2 Part-3 Part-4 Part-5 Topology of our network Here is the network topology that we will use in this tutorial:
+Part-1
+Part-2
+Part-3
+Part-4
+Part-5
+Topology of our network Here is the network topology that we will use in this tutorial:
 To access the Internet, &amp;ldquo;PC1&amp;rdquo; will go through the &amp;ldquo;Pfsense&amp;rdquo; router, in order to leave the local network &amp;ldquo;LAN&amp;rdquo;.</description>
     </item>
     

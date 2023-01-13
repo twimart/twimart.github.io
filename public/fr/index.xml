@@ -6,7 +6,19 @@
     <description>Recent content on Thomas WIMART</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 06 Jan 2023 11:24:04 +0100</lastBuildDate><atom:link href="https://www.thomaswimart.fr/fr/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 12 Jan 2023 14:01:35 +0100</lastBuildDate><atom:link href="https://www.thomaswimart.fr/fr/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Projet de configuration d&#39;un réseau</title>
+      <link>https://www.thomaswimart.fr/fr/notes/m2l/</link>
+      <pubDate>Thu, 12 Jan 2023 14:01:35 +0100</pubDate>
+      
+      <guid>https://www.thomaswimart.fr/fr/notes/m2l/</guid>
+      <description>Intro Dans ce TP, nous allons réalisier la configuration du réseau de &amp;ldquo;Maison des Ligues&amp;rdquo;, un bâtiment qui accueil les différentes ligues sportives de la région Lorraine.
+Les différentes missions On va devoir configurer ce réseau, et pour cela plusieurs missions sont nécessaires :
+Il va falloir segmenter le réseau, réfléchir au nombre de VLAN qu’il faut attribuer, aux IP…
+On va ensuite devoir donner un configuration basique au équipements, de manière à ce qu’il s puissent se « ping » entre eux.</description>
+    </item>
+    
     <item>
       <title>Créer un serveur TFTP et sauvegarder et restaurer les configuration des équipements</title>
       <link>https://www.thomaswimart.fr/fr/notes/tftp/</link>
@@ -22,10 +34,10 @@ service tftp { protocol = udp port = 69 socket_type = dgram wait = yes user = no
     
     <item>
       <title>Créer un serveur NTP avec Chrony et synchroniser ses équipements </title>
-      <link>https://www.thomaswimart.fr/fr/notes/chrony/</link>
+      <link>https://www.thomaswimart.fr/fr/notes/ntp/</link>
       <pubDate>Fri, 06 Jan 2023 09:24:04 +0100</pubDate>
       
-      <guid>https://www.thomaswimart.fr/fr/notes/chrony/</guid>
+      <guid>https://www.thomaswimart.fr/fr/notes/ntp/</guid>
       <description>⚠ J&amp;rsquo;utilise une machine Debian pour mon serveur Chrony, les commandes présentés ne sont donc valide que pour Linux.
 A faire sur votre serveur (Linux ou Windows) Tout d&amp;rsquo;abord, installer Chrony:
 sudo -s apt install chrony On peut ensuite vérifier le contenu du fichier &amp;ldquo;chrony.conf&amp;rdquo;
@@ -95,8 +107,7 @@ La, on va remplir les informations qu&amp;rsquo;on nous demande (pour le &amp;ld
       <description>Je précise que j&amp;rsquo;utilise Vmware Worksation 16 Pro. L&amp;rsquo;installation d&amp;rsquo;un machine virtuelle (VM) se déroule de la même manière si vous utilisez la version Player.
 Télécharger une image iso Rendez-vous sur la page de téléchargement du système d&amp;rsquo;exploitaion désiré. Dans cet exemple, on va choisir Linux Ubuntu.
 Créer la VM Sur Vmware, appuyer sur &amp;ldquo;Create a new virtual machine&amp;rdquo;:
-Un assistant de création de machine virtuelle apparait.
-Sélectionnez &amp;ldquo;Typical&amp;rdquo;, puis &amp;ldquo;Next&amp;rdquo;:</description>
+Un assistant de création de machine virtuelle apparait. Sélectionnez &amp;ldquo;Typical&amp;rdquo;, puis &amp;ldquo;Next&amp;rdquo;:</description>
     </item>
     
     <item>
@@ -154,7 +165,7 @@ Switch&amp;gt;en Switch#conf t ```console Définir le nom du switch, ainsi que l
       <pubDate>Thu, 17 Nov 2022 11:02:24 +0100</pubDate>
       
       <guid>https://www.thomaswimart.fr/fr/french/porfolio/</guid>
-      <description>Voilà mon portfolio📑&amp;rsquo;:&#39; À propos de moi Je m&amp;rsquo;appelle Thomas, et j&amp;rsquo;habite à Amiens, en France. Actuellement étudiant en informatique, je m&amp;rsquo;intéresse de près à l&amp;rsquo;admninistration des réseaux informatique, ainsi qu&amp;rsquo;à la cybersécurité. Ce site me sert à la fois de portfolio, mais aussi de notes personnelles qui me servent pour les missions que je dois accomplir pour mes études.
+      <description>À propos de moi Je m&amp;rsquo;appelle Thomas, et j&amp;rsquo;habite à Amiens, en France. Actuellement étudiant en informatique, je m&amp;rsquo;intéresse de près à l&amp;rsquo;admninistration des réseaux informatique, ainsi qu&amp;rsquo;à la cybersécurité. Ce site me sert à la fois de portfolio, mais aussi de notes personnelles qui me servent pour les missions que je dois accomplir pour mes études.
 Mes projets La conception et la maintenance de ce site constituent déja un projet en soi: en effet le dévellopement web n&amp;rsquo;est pas vraiment mon point fort.</description>
     </item>
     

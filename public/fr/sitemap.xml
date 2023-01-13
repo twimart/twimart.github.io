@@ -3,25 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.thomaswimart.fr/fr/frtags/cisco/</loc>
-    <lastmod>2023-01-06T11:24:04+01:00</lastmod>
+    <lastmod>2023-01-12T14:01:35+01:00</lastmod>
   </url><url>
-    <loc>https://www.thomaswimart.fr/fr/notes/tftp/</loc>
-    <lastmod>2023-01-06T11:24:04+01:00</lastmod>
+    <loc>https://www.thomaswimart.fr/fr/frtags/configuration/</loc>
+    <lastmod>2023-01-12T14:01:35+01:00</lastmod>
   </url><url>
     <loc>https://www.thomaswimart.fr/fr/frtags/</loc>
-    <lastmod>2023-01-06T11:24:04+01:00</lastmod>
-  </url><url>
-    <loc>https://www.thomaswimart.fr/fr/frtags/linux/</loc>
-    <lastmod>2023-01-06T11:24:04+01:00</lastmod>
+    <lastmod>2023-01-12T14:01:35+01:00</lastmod>
   </url><url>
     <loc>https://www.thomaswimart.fr/fr/notes/</loc>
-    <lastmod>2023-01-06T11:24:04+01:00</lastmod>
+    <lastmod>2023-01-12T14:01:35+01:00</lastmod>
   </url><url>
-    <loc>https://www.thomaswimart.fr/fr/frtags/tftp/</loc>
-    <lastmod>2023-01-06T11:24:04+01:00</lastmod>
+    <loc>https://www.thomaswimart.fr/fr/notes/m2l/</loc>
+    <lastmod>2023-01-12T14:01:35+01:00</lastmod>
   </url><url>
     <loc>https://www.thomaswimart.fr/fr/</loc>
-    <lastmod>2023-01-06T11:24:04+01:00</lastmod>
+    <lastmod>2023-01-12T14:01:35+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -33,10 +30,19 @@
                 href="https://www.thomaswimart.fr/fr/"
                 />
   </url><url>
+    <loc>https://www.thomaswimart.fr/fr/notes/tftp/</loc>
+    <lastmod>2023-01-06T11:24:04+01:00</lastmod>
+  </url><url>
+    <loc>https://www.thomaswimart.fr/fr/frtags/linux/</loc>
+    <lastmod>2023-01-06T11:24:04+01:00</lastmod>
+  </url><url>
+    <loc>https://www.thomaswimart.fr/fr/frtags/tftp/</loc>
+    <lastmod>2023-01-06T11:24:04+01:00</lastmod>
+  </url><url>
     <loc>https://www.thomaswimart.fr/fr/frtags/chrony/</loc>
     <lastmod>2023-01-06T09:24:04+01:00</lastmod>
   </url><url>
-    <loc>https://www.thomaswimart.fr/fr/notes/chrony/</loc>
+    <loc>https://www.thomaswimart.fr/fr/notes/ntp/</loc>
     <lastmod>2023-01-06T09:24:04+01:00</lastmod>
   </url><url>
     <loc>https://www.thomaswimart.fr/fr/proxy/proxy2/</loc>
@@ -82,9 +88,6 @@
   </url><url>
     <loc>https://www.thomaswimart.fr/fr/frtags/vmware/</loc>
     <lastmod>2022-12-01T11:21:10+01:00</lastmod>
-  </url><url>
-    <loc>https://www.thomaswimart.fr/fr/frtags/configuration/</loc>
-    <lastmod>2022-12-01T09:04:41+01:00</lastmod>
   </url><url>
     <loc>https://www.thomaswimart.fr/fr/notes/proxy/</loc>
     <lastmod>2022-12-01T09:04:41+01:00</lastmod>

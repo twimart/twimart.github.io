@@ -6,13 +6,22 @@
     <description>Recent content in FRtags on Thomas WIMART</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 06 Jan 2023 11:24:04 +0100</lastBuildDate><atom:link href="https://www.thomaswimart.fr/fr/frtags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 12 Jan 2023 14:01:35 +0100</lastBuildDate><atom:link href="https://www.thomaswimart.fr/fr/frtags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>cisco</title>
       <link>https://www.thomaswimart.fr/fr/frtags/cisco/</link>
-      <pubDate>Fri, 06 Jan 2023 11:24:04 +0100</pubDate>
+      <pubDate>Thu, 12 Jan 2023 14:01:35 +0100</pubDate>
       
       <guid>https://www.thomaswimart.fr/fr/frtags/cisco/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>configuration</title>
+      <link>https://www.thomaswimart.fr/fr/frtags/configuration/</link>
+      <pubDate>Thu, 12 Jan 2023 14:01:35 +0100</pubDate>
+      
+      <guid>https://www.thomaswimart.fr/fr/frtags/configuration/</guid>
       <description></description>
     </item>
     
@@ -58,15 +67,6 @@
       <pubDate>Thu, 01 Dec 2022 11:21:10 +0100</pubDate>
       
       <guid>https://www.thomaswimart.fr/fr/frtags/vmware/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>configuration</title>
-      <link>https://www.thomaswimart.fr/fr/frtags/configuration/</link>
-      <pubDate>Thu, 01 Dec 2022 09:04:41 +0100</pubDate>
-      
-      <guid>https://www.thomaswimart.fr/fr/frtags/configuration/</guid>
       <description></description>
     </item>
     
