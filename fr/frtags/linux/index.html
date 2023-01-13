@@ -6,7 +6,7 @@ service tftp { protocol = udp port = 69 socket_type = dgram wait = yes user = no
 A faire sur votre serveur (Linux ou Windows) Tout d’abord, installer Chrony:
 sudo -s apt install chrony On peut ensuite vérifier le contenu du fichier “chrony.conf”
 nano /etc/chrony/chrony.conf Ensuite nous devons déclarer nos pool NTP. Nous allons nous rendre à la ligne 3 du fichier pour faire quelques modification :
-pool 2....</p></div><footer class=entry-footer><span title='2023-01-06 09:24:04 +0100 +0100'>janvier 6, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Thomas</footer><a class=entry-link aria-label="post link to Créer un serveur NTP avec Chrony et synchroniser ses équipements " href=https://www.thomaswimart.fr/fr/notes/chrony/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2>Créer et configurer un serveur DNS sur Linux avec Bind9</h2></header><div class=entry-content><p>Installer Bind9 :
+pool 2....</p></div><footer class=entry-footer><span title='2023-01-06 09:24:04 +0100 +0100'>janvier 6, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Thomas</footer><a class=entry-link aria-label="post link to Créer un serveur NTP avec Chrony et synchroniser ses équipements " href=https://www.thomaswimart.fr/fr/notes/ntp/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2>Créer et configurer un serveur DNS sur Linux avec Bind9</h2></header><div class=entry-content><p>Installer Bind9 :
 sudo apt-get install bind9
 Les fichiers de configuration de Bind9 sont dans /etc/bind/
 cd /etc/bind/ Tout d’abord, on met cet 3 lignes dans le fichier named.conf :

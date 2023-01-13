@@ -5,7 +5,7 @@ On va ensuite devoir donner un configuration basique au équipements, de manièr
 A faire sur votre serveur Sur une machine Debian 10, installer un serveur TFTP:
 sudo -s apt install xinetd tftpd tftp Une fois le service installé, il faut créer le fichier de configuration :
 nano /etc/xinetd.d/tftp et ajouter les lignes suivantes dans le fichier :
-service tftp { protocol = udp port = 69 socket_type = dgram wait = yes user = nobody server = /usr/sbin/in.</description></item><item><title>Créer un serveur NTP avec Chrony et synchroniser ses équipements</title><link>https://www.thomaswimart.fr/fr/notes/chrony/</link><pubDate>Fri, 06 Jan 2023 09:24:04 +0100</pubDate><guid>https://www.thomaswimart.fr/fr/notes/chrony/</guid><description>⚠ J&amp;rsquo;utilise une machine Debian pour mon serveur Chrony, les commandes présentés ne sont donc valide que pour Linux.
+service tftp { protocol = udp port = 69 socket_type = dgram wait = yes user = nobody server = /usr/sbin/in.</description></item><item><title>Créer un serveur NTP avec Chrony et synchroniser ses équipements</title><link>https://www.thomaswimart.fr/fr/notes/ntp/</link><pubDate>Fri, 06 Jan 2023 09:24:04 +0100</pubDate><guid>https://www.thomaswimart.fr/fr/notes/ntp/</guid><description>⚠ J&amp;rsquo;utilise une machine Debian pour mon serveur Chrony, les commandes présentés ne sont donc valide que pour Linux.
 A faire sur votre serveur (Linux ou Windows) Tout d&amp;rsquo;abord, installer Chrony:
 sudo -s apt install chrony On peut ensuite vérifier le contenu du fichier &amp;ldquo;chrony.conf&amp;rdquo;
 nano /etc/chrony/chrony.conf Ensuite nous devons déclarer nos pool NTP. Nous allons nous rendre à la ligne 3 du fichier pour faire quelques modification :
