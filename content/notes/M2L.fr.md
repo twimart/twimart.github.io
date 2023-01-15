@@ -84,7 +84,9 @@ Voir comment faire [ici.](https://thomasgarden.netlify.app/fiches/cisco/ios/conf
 
 - Puis on s'occupera de créer un serveur NTP et de définir les machines d'interconnexion comme clientes de ce serveur.
 
-Voir comment faire [ici.](/fr/notes/ntp).
+Voir comment faire [ici.](/fr/notes/ntp)
 
+- On va ensuite créer et définir les différents VLAN sur les équipements. 
 
+Les commandes concernant les VLAN [ici.](https://thomasgarden.netlify.app/fiches/cisco/vlan/les-commandes-de-vlan-sur-ios/)
 
