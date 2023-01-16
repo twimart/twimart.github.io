@@ -76,7 +76,7 @@ Nous allons maintenant configurer les équipements d'interconnexion, c'est-à-di
 
 - On commence par donner un nom explicite à nos machines.
 
-Voir comment faire [ici.](https://thomasgarden.netlify.app/fiches/cisco/ios/donner-un-nom-a-un-equipement/)
+Voir comment faire [ici.](https://thomasgarden.netlify.app/fiches/cisco/ios/donner-un-nom-a-un-equipement-cisco/)
 
 - On devra créer une bannière de connexion pour les équipements.
 
