@@ -5,7 +5,6 @@ FRtags: ["portfolio", "CV", "certifications"]
 ShowBreadCrumbs: false
 ---
 
-
 ### À propos de moi ###
 
 Je m'appelle Thomas, et j'habite à Amiens, en France. Actuellement étudiant en informatique, je m'intéresse de près à l'admninistration des réseaux informatique, ainsi qu'à la cybersécurité.

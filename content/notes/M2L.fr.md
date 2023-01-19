@@ -6,7 +6,7 @@ FRtags: ["configuration", "cisco"]
 
 ## Intro ##
 
-Dans ce TP, nous allons réalisier la configuration du réseau de "Maison des Ligues", un bâtiment qui accueil les différentes ligues sportives de la région Lorraine.
+Dans ce TP, nous allons réalisier la configuration du réseau de la "Maison des Ligues", un bâtiment qui accueil les différentes ligues sportives de la région Lorraine.
 
 ![shema_reseau](/images/M2L/shema_reseau.png)
 
@@ -34,41 +34,73 @@ On va ici définir la segmentation de notre réseau, c’est à dire qu’on va 
 
 - On va tout d’abord créer 80 VLAN, chacun de 32 adresses, qui seront adaptable en fonction du nombre de ligues présente dans le bâtiment grâce a VLSM.
 
-plage d’adresses : **172.16.0.1/27 - 172.16.9.254/27**
+|       Nom du VLAN     | Nombres de VLAN et d'adresses disponnible |           Plage d'adresses         |
+| :---------------------|:-----------------------------------------:| ----------------------------------:|
+| VLAN "Ligues"         |            80 VLANs de 32 adresses        | 172.16.0.1/27 - 172.16.9.254/27    |
 
 - On va ensuite faire un VLAN pour le Wifi public. On va prévoir un grand nombre d’adresses au cas ou, avec 4 096 adresses disponible dans ce VLAN.
 
-plage d’adresse : **172.16.16.1/20 – 172.16.31.254/20**
+|       Nom du VLAN     | Nombres de VLAN et d'adresses disponnible |           Plage d'adresses         |
+| :---------------------|:-----------------------------------------:| ----------------------------------:|
+| VLAN "Wifi Publique"  |            1 VLAN de 4096 adresses        | 172.16.16.1/20 – 172.16.31.254/20  |
 
 - On va créer un VLAN « Administration », de 27 adresses. Il sera réservé pour la salle d’administration.
 
-plage d’adresses : **172.16.10.1/27 – 172.16.10.30/27**
+|       Nom du VLAN     | Nombres de VLAN et d'adresses disponnible |           Plage d'adresses         |
+| :---------------------|:-----------------------------------------:| ----------------------------------:|
+| VLAN "Administration" |             1 VLAN de 27 adresses         | 172.16.10.1/27 – 172.16.10.30/27   |
 
 - Il y a une salle de reprographie dans le bâtiment. On va créer un VLAN de 32 adresses pour cette pièce.
 
-plage d’adresse : **172.16.10.33/27 – 172.16.10.62/27**
+|       Nom du VLAN     | Nombres de VLAN et d'adresses disponnible |           Plage d'adresses         |
+| :---------------------|:-----------------------------------------:| ----------------------------------:|
+| VLAN "Reprographie"   |             1 VLAN de 32 adresses         | 172.16.10.33/27 – 172.16.10.62/27  |
 
 - Pour la salle Multimédia, on va aussi faire un VLAN de 32 adresses.
 
-plage d’adresses : **172.16.10.65/27 – 172.16.10.94/27**
+|       Nom du VLAN     | Nombres de VLAN et d'adresses disponnible |           Plage d'adresses         |
+| :---------------------|:-----------------------------------------:| ----------------------------------:|
+| VLAN "Multimédia"     |             1 VLAN de 32 adresses         | 172.16.10.65/27 – 172.16.10.94/27  |
 
 - Pour l’Amphithéâtre, la salle de réunion, et la salle de convivialité, un VLAN filaire public sera nécessaire. 32 adresses seront suffisantes pour ce VLAN.
 
-plage d’adresses : **172.160.10.97/27 - 172.16.10.126**
+|       Nom du VLAN     | Nombres de VLAN et d'adresses disponnible |           Plage d'adresses         |
+| :---------------------|:-----------------------------------------:| ----------------------------------:|
+| VLAN "Filaire Public" |             1 VLAN de 32 adresses         | 172.16.10.97/27 - 172.16.10.126/27 |
 
 - Il y a des ecrans qui affichent des informations dans les couloirs. On va donc leurs créer un VLAN spécifique, 32 addresses seront largement suffisantes.
 
-plage d’adresses : **172.160.10.129/27 - 172.16.10.12**
+|       Nom du VLAN     | Nombres de VLAN et d'adresses disponnible |           Plage d'adresses         |
+| :---------------------|:-----------------------------------------:| ----------------------------------:|
+| VLAN "Ecrans"         |             1 VLAN de 32 adresses         | 172.16.10.129/27 - 172.16.10.12/27 |
 
 - On va aussi evdemment créer un VLAN spécifique pour la serveurs de la DMZ, de 32 addresses.
 
-plage d’adresses : **10.54.0.1/24 10.54.0.31/24**
+|       Nom du VLAN     | Nombres de VLAN et d'adresses disponnible |           Plage d'adresses         |
+| :---------------------|:-----------------------------------------:| ----------------------------------:|
+| VLAN "DMZ"            |             1 VLAN de 32 adresses         | 10.54.0.1/16 - 10.54.0.31/16       |
 
 - Et enfin un dernier VLAN "Management", qui nous permettra d'administrer les divers équipements d'inter-connexion. 32 addresses devrait suffire.
 
-plage d’adresses : **172.16.10.193/27 172.16.10.222/27**
+|       Nom du VLAN     | Nombres de VLAN et d'adresses disponnible |           Plage d'adresses         |
+| :---------------------|:-----------------------------------------:| ----------------------------------:|
+| VLAN "Management"     |             1 VLAN de 32 adresses         | 172.16.10.193/27 172.16.10.222/27  |
 
 Et voila pour la segmentation de notre réseau!
+
+**Voila un tableau de tout les VLANs pour résumer:**
+
+|       Nom du VLAN     | Nombres de VLAN et d'adresses disponnible |           Plage d'adresses         |
+| :---------------------|:-----------------------------------------:| ----------------------------------:|
+| VLAN "Ligues"         |            80 VLANs de 32 adresses        | 172.16.0.1/27 - 172.16.9.254/27    |
+| VLAN "Wifi Publique"  |            1 VLAN de 4096 adresses        | 172.16.16.1/20 – 172.16.31.254/20  |
+| VLAN "Administration" |             1 VLAN de 27 adresses         | 172.16.10.1/27 – 172.16.10.30/27   |
+| VLAN "Reprographie"   |             1 VLAN de 32 adresses         | 172.16.10.33/27 – 172.16.10.62/27  |
+| VLAN "Multimédia"     |             1 VLAN de 32 adresses         | 172.16.10.65/27 – 172.16.10.94/27  |
+| VLAN "Filaire Public" |             1 VLAN de 32 adresses         | 172.16.10.97/27 - 172.16.10.126/27 |
+| VLAN "Ecrans"         |             1 VLAN de 32 adresses         | 172.16.10.129/27 - 172.16.10.12/27 |
+| VLAN "DMZ"            |             1 VLAN de 32 adresses         | 10.54.0.1/16 - 10.54.0.31/16       |
+| VLAN "Management"     |             1 VLAN de 32 adresses         | 172.16.10.193/27 172.16.10.222/27  |
 
 ### 2ième mission : segmentation du réseau ###
 
