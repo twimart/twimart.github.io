@@ -102,7 +102,7 @@ Et voila pour la segmentation de notre réseau!
 | VLAN "DMZ"            |             1 VLAN de 32 adresses         | 10.54.0.1/16 - 10.54.0.31/16       |
 | VLAN "Management"     |             1 VLAN de 32 adresses         | 172.16.10.193/27 172.16.10.222/27  |
 
-### 2ième mission : segmentation du réseau ###
+### 2ième mission : Configuration des équipements et serveur NTP ###
 
 Nous allons maintenant configurer les équipements d'interconnexion, c'est-à-dire les switch et les routeurs. Il nous faudra aussi créer un serveur NTP et synchronyser nos divers équipements.
 
@@ -117,8 +117,3 @@ Voir comment faire [ici.](https://thomasgarden.netlify.app/fiches/cisco/ios/conf
 - Puis on s'occupera de créer un serveur NTP et de définir les machines d'interconnexion comme clientes de ce serveur.
 
 Voir comment faire [ici.](/fr/notes/ntp)
-
-- On va ensuite créer et définir les différents VLAN sur les équipements. 
-
-Les commandes concernant les VLAN [ici.](https://thomasgarden.netlify.app/fiches/cisco/vlan/les-commandes-de-vlan-sur-ios/)
-
