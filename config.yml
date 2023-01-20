@@ -56,7 +56,7 @@ params:
       enabled: true
       title: "Welcome!👋 "  # optional default will be site titl
       subtitle: "You will find here my portfolio, as well as my IT. 😊💻"
-      imageUrl: "WEB1.JPG" # optional
+      imageUrl: "WEB2.jpg" # optional
       imageTitle: "photo de moi" # optional
       imageWidth: 180 # custom size
       imageHeight: 180 # custom size
@@ -119,7 +119,7 @@ languages:
             enabled: true
             title: "Bienvenue! 👋"
             subtitle: "Vous trouverez ici mon portfolio, ainsi que mes notes informatiques. 😊💻"
-            imageUrl: "/profile-picture.jpg" # optional
+            imageUrl: "WEB2.jpg" # optional
             imageTitle: "une image test" # optional
             imageWidth: 185 # custom size 
             imageHeight: 185 # custom size

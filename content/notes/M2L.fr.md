@@ -117,3 +117,5 @@ Voir comment faire [ici.](https://thomasgarden.netlify.app/fiches/cisco/ios/conf
 - Puis on s'occupera de créer un serveur NTP et de définir les machines d'interconnexion comme clientes de ce serveur.
 
 Voir comment faire [ici.](/fr/notes/ntp)
+
+
