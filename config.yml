@@ -58,8 +58,8 @@ params:
       subtitle: "You will find here my portfolio, as well as my IT. 😊💻"
       imageUrl: "WEB2.jpg" # optional
       imageTitle: "photo de moi" # optional
-      imageWidth: 180 # custom size
-      imageHeight: 180 # custom size
+      imageWidth: 185 # custom size
+      imageHeight: 185 # custom size
       buttons:
         - name: My Portfolio
           url: "/english/portfolio/"
