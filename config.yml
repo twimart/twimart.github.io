@@ -35,29 +35,23 @@ params:
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
   ShowToc: true
-  
+
 
   cover:
     ShowReadingTime: true
-
-  assets:
-    favicon: "/favicon.ico"
-    favicon16x16:  "/favicon-16x16.png"
-    favicon32x32:  "/favicon-32x32.png"
-    apple_touch_icon:  "/apple-touch-icon.png"
 
   label:
     text: "WIMART Thomas"
     icon: /apple-touch-icon.png
     iconHeight: 30
-    
+
 
   profileMode:
       enabled: true
       title: "Welcome!👋 "  # optional default will be site titl
-      subtitle: "You will find here my portfolio, as well as my IT. 😊💻"
+      subtitle: "You will find here my portfolio, some IT projects and notes, and my knowledge network. 😊💻"
       imageUrl: "WEB2.jpg" # optional
-      imageTitle: "photo de moi" # optional
+      imageTitle: "profile picture" # optional
       imageWidth: 185 # custom size
       imageHeight: 185 # custom size
       buttons:
@@ -118,9 +112,9 @@ languages:
         profileMode:
             enabled: true
             title: "Bienvenue! 👋"
-            subtitle: "Vous trouverez ici mon portfolio, ainsi que mes notes informatiques. 😊💻"
+            subtitle: "Vous trouverez ici mon portfolio, divers projets, ainsi que mes notes informatiques. 😊💻"
             imageUrl: "WEB2.jpg" # optional
-            imageTitle: "une image test" # optional
+            imageTitle: "profile picture" # optional
             imageWidth: 185 # custom size 
             imageHeight: 185 # custom size
             buttons:
@@ -128,7 +122,7 @@ languages:
                 url: "/fr/french/porfolio/"
               - name: Mes Notes
                 url: "/fr/notes/"
-              - name: Mon réseau de connaisances 
+              - name: Mon réseau de connaisances
                 url: "https://thomasgarden.netlify.app/"
 
         menu:
