@@ -24,4 +24,3 @@ Je suis titulaire d'une certification Cisco Netacad NDG Linux Essential. Cette c
 
 ![cv](/images/cv.png)
 
-Je dois juste prendre une photo de bg mais ça arrive bientot !

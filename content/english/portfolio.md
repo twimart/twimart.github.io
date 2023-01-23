@@ -25,4 +25,4 @@ I have a Cisco Netacad NDG Linux Essential certification. This certification att
 
 ![cv](/images/cv.png)
 
-the english version and the photo will come soon !
+The english version of my resumé will come soon!
