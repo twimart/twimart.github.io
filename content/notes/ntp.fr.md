@@ -47,7 +47,8 @@ driftfile /var/lib/chrony/chrony.drift
 local stratum 8
 manual
 allow 172.25
-``` console
+
+```
 Si ces lignes ne sont pas présentes, il faudra les modifier comme ci-dessus.
 
 Le  `local stratum 8` déclare la "couche" de notre serveur NTP. Pour terminer cette installation il faut lancer le serveur.
