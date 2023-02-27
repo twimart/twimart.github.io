@@ -60,7 +60,7 @@ params:
         - name: My IT Posts
           url: "/posts/"
         - name: My knowledge network (in French)
-          url: "https://thomasgarden.netlify.app/"
+          url: "https://digitalgarden-beta.vercel.app/"
             
 
   socialIcons: # optional
@@ -123,7 +123,7 @@ languages:
               - name: Mes Notes
                 url: "/fr/notes/"
               - name: Mon réseau de connaisances
-                url: "https://thomasgarden.netlify.app/"
+                url: "https://digitalgarden-beta.vercel.app/"
 
         menu:
             main:
