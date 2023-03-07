@@ -23,6 +23,8 @@ I have a Cisco Netacad NDG Linux Essential certification. This certification att
 
 ### My Resume ###
 
+You can download it [here [https://mega.nz/file/kiYy3IRY#AqEsmV0Sg1CcZhUUrLB3iBtinf0jx2_M1OWttz9GLlA]]!
+
 ![cv](/images/cv.png)
 
 The english version of my resumé will come soon!

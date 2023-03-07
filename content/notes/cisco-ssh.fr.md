@@ -10,7 +10,7 @@ FRtags: ["cisco", "SSH"]
 
 Tout d'abord, si ça n'est pas déja fait, donner un nom personnalisé ainsi qu'un nom de domaine DNS à votre appareil:
 
-```console
+```
 Router(config)# hostname Toto
 Toto(config)# ip domain-name exemple.com
 ```
@@ -19,20 +19,20 @@ Toto(config)# ip domain-name exemple.com
 
 Pensez à sécuriser le mode privilégié de votre appareil !
 
-```console
+```
 Toto(config)# enable secret <mot_de_passe>
 ```
 
 Ensuite, nous devons dire à notre routeur (ou switch) de générer une paire de clés asymétrique (nécessaire à la connexion SSH).
 Il faut aussi chiffrer ces clés, on va pour cela utiliser le protocole RSA:
 
-```console
+```
 Toto(config)# crypto key generate rsa
 ```
 
 On va ensuite nous demander la taille voulu de la clé. Personnellement je met `1024` bits.
 
-```console
+```
 The name for the keys will be: Toto.exemple.com
 Choose the size of the key modulus in the range of 360 to 2048 for your
 General Purpose Keys. Choosing a key modulus greater than 512 may take a few minutes.
@@ -46,7 +46,7 @@ Toto(config)#
 On va maintenant créer un utilisateur, c'est avec ses logins que l'on pourra se connecter au routeur (ou switch) à distance.
 Ici, j'ai mis `thomas` pour le username et `admin` pour le mot de passe, **mais vous mettrez évidemment les valeurs que vous voulez.**
 
-```console
+```
 Toto(config)# username thomas password admin
 ```
 
@@ -54,7 +54,7 @@ Toto(config)# username thomas password admin
 
 On peut maintenant activer le protocole SSH sur notre routeur (ou switch):
 
-```console
+```
 Toto(config)# ip ssh version 2
 ```
 
@@ -68,7 +68,7 @@ C'est ce que l'on va faire maintenant.
 
 On va d'abord forcer notre switch à n'accepter que la communication entrante en SSH:
 
-```console
+```
 Toto(config)# line vty 0 4
 Toto(config)# login local
 Toto(config-line)# transport input ssh
@@ -76,19 +76,19 @@ Toto(config-line)# transport input ssh
 
 Puis on fait de même pour la communication sortante:
 
-```console
+```
 Toto(config-line)# transport output ssh
 ```
 
 Maintenant, on peut vérifier les changement de configuration:
 
-```console
+```
 Toto# show running-config
 ```
 
 N'oubliez pas de sauvegarder la nouvelle configuration !
 
-```console
+```
 Toto# copy running-config startup-config 
 
 ```
