@@ -66,13 +66,27 @@ Ensuite, j’ai déclaré 2 serveurs web, serv1 et serv2.
 
 ***Je rappelle qu’il faudra adapter cette configuration en fonction de ces besoins, celle-la n’est qu’un exemple.***
 
-Si notre Serveur DNS n’est pas capable de résoudre certain nom de domaine, il faut qu’il envoie ces requêtes à d’autre DNS qui pourront le faire. Ces serveurs s’appellent des « forwarders ». On doit les indiquer dans le fichier « named.conf.options ».
+Si notre Serveur DNS n’est pas capable de résoudre certain nom de domaine, il faut qu’il envoie ces requêtes à d’autre DNS qui pourront le faire. Il nous faudra pour cela configurer la récursion. Ajoutez ces lignes dans le fichier "named.conf.options":
 
 ```console
-forwarders {
+acl  goodclients {
+    172.25.0.0/16
+    172.16.0.0/16
+    10.54.0.0/16
+    192.168.0.0/24
+    localhost
+    
+options {
+    forwarders {
         8.8.8.8;
-        172.25.254.15 ;
+        172.25.254.12;
+        172.25.254.15;
+    recursion yes;
+    allow-recursion { goodclients; };
+    allow-query     { any; };
+
     };
 ```
+
 
 Vous devriez avoir maintenant un DNS fonctionnel! 😁
