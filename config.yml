@@ -57,6 +57,8 @@ params:
       buttons:
         - name: My Portfolio
           url: "/english/portfolio/"
+        - name: Révision Math !!
+          url: "https://thomas-garden.vercel.app/revision-maths/"
         - name: My IT Posts
           url: "/posts/"
         - name: My knowledge network (in French)
@@ -120,6 +122,8 @@ languages:
             buttons:
               - name: Mon Portfolio
                 url: "/fr/french/porfolio/"
+              - name: Révision Math !!
+                url: "https://thomas-garden.vercel.app/revision-maths/"
               - name: Mes Notes
                 url: "/fr/notes/"
               - name: Mon réseau de connaisances
