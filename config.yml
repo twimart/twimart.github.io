@@ -118,7 +118,7 @@ languages:
             buttons:
               - name: Mon Portfolio
                 url: "/fr/french/porfolio/"
-              - name: Articles Tech
+              - name: Mes Notes
                 url: "/fr/notes/"
               - name: Ma base de connaisances
                 url: "https://thomas-garden.vercel.app/"
