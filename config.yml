@@ -49,17 +49,17 @@ params:
   profileMode:
       enabled: true
       title: "Welcome!👋 "  # optional default will be site titl
-      subtitle: "You will find here my portfolio, some IT projects and notes, and my knowledge network. 😊💻"
+      subtitle: "You will find here my portfolio, some tech posts, and my IT notes. 😊💻"
       imageUrl: "WEB2.jpg" # optional
       imageTitle: "profile picture" # optional
-      imageWidth: 185 # custom size
-      imageHeight: 185 # custom size
+      imageWidth: 200 # custom size
+      imageHeight: 195 # custom size
       buttons:
-        - name: My Portfolio
+        - name: My portfolio
           url: "/english/portfolio/"
-        - name: My IT Posts
+        - name: Tech posts
           url: "/posts/"
-        - name: My knowledge network (in French)
+        - name: My knowledge base
           url: "https://thomas-garden.vercel.app/"
             
 
@@ -68,8 +68,6 @@ params:
           url: "https://www.linkedin.com/in/thomas-wimart"
         - name: "Github"
           url: "https://github.com/twimart"
-        - name: "Instagram"
-          url: "https://www.instagram.com/thomaswimart/"
         - name: "paypal"
           url: "https://paypal.me/thomaswimart"
 
@@ -112,17 +110,17 @@ languages:
         profileMode:
             enabled: true
             title: "Bienvenue! 👋"
-            subtitle: "Vous trouverez ici mon portfolio, divers projets, ainsi que mes notes informatiques. 😊💻"
+            subtitle: "Vous trouverez ici mon portfolio, divers articles, ainsi que mes notes informatiques. 😊💻"
             imageUrl: "WEB2.jpg" # optional
             imageTitle: "profile picture" # optional
-            imageWidth: 185 # custom size 
-            imageHeight: 185 # custom size
+            imageWidth: 200 # custom size 
+            imageHeight: 195 # custom size
             buttons:
               - name: Mon Portfolio
                 url: "/fr/french/porfolio/"
-              - name: Mes Notes
+              - name: Articles Tech
                 url: "/fr/notes/"
-              - name: Mon réseau de connaisances
+              - name: Ma base de connaisances
                 url: "https://thomas-garden.vercel.app/"
 
         menu:

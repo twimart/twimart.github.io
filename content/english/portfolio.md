@@ -8,8 +8,12 @@ ShowBreadCrumbs: false
 
 ### About me ###
 
-My name is Thomas, and I live in Amiens, France. I'm currently a computer science student, and I'm very interested in computer network administration, as well as in cybersecurity.
-This site serves me as a portfolio, but also as personal notes for the missions I have to accomplish for my studies.
+My name is Thomas, and I live in Amiens, France. I'm currently studying computer science (in a BTS SIO), and I'm very interested in computer network administration, as well as in cybersecurity.
+This site serves as a portfolio, but also as personal notes that I use for the missions I have to accomplish for my studies.
+
+### The BTS SIO ###
+
+During these two years of BTS, I learned the basic principles of computer networks, the different communication protocols, network architectures and network security. This BTS allowed me to have basic but concrete knowledge, and will be a springboard for my student career.
 
 ### My projects ###
 
@@ -21,10 +25,12 @@ I have a Cisco Netacad NDG Linux Essential certification. This certification att
 
 ![certif linux](/images/certif-linux.png)
 
+- In addition, I am currently taking the ANSSI MOOC, a certification that I will obtain soon.
+
 ### My Resume ###
 
-**You can download it [here](https://mega.nz/file/kiYy3IRY#AqEsmV0Sg1CcZhUUrLB3iBtinf0jx2_M1OWttz9GLlA)!**
+**You can download it [here](https://mega.nz/file/lrpAgTBK#97ggMqBZyyhjMZjJZmdzESMF5-rmQ_pbDjzrRIYdd2E)!**
 
 ![cv](/images/cv.png)
 
-The english version of my resumé will come soon!
+
