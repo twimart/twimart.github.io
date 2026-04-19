@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-bg: #F0F4FF;
+    --color-bg2: #E8EEFF;
+    --color-surface: #FFFFFF;
+    --color-surface2: #F1F5FF;
+    --color-border: rgba(14, 165, 233, 0.2);
+    --color-text: #0F172A;
+    --color-muted: #64748B;
+    --color-accent: #0EA5E9;
+    --color-accent2: #6366F1;
+  }
+
+  .dark {
+    --color-bg: #050B18;
+    --color-bg2: #080F1F;
+    --color-surface: rgba(255,255,255,0.04);
+    --color-surface2: rgba(255,255,255,0.07);
+    --color-border: rgba(14, 165, 233, 0.15);
+    --color-text: #E2E8F0;
+    --color-muted: #94A3B8;
+    --color-accent: #38BDF8;
+    --color-accent2: #818CF8;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: 'Inter', system-ui, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    overflow-x: hidden;
+    margin: 0;
+  }
+
+  ::selection {
+    background: rgba(56, 189, 248, 0.3);
+    color: var(--color-text);
+  }
+
+  ::-webkit-scrollbar { width: 5px; }
+  ::-webkit-scrollbar-track { background: var(--color-bg); }
+  ::-webkit-scrollbar-thumb { background: var(--color-accent); border-radius: 3px; }
+}
+
+@layer utilities {
+  .text-accent { color: var(--color-accent); }
+  .text-accent2 { color: var(--color-accent2); }
+  .text-muted { color: var(--color-muted); }
+  .bg-surface { background-color: var(--color-surface); }
+  .bg-surface2 { background-color: var(--color-surface2); }
+  .bg-main { background-color: var(--color-bg); }
+  .bg-main2 { background-color: var(--color-bg2); }
+  .text-main { color: var(--color-text); }
+
+  .glass {
+    background: var(--color-surface);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--color-border);
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, var(--color-accent), var(--color-accent2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glow-hover:hover {
+    box-shadow: 0 0 30px rgba(56, 189, 248, 0.2), 0 0 60px rgba(56, 189, 248, 0.08);
+  }
+}
