@@ -4,8 +4,8 @@ export const personal = {
   subtitle: "Apprentice Engineer at Thales · UniLaSalle Amiens",
   email: "hiring.drizzly415@aleeas.com",
   website: "www.thomaswimart.fr",
-  location: "Amiens, France",
-  languages: "FR · EN (C1)",
+  location: "Lille, France",
+  languages: "FR · EN (C1 - TOEIC)",
   linkedin: "https://www.linkedin.com/in/thomas-wimart",
   github: "https://github.com/twimart",
 };
@@ -90,7 +90,7 @@ export const skills = [
   {
     category: "Languages",
     icon: "💬",
-    items: ["French (Native)", "English (C1)"],
+    items: ["French (Native)", "English (C1 - TOEIC)"],
   },
 ];
 
