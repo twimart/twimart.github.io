@@ -8,6 +8,7 @@ import SectionTitle from './SectionTitle';
 const statusStyles = {
   live: { bg: 'rgba(34,197,94,0.08)', border: 'rgba(34,197,94,0.2)', text: '#4ade80' },
   'in-progress': { bg: 'rgba(251,191,36,0.08)', border: 'rgba(251,191,36,0.2)', text: '#fbbf24' },
+  concept: { bg: 'rgba(139,92,246,0.08)', border: 'rgba(139,92,246,0.2)', text: '#a78bfa' },
 };
 
 function StatusBadge({ status }) {
@@ -128,8 +129,7 @@ function ProjectModal({ project, onClose }) {
   }, [onClose]);
 
   return (
-    <AnimatePresence>
-      <motion.div
+    <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
@@ -193,7 +193,7 @@ function ProjectModal({ project, onClose }) {
             </div>
             <button
               onClick={onClose}
-              className="glass rounded-lg p-2 text-muted hover:text-accent transition-colors shrink-0 mt-1"
+              className="glass rounded-lg p-2 text-muted hover:text-accent transition-colors shrink-0 mt-1 cursor-pointer"
             >
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
@@ -222,7 +222,6 @@ function ProjectModal({ project, onClose }) {
           </div>
         </motion.div>
       </motion.div>
-    </AnimatePresence>
   );
 }
 
@@ -251,7 +250,7 @@ export default function Projects() {
 
   const projectsData = projects.map(p => ({
     ...p,
-    description: t.projectDescriptions[p.title] ?? p.description,
+    description: t.projectDescriptions[p.id] ?? p.description,
   }));
 
   return (
@@ -266,12 +265,12 @@ export default function Projects() {
           {projectsData.map((p, i) => (
             <ProjectCard key={p.title} project={p} index={i} onClick={setSelected} />
           ))}
-          <ComingSoonCard index={projects.length} />
-          <ComingSoonCard index={projects.length + 1} />
         </div>
       </div>
 
-      {selected && <ProjectModal project={{ ...selected, description: t.projectDescriptions[selected.title] ?? selected.description }} onClose={() => setSelected(null)} />}
+      <AnimatePresence>
+        {selected && <ProjectModal project={{ ...selected, description: t.projectDescriptions[selected.id] ?? selected.description }} onClose={() => setSelected(null)} />}
+      </AnimatePresence>
     </section>
   );
 }

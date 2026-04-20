@@ -32,8 +32,14 @@ export default function Navbar({ dark, toggleTheme }) {
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        <a href="#hero" className="font-mono text-sm font-medium text-accent tracking-wider">
-          TW<span className="text-muted">.</span>
+        <a
+          href="#hero"
+          aria-label="Thomas Wimart"
+          className="flex items-center justify-center w-9 h-9 rounded-xl glass glow-hover transition-all duration-200"
+        >
+          <span className="font-mono text-sm font-bold tracking-tighter gradient-text select-none">
+            TW
+          </span>
         </a>
 
         <div className="hidden md:flex items-center gap-8">
@@ -52,7 +58,7 @@ export default function Navbar({ dark, toggleTheme }) {
           {/* Language toggle */}
           <button
             onClick={toggleLang}
-            className="glass rounded-full px-3 py-2 flex items-center gap-1.5 text-muted hover:text-accent transition-colors duration-200"
+            className="glass rounded-full px-3 py-2 flex items-center gap-1.5 text-muted hover:text-accent transition-colors duration-200 cursor-pointer"
             aria-label="Toggle language"
           >
             <span className="text-base leading-none">
@@ -66,7 +72,7 @@ export default function Navbar({ dark, toggleTheme }) {
           {/* Theme toggle */}
           <button
             onClick={toggleTheme}
-            className="glass rounded-full p-2.5 text-muted hover:text-accent transition-colors duration-200"
+            className="glass rounded-full p-2.5 text-muted hover:text-accent transition-colors duration-200 cursor-pointer"
             aria-label="Toggle theme"
           >
             {dark ? (

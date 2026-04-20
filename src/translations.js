@@ -19,7 +19,7 @@ export const translations = {
       label: 'Introduction',
       title: 'About Me',
       p1: [
-        "I'm a 3rd-year apprentice engineering student specialising in",
+        "I'm a 5th-year apprentice engineering student specialising in",
         'Computer Networks & Cybersecurity',
         ', currently on a work-study contract at',
         'Thales',
@@ -54,7 +54,10 @@ export const translations = {
       coming_soon_sub: 'Stay tuned!',
       tech_stack: 'Tech Stack',
       live_site: 'Live site',
-      status: { live: 'Live', 'in-progress': 'In Progress' },
+      status: { live: 'Live', 'in-progress': 'In Progress', concept: 'Concept' },
+    },
+    certifications: {
+      title: 'Certifications',
     },
     articles: {
       label: 'Writing',
@@ -119,8 +122,9 @@ export const translations = {
     ],
     skillCategories: ['Networking', 'Security', 'Systems & Tools', 'Languages'],
     projectDescriptions: {
-      'Personal Portfolio': 'Design and development of a personal portfolio website, showcasing technical skills, projects, articles and experience. Built with React and Vite, with smooth animations via Framer Motion and a fully responsive dark UI.',
-      'Smart Recipes': 'Mobile app that suggests recipes based on available ingredients. Features barcode scanning via OpenFoodFacts, a fuzzy-matching algorithm computing ingredient availability (0–100%), and an offline-first architecture with Hive local storage and automatic Firestore sync. Includes 50+ French recipes scraped from Marmiton.',
+      'portfolio': 'Design and development of a personal portfolio website, showcasing technical skills, projects, articles and experience. Built with React and Vite, with smooth animations via Framer Motion and a fully responsive dark UI.',
+      'smart-recipes': 'Mobile app that suggests recipes based on available ingredients. Features barcode scanning via OpenFoodFacts, a fuzzy-matching algorithm computing ingredient availability (0–100%), and an offline-first architecture with Hive local storage and automatic Firestore sync. Includes 50+ French recipes scraped from Marmiton.',
+      'unipark': 'Proof-of-concept smart parking system using FIWARE and ESP32 microcontrollers. Simulates an 8-space lot with Hall-effect sensors, real-time MQTT telemetry, an RGB LED state machine, and a full cloud stack (Orion Context Broker, Node-RED, Grafana) orchestrated with Docker Compose.',
     },
   },
 
@@ -144,7 +148,7 @@ export const translations = {
       label: 'Introduction',
       title: 'À propos',
       p1: [
-        "Je suis étudiant en 3ème année d'ingénierie spécialisé en",
+        "Je suis étudiant en 5ème année d'ingénierie spécialisé en",
         'Réseaux Informatiques & Cybersécurité',
         ', actuellement en alternance chez',
         'Thales',
@@ -179,7 +183,10 @@ export const translations = {
       coming_soon_sub: 'Restez connecté !',
       tech_stack: 'Stack Technique',
       live_site: 'Site en ligne',
-      status: { live: 'En ligne', 'in-progress': 'En cours' },
+      status: { live: 'En ligne', 'in-progress': 'En cours', concept: 'Concept' },
+    },
+    certifications: {
+      title: 'Certifications',
     },
     articles: {
       label: 'Blog',
@@ -223,6 +230,7 @@ export const translations = {
       },
       {
         role: 'Stagiaire Département Informatique',
+        company: "Rectorat d'Académie d'Amiens",
         description: [
           "Déploiement et administration d'Active Directory",
           "Maintenance et remplacement d'équipements informatiques",
@@ -244,8 +252,9 @@ export const translations = {
     ],
     skillCategories: ['Réseaux', 'Sécurité', 'Systèmes & Outils', 'Langues'],
     projectDescriptions: {
-      'Personal Portfolio': "Conception et développement d'un site portfolio personnel, mettant en avant mes compétences techniques, projets, articles et expériences. Réalisé avec React et Vite, avec des animations fluides via Framer Motion et une interface sombre entièrement responsive.",
-      'Smart Recipes': "Application mobile suggérant des recettes selon les ingrédients disponibles. Intègre un scan de codes-barres via OpenFoodFacts, un algorithme de correspondance floue calculant la disponibilité des ingrédients (0–100%) et une architecture offline-first avec stockage Hive et synchronisation automatique Firestore. Plus de 50 recettes françaises extraites de Marmiton.",
+      'portfolio': "Conception et développement d'un site portfolio personnel, mettant en avant mes compétences techniques, projets, articles et expériences. Réalisé avec React et Vite, avec des animations fluides via Framer Motion et une interface sombre entièrement responsive.",
+      'smart-recipes': "Application mobile suggérant des recettes selon les ingrédients disponibles. Intègre un scan de codes-barres via OpenFoodFacts, un algorithme de correspondance floue calculant la disponibilité des ingrédients (0–100%) et une architecture offline-first avec stockage Hive et synchronisation automatique Firestore. Plus de 50 recettes françaises extraites de Marmiton.",
+      'unipark': "Preuve de concept pour un système de stationnement intelligent basé sur FIWARE et des microcontrôleurs ESP32. Simule un parking de 8 places avec capteurs à effet Hall, télémétrie MQTT en temps réel, machine d'état LED RGB et une stack cloud complète (Orion Context Broker, Node-RED, Grafana) orchestrée via Docker Compose.",
     },
   },
 };

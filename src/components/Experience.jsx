@@ -83,6 +83,7 @@ export default function Experience() {
   const experiencesData = experiences.map((exp, i) => ({
     ...exp,
     role: t.experiences[i]?.role ?? exp.role,
+    company: t.experiences[i]?.company ?? exp.company,
     description: t.experiences[i]?.description ?? exp.description,
   }));
 

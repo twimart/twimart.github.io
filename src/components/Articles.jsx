@@ -27,7 +27,7 @@ function CategoryBadge({ category }) {
 
 function ArticleCard({ article, index, onClick }) {
   const [ref, inView] = useInView(0.1);
-  const { t } = useLang();
+  const { t, lang } = useLang();
 
   return (
     <motion.article
@@ -41,19 +41,19 @@ function ArticleCard({ article, index, onClick }) {
     >
       <div className="flex items-start justify-between gap-3 mb-3">
         <CategoryBadge category={article.category} />
-        <span className="text-xs text-muted font-mono shrink-0">{article.readTime}</span>
+        <span className="text-xs text-muted font-mono shrink-0">{article.readTime[lang]}</span>
       </div>
 
       <h3 className="font-bold text-main text-base mb-2 group-hover:text-accent transition-colors leading-snug">
-        {article.title}
+        {article.title[lang]}
       </h3>
 
       <p className="text-muted text-sm leading-relaxed flex-1 mb-4 line-clamp-3">
-        {article.excerpt}
+        {article.excerpt[lang]}
       </p>
 
       <div className="flex items-center justify-between mt-auto">
-        <span className="text-xs text-muted font-mono">{article.date}</span>
+        <span className="text-xs text-muted font-mono">{article.date[lang]}</span>
         <span className="text-xs text-accent flex items-center gap-1 group-hover:gap-2 transition-all duration-200">
           {t.articles.read_more}
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -66,6 +66,7 @@ function ArticleCard({ article, index, onClick }) {
 }
 
 function ArticleModal({ article, onClose }) {
+  const { lang } = useLang();
   useEffect(() => {
     document.body.style.overflow = 'hidden';
     const onKey = (e) => { if (e.key === 'Escape') onClose(); };
@@ -186,8 +187,7 @@ function ArticleModal({ article, onClose }) {
   };
 
   return (
-    <AnimatePresence>
-      <motion.div
+    <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
@@ -207,16 +207,16 @@ function ArticleModal({ article, onClose }) {
           <div className="sticky top-0 rounded-t-3xl px-5 sm:px-8 py-4 sm:py-5 flex items-start justify-between gap-4" style={{ background: 'var(--color-bg)', backdropFilter: 'blur(16px)', borderBottom: '1px solid var(--color-border)' }}>
             <div>
               <CategoryBadge category={article.category} />
-              <h2 className="font-bold text-main text-xl mt-2 leading-snug">{article.title}</h2>
+              <h2 className="font-bold text-main text-xl mt-2 leading-snug">{article.title[lang]}</h2>
               <div className="flex gap-3 mt-2 text-xs text-muted font-mono">
-                <span>{article.date}</span>
+                <span>{article.date[lang]}</span>
                 <span>·</span>
-                <span>{article.readTime}</span>
+                <span>{article.readTime[lang]}</span>
               </div>
             </div>
             <button
               onClick={onClose}
-              className="glass rounded-lg p-2 text-muted hover:text-accent transition-colors shrink-0 mt-1"
+              className="glass rounded-lg p-2 text-muted hover:text-accent transition-colors shrink-0 mt-1 cursor-pointer"
             >
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
@@ -227,9 +227,9 @@ function ArticleModal({ article, onClose }) {
           {/* Body */}
           <div className="px-5 sm:px-8 pb-8 pt-4">
             <p className="text-muted text-base leading-relaxed mb-6 italic border-l-2 pl-4" style={{ borderColor: 'var(--color-accent2)' }}>
-              {article.excerpt}
+              {article.excerpt[lang]}
             </p>
-            {renderContent(article.content)}
+            {renderContent(article.content[lang])}
 
             {/* Tags */}
             <div className="flex flex-wrap gap-2 mt-8 pt-6" style={{ borderTop: '1px solid var(--color-border)' }}>
@@ -242,7 +242,6 @@ function ArticleModal({ article, onClose }) {
           </div>
         </motion.div>
       </motion.div>
-    </AnimatePresence>
   );
 }
 
@@ -266,7 +265,9 @@ export default function Articles() {
         </div>
       </div>
 
-      {selected && <ArticleModal article={selected} onClose={() => setSelected(null)} />}
+      <AnimatePresence>
+        {selected && <ArticleModal article={selected} onClose={() => setSelected(null)} />}
+      </AnimatePresence>
     </section>
   );
 }

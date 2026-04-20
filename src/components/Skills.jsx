@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useInView } from '../hooks/useInView';
-import { skills } from '../data';
+import { skills, certifications } from '../data';
 import { useLang } from '../LangContext';
 import SectionTitle from './SectionTitle';
 
@@ -70,6 +70,29 @@ export default function Skills() {
             <SkillCard key={s.category} skill={s} index={i} />
           ))}
         </div>
+
+        {certifications.length > 0 && (
+          <div className="mt-10">
+            <h3 className="text-xs font-mono uppercase tracking-widest text-muted mb-4">{t.certifications.title}</h3>
+            <div className="flex flex-wrap gap-4">
+              {certifications.map((cert, i) => (
+                <motion.div
+                  key={cert.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: i * 0.1 }}
+                  className="glass rounded-xl px-5 py-4 flex items-center gap-3 glow-hover"
+                >
+                  <span className="text-2xl">{cert.icon}</span>
+                  <div>
+                    <p className="text-sm font-semibold text-main">{cert.name}</p>
+                    <p className="text-xs text-muted">{cert.issuer}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );

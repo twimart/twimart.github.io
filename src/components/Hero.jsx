@@ -11,8 +11,8 @@ function AnimatedGrid() {
           position: 'absolute',
           inset: 0,
           backgroundImage: `
-            linear-gradient(rgba(56,189,248,0.04) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(56,189,248,0.04) 1px, transparent 1px)
+            linear-gradient(var(--color-grid) 1px, transparent 1px),
+            linear-gradient(90deg, var(--color-grid) 1px, transparent 1px)
           `,
           backgroundSize: '60px 60px',
         }}
@@ -25,7 +25,7 @@ function AnimatedGrid() {
           transform: 'translate(-50%, -50%)',
           width: '600px',
           height: '600px',
-          background: 'radial-gradient(circle, rgba(56,189,248,0.08) 0%, transparent 70%)',
+          background: 'radial-gradient(circle, var(--color-accent-dim) 0%, transparent 70%)',
           borderRadius: '50%',
         }}
       />
@@ -36,7 +36,7 @@ function AnimatedGrid() {
           left: '70%',
           width: '400px',
           height: '400px',
-          background: 'radial-gradient(circle, rgba(129,140,248,0.06) 0%, transparent 70%)',
+          background: 'radial-gradient(circle, var(--color-accent2-dim) 0%, transparent 70%)',
           borderRadius: '50%',
         }}
       />
@@ -45,13 +45,13 @@ function AnimatedGrid() {
 }
 
 function TypewriterText({ texts }) {
-  const [displayed, setDisplayed] = useState('');
   const [textIndex, setTextIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
   const [deleting, setDeleting] = useState(false);
 
+  const current = texts[textIndex % texts.length];
+
   useEffect(() => {
-    const current = texts[textIndex % texts.length];
     let timeout;
     if (!deleting && charIndex < current.length) {
       timeout = setTimeout(() => setCharIndex(i => i + 1), 60);
@@ -63,20 +63,18 @@ function TypewriterText({ texts }) {
       setDeleting(false);
       setTextIndex(i => (i + 1) % texts.length);
     }
-    setDisplayed(current.slice(0, charIndex));
     return () => clearTimeout(timeout);
-  }, [charIndex, deleting, textIndex, texts]);
+  }, [charIndex, deleting, current]);
 
   useEffect(() => {
     setCharIndex(0);
     setDeleting(false);
     setTextIndex(0);
-    setDisplayed('');
   }, [texts]);
 
   return (
     <span className="text-accent">
-      {displayed}
+      {current.slice(0, charIndex)}
       <span className="inline-block w-0.5 h-8 bg-accent ml-1 animate-pulse align-middle" />
     </span>
   );
@@ -126,7 +124,7 @@ function TiltPhoto() {
     hoveredRef.current = true;
     if (containerRef.current) {
       containerRef.current.style.transition = 'transform 0.08s ease-out, box-shadow 0.3s ease';
-      containerRef.current.style.boxShadow = '0 20px 60px rgba(56,189,248,0.25), 0 0 0 2px rgba(56,189,248,0.3)';
+      containerRef.current.style.boxShadow = 'var(--shadow-photo-hover)';
     }
   };
 
@@ -135,7 +133,7 @@ function TiltPhoto() {
     startRef.current = performance.now();
     if (containerRef.current) {
       containerRef.current.style.transition = 'box-shadow 0.3s ease';
-      containerRef.current.style.boxShadow = '0 8px 30px rgba(0,0,0,0.3), 0 0 0 2px rgba(56,189,248,0.15)';
+      containerRef.current.style.boxShadow = 'var(--shadow-photo)';
     }
     if (glareRef.current) glareRef.current.style.background = 'none';
   };
@@ -150,7 +148,7 @@ function TiltPhoto() {
       style={{
         width: '320px',
         height: '320px',
-        boxShadow: '0 8px 30px rgba(0,0,0,0.3), 0 0 0 2px rgba(56,189,248,0.15)',
+        boxShadow: 'var(--shadow-photo)',
       }}
     >
       <img

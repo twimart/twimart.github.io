@@ -1,15 +1,22 @@
 import { motion } from 'framer-motion';
 import { useInView } from '../hooks/useInView';
+import { personal, experiences, education } from '../data';
 import { useLang } from '../LangContext';
 import SectionTitle from './SectionTitle';
 
 const factIcons = ['🏢', '🎓', '📍', '🌐'];
 const factKeys = ['company', 'school', 'location', 'languages'];
-const factValues = ['Thales', 'UniLaSalle Amiens', 'Amiens, France', 'FR · EN (C1)'];
 
 export default function About() {
   const [ref, inView] = useInView(0.2);
   const { t } = useLang();
+
+  const factValues = [
+    experiences[0].company,
+    education[0].school,
+    personal.location,
+    personal.languages,
+  ];
 
   const facts = factKeys.map((key, i) => ({
     icon: factIcons[i],
