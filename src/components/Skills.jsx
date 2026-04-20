@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from '../hooks/useInView';
 import { skills } from '../data';
+import { useLang } from '../LangContext';
 import SectionTitle from './SectionTitle';
 
 function SkillCard({ skill, index }) {
@@ -49,16 +50,23 @@ function SkillCard({ skill, index }) {
 }
 
 export default function Skills() {
+  const { t } = useLang();
+
+  const skillsData = skills.map((s, i) => ({
+    ...s,
+    category: t.skillCategories[i] ?? s.category,
+  }));
+
   return (
     <section id="skills" className="py-24 px-6 bg-main2">
       <div className="max-w-6xl mx-auto">
         <SectionTitle
-          label="Expertise"
-          title="Technical Skills"
-          subtitle="Technologies and tools I work with on a daily basis."
+          label={t.skills.label}
+          title={t.skills.title}
+          subtitle={t.skills.subtitle}
         />
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {skills.map((s, i) => (
+          {skillsData.map((s, i) => (
             <SkillCard key={s.category} skill={s} index={i} />
           ))}
         </div>

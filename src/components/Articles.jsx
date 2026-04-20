@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from '../hooks/useInView';
 import { articles } from '../data';
+import { useLang } from '../LangContext';
 import SectionTitle from './SectionTitle';
 
 const categoryColors = {
@@ -26,6 +27,7 @@ function CategoryBadge({ category }) {
 
 function ArticleCard({ article, index, onClick }) {
   const [ref, inView] = useInView(0.1);
+  const { t } = useLang();
 
   return (
     <motion.article
@@ -53,7 +55,7 @@ function ArticleCard({ article, index, onClick }) {
       <div className="flex items-center justify-between mt-auto">
         <span className="text-xs text-muted font-mono">{article.date}</span>
         <span className="text-xs text-accent flex items-center gap-1 group-hover:gap-2 transition-all duration-200">
-          Read more
+          {t.articles.read_more}
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <path d="M5 12h14M12 5l7 7-7 7"/>
           </svg>
@@ -189,20 +191,20 @@ function ArticleModal({ article, onClose }) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="fixed inset-0 z-50 flex items-start justify-center p-4 pt-16"
+        className="fixed inset-0 z-50 flex items-end sm:items-start justify-center sm:p-4 sm:pt-16"
         style={{ background: 'rgba(0,0,0,0.7)', backdropFilter: 'blur(8px)' }}
         onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}
       >
         <motion.div
-          initial={{ opacity: 0, y: 40, scale: 0.97 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          exit={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 60 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 60 }}
           transition={{ duration: 0.3, ease: 'easeOut' }}
-          className="glass rounded-3xl max-w-2xl w-full max-h-[80vh] overflow-y-auto"
+          className="glass w-full sm:max-w-2xl max-h-[90vh] sm:max-h-[80vh] overflow-y-auto rounded-t-3xl sm:rounded-3xl"
           style={{ border: '1px solid var(--color-border)' }}
         >
           {/* Header */}
-          <div className="sticky top-0 glass rounded-t-3xl px-8 py-5 flex items-start justify-between gap-4" style={{ borderBottom: '1px solid var(--color-border)' }}>
+          <div className="sticky top-0 rounded-t-3xl px-5 sm:px-8 py-4 sm:py-5 flex items-start justify-between gap-4" style={{ background: 'var(--color-bg)', backdropFilter: 'blur(16px)', borderBottom: '1px solid var(--color-border)' }}>
             <div>
               <CategoryBadge category={article.category} />
               <h2 className="font-bold text-main text-xl mt-2 leading-snug">{article.title}</h2>
@@ -223,7 +225,7 @@ function ArticleModal({ article, onClose }) {
           </div>
 
           {/* Body */}
-          <div className="px-8 pb-8 pt-4">
+          <div className="px-5 sm:px-8 pb-8 pt-4">
             <p className="text-muted text-base leading-relaxed mb-6 italic border-l-2 pl-4" style={{ borderColor: 'var(--color-accent2)' }}>
               {article.excerpt}
             </p>
@@ -246,14 +248,15 @@ function ArticleModal({ article, onClose }) {
 
 export default function Articles() {
   const [selected, setSelected] = useState(null);
+  const { t } = useLang();
 
   return (
     <section id="articles" className="py-24 px-6 bg-main2">
       <div className="max-w-6xl mx-auto">
         <SectionTitle
-          label="Writing"
-          title="Articles & Thoughts"
-          subtitle="Notes on Linux, privacy, security and the tools I care about."
+          label={t.articles.label}
+          title={t.articles.title}
+          subtitle={t.articles.subtitle}
         />
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">

@@ -1,18 +1,20 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-
-const links = [
-  { label: 'About', href: '#about' },
-  { label: 'Experience', href: '#experience' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Articles', href: '#articles' },
-  { label: 'Contact', href: '#contact' },
-];
+import { useLang } from '../LangContext';
 
 export default function Navbar({ dark, toggleTheme }) {
+  const { lang, t, toggleLang } = useLang();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const links = [
+    { label: t.nav.about, href: '#about' },
+    { label: t.nav.experience, href: '#experience' },
+    { label: t.nav.skills, href: '#skills' },
+    { label: t.nav.projects, href: '#projects' },
+    { label: t.nav.articles, href: '#articles' },
+    { label: t.nav.contact, href: '#contact' },
+  ];
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -29,13 +31,11 @@ export default function Navbar({ dark, toggleTheme }) {
         scrolled ? 'glass shadow-lg' : 'bg-transparent'
       }`}
     >
-      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        {/* Logo */}
+      <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <a href="#hero" className="font-mono text-sm font-medium text-accent tracking-wider">
           TW<span className="text-muted">.</span>
         </a>
 
-        {/* Desktop links */}
         <div className="hidden md:flex items-center gap-8">
           {links.map((l) => (
             <a
@@ -48,11 +48,25 @@ export default function Navbar({ dark, toggleTheme }) {
           ))}
         </div>
 
-        {/* Theme toggle + mobile menu */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 self-center">
+          {/* Language toggle */}
+          <button
+            onClick={toggleLang}
+            className="glass rounded-full px-3 py-2 flex items-center gap-1.5 text-muted hover:text-accent transition-colors duration-200"
+            aria-label="Toggle language"
+          >
+            <span className="text-base leading-none">
+              {lang === 'fr' ? '🇬🇧' : '🇫🇷'}
+            </span>
+            <span className="text-xs font-mono font-medium">
+              {lang === 'fr' ? 'EN' : 'FR'}
+            </span>
+          </button>
+
+          {/* Theme toggle */}
           <button
             onClick={toggleTheme}
-            className="glass rounded-full p-2 text-muted hover:text-accent transition-colors duration-200"
+            className="glass rounded-full p-2.5 text-muted hover:text-accent transition-colors duration-200"
             aria-label="Toggle theme"
           >
             {dark ? (
@@ -85,7 +99,6 @@ export default function Navbar({ dark, toggleTheme }) {
         </div>
       </div>
 
-      {/* Mobile menu */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div

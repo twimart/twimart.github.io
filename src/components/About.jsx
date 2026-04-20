@@ -1,49 +1,50 @@
 import { motion } from 'framer-motion';
 import { useInView } from '../hooks/useInView';
-import { personal } from '../data';
+import { useLang } from '../LangContext';
 import SectionTitle from './SectionTitle';
 
-const facts = [
-  { icon: '🏢', label: 'Company', value: 'Thales' },
-  { icon: '🎓', label: 'School', value: 'UniLaSalle Amiens' },
-  { icon: '📍', label: 'Location', value: 'Amiens, France' },
-  { icon: '🌐', label: 'Languages', value: 'FR · EN (C1)' },
-];
+const factIcons = ['🏢', '🎓', '📍', '🌐'];
+const factKeys = ['company', 'school', 'location', 'languages'];
+const factValues = ['Thales', 'UniLaSalle Amiens', 'Amiens, France', 'FR · EN (C1)'];
 
 export default function About() {
   const [ref, inView] = useInView(0.2);
+  const { t } = useLang();
+
+  const facts = factKeys.map((key, i) => ({
+    icon: factIcons[i],
+    label: t.about.facts[key],
+    value: factValues[i],
+  }));
 
   return (
     <section id="about" className="py-24 px-6 bg-main2">
       <div className="max-w-6xl mx-auto">
-        <SectionTitle label="Introduction" title="About Me" />
+        <SectionTitle label={t.about.label} title={t.about.title} />
 
         <div ref={ref} className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Text */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7 }}
           >
             <p className="text-muted text-lg leading-relaxed mb-6">
-              I'm a 3rd-year apprentice engineering student specialising in{' '}
-              <span className="text-accent font-medium">Computer Networks & Cybersecurity</span>,
-              currently on a work-study contract at{' '}
-              <span className="text-accent font-medium">Thales</span> in Lambersart.
+              {t.about.p1[0]}{' '}
+              <span className="text-accent font-medium">{t.about.p1[1]}</span>
+              {t.about.p1[2]}{' '}
+              <span className="text-accent font-medium">{t.about.p1[3]}</span>
+              {t.about.p1[4]}
             </p>
             <p className="text-muted text-lg leading-relaxed mb-6">
-              My day-to-day work involves configuring and deploying network equipment
-              (routers, switches, firewalls), validating complex network configurations,
-              and writing technical documentation.
+              {t.about.p2}
             </p>
             <p className="text-muted text-lg leading-relaxed">
-              Beyond networking, I'm passionate about{' '}
-              <span className="text-accent font-medium">Linux, automation, and AI</span>.
-              I'm always looking to expand my skill set and explore new technologies.
+              {t.about.p3[0]}{' '}
+              <span className="text-accent font-medium">{t.about.p3[1]}</span>
+              {t.about.p3[2]}
             </p>
           </motion.div>
 
-          {/* Facts grid */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}

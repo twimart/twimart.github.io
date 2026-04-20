@@ -1,4 +1,5 @@
 import { useTheme } from './hooks/useTheme';
+import { LangProvider } from './LangContext';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -13,18 +14,20 @@ export default function App() {
   const { dark, toggle } = useTheme();
 
   return (
-    <div className="min-h-screen bg-main text-main">
-      <Navbar dark={dark} toggleTheme={toggle} />
-      <main>
-        <Hero />
-        <About />
-        <Experience />
-        <Skills />
-        <Projects />
-        <Articles />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+    <LangProvider>
+      <div className="min-h-screen bg-main text-main">
+        <Navbar dark={dark} toggleTheme={toggle} />
+        <main>
+          <Hero />
+          <About />
+          <Experience />
+          <Skills />
+          <Projects />
+          <Articles />
+          <Contact />
+        </main>
+        <Footer />
+      </div>
+    </LangProvider>
   );
 }

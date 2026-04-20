@@ -1,5 +1,5 @@
 export const personal = {
-  name: "Thomas Wimart",
+  name: "Thomas WIMART",
   title: "Network & Security Engineer",
   subtitle: "Apprentice Engineer at Thales · UniLaSalle Amiens",
   email: "hiring.drizzly415@aleeas.com",
@@ -41,7 +41,7 @@ export const experiences = [
   },
   {
     role: "IT Department Intern",
-    company: "Rectorat de l'Académie d'Amiens",
+    company: "Amiens School District Office",
     period: "May – Jun. 2022",
     duration: "2 months",
     location: "Amiens, Hauts-de-France",
@@ -64,7 +64,7 @@ export const education = [
   },
   {
     degree: "BTS SIO — Infrastructure, Services & Networks",
-    school: "Édouard Gand Vocational High School",
+    school: "Édouard Gand High School",
     period: "Sept. 2021 – Jul. 2023",
     description: "Specialisation in system administration, networks and security",
     icon: "📘",
@@ -145,11 +145,11 @@ Key criteria I used:
 ## My Daily Setup
 
 \`\`\`
-OS:      Fedora 41 (Workstation)
-Desktop: GNOME (with a few extensions)
-Shell:   Zsh + Oh My Zsh
-Editor:  Neovim / VS Code
-Terminal: Kitty
+OS:      Fedora 43 
+Desktop: KDE Plasma
+Shell:   Bash
+Editor:  VSCodium
+Browser: Brave
 \`\`\`
 
 ## Is It For Everyone?
@@ -453,10 +453,19 @@ The workflow that works: AI generates a draft → I review and understand every 
 export const projects = [
   {
     title: "Personal Portfolio",
-    description: "Design and development of a personal portfolio website, showcasing technical skills and projects.",
+    description: "Design and development of a personal portfolio website, showcasing technical skills, projects, articles and experience. Built with React and Vite, with smooth animations via Framer Motion and a fully responsive dark UI.",
     tags: ["React", "Vite", "Tailwind CSS", "Framer Motion"],
     link: "https://thomaswimart.fr",
     github: "https://github.com/twimart/twimart.github.io",
+    image: "/portfolio.png",
     status: "live",
+  },
+  {
+    title: "Smart Recipes",
+    description: "Mobile app that suggests recipes based on available ingredients. Features barcode scanning via OpenFoodFacts, a fuzzy-matching algorithm computing ingredient availability (0–100%), and an offline-first architecture with Hive local storage and automatic Firestore sync. Includes 50+ French recipes scraped from Marmiton.",
+    tags: ["Flutter", "Dart", "Firebase", "Node.js", "Hive", "Docker"],
+    github: "https://github.com/Artek60744/Smart_Recipes",
+    image: "/smart-recipe.png",
+    status: "in-progress",
   },
 ];

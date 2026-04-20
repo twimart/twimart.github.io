@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from '../hooks/useInView';
 import { experiences, education } from '../data';
+import { useLang } from '../LangContext';
 import SectionTitle from './SectionTitle';
 
 function TimelineItem({ item, index, isExperience }) {
@@ -9,28 +10,26 @@ function TimelineItem({ item, index, isExperience }) {
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, x: index % 2 === 0 ? -40 : 40 }}
-      animate={inView ? { opacity: 1, x: 0 } : {}}
+      initial={{ opacity: 0, y: 30 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6, delay: index * 0.1 }}
       className="relative pl-8 pb-10 last:pb-0"
     >
-      {/* Line */}
       <div className="absolute left-0 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-[var(--color-border)] to-transparent" />
-      {/* Dot */}
       <div className="absolute -left-1.5 top-1.5 w-3 h-3 rounded-full border-2 border-accent bg-main" />
 
       <div className="glass rounded-2xl p-6 glow-hover transition-all duration-300 group">
-        <div className="flex flex-wrap items-start justify-between gap-2 mb-3">
-          <div>
-            <h3 className="font-bold text-main text-lg group-hover:text-accent transition-colors">
+        <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
+          <div className="min-w-0">
+            <h3 className="font-bold text-main text-base group-hover:text-accent transition-colors leading-snug">
               {isExperience ? item.role : item.degree}
             </h3>
             <p className="text-accent font-semibold text-sm">
               {isExperience ? item.company : item.school}
             </p>
           </div>
-          <div className="text-right">
-            <span className="font-mono text-xs text-muted bg-surface2 rounded-full px-3 py-1">
+          <div className="sm:text-right shrink-0">
+            <span className="font-mono text-xs text-muted bg-surface2 rounded-full px-3 py-1 whitespace-nowrap">
               {item.period}
             </span>
             {item.duration && (
@@ -79,34 +78,47 @@ function TimelineItem({ item, index, isExperience }) {
 }
 
 export default function Experience() {
+  const { t } = useLang();
+
+  const experiencesData = experiences.map((exp, i) => ({
+    ...exp,
+    role: t.experiences[i]?.role ?? exp.role,
+    description: t.experiences[i]?.description ?? exp.description,
+  }));
+
+  const educationData = education.map((edu, i) => ({
+    ...edu,
+    degree: t.education[i]?.degree ?? edu.degree,
+    school: t.education[i]?.school ?? edu.school,
+    description: t.education[i]?.description ?? edu.description,
+  }));
+
   return (
     <section id="experience" className="py-24 px-6">
       <div className="max-w-4xl mx-auto">
         <SectionTitle
-          label="Background"
-          title="Experience & Education"
-          subtitle="My professional journey and academic background."
+          label={t.experience.label}
+          title={t.experience.title}
+          subtitle={t.experience.subtitle}
         />
 
         <div className="grid md:grid-cols-2 gap-12">
-          {/* Experience */}
           <div>
             <h3 className="text-lg font-bold text-main mb-8 flex items-center gap-2">
               <span className="w-6 h-6 rounded-md bg-surface2 flex items-center justify-center text-sm">💼</span>
-              Work Experience
+              {t.experience.work}
             </h3>
-            {experiences.map((exp, i) => (
+            {experiencesData.map((exp, i) => (
               <TimelineItem key={i} item={exp} index={i} isExperience />
             ))}
           </div>
 
-          {/* Education */}
           <div>
             <h3 className="text-lg font-bold text-main mb-8 flex items-center gap-2">
               <span className="w-6 h-6 rounded-md bg-surface2 flex items-center justify-center text-sm">🎓</span>
-              Education
+              {t.experience.education}
             </h3>
-            {education.map((edu, i) => (
+            {educationData.map((edu, i) => (
               <TimelineItem key={i} item={edu} index={i} isExperience={false} />
             ))}
           </div>

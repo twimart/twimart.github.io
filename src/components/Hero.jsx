@@ -1,6 +1,7 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { personal } from '../data';
+import { useLang } from '../LangContext';
 
 function AnimatedGrid() {
   return (
@@ -16,7 +17,6 @@ function AnimatedGrid() {
           backgroundSize: '60px 60px',
         }}
       />
-      {/* Radial glow center */}
       <div
         style={{
           position: 'absolute',
@@ -51,7 +51,7 @@ function TypewriterText({ texts }) {
   const [deleting, setDeleting] = useState(false);
 
   useEffect(() => {
-    const current = texts[textIndex];
+    const current = texts[textIndex % texts.length];
     let timeout;
     if (!deleting && charIndex < current.length) {
       timeout = setTimeout(() => setCharIndex(i => i + 1), 60);
@@ -67,6 +67,13 @@ function TypewriterText({ texts }) {
     return () => clearTimeout(timeout);
   }, [charIndex, deleting, textIndex, texts]);
 
+  useEffect(() => {
+    setCharIndex(0);
+    setDeleting(false);
+    setTextIndex(0);
+    setDisplayed('');
+  }, [texts]);
+
   return (
     <span className="text-accent">
       {displayed}
@@ -75,16 +82,102 @@ function TypewriterText({ texts }) {
   );
 }
 
+function TiltPhoto() {
+  const containerRef = useRef(null);
+  const glareRef = useRef(null);
+  const hoveredRef = useRef(false);
+  const frameRef = useRef(null);
+  const startRef = useRef(performance.now());
+
+  const applyTransform = (rx, ry, scale, glareX = 50, glareY = 50, glareOpacity = 0) => {
+    if (!containerRef.current) return;
+    containerRef.current.style.transform = `perspective(800px) rotateX(${rx}deg) rotateY(${ry}deg) scale(${scale})`;
+    if (glareRef.current) {
+      glareRef.current.style.background = `radial-gradient(circle at ${glareX}% ${glareY}%, rgba(255,255,255,${glareOpacity}) 0%, transparent 60%)`;
+    }
+  };
+
+  useEffect(() => {
+    const animate = (now) => {
+      if (!hoveredRef.current) {
+        const t = (now - startRef.current) / 1000;
+        const rx = Math.sin(t * 1.8) * 11;
+        const ry = Math.cos(t * 1.3) * 11;
+        applyTransform(rx, ry, 1);
+      }
+      frameRef.current = requestAnimationFrame(animate);
+    };
+    frameRef.current = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(frameRef.current);
+  }, []);
+
+  const handleMouseMove = (e) => {
+    const rect = containerRef.current.getBoundingClientRect();
+    const cx = rect.left + rect.width / 2;
+    const cy = rect.top + rect.height / 2;
+    const rx = ((e.clientY - cy) / (rect.height / 2)) * -18;
+    const ry = ((e.clientX - cx) / (rect.width / 2)) * 18;
+    const gx = ((e.clientX - rect.left) / rect.width) * 100;
+    const gy = ((e.clientY - rect.top) / rect.height) * 100;
+    applyTransform(rx, ry, 1.04, gx, gy, 0.18);
+  };
+
+  const handleMouseEnter = () => {
+    hoveredRef.current = true;
+    if (containerRef.current) {
+      containerRef.current.style.transition = 'transform 0.08s ease-out, box-shadow 0.3s ease';
+      containerRef.current.style.boxShadow = '0 20px 60px rgba(56,189,248,0.25), 0 0 0 2px rgba(56,189,248,0.3)';
+    }
+  };
+
+  const handleMouseLeave = () => {
+    hoveredRef.current = false;
+    startRef.current = performance.now();
+    if (containerRef.current) {
+      containerRef.current.style.transition = 'box-shadow 0.3s ease';
+      containerRef.current.style.boxShadow = '0 8px 30px rgba(0,0,0,0.3), 0 0 0 2px rgba(56,189,248,0.15)';
+    }
+    if (glareRef.current) glareRef.current.style.background = 'none';
+  };
+
+  return (
+    <div
+      ref={containerRef}
+      onMouseMove={handleMouseMove}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      className="relative flex-shrink-0 rounded-full overflow-hidden cursor-pointer"
+      style={{
+        width: '320px',
+        height: '320px',
+        boxShadow: '0 8px 30px rgba(0,0,0,0.3), 0 0 0 2px rgba(56,189,248,0.15)',
+      }}
+    >
+      <img
+        src="/profile.jpeg"
+        alt="Thomas Wimart"
+        className="w-full h-full object-cover object-top"
+        draggable={false}
+      />
+      <div
+        ref={glareRef}
+        className="absolute inset-0 rounded-full pointer-events-none"
+      />
+    </div>
+  );
+}
+
 export default function Hero() {
+  const { t } = useLang();
+
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex flex-col items-center justify-center text-center px-6"
+      className="relative min-h-screen flex flex-col items-center justify-center text-center px-6 pt-24 md:pt-0"
     >
       <AnimatedGrid />
 
       <div className="relative z-10 max-w-4xl mx-auto">
-        {/* Badge */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -92,46 +185,42 @@ export default function Hero() {
           className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 text-xs font-mono text-muted mb-8"
         >
           <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-          Available for new opportunities
+          {t.hero.badge}
         </motion.div>
 
-        {/* Name */}
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 0.7 }}
-          className="text-5xl md:text-7xl font-bold text-main leading-tight mb-4"
-          style={{ fontFamily: 'Inter, sans-serif', letterSpacing: '-0.02em' }}
-        >
-          {personal.name}
-        </motion.h1>
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-10 mb-4">
+          <TiltPhoto />
 
-        {/* Typewriter title */}
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, duration: 0.7 }}
+            className="text-5xl sm:text-6xl md:text-8xl font-bold text-main leading-tight text-left"
+            style={{ fontFamily: 'Inter, sans-serif', letterSpacing: '-0.02em' }}
+          >
+            <span className="block">Thomas</span>
+            <span className="block">WIMART</span>
+          </motion.h1>
+        </div>
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.6 }}
-          className="text-2xl md:text-3xl font-semibold mb-6 h-10"
+          className="text-xl sm:text-2xl md:text-3xl font-semibold mb-6 h-10"
         >
-          <TypewriterText texts={[
-            'Network Engineer',
-            'Security Specialist',
-            'Linux Enthusiast',
-            'Thales Apprentice',
-          ]} />
+          <TypewriterText texts={t.hero.typewriter} />
         </motion.div>
 
-        {/* Bio */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.7, duration: 0.6 }}
           className="text-muted text-lg max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          {personal.bio}
+          {t.personal.bio}
         </motion.p>
 
-        {/* CTA buttons */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -146,17 +235,16 @@ export default function Hero() {
               color: '#fff',
             }}
           >
-            Get in touch
+            {t.hero.cta_contact}
           </a>
           <a
             href="#experience"
             className="glass px-6 py-3 rounded-xl font-semibold text-sm text-muted hover:text-accent transition-all duration-300"
           >
-            View my work
+            {t.hero.cta_work}
           </a>
         </motion.div>
 
-        {/* Social icons */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -182,14 +270,13 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* Scroll indicator */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted"
       >
-        <span className="text-xs font-mono tracking-widest uppercase">Scroll</span>
+        <span className="text-xs font-mono tracking-widest uppercase">{t.hero.scroll}</span>
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
