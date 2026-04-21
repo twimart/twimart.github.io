@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from '../hooks/useInView';
 import { projects } from '../data';
@@ -118,15 +118,17 @@ function ProjectCard({ project, index, onClick }) {
 
 function ProjectModal({ project, onClose }) {
   const { t } = useLang();
+  const onCloseRef = useRef(onClose);
+  useEffect(() => { onCloseRef.current = onClose; });
   useEffect(() => {
     document.body.style.overflow = 'hidden';
-    const onKey = (e) => { if (e.key === 'Escape') onClose(); };
+    const onKey = (e) => { if (e.key === 'Escape') onCloseRef.current(); };
     window.addEventListener('keydown', onKey);
     return () => {
       document.body.style.overflow = '';
       window.removeEventListener('keydown', onKey);
     };
-  }, [onClose]);
+  }, []);
 
   return (
     <motion.div
@@ -193,6 +195,7 @@ function ProjectModal({ project, onClose }) {
             </div>
             <button
               onClick={onClose}
+              aria-label="Fermer"
               className="glass rounded-lg p-2 text-muted hover:text-accent transition-colors shrink-0 mt-1 cursor-pointer"
             >
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -269,7 +272,7 @@ export default function Projects() {
       </div>
 
       <AnimatePresence>
-        {selected && <ProjectModal project={{ ...selected, description: t.projectDescriptions[selected.id] ?? selected.description }} onClose={() => setSelected(null)} />}
+        {selected && <ProjectModal project={selected} onClose={() => setSelected(null)} />}
       </AnimatePresence>
     </section>
   );

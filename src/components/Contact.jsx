@@ -83,7 +83,7 @@ export default function Contact() {
                 key={link.label}
                 href={link.href}
                 target={link.label !== 'Email' ? '_blank' : undefined}
-                rel="noopener noreferrer"
+                rel={link.label !== 'Email' ? 'noopener noreferrer' : undefined}
                 initial={{ opacity: 0, y: 20 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.4, delay: 0.3 + i * 0.1 }}

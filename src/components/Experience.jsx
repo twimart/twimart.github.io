@@ -110,7 +110,7 @@ export default function Experience() {
               {t.experience.work}
             </h3>
             {experiencesData.map((exp, i) => (
-              <TimelineItem key={i} item={exp} index={i} isExperience />
+              <TimelineItem key={exp.company} item={exp} index={i} isExperience />
             ))}
           </div>
 
@@ -120,7 +120,7 @@ export default function Experience() {
               {t.experience.education}
             </h3>
             {educationData.map((edu, i) => (
-              <TimelineItem key={i} item={edu} index={i} isExperience={false} />
+              <TimelineItem key={edu.school} item={edu} index={i} isExperience={false} />
             ))}
           </div>
         </div>
