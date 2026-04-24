@@ -2,7 +2,7 @@ export const personal = {
   name: "Thomas WIMART",
   title: "Network & Security Engineer",
   subtitle: "Apprentice Engineer at Thales · UniLaSalle Amiens",
-  email: "hiring.drizzly415@aleeas.com",
+  email: "thomaswimart@pm.me",
   website: "www.thomaswimart.fr",
   location: "Lille, France",
   languages: "FR · EN (C1 - TOEIC)",
