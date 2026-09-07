@@ -15,7 +15,7 @@ export default function SectionTitle({ label, title, subtitle }) {
       <span className="font-mono text-xs text-accent tracking-widest uppercase mb-3 block">
         {label}
       </span>
-      <h2 className="text-3xl md:text-4xl font-bold text-main mb-4" style={{ letterSpacing: '-0.01em' }}>
+      <h2 className="font-display text-3xl md:text-5xl font-bold text-main mb-4" style={{ letterSpacing: '-0.03em' }}>
         {title}
       </h2>
       {subtitle && (

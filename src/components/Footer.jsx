@@ -14,6 +14,9 @@ export default function Footer() {
           {t.footer.built}
         </p>
         <div className="flex gap-4">
+          <a href={personal.cv} download className="text-muted hover:text-accent transition-colors text-sm">
+            CV
+          </a>
           <a href={personal.github} target="_blank" rel="noopener noreferrer" className="text-muted hover:text-accent transition-colors text-sm">
             GitHub
           </a>

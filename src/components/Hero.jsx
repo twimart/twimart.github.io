@@ -1,47 +1,60 @@
 import { useEffect, useState, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { personal } from '../data';
+import { personal, stats } from '../data';
 import { useLang } from '../LangContext';
+import { usePrefersReducedMotion } from '../hooks/usePrefersReducedMotion';
+import NetworkMesh from './NetworkMesh';
+import Magnetic from './Magnetic';
 
-function AnimatedGrid() {
+function SplitWord({ text, delay = 0 }) {
+  const reduced = usePrefersReducedMotion();
+  if (reduced) return <span>{text}</span>;
   return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none">
-      <div
-        style={{
-          position: 'absolute',
-          inset: 0,
-          backgroundImage: `
-            linear-gradient(var(--color-grid) 1px, transparent 1px),
-            linear-gradient(90deg, var(--color-grid) 1px, transparent 1px)
-          `,
-          backgroundSize: '60px 60px',
-        }}
-      />
-      <div
-        style={{
-          position: 'absolute',
-          top: '40%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-          width: '600px',
-          height: '600px',
-          background: 'radial-gradient(circle, var(--color-accent-dim) 0%, transparent 70%)',
-          borderRadius: '50%',
-        }}
-      />
-      <div
-        style={{
-          position: 'absolute',
-          top: '30%',
-          left: '70%',
-          width: '400px',
-          height: '400px',
-          background: 'radial-gradient(circle, var(--color-accent2-dim) 0%, transparent 70%)',
-          borderRadius: '50%',
-        }}
-      />
-    </div>
+    <span className="inline-flex">
+      {text.split('').map((ch, i) => (
+        <motion.span
+          key={`${text}-${i}`}
+          initial={{ opacity: 0, y: 42, rotateX: 50, filter: 'blur(8px)' }}
+          animate={{ opacity: 1, y: 0, rotateX: 0, filter: 'blur(0px)' }}
+          transition={{ duration: 0.55, delay: delay + i * 0.045, ease: [0.22, 1, 0.36, 1] }}
+          className="inline-block"
+          style={{ transformOrigin: 'bottom' }}
+        >
+          {ch}
+        </motion.span>
+      ))}
+    </span>
   );
+}
+
+function CountUp({ value, inView }) {
+  const reduced = usePrefersReducedMotion();
+  const [n, setN] = useState(value);
+
+  useEffect(() => {
+    const match = String(value).match(/^(\d+)/);
+    if (!inView || reduced || !match) {
+      setN(value);
+      return;
+    }
+    const target = Number(match[1]);
+    const suffix = String(value).slice(match[1].length);
+    setN(`0${suffix}`);
+    let start;
+    let raf;
+    const dur = 1100;
+    const tick = (t) => {
+      if (!start) start = t;
+      const p = Math.min(1, (t - start) / dur);
+      const eased = 1 - (1 - p) ** 3;
+      setN(`${Math.round(target * eased)}${suffix}`);
+      if (p < 1) raf = requestAnimationFrame(tick);
+    };
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
+  }, [inView, value, reduced]);
+
+  return n;
 }
 
 function TypewriterText({ texts }) {
@@ -85,7 +98,7 @@ function TiltPhoto() {
   const glareRef = useRef(null);
   const hoveredRef = useRef(false);
   const frameRef = useRef(null);
-  const startRef = useRef(performance.now());
+  const startRef = useRef(0);
 
   const applyTransform = (rx, ry, scale, glareX = 50, glareY = 50, glareOpacity = 0) => {
     if (!containerRef.current) return;
@@ -144,12 +157,8 @@ function TiltPhoto() {
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className="relative flex-shrink-0 rounded-full overflow-hidden cursor-pointer"
-      style={{
-        width: '320px',
-        height: '320px',
-        boxShadow: 'var(--shadow-photo)',
-      }}
+      className="relative flex-shrink-0 rounded-full overflow-hidden cursor-pointer w-40 h-40 sm:w-56 sm:h-56 md:w-72 md:h-72"
+      style={{ boxShadow: 'var(--shadow-photo)' }}
     >
       <img
         src="/profile.jpeg"
@@ -166,20 +175,20 @@ function TiltPhoto() {
 }
 
 export default function Hero() {
-  const { t } = useLang();
+  const { t, lang } = useLang();
 
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex flex-col items-center justify-center text-center px-6 pt-24 md:pt-0"
+      className="relative isolate min-h-screen flex flex-col items-center justify-center text-center px-6 pt-28 pb-16"
     >
-      <AnimatedGrid />
+      <NetworkMesh />
 
       <div className="relative z-10 max-w-4xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.6 }}
+          initial={{ opacity: 0, y: 20, scale: 0.96 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ delay: 0.15, duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
           className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 text-xs font-mono text-muted mb-8"
         >
           <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
@@ -187,25 +196,28 @@ export default function Hero() {
         </motion.div>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-10 mb-4">
-          <TiltPhoto />
-
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.7 }}
-            className="text-5xl sm:text-6xl md:text-8xl font-bold text-main leading-tight text-left"
-            style={{ fontFamily: 'Inter, sans-serif', letterSpacing: '-0.02em' }}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.86, rotate: -6 }}
+            animate={{ opacity: 1, scale: 1, rotate: 0 }}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           >
-            <span className="block">Thomas</span>
-            <span className="block">WIMART</span>
-          </motion.h1>
+            <TiltPhoto />
+          </motion.div>
+
+          <h1
+            className="font-display text-5xl sm:text-6xl md:text-8xl font-bold text-main leading-[0.95] text-center sm:text-left"
+            style={{ letterSpacing: '-0.04em', perspective: '600px' }}
+          >
+            <span className="block"><SplitWord text="Thomas" delay={0.15} /></span>
+            <span className="block text-accent"><SplitWord text="WIMART" delay={0.4} /></span>
+          </h1>
         </div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.6 }}
-          className="text-xl sm:text-2xl md:text-3xl font-semibold mb-6 h-10"
+          className="font-display text-xl sm:text-2xl md:text-3xl font-semibold mb-6 min-h-10"
         >
           <TypewriterText texts={t.hero.typewriter} />
         </motion.div>
@@ -222,25 +234,60 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.9, duration: 0.6 }}
-          className="flex flex-wrap gap-4 justify-center mb-12"
+          transition={{ delay: 0.8, duration: 0.6 }}
+          className="grid grid-cols-3 gap-3 max-w-xl mx-auto mb-10"
         >
-          <a
-            href="#contact"
-            className="px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-300 glow-hover"
-            style={{
-              background: 'linear-gradient(135deg, var(--color-accent), var(--color-accent2))',
-              color: '#fff',
-            }}
-          >
-            {t.hero.cta_contact}
-          </a>
-          <a
-            href="#experience"
-            className="glass px-6 py-3 rounded-xl font-semibold text-sm text-muted hover:text-accent transition-all duration-300"
-          >
-            {t.hero.cta_work}
-          </a>
+          {stats.map((s, i) => (
+            <motion.div
+              key={s.key}
+              className="glass glass-spot rounded-2xl px-3 py-4"
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.85 + i * 0.08, duration: 0.5 }}
+            >
+              <div className="font-display font-bold text-accent text-lg sm:text-xl leading-none mb-1">
+                <CountUp value={s.value[lang]} inView />
+              </div>
+              <div className="text-[10px] sm:text-xs text-muted leading-snug">{t.hero.stats[s.key]}</div>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.9, duration: 0.6 }}
+          className="flex flex-wrap gap-3 justify-center mb-12"
+        >
+          <Magnetic>
+            <a
+              href="#contact"
+              className="inline-block px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-300 glow-hover"
+              style={{
+                background: 'linear-gradient(135deg, var(--color-accent), var(--color-accent2))',
+                color: '#fff',
+              }}
+            >
+              {t.hero.cta_contact}
+            </a>
+          </Magnetic>
+          <Magnetic>
+            <a
+              href="#experience"
+              className="inline-block glass px-6 py-3 rounded-xl font-semibold text-sm text-muted hover:text-accent transition-all duration-300"
+            >
+              {t.hero.cta_work}
+            </a>
+          </Magnetic>
+          <Magnetic>
+            <a
+              href={personal.cv}
+              download
+              className="inline-block glass px-6 py-3 rounded-xl font-semibold text-sm text-muted hover:text-accent transition-all duration-300"
+            >
+              {t.hero.cta_cv}
+            </a>
+          </Magnetic>
         </motion.div>
 
         <motion.div
@@ -272,7 +319,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted"
+        className="relative z-10 mt-10 flex flex-col items-center gap-2 text-muted"
       >
         <span className="text-xs font-mono tracking-widest uppercase">{t.hero.scroll}</span>
         <motion.div

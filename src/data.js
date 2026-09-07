@@ -1,30 +1,40 @@
 export const personal = {
   name: "Thomas WIMART",
   title: "Network & Security Engineer",
-  subtitle: "Apprentice Engineer at Thales · UniLaSalle Amiens",
+  subtitle: "Thales · UniLaSalle Amiens",
   email: "thomaswimart@pm.me",
   website: "www.thomaswimart.fr",
   location: "Lille, France",
   languages: "FR · EN (C1 - TOEIC)",
   linkedin: "https://www.linkedin.com/in/thomas-wimart",
   github: "https://github.com/twimart",
+  cv: "/cv.pdf",
 };
+
+export const stats = [
+  { value: { en: "50+", fr: "50+" }, key: "devices" },
+  { value: { en: "3 yrs", fr: "3 ans" }, key: "thales" },
+  { value: { en: "Sept. 2026", fr: "Sept. 2026" }, key: "available" },
+];
+
+export const nowUsing = ["Omarchy", "Hyprland", "Proton", "iPhone"];
 
 export const experiences = [
   {
-    role: "Apprentice Network & Security Engineer",
+    role: "Network & Security Engineer",
     company: "Thales",
     period: "Sept. 2023 – Present",
-    duration: "2+ years",
-    location: "Lambersart, Hauts-de-France",
+    duration: "3 years",
+    location: "Lambersart — Defence & National Security",
     description: [
-      "Configuration and deployment of network equipment (routers, switches, firewalls)",
-      "Testing and validation of network configurations: OSPF, rsyslog, routing protocols",
-      "Installation and commissioning of equipment",
-      "Development of an optimisation method for installation and testing processes",
-      "Writing procedures and technical documentation",
+      "Integration and production rollout of around fifty network devices (routers, switches, Stormshield/Fortinet firewalls), including non-regression checks in operational conditions",
+      "Routing and filtering: OSPF, VRRP, advanced static routing, VLAN segmentation, flow policies — Stormshield application filtering, site-to-site IPsec, bridge mode",
+      "Network diagnostics with Wireshark and physical TAP capture probes — e.g. tracing application latency in a sensitive production environment",
+      "Configuration versioning (Git/Bitbucket) and Ansible deployments; industrialised several playbooks and Bash scripts for recurring operations",
+      "Internal tool referent: only team member proficient on a complex proprietary integration/test platform that reproduces production conditions",
+      "Final-year project — Proxmox lab: dedicated VMs for centralised SSH/web access to the fleet, removing per-device cabling; estimated ~50% cut in integration time",
     ],
-    tags: ["Cisco", "OSPF", "Firewalls", "Documentation"],
+    tags: ["Stormshield", "Fortinet", "Cisco", "OSPF", "IPsec", "Ansible", "Proxmox"],
   },
   {
     role: "Network Intern",
@@ -75,54 +85,74 @@ export const skills = [
   {
     category: "Networking",
     icon: "🌐",
-    items: ["Cisco", "Aruba", "OSPF", "VLAN", "TFTP", "Routing Protocols", "Fiber Optic Cabling"],
+    items: ["Cisco", "Stormshield", "Fortinet", "OSPF", "VRRP", "VLAN", "IPsec", "Fiber Optic"],
   },
   {
     category: "Security",
     icon: "🔒",
-    items: ["Stormshield", "Fortinet", "Firewalls", "Proxy Server", "SSH", "VPN"],
+    items: ["Application filtering", "Firewalls", "Wireshark", "TAP probes", "VPN", "SSH", "Log analysis"],
   },
   {
-    category: "Systems & Tools",
+    category: "Automation",
     icon: "⚙️",
-    items: ["Linux", "Active Directory", "GitLab", "Jira", "Bitbucket"],
+    items: ["Ansible", "Bash", "Python", "Git", "GitLab", "Bitbucket", "Jira"],
   },
   {
-    category: "Languages",
-    icon: "💬",
-    items: ["French (Native)", "English (C1 - TOEIC)"],
+    category: "Systems",
+    icon: "🐧",
+    items: ["Linux (Debian/Ubuntu)", "Omarchy / Arch", "Proxmox", "VMware", "Windows Server", "Zabbix"],
   },
 ];
 
 export const certifications = [
   {
+    name: "CCNA",
+    academic: true,
+    issuer: {
+      en: "Cisco Networking Academy",
+      fr: "Cisco Networking Academy",
+    },
+    description: {
+      en: "Coursework followed as part of the engineering degree — not the official Cisco exam.",
+      fr: "Cours suivis dans le cadre du diplôme d'ingénieur — ce n'est pas l'examen Cisco officiel.",
+    },
+    icon: "📡",
+  },
+  {
     name: "NDG Linux Essentials",
-    issuer: "Cisco NetAcad",
-    description: "Certification attesting to knowledge of basic Linux commands and concepts.",
+    academic: false,
+    issuer: {
+      en: "Cisco NetAcad",
+      fr: "Cisco NetAcad",
+    },
+    description: {
+      en: "Certification covering basic Linux commands and concepts.",
+      fr: "Certification sur les commandes et concepts Linux de base.",
+    },
     icon: "🐧",
   },
 ];
 
 export const articles = [
   {
-    slug: "linux-daily-driver",
+    slug: "omarchy-daily-driver",
     title: {
-      en: "Why I Switched to Linux as My Daily Driver",
-      fr: "Pourquoi j'ai adopté Linux au quotidien",
+      en: "Omarchy: How I Actually Use Linux Every Day",
+      fr: "Omarchy : comment j'utilise Linux au quotidien",
     },
     date: {
-      en: "March 2025",
-      fr: "Mars 2025",
+      en: "September 2026",
+      fr: "Septembre 2026",
     },
     readTime: {
-      en: "2 min read",
-      fr: "2 min de lecture",
+      en: "4 min read",
+      fr: "4 min de lecture",
     },
     category: "Linux",
-    tags: ["Linux", "Open Source", "Productivity"],
+    tags: ["Omarchy", "Arch", "Hyprland", "Linux"],
     excerpt: {
-      en: "After years of Windows, switching to Linux felt like opening a window in a stuffy room. Here's my honest take on the transition, the tools I use, and why I'll never go back.",
-      fr: "Après des années sous Windows, passer à Linux a été comme ouvrir une fenêtre dans une pièce étouffante. Mon retour honnête sur la transition, les outils que j'utilise, et pourquoi je ne reviendrai jamais en arrière.",
+      en: "I started on Fedora with KDE. I now live in Omarchy — an opinionated Arch + Hyprland setup that finally made Linux feel finished, not half-configured.",
+      fr: "J'ai commencé sur Fedora avec KDE. Aujourd'hui je vis dans Omarchy — un Arch + Hyprland opiniâtre qui, pour la première fois, donne l'impression que Linux est fini, pas à moitié configuré.",
     },
     content: {
       en: `
@@ -132,44 +162,41 @@ It started with an update. Windows decided — without asking — to restart my 
 
 I'd been curious about Linux for years (the NDG Linux Essentials cert I earned wasn't just for the résumé), but I always had excuses: "the software won't work," "it's too complex," "I don't have time to tinker." All valid concerns, all wrong.
 
-## Choosing a Distribution
+## The Scenic Route
 
-The Linux world is famously fragmented. After some research, I landed on **Fedora** — a solid middle ground between cutting-edge software and stability. If you're just starting out, **Ubuntu** or **Linux Mint** are friendlier entry points.
+The Linux world is famously fragmented. I started on **Fedora + KDE** — a solid middle ground, and still what I'd recommend as a first install. Ubuntu or Linux Mint are even friendlier.
 
-Key criteria I used:
-- Active community and regular updates
-- Good hardware support (critical for modern laptops)
-- Not tied to a single commercial entity (sorry, Ubuntu/Canonical)
+That setup taught me the real wins: faster boots, a package manager that isn't a storefront, a machine I could actually inspect, no ads in the start menu. It also taught me the tax: drivers on some hardware, the odd proprietary app, and the endless temptation to "just tweak one more config".
 
-## What Surprised Me
+## Then Omarchy Happened
 
-**The good:**
-- Boot times are genuinely faster
-- Package manager (\`dnf\`) make software installation trivially easy
-- You understand what's running on your machine
-- Terminal workflows are dramatically more powerful
-- No telemetry, no ads in the Start menu, no "recommended" content
+[Omarchy](https://omarchy.org) is an opinionated Arch Linux distribution built around **Hyprland**. It is not trying to look like Windows or macOS. Keyboard-first, tiling windows, a single \`omarchy\` CLI for themes, updates, screenshots, the bar — the boring parts are already decided.
 
-**The genuinely hard parts:**
-- Some proprietary software (Adobe suite, some games) doesn't run natively — Proton/Wine bridge the gap for most things
-- Initial Wi-Fi/Bluetooth drivers can be a headache on some hardware
-- The learning curve is real, but it's also the point
+I run **Omarchy 4**. After years of "I'll rice it this weekend", I wanted a Linux desktop that was beautiful *and* maintained by someone else.
 
 ## My Daily Setup
 
 \`\`\`
-OS:      Fedora 43
-Desktop: KDE Plasma
+OS:      Omarchy 4 (Arch)
+Desktop: Hyprland (Wayland)
 Shell:   Bash
-Editor:  VSCodium
 Browser: Brave
+Mail:    Proton
 \`\`\`
+
+What I actually like, day to day:
+- **Themes that apply everywhere** — terminal, bar, borders, not five config files
+- **Tiling that stays out of the way** once the muscle memory lands
+- **Updates as a command**, not a scavenger hunt
+- A machine I understand, without spending my Sundays on it
 
 ## Is It For Everyone?
 
-Honestly? Not yet. If you depend on specific Windows-only software for work, dual-booting is a sensible middle ground. But if you're willing to invest a few weekends into the setup, Linux pays dividends in speed, control, and privacy.
+Omarchy is not the friendly on-ramp. If you want "it just works" with a mouse, Ubuntu or Fedora KDE are still better first steps — that's the path I took.
 
-The biggest shift isn't technical — it's philosophical. Linux asks you to understand your tools rather than just consume them. For me, that's the whole point.
+If you already live in a terminal, and you want Linux to feel like a product rather than a kit, this is the most coherent daily driver I've used.
+
+The biggest shift still isn't technical — it's philosophical. Linux asks you to understand your tools rather than just consume them. Omarchy just makes that ask less exhausting.
       `,
       fr: `
 ## Le déclic
@@ -178,44 +205,150 @@ Tout a commencé par une mise à jour. Windows a décidé — sans me demander m
 
 La curiosité pour Linux me trottait dans la tête depuis des années (la certification NDG Linux Essentials que j'ai obtenue n'était pas que pour le CV), mais j'avais toujours des excuses : "les logiciels ne tourneront pas", "c'est trop complexe", "je n'ai pas le temps de bidouiller". Des craintes légitimes. Et toutes fausses.
 
-## Choisir une distribution
+## Le chemin des écoliers
 
-Le monde Linux est notoirement fragmenté. Après quelques recherches, j'ai opté pour **Fedora** — un bon compromis entre logiciels récents et stabilité. Pour débuter, **Ubuntu** ou **Linux Mint** sont des points d'entrée plus accessibles.
+Le monde Linux est notoirement fragmenté. J'ai commencé sur **Fedora + KDE** — un bon compromis, et ce que je recommanderais encore pour une première install. Ubuntu ou Linux Mint sont encore plus gentils.
 
-Mes critères principaux :
-- Communauté active et mises à jour régulières
-- Bon support matériel (crucial sur les laptops modernes)
-- Pas lié à une seule entité commerciale (désolé, Ubuntu/Canonical)
+Cette config m'a appris les vrais gains : boot plus rapide, un gestionnaire de paquets qui n'est pas une boutique, une machine que je peux inspecter, pas de pubs dans le menu démarrer. Elle m'a aussi appris la taxe : les pilotes sur certains matériels, l'appli propriétaire de trop, et la tentation sans fin de "juste tweaker encore un fichier".
 
-## Ce qui m'a surpris
+## Puis Omarchy
 
-**Les bonnes surprises :**
-- Les temps de démarrage sont vraiment plus rapides
-- Le gestionnaire de paquet (\`dnf\`) rendent l'installation de logiciels triviale
-- On comprend ce qui tourne sur sa machine
-- Les workflows en terminal sont nettement plus puissants
-- Pas de télémétrie, pas de pubs dans le menu démarrer, pas de contenu "recommandé"
+[Omarchy](https://omarchy.org) est une distribution Arch opiniâtre, construite autour de **Hyprland**. Elle ne cherche pas à ressembler à Windows ou macOS. Clavier d'abord, fenêtres en tiling, une CLI \`omarchy\` pour les thèmes, les mises à jour, les captures, la barre — les choix ennuyeux sont déjà faits.
 
-**Les vraies difficultés :**
-- Certains logiciels propriétaires (suite Adobe, certains jeux) ne tournent pas nativement — Proton/Wine comblent l'écart pour la plupart
-- Les pilotes Wi-Fi/Bluetooth peuvent être pénibles sur certains appareils
-- La courbe d'apprentissage est réelle, mais c'est aussi l'intérêt
+Je tourne sous **Omarchy 4**. Après des années de "je customiserai ça ce week-end", je voulais un bureau Linux beau *et* maintenu par quelqu'un d'autre.
 
 ## Ma configuration quotidienne
 
 \`\`\`
-OS :         Fedora 43
-Bureau :     KDE Plasma
+OS :         Omarchy 4 (Arch)
+Bureau :     Hyprland (Wayland)
 Shell :      Bash
-Éditeur :    VSCodium
 Navigateur : Brave
+Mail :       Proton
 \`\`\`
+
+Ce que j'aime vraiment, au quotidien :
+- **Des thèmes qui s'appliquent partout** — terminal, barre, bordures, pas cinq fichiers de conf
+- **Le tiling qui disparaît** une fois la mémoire musculaire en place
+- **Les mises à jour comme une commande**, pas comme une chasse au trésor
+- Une machine que je comprends, sans y passer mes dimanches
 
 ## Est-ce pour tout le monde ?
 
-Honnêtement ? Pas encore. Si vous dépendez de logiciels Windows spécifiques pour le travail, le dual-boot est un compromis raisonnable. Mais si vous êtes prêt à investir quelques week-ends dans la configuration, Linux rapporte gros en vitesse, contrôle et confidentialité.
+Omarchy n'est pas la rampe d'accès gentille. Si vous voulez "ça marche" à la souris, Ubuntu ou Fedora KDE restent de meilleurs premiers pas — c'est le chemin que j'ai pris.
 
-Le plus grand changement n'est pas technique — c'est philosophique. Linux vous demande de comprendre vos outils plutôt que de les consommer. Pour moi, c'est tout l'intérêt.
+Si vous vivez déjà dans un terminal, et que vous voulez que Linux ressemble à un produit plutôt qu'à un kit, c'est le daily driver le plus cohérent que j'aie utilisé.
+
+Le plus grand changement n'est toujours pas technique — c'est philosophique. Linux vous demande de comprendre vos outils plutôt que de les consommer. Omarchy rend juste cette demande moins épuisante.
+      `,
+    },
+  },
+  {
+    slug: "proxmox-lab-integration",
+    title: {
+      en: "A Proxmox Lab That Cut Integration Time in Half",
+      fr: "Un lab Proxmox qui divise par deux le temps d'intégration",
+    },
+    date: {
+      en: "September 2026",
+      fr: "Septembre 2026",
+    },
+    readTime: {
+      en: "3 min read",
+      fr: "3 min de lecture",
+    },
+    category: "Infrastructure",
+    tags: ["Proxmox", "Ansible", "Linux", "Automation", "Thales"],
+    excerpt: {
+      en: "My final-year project at Thales: dedicated VMs so we stop walking a cable to every device. Centralised SSH and web access, Ansible on top — about 50% less integration time once it lands.",
+      fr: "Mon PFE chez Thales : des VMs dédiées pour arrêter de tirer un câble vers chaque équipement. Accès SSH et web centralisés, Ansible par-dessus — environ 50 % de temps d'intégration en moins une fois en place.",
+    },
+    content: {
+      en: `
+## The Pain
+
+Integrating network gear in a constrained environment is slow for a boring reason: you sit in front of the device. Console cable, laptop, one box at a time. Multiply that by a fleet of routers, switches and firewalls and the calendar disappears.
+
+I wanted the same outcome — a configuration validated as if we were in production — without the physical hop.
+
+## The Idea
+
+Stand up a **Proxmox** virtualisation host and give each piece of equipment a dedicated VM that already has SSH and web access to the fleet. The engineer works from the VM. No more plugging a laptop into every RJ45.
+
+That sounds small. It isn't. Cabling, finding the right port, waiting on a console, swapping laptops — that is most of an integration afternoon.
+
+## What It Looks Like
+
+\`\`\`
+Proxmox host
+  └── VM per operator / per flow
+        ├── SSH jump to the devices
+        ├── HTTPS to web UIs (Stormshield, Fortinet, …)
+        └── Ansible inventory for the repeatable bits
+\`\`\`
+
+Two layers:
+- **Access** — the VM is the cockpit. One place, one set of keys, one browser profile.
+- **Automation** — Ansible playbooks and Bash scripts for the tasks we were already doing by hand (backup, push, sanity checks).
+
+Git/Bitbucket keeps the configurations. That was already true; the lab makes it usable instead of ceremonial.
+
+## Why Proxmox
+
+I already live in Linux. Proxmox is Debian underneath, KVM for the VMs, a web UI that non-virtualisation people can survive. VMware is in the skill list because that's what enterprises run; Proxmox is what I can own end to end in a lab without a licence conversation.
+
+## The 50% Number
+
+The estimate is honest: **about half the integration time**, once the pattern is adopted — not on day one. You still write the configs. You still validate. You stop wasting the hour around the config.
+
+The other win is quality: a VM that looks like production is a better test than a laptop on a bench.
+
+## What I'd Tell Past Me
+
+Don't automate the clever part first. Automate the walking around. The routing policy still needs a human. The cable does not.
+      `,
+      fr: `
+## Le problème
+
+Intégrer du réseau dans un environnement contraint est lent pour une raison ennuyeuse : on s'assoit devant l'équipement. Câble console, laptop, une boîte à la fois. Multipliez par un parc de routeurs, switches et pare-feux, et le calendrier disparaît.
+
+Je voulais le même résultat — une configuration validée comme en production — sans le déplacement physique.
+
+## L'idée
+
+Monter un hôte de virtualisation **Proxmox** et donner à chaque flux une VM dédiée, déjà pourvue d'un accès SSH et web au parc. L'ingénieur travaille depuis la VM. Fini de brancher un laptop sur chaque RJ45.
+
+Ça a l'air petit. Ça ne l'est pas. Le câblage, trouver le bon port, attendre une console, échanger les laptops — c'est le gros d'un après-midi d'intégration.
+
+## À quoi ça ressemble
+
+\`\`\`
+Hôte Proxmox
+  └── VM par opérateur / par flux
+        ├── Saut SSH vers les équipements
+        ├── HTTPS vers les interfaces web (Stormshield, Fortinet, …)
+        └── Inventaire Ansible pour ce qui se répète
+\`\`\`
+
+Deux couches :
+- **L'accès** — la VM est le cockpit. Un endroit, un jeu de clés, un profil navigateur.
+- **L'automatisation** — playbooks Ansible et scripts Bash pour les tâches qu'on faisait déjà à la main (sauvegarde, push, contrôles de sanity).
+
+Git/Bitbucket versionne les configurations. C'était déjà vrai ; le lab rend ça utilisable au lieu de cérémonial.
+
+## Pourquoi Proxmox
+
+Je vis déjà dans Linux. Proxmox, c'est du Debian en dessous, du KVM pour les VMs, une UI web que les non-spécialistes de la virtu survivent. VMware est dans la liste de compétences parce que c'est ce que les entreprises font tourner ; Proxmox, c'est ce que je peux maîtriser de bout en bout dans un lab sans discussion de licence.
+
+## Le chiffre des 50 %
+
+L'estimation est honnête : **environ la moitié du temps d'intégration**, une fois le schéma adopté — pas au jour un. On écrit encore les configs. On valide encore. On arrête de perdre l'heure autour de la config.
+
+L'autre gain, c'est la qualité : une VM qui ressemble à la production teste mieux qu'un laptop sur un établi.
+
+## Ce que je dirais à moi d'avant
+
+N'automatisez pas d'abord la partie intelligente. Automatisez le fait de marcher. La politique de routage a encore besoin d'un humain. Le câble, non.
       `,
     },
   },
@@ -436,123 +569,97 @@ Mais si vous croyez que le matériel devrait durer dix ans et que les fabricants
     },
   },
   {
-    slug: "fairphone-eos-degoogled-android",
+    slug: "grapheneos-from-iphone",
     title: {
-      en: "Fairphone + /e/OS: A Fully Degoogled Android",
-      fr: "Fairphone + /e/OS : un Android entièrement dégooglifié",
+      en: "GrapheneOS from an iPhone: Curious, Not Ready",
+      fr: "GrapheneOS depuis un iPhone : curieux, pas prêt",
     },
     date: {
-      en: "December 2024",
-      fr: "Décembre 2024",
+      en: "September 2026",
+      fr: "Septembre 2026",
     },
     readTime: {
       en: "3 min read",
       fr: "3 min de lecture",
     },
     category: "Privacy",
-    tags: ["Fairphone", "/e/OS", "Android", "Privacy", "Degoogling"],
+    tags: ["GrapheneOS", "iPhone", "Privacy", "Android", "Pixel"],
     excerpt: {
-      en: "What happens when you combine an ethically-sourced, repairable phone with a fully Google-free Android fork? A surprisingly daily-driveable setup — with some caveats.",
-      fr: "Que se passe-t-il quand on combine un téléphone éthique et réparable avec un fork Android totalement sans Google ? Une configuration étonnamment utilisable au quotidien — avec quelques nuances.",
+      en: "I still use an iPhone. GrapheneOS is the phone OS I keep reading about — and it still feels a bit too 'root' for how I actually live. Here's the honest gap.",
+      fr: "J'utilise encore un iPhone. GrapheneOS est l'OS mobile que je continue de lire — et ça reste un peu trop 'root' pour ma vraie vie. Le décalage, sans posture.",
     },
     content: {
       en: `
-## The Phone Problem
+## Two Different Brains
 
-Your smartphone is the most personal tracking device ever invented. Android, as shipped by most manufacturers, comes bundled with Google Play Services — a deep system-level component that reports your location, app usage, and behaviour back to Google continuously.
+On the desktop I run **Omarchy**. Mail is Proton. I care about what leaves the machine.
 
-Custom ROMs have long offered an escape, but historically required technical expertise and often broke core functionality. **/e/OS** changes that calculus significantly.
+In my pocket I still have an **iPhone**. That isn't a plot twist — it's the honest split. The phone is the device I don't want to fight at 7:40 on a platform.
 
-## What is /e/OS?
+## Why GrapheneOS Keeps Coming Back
 
-[/e/OS](https://e.foundation) (now rebranded as **Murena OS**) is a fork of Android with all Google components removed and replaced:
+[GrapheneOS](https://grapheneos.org) is a hardened Android, officially for **Google Pixel** hardware. Verified boot, aggressive sandboxing, optional sandboxed Play services instead of a Google-shaped hole in the OS. On paper it is the grown-up answer to "I want a smartphone that isn't a tracking beacon."
 
-- Google Play Services → **microG** (open-source reimplementation, much less invasive)
-- Google Play Store → **App Lounge** (accesses Play Store apps anonymously)
-- Google Search → configurable (I use Brave Search)
-- Google Maps → Magic Earth (HERE-based, offline maps)
-- Google Drive → Murena Cloud (Nextcloud-based)
+It is also a *project*. Unlock the bootloader. Flash. Live with Play Integrity when a bank app gets moody. Lose iMessage, FaceTime, the Apple Watch, the "it just works" that is the whole point of the iPhone.
 
-The key insight: *most* Android apps don't actually need Google Play Services. They use it for push notifications and licensing checks. microG handles notifications; most apps run fine.
+That's what I mean by **too root for me, for now**. Not that the OS is only for people who jailbreak for fun — GrapheneOS is well documented. It's that my phone is not a lab. My laptop is.
 
-## Fairphone: The Hardware Side
+## What I'd Actually Gain
 
-[Fairphone](https://www.fairphone.com) makes phones designed around three principles:
-1. **Ethical sourcing** of materials (conflict-free minerals, fair labour)
-2. **Repairability** (replaceable battery, screen, charging port — by you, at home)
-3. **Longevity** (5 years of OS updates, 8 years of spare parts)
+- A device that matches the rest of the privacy stack (Proton, Linux)
+- Hardware-backed hardening I don't get on iOS, no matter what Apple's ads say
+- The option to run Play services in a box, or not at all
 
-The Fairphone 5 scores **9.3/10 on iFixit**. For context, the iPhone 15 scores 7/10.
+## What I'd Pay
 
-## The /e/OS + Fairphone Combo
+- A Pixel, because GrapheneOS doesn't run on an iPhone and doesn't pretend to
+- Banking, payments, some government apps — the usual compatibility lottery
+- The Apple ecosystem tax in reverse: photos, messages, the watch
+- Time. Even a clean install is a weekend, and the first broken app is a mood
 
-Murena sells pre-installed /e/OS Fairphones directly. The e.foundation officially supports Fairphone models, meaning updates are prompt and stable.
+Fairphone and /e/OS are in the same family of answers. I still like the idea. I haven't daily-driven either, and I won't pretend I have.
 
-**What works perfectly:**
-- Banking apps (most, via microG compatibility layer)
-- WhatsApp, Signal, Telegram
-- Spotify, navigation apps
-- Camera (decent, not flagship-tier)
+## Where I Am
 
-**What's limited:**
-- Apps requiring Google Play integrity attestation (some banking apps, Netflix DRM)
-- Google Pay obviously doesn't work — use a physical card
-- Push notifications can occasionally be delayed
+Curious. Reading the docs. Not flashing anything this month.
 
-## Should You Do It?
-
-If you're already on a degoogling path (Proton suite, Linux), a /e/OS phone is the logical next step. The combination of Fairphone hardware and /e/OS gives you a device you actually own — one that respects your privacy, can be repaired, and will receive updates for years.
-
-The trade-off is convenience. Some apps won't work perfectly. But if you've already decided that convenience at the cost of privacy isn't worth it, this setup delivers remarkably well.
+If I switch, it will be because a Pixel + GrapheneOS covers the 5% of phone life that currently requires an iPhone — not because I enjoyed a forum thread. Until then, the iPhone stays, and the Linux box does the serious work.
       `,
       fr: `
-## Le problème du smartphone
+## Deux cerveaux différents
 
-Votre smartphone est l'appareil de traçage le plus personnel jamais inventé. Android, tel que livré par la plupart des fabricants, est fourni avec Google Play Services — un composant système profond qui remonte continuellement votre localisation, l'usage de vos apps et vos comportements à Google.
+Sur le bureau, je tourne sous **Omarchy**. Le mail, c'est Proton. Je fais attention à ce qui sort de la machine.
 
-Les ROMs custom offraient depuis longtemps une échappatoire, mais nécessitaient historiquement une expertise technique et cassaient souvent des fonctionnalités essentielles. **/e/OS** change significativement cette équation.
+Dans la poche, j'ai encore un **iPhone**. Ce n'est pas un twist — c'est le décalage honnête. Le téléphone, c'est l'appareil que je ne veux pas combattre à 7h40 sur un quai.
 
-## Qu'est-ce que /e/OS ?
+## Pourquoi GrapheneOS revient tout le temps
 
-[/e/OS](https://e.foundation) (rebaptisé **Murena OS**) est un fork d'Android avec tous les composants Google retirés et remplacés :
+[GrapheneOS](https://grapheneos.org) est un Android durci, officiellement pour les **Google Pixel**. Verified boot, sandboxing agressif, services Play optionnels et isolés au lieu d'un trou en forme de Google dans l'OS. Sur le papier, c'est la réponse adulte à "je veux un smartphone qui n'est pas une balise."
 
-- Google Play Services → **microG** (réimplémentation open source, bien moins invasive)
-- Google Play Store → **App Lounge** (accède aux apps Play Store anonymement)
-- Google Search → configurable (j'utilise Brave Search)
-- Google Maps → Magic Earth (basé sur HERE, cartes hors ligne)
-- Google Drive → Murena Cloud (basé sur Nextcloud)
+C'est aussi un *projet*. Déverrouiller le bootloader. Flasher. Vivre avec Play Integrity quand l'appli bancaire fait des siennes. Perdre iMessage, FaceTime, l'Apple Watch, le "ça marche" qui est tout l'intérêt de l'iPhone.
 
-L'insight clé : *la plupart* des apps Android n'ont pas vraiment besoin de Google Play Services. Elles l'utilisent pour les notifications push et les vérifications de licence. microG gère les notifications ; la plupart des apps fonctionnent bien.
+C'est ça que je veux dire par **trop root pour moi, pour l'instant**. Pas que l'OS soit réservé à ceux qui jailbreakent pour le sport — GrapheneOS est bien documenté. C'est que mon téléphone n'est pas un lab. Mon laptop, oui.
 
-## Fairphone : le côté matériel
+## Ce que je gagnerais vraiment
 
-[Fairphone](https://www.fairphone.com) fabrique des téléphones autour de trois principes :
-1. **Approvisionnement éthique** des matériaux (minerais sans conflits, travail équitable)
-2. **Réparabilité** (batterie, écran, port de charge remplaçables — par vous, chez vous)
-3. **Longévité** (5 ans de mises à jour OS, 8 ans de pièces détachées)
+- Un appareil aligné avec le reste de la stack vie privée (Proton, Linux)
+- Un durcissement matériel que iOS ne me donne pas, quelles que soient les pubs Apple
+- La possibilité de faire tourner les services Play dans une boîte — ou pas du tout
 
-Le Fairphone 5 obtient **9,3/10 sur iFixit**. Pour référence, l'iPhone 15 obtient 7/10.
+## Ce que je paierais
 
-## La combinaison /e/OS + Fairphone
+- Un Pixel, parce que GrapheneOS ne tourne pas sur iPhone et ne le prétend pas
+- Banque, paiement, certaines apps admin — la loterie de compatibilité habituelle
+- La taxe écosystème Apple à l'envers : photos, messages, la montre
+- Du temps. Même une install propre, c'est un week-end, et la première app cassée, c'est une humeur
 
-Murena vend des Fairphone avec /e/OS préinstallé. La e.foundation supporte officiellement les modèles Fairphone, ce qui signifie des mises à jour rapides et stables.
+Fairphone et /e/OS sont dans la même famille de réponses. L'idée me plaît toujours. Je n'ai daily-drive ni l'un ni l'autre, et je ne vais pas le prétendre.
 
-**Ce qui fonctionne parfaitement :**
-- Les apps bancaires (la plupart, via la couche de compatibilité microG)
-- WhatsApp, Signal, Telegram
-- Spotify, apps de navigation
-- Appareil photo (correct, pas niveau flagship)
+## Où j'en suis
 
-**Ce qui est limité :**
-- Les apps nécessitant l'attestation d'intégrité Google Play (certaines apps bancaires, DRM Netflix)
-- Google Pay ne fonctionne évidemment pas — utilisez une carte physique
-- Les notifications push peuvent parfois être retardées
+Curieux. Je lis la doc. Je ne flashe rien ce mois-ci.
 
-## Faut-il le faire ?
-
-Si vous êtes déjà dans une démarche de dégoogleification (suite Proton, Linux), un téléphone /e/OS est la prochaine étape logique. La combinaison matériel Fairphone et /e/OS vous donne un appareil que vous possédez vraiment — qui respecte votre vie privée, peut être réparé, et recevra des mises à jour pendant des années.
-
-La contrepartie, c'est la commodité. Certaines apps ne fonctionneront pas parfaitement. Mais si vous avez déjà décidé que la commodité au prix de la vie privée n'en vaut pas la peine, cette configuration tient étonnamment bien la route.
+Si je change, ce sera parce qu'un Pixel + GrapheneOS couvre les 5 % de vie téléphone qui exigent encore un iPhone — pas parce que j'ai aimé un thread. En attendant, l'iPhone reste, et la machine Linux fait le vrai travail.
       `,
     },
   },
@@ -720,46 +827,45 @@ La sécurité est une pratique, pas un produit.
     },
   },
   {
-    slug: "ai-tools-developer-2025",
+    slug: "ai-tools-developer-2026",
     title: {
-      en: "AI Tools for Developers in 2025: What I Actually Use",
-      fr: "Outils IA pour développeurs en 2025 : ce que j'utilise vraiment",
+      en: "AI Tools in 2026: What I Actually Use",
+      fr: "Outils IA en 2026 : ce que j'utilise vraiment",
     },
     date: {
-      en: "April 2025",
-      fr: "Avril 2025",
+      en: "September 2026",
+      fr: "Septembre 2026",
     },
     readTime: {
-      en: "2 min read",
-      fr: "2 min de lecture",
+      en: "3 min read",
+      fr: "3 min de lecture",
     },
     category: "AI",
-    tags: ["AI", "OpenCode", "Claude", "Productivity", "Developer Tools"],
+    tags: ["AI", "Grok", "Terminal", "Productivity", "Developer Tools"],
     excerpt: {
-      en: "The AI tooling landscape moves fast. After trying most of what's out there, here's what's actually in my daily workflow — and what turned out to be hype.",
-      fr: "Le paysage des outils IA évolue vite. Après avoir tout testé ou presque, voici ce qui est réellement dans mon workflow quotidien — et ce qui n'était que du buzz.",
+      en: "The interesting question is no longer which model. It's which workflow survives contact with real network configs. Here's what's still in mine.",
+      fr: "La question intéressante n'est plus quel modèle. C'est quel workflow survit au contact de vraies configs réseau. Voici ce qui reste dans le mien.",
     },
     content: {
       en: `
 ## The Landscape Has Settled (A Bit)
 
-A year ago, every week brought a new "GPT killer." The market has consolidated somewhat. There are now a few genuinely excellent models (Claude, GPT-4o, Gemini) and a growing ecosystem of tooling built on top of them. The interesting question in 2025 isn't "which model?" — it's "which workflow?"
+The market has names now. A few models are actually good. The interesting question in 2026 still isn't "which model?" — it's "which workflow?"
 
-## OpenCode: AI in the Terminal
+## AI in the Terminal
 
-[OpenCode](https://opencode.ai) is an open-source, terminal-native AI coding assistant. Think of it as Claude Code or GitHub Copilot, but running entirely in your terminal, with support for multiple model providers.
+I live in a terminal on Omarchy. The assistants that stuck are the ones that sit there with the repo, not in a browser tab.
 
-What makes it stand out for me:
-- **Terminal-first**: I spend most of my time in a terminal. A tool that integrates there without a browser tab is genuinely more ergonomic.
-- **Model-agnostic**: You can swap between Claude, GPT, local models (via Ollama) from the same interface
-- **Context-aware**: It reads your current directory, open files, and git history
-- **Open source**: I can see exactly what's being sent to which API
+What I want from the tool:
+- **Terminal-first**: no extra chrome
+- **The files in front of me**: current directory, git, the config I actually opened
+- **A model I can swap**: useful when one provider is having a day
 
-My typical use: refactoring shell scripts, writing documentation, generating Ansible tasks I half-remember the syntax for.
+My typical use: refactoring shell scripts, writing documentation, generating Ansible tasks I half-remember the syntax for. Lately that's often **Grok** in the terminal — same job, less tab-switching.
 
-## Claude as a Thought Partner
+## A Thought Partner, Not an Oracle
 
-Beyond code, I use Claude (via the web interface and API) as a reasoning partner for architecture decisions. Not to generate code blindly, but to think through trade-offs.
+Beyond code, I use a chat model as a reasoning partner for architecture decisions. Not to generate configs blindly, but to think through trade-offs.
 
 A prompt that's worked well for me:
 > "I'm designing a network segmentation policy for an environment with X, Y, Z constraints. Walk me through the trade-offs between approach A and approach B."
@@ -783,23 +889,22 @@ The workflow that works: AI generates a draft → I review and understand every 
       fr: `
 ## Le paysage s'est stabilisé (un peu)
 
-Il y a un an, chaque semaine amenait un nouveau "tueur de GPT". Le marché s'est un peu consolidé. Il y a maintenant quelques modèles vraiment excellents (Claude, GPT-4o, Gemini) et un écosystème croissant d'outils construits dessus. La question intéressante en 2025 n'est plus "quel modèle ?" — c'est "quel workflow ?"
+Le marché a des noms, maintenant. Quelques modèles sont vraiment bons. La question intéressante en 2026 n'est toujours pas "quel modèle ?" — c'est "quel workflow ?"
 
-## OpenCode : l'IA dans le terminal
+## L'IA dans le terminal
 
-[OpenCode](https://opencode.ai) est un assistant de code IA open source, natif du terminal. Pensez-y comme Claude Code ou GitHub Copilot, mais tournant entièrement dans votre terminal, avec support de plusieurs fournisseurs de modèles.
+Je vis dans un terminal sous Omarchy. Les assistants qui restent sont ceux qui s'assoient là, avec le dépôt, pas dans un onglet navigateur.
 
-Ce qui le distingue pour moi :
-- **Terminal-first** : je passe la plupart de mon temps dans un terminal. Un outil qui s'y intègre sans ouvrir d'onglet navigateur est vraiment plus ergonomique.
-- **Agnostique au modèle** : vous pouvez basculer entre Claude, GPT, les modèles locaux (via Ollama) depuis la même interface
-- **Contextuel** : il lit votre répertoire courant, les fichiers ouverts et l'historique git
-- **Open source** : je peux voir exactement ce qui est envoyé à quelle API
+Ce que je demande à l'outil :
+- **Terminal-first** : pas de chrome en trop
+- **Les fichiers sous les yeux** : le répertoire courant, git, la config que j'ai vraiment ouverte
+- **Un modèle que je peux changer** : utile le jour où un fournisseur a un jour sans
 
-Mon usage typique : refactoring de scripts shell, rédaction de documentation, génération de tâches Ansible dont je me souviens à moitié de la syntaxe.
+Mon usage typique : refactoring de scripts shell, rédaction de documentation, génération de tâches Ansible dont je me souviens à moitié de la syntaxe. En ce moment, c'est souvent **Grok** dans le terminal — même boulot, moins d'onglets.
 
-## Claude comme partenaire de réflexion
+## Un partenaire de réflexion, pas un oracle
 
-Au-delà du code, j'utilise Claude (via l'interface web et l'API) comme partenaire de raisonnement pour les décisions d'architecture. Pas pour générer du code à l'aveugle, mais pour réfléchir aux compromis.
+Au-delà du code, j'utilise un modèle de chat comme partenaire de raisonnement pour les décisions d'architecture. Pas pour générer des configs à l'aveugle, mais pour réfléchir aux compromis.
 
 Un prompt qui m'a bien servi :
 > "Je conçois une politique de segmentation réseau pour un environnement avec les contraintes X, Y, Z. Explique-moi les compromis entre l'approche A et l'approche B."
@@ -825,6 +930,12 @@ Le workflow qui fonctionne : l'IA génère un brouillon → je revois et compren
 ];
 
 export const projects = [
+  {
+    id: "proxmox-lab",
+    title: "Proxmox Integration Lab",
+    tags: ["Proxmox", "Ansible", "Bash", "Linux", "SSH"],
+    status: "in-progress",
+  },
   {
     id: "portfolio",
     title: "Personal Portfolio",

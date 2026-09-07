@@ -43,7 +43,7 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contact" className="py-24 px-6 bg-main2">
+    <section id="contact" className="py-24 px-6">
       <div className="max-w-3xl mx-auto">
         <SectionTitle
           label={t.contact.label}
@@ -56,7 +56,7 @@ export default function Contact() {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="glass rounded-3xl p-8 md:p-12 text-center"
+          className="glass glass-spot rounded-3xl p-8 md:p-12 text-center"
         >
           <p className="text-muted text-lg mb-8 leading-relaxed">
             {t.contact.body}

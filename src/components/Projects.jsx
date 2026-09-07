@@ -35,17 +35,25 @@ function ProjectCard({ project, index, onClick }) {
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       onClick={() => onClick(project)}
-      className="glass rounded-2xl overflow-hidden glow-hover transition-all duration-300 group flex flex-col cursor-pointer"
-      whileHover={{ y: -4 }}
+      className="glass glass-spot rounded-2xl overflow-hidden glow-hover transition-all duration-300 group flex flex-col cursor-pointer"
+      whileHover={{ y: -8, transition: { duration: 0.25 } }}
     >
-      {/* Image */}
-      {project.image && (
+      {project.image ? (
         <div className="w-full h-40 overflow-hidden bg-surface2 shrink-0">
           <img
             src={project.image}
             alt={project.title}
             className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
           />
+        </div>
+      ) : (
+        <div
+          className="w-full h-40 shrink-0 flex items-center justify-center"
+          style={{
+            background: 'linear-gradient(135deg, var(--color-accent-dim), var(--color-accent2-dim))',
+          }}
+        >
+          <span className="font-display text-3xl font-bold gradient-text">{project.title.split(' ')[0]}</span>
         </div>
       )}
 
@@ -148,13 +156,20 @@ function ProjectModal({ project, onClose }) {
           style={{ border: '1px solid var(--color-border)' }}
         >
           {/* Image */}
-          {project.image && (
+          {project.image ? (
             <div className="w-full h-56 overflow-hidden rounded-t-3xl bg-surface2">
               <img
                 src={project.image}
                 alt={project.title}
                 className="w-full h-full object-cover"
               />
+            </div>
+          ) : (
+            <div
+              className="w-full h-40 rounded-t-3xl flex items-center justify-center"
+              style={{ background: 'linear-gradient(135deg, var(--color-accent-dim), var(--color-accent2-dim))' }}
+            >
+              <span className="font-display text-3xl font-bold gradient-text">{project.title}</span>
             </div>
           )}
 
@@ -228,31 +243,13 @@ function ProjectModal({ project, onClose }) {
   );
 }
 
-function ComingSoonCard({ index }) {
-  const [ref, inView] = useInView(0.15);
-  const { t } = useLang();
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 30 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="glass rounded-2xl p-6 flex flex-col items-center justify-center text-center min-h-40 border-dashed"
-      style={{ borderStyle: 'dashed', borderColor: 'var(--color-border)', borderWidth: '1px' }}
-    >
-      <div className="text-muted text-3xl mb-3">+</div>
-      <p className="text-muted text-sm font-medium">{t.projects.coming_soon}</p>
-      <p className="text-muted text-xs mt-1">{t.projects.coming_soon_sub}</p>
-    </motion.div>
-  );
-}
-
 export default function Projects() {
   const [selected, setSelected] = useState(null);
   const { t } = useLang();
 
   const projectsData = projects.map(p => ({
     ...p,
+    title: t.projectTitles?.[p.id] ?? p.title,
     description: t.projectDescriptions[p.id] ?? p.description,
   }));
 

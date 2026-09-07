@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useInView } from '../hooks/useInView';
-import { personal, experiences, education } from '../data';
+import { personal, experiences, education, nowUsing } from '../data';
 import { useLang } from '../LangContext';
 import SectionTitle from './SectionTitle';
 
@@ -45,11 +45,21 @@ export default function About() {
             <p className="text-muted text-lg leading-relaxed mb-6">
               {t.about.p2}
             </p>
-            <p className="text-muted text-lg leading-relaxed">
+            <p className="text-muted text-lg leading-relaxed mb-6">
               {t.about.p3[0]}{' '}
               <span className="text-accent font-medium">{t.about.p3[1]}</span>
               {t.about.p3[2]}
             </p>
+            <div>
+              <div className="text-xs font-mono uppercase tracking-wider text-muted mb-2">{t.about.now}</div>
+              <div className="flex flex-wrap gap-2">
+                {nowUsing.map((item) => (
+                  <span key={item} className="chip text-accent" style={{ color: 'var(--color-accent)', borderColor: 'var(--color-border)' }}>
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
           </motion.div>
 
           <motion.div
@@ -64,7 +74,7 @@ export default function About() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: 0.2 + i * 0.1 }}
-                className="glass rounded-2xl p-5 glow-hover transition-all duration-300"
+                className="glass glass-spot rounded-2xl p-5 glow-hover transition-all duration-300"
               >
                 <div className="text-2xl mb-2">{f.icon}</div>
                 <div className="text-xs text-muted font-mono uppercase tracking-wider mb-1">{f.label}</div>

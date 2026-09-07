@@ -16,9 +16,9 @@ function TimelineItem({ item, index, isExperience }) {
       className="relative pl-8 pb-10 last:pb-0"
     >
       <div className="absolute left-0 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-[var(--color-border)] to-transparent" />
-      <div className="absolute -left-1.5 top-1.5 w-3 h-3 rounded-full border-2 border-accent bg-main" />
+      <div className="timeline-dot absolute -left-1.5 top-1.5 w-3 h-3 rounded-full border-2 border-accent bg-main" />
 
-      <div className="glass rounded-2xl p-6 glow-hover transition-all duration-300 group">
+      <div className="glass glass-spot rounded-2xl p-6 glow-hover transition-all duration-300 group">
         <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
           <div className="min-w-0">
             <h3 className="font-bold text-main text-base group-hover:text-accent transition-colors leading-snug">
@@ -85,6 +85,9 @@ export default function Experience() {
     role: t.experiences[i]?.role ?? exp.role,
     company: t.experiences[i]?.company ?? exp.company,
     description: t.experiences[i]?.description ?? exp.description,
+    period: t.experiences[i]?.period ?? exp.period,
+    duration: t.experiences[i]?.duration ?? exp.duration,
+    location: t.experiences[i]?.location ?? exp.location,
   }));
 
   const educationData = education.map((edu, i) => ({

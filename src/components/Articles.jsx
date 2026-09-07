@@ -11,6 +11,7 @@ const categoryColors = {
   'Sustainable Tech': { bg: 'rgba(16,185,129,0.08)', border: 'rgba(16,185,129,0.2)', text: '#34d399' },
   Security: { bg: 'rgba(239,68,68,0.08)', border: 'rgba(239,68,68,0.2)', text: '#f87171' },
   AI: { bg: 'rgba(56,189,248,0.08)', border: 'rgba(56,189,248,0.2)', text: '#38bdf8' },
+  Infrastructure: { bg: 'rgba(245,158,11,0.08)', border: 'rgba(245,158,11,0.2)', text: '#fbbf24' },
 };
 
 function CategoryBadge({ category }) {
@@ -36,8 +37,8 @@ function ArticleCard({ article, index, onClick }) {
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.5, delay: index * 0.08 }}
       onClick={() => onClick(article)}
-      className="glass rounded-2xl p-6 cursor-pointer glow-hover transition-all duration-300 group flex flex-col"
-      whileHover={{ y: -4 }}
+      className="glass glass-spot rounded-2xl p-6 cursor-pointer glow-hover transition-all duration-300 group flex flex-col"
+      whileHover={{ y: -8, transition: { duration: 0.25 } }}
     >
       <div className="flex items-start justify-between gap-3 mb-3">
         <CategoryBadge category={article.category} />
@@ -112,6 +113,22 @@ function ArticleModal({ article, onClose }) {
             <code className="text-accent">{codeLines.join('\n')}</code>
           </pre>
         );
+      } else if (/^\d+\.\s/.test(line)) {
+        const items = [];
+        while (i < lines.length && /^\d+\.\s/.test(lines[i])) {
+          items.push(lines[i].replace(/^\d+\.\s/, ''));
+          i++;
+        }
+        elements.push(
+          <ol key={i} className="space-y-1.5 my-3 ml-4 list-decimal">
+            {items.map((item, j) => (
+              <li key={j} className="text-muted text-sm ml-4">
+                <span dangerouslySetInnerHTML={{ __html: formatInline(item) }} />
+              </li>
+            ))}
+          </ol>
+        );
+        continue;
       } else if (line.startsWith('- ')) {
         const items = [];
         while (i < lines.length && lines[i].startsWith('- ')) {
@@ -250,7 +267,13 @@ function ArticleModal({ article, onClose }) {
 
 export default function Articles() {
   const [selected, setSelected] = useState(null);
-  const { t } = useLang();
+  const [filter, setFilter] = useState('all');
+  const { t, lang } = useLang();
+
+  const categories = [...new Set(articles.map((a) => a.category))];
+  const visible = filter === 'all' ? articles : articles.filter((a) => a.category === filter);
+  const [featured, ...rest] = filter === 'all' ? visible : [null, ...visible];
+  const gridArticles = filter === 'all' ? rest : visible;
 
   return (
     <section id="articles" className="py-24 px-6 bg-main2">
@@ -261,8 +284,57 @@ export default function Articles() {
           subtitle={t.articles.subtitle}
         />
 
+        <div className="flex flex-wrap justify-center gap-2 mb-10">
+          <button
+            onClick={() => setFilter('all')}
+            className={`chip cursor-pointer transition-colors ${filter === 'all' ? 'text-accent' : ''}`}
+            style={filter === 'all' ? { color: 'var(--color-accent)', borderColor: 'var(--color-accent)' } : {}}
+          >
+            {t.articles.all}
+          </button>
+          {categories.map((c) => (
+            <button
+              key={c}
+              onClick={() => setFilter(c)}
+              className="chip cursor-pointer transition-colors"
+              style={filter === c ? { color: 'var(--color-accent)', borderColor: 'var(--color-accent)' } : {}}
+            >
+              {c}
+            </button>
+          ))}
+        </div>
+
+        {featured && (
+          <motion.article
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            onClick={() => setSelected(featured)}
+            className="glass glass-spot rounded-3xl p-6 sm:p-8 mb-5 cursor-pointer glow-hover transition-all duration-300 group grid md:grid-cols-[1fr_auto] gap-6 items-end"
+          >
+            <div>
+              <div className="flex items-center gap-3 mb-3">
+                <span className="text-xs font-mono uppercase tracking-widest text-accent">{t.articles.featured}</span>
+                <CategoryBadge category={featured.category} />
+              </div>
+              <h3 className="font-display font-bold text-main text-2xl sm:text-3xl mb-3 group-hover:text-accent transition-colors leading-tight">
+                {featured.title[lang]}
+              </h3>
+              <p className="text-muted leading-relaxed max-w-2xl">{featured.excerpt[lang]}</p>
+            </div>
+            <div className="flex items-center justify-between md:flex-col md:items-end gap-3 text-xs font-mono text-muted">
+              <span>{featured.date[lang]}</span>
+              <span className="text-accent flex items-center gap-1 group-hover:gap-2 transition-all">
+                {t.articles.read_more}
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </span>
+            </div>
+          </motion.article>
+        )}
+
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {articles.map((article, i) => (
+          {gridArticles.map((article, i) => (
             <ArticleCard key={article.slug} article={article} index={i} onClick={setSelected} />
           ))}
         </div>

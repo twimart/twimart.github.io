@@ -1,11 +1,14 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLang } from '../LangContext';
+import { personal } from '../data';
 
 export default function Navbar({ dark, toggleTheme }) {
   const { lang, t, toggleLang } = useLang();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [progress, setProgress] = useState(0);
+  const [active, setActive] = useState('#hero');
 
   const links = [
     { label: t.nav.about, href: '#about' },
@@ -17,8 +20,24 @@ export default function Navbar({ dark, toggleTheme }) {
   ];
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
-    window.addEventListener('scroll', onScroll);
+    const ids = ['hero', 'about', 'experience', 'skills', 'projects', 'articles', 'contact'];
+    const onScroll = () => {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      setScrolled(window.scrollY > 40);
+      setProgress(max > 0 ? Math.min(1, window.scrollY / max) : 0);
+
+      let current = '#hero';
+      for (const id of ids) {
+        const el = document.getElementById(id);
+        if (!el) continue;
+        if (el.getBoundingClientRect().top <= window.innerHeight * 0.32) {
+          current = `#${id}`;
+        }
+      }
+      setActive(current);
+    };
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
@@ -31,6 +50,10 @@ export default function Navbar({ dark, toggleTheme }) {
         scrolled ? 'glass shadow-lg' : 'bg-transparent'
       }`}
     >
+      <div
+        className="scroll-progress absolute left-0 bottom-0 h-[2px] w-full"
+        style={{ transform: `scaleX(${progress})` }}
+      />
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <a
           href="#hero"
@@ -47,14 +70,31 @@ export default function Navbar({ dark, toggleTheme }) {
             <a
               key={l.href}
               href={l.href}
-              className="text-sm text-muted hover:text-accent transition-colors duration-200 font-medium"
+              className={`relative text-sm transition-colors duration-200 font-medium ${
+                active === l.href ? 'text-accent' : 'text-muted hover:text-accent'
+              }`}
             >
               {l.label}
+              {active === l.href && (
+                <motion.span
+                  layoutId="nav-underline"
+                  className="absolute -bottom-1 left-0 right-0 h-px"
+                  style={{ background: 'var(--color-accent)' }}
+                />
+              )}
             </a>
           ))}
         </div>
 
         <div className="flex items-center gap-2 self-center">
+          <a
+            href={personal.cv}
+            download
+            className="hidden sm:inline-flex glass rounded-full px-3 py-2 text-xs font-mono font-medium text-muted hover:text-accent transition-colors duration-200"
+          >
+            CV
+          </a>
+
           {/* Language toggle */}
           <button
             onClick={toggleLang}
@@ -124,6 +164,14 @@ export default function Navbar({ dark, toggleTheme }) {
                   {l.label}
                 </a>
               ))}
+              <a
+                href={personal.cv}
+                download
+                onClick={() => setMenuOpen(false)}
+                className="text-sm text-muted hover:text-accent transition-colors font-medium"
+              >
+                CV
+              </a>
             </div>
           </motion.div>
         )}
