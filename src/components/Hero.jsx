@@ -29,17 +29,17 @@ function SplitWord({ text, delay = 0 }) {
 
 function CountUp({ value, inView }) {
   const reduced = usePrefersReducedMotion();
+  const match = String(value).match(/^(\d+)/);
+  const canAnimate = Boolean(inView && !reduced && match);
   const [n, setN] = useState(value);
 
   useEffect(() => {
-    const match = String(value).match(/^(\d+)/);
-    if (!inView || reduced || !match) {
-      setN(value);
-      return;
-    }
-    const target = Number(match[1]);
-    const suffix = String(value).slice(match[1].length);
-    setN(`0${suffix}`);
+    if (!canAnimate) return;
+
+    const digits = String(value).match(/^(\d+)/)?.[1];
+    if (!digits) return;
+    const target = Number(digits);
+    const suffix = String(value).slice(digits.length);
     let start;
     let raf;
     const dur = 1100;
@@ -50,10 +50,17 @@ function CountUp({ value, inView }) {
       setN(`${Math.round(target * eased)}${suffix}`);
       if (p < 1) raf = requestAnimationFrame(tick);
     };
-    raf = requestAnimationFrame(tick);
+    // Start from 0 inside rAF (avoids synchronous setState in the effect body).
+    raf = requestAnimationFrame((t) => {
+      setN(`0${suffix}`);
+      start = t;
+      raf = requestAnimationFrame(tick);
+    });
     return () => cancelAnimationFrame(raf);
-  }, [inView, value, reduced]);
+  }, [canAnimate, value]);
 
+  // Derive the static value when not animating — no effect setState needed.
+  if (!canAnimate) return value;
   return n;
 }
 
@@ -62,7 +69,8 @@ function TypewriterText({ texts }) {
   const [charIndex, setCharIndex] = useState(0);
   const [deleting, setDeleting] = useState(false);
 
-  const current = texts[textIndex % texts.length];
+  const len = texts.length;
+  const current = texts[textIndex % len] ?? '';
 
   useEffect(() => {
     let timeout;
@@ -73,17 +81,14 @@ function TypewriterText({ texts }) {
     } else if (deleting && charIndex > 0) {
       timeout = setTimeout(() => setCharIndex(i => i - 1), 35);
     } else if (deleting && charIndex === 0) {
-      setDeleting(false);
-      setTextIndex(i => (i + 1) % texts.length);
+      // Advance to next string via timeout (avoids synchronous setState in effect).
+      timeout = setTimeout(() => {
+        setDeleting(false);
+        setTextIndex(i => (i + 1) % len);
+      }, 0);
     }
     return () => clearTimeout(timeout);
-  }, [charIndex, deleting, current]);
-
-  useEffect(() => {
-    setCharIndex(0);
-    setDeleting(false);
-    setTextIndex(0);
-  }, [texts]);
+  }, [charIndex, deleting, current, len]);
 
   return (
     <span className="text-accent">
@@ -219,7 +224,7 @@ export default function Hero() {
           transition={{ delay: 0.5, duration: 0.6 }}
           className="font-display text-xl sm:text-2xl md:text-3xl font-semibold mb-6 min-h-10"
         >
-          <TypewriterText texts={t.hero.typewriter} />
+          <TypewriterText key={lang} texts={t.hero.typewriter} />
         </motion.div>
 
         <motion.p
