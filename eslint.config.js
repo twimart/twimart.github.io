@@ -23,7 +23,14 @@ export default defineConfig([
       },
     },
     rules: {
-      'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
+      // ESLint does not treat JSX member expressions (e.g. motion.div) as usage;
+      // Vite React template already ignores PascalCase components the same way.
+      'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]|^(motion)$' }],
+      // LangContext exports LangProvider + useLang (standard context pattern).
+      'react-refresh/only-export-components': [
+        'error',
+        { allowConstantExport: true, allowExportNames: ['useLang'] },
+      ],
     },
   },
 ])
